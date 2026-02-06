@@ -1,0 +1,127 @@
+{
+  "project": "marziali-hub",
+  "version": "2.0.0",
+  "last_updated": "2026-02-06",
+  "user_stories": [
+    {
+      "id": "US-001",
+      "title": "Translation Debate System - Ollama Integration",
+      "priority": "HIGH",
+      "status": "TODO",
+      "description": "Two local LLMs debate to produce accurate martial arts translations",
+      "acceptance_criteria": [
+        "Ollama engine connects to local qwen2.5:7b and llama3.1:8b models",
+        "Debate produces translation with confidence score",
+        "Fallback to single model if one unavailable",
+        "API endpoint POST /api/v1/translation/debate works",
+        "ZERO MOCK test passes with real Ollama running"
+      ],
+      "files": [
+        "backend/services/translation/engines/ollama_engine.py",
+        "backend/services/translation/translation_debate.py",
+        "backend/api/v1/translation_debate.py",
+        "backend/tests/integration/test_translation_debate_integration.py"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-002", 
+      "title": "Grammar Extractor - Asian Languages",
+      "priority": "HIGH",
+      "status": "TODO",
+      "description": "Extract grammar rules from Chinese/Japanese/Korean text for learning",
+      "acceptance_criteria": [
+        "Extracts particles, verb conjugations, sentence patterns",
+        "Supports Chinese (simplified/traditional), Japanese, Korean",
+        "Stores rules in backend/data/grammar/",
+        "API endpoint POST /api/v1/grammar/extract works",
+        "ZERO MOCK test with real text samples"
+      ],
+      "files": [
+        "backend/services/language_learning/grammar_extractor.py",
+        "backend/api/v1/endpoints/grammar_learning.py",
+        "backend/tests/unit/test_grammar_extractor.py"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-003",
+      "title": "Backend Health Check & Startup",
+      "priority": "MEDIUM",
+      "status": "TODO",
+      "description": "Ensure backend starts cleanly and health endpoint works",
+      "acceptance_criteria": [
+        "uvicorn main:app --port 8000 starts without errors",
+        "GET /health returns 200 OK",
+        "GET /docs shows Swagger UI",
+        "All routers load without import errors"
+      ],
+      "files": [
+        "backend/main.py",
+        "backend/api/v1/__init__.py"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-004",
+      "title": "Frontend Auth Flow Fix",
+      "priority": "MEDIUM", 
+      "status": "TODO",
+      "description": "Fix login/logout navigation in Next.js frontend",
+      "acceptance_criteria": [
+        "Login redirects to dashboard on success",
+        "Logout clears token and redirects to home",
+        "Protected routes redirect to login if not authenticated",
+        "No console errors on auth pages"
+      ],
+      "files": [
+        "frontend/src/app/(auth)/login/page.tsx",
+        "frontend/src/contexts/AuthContext.tsx",
+        "frontend/src/middleware.ts"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-005",
+      "title": "Skeleton Extraction Pipeline",
+      "priority": "LOW",
+      "status": "TODO",
+      "description": "MediaPipe Holistic extracts 75 landmarks from video",
+      "acceptance_criteria": [
+        "Upload video via API",
+        "MediaPipe processes frames",
+        "JSON skeleton data saved to storage",
+        "Skeleton viewable in frontend player overlay"
+      ],
+      "files": [
+        "backend/services/video_studio/skeleton_extraction_holistic.py",
+        "backend/api/v1/skeleton.py"
+      ],
+      "passes": false
+    },
+    {
+      "id": "US-006",
+      "title": "AI-First Headers Audit",
+      "priority": "LOW",
+      "status": "TODO",
+      "description": "Add AI-First headers to all core backend files",
+      "acceptance_criteria": [
+        "All files in backend/services/ have AI_MODULE header",
+        "All files in backend/api/v1/ have AI_MODULE header",
+        "Headers include ALTERNATIVE_VALUTATE section",
+        "Minimum 10 files updated per loop"
+      ],
+      "files": [
+        "backend/services/**/*.py",
+        "backend/api/v1/*.py"
+      ],
+      "passes": false
+    }
+  ],
+  "notes": {
+    "ollama_models": ["qwen2.5:7b", "llama3.1:8b"],
+    "backend_port": 8000,
+    "frontend_port": 3000,
+    "test_rule": "ZERO MOCK - all tests must call real APIs"
+  }
+}
