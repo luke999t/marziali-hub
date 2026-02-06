@@ -1,0 +1,227 @@
+{
+  "metadata": {
+    "project": "Media Center Arti Marziali",
+    "created_at": "2025-01-09T10:45:00Z",
+    "last_updated": "2025-01-09T10:45:00Z",
+    "version": "1.0.0",
+    "purpose": "AI-First error tracking per manutenzione automatica"
+  },
+  
+  "errors": [
+    {
+      "id": "ERR-001",
+      "date": "2025-01-09",
+      "category": "SQLAlchemy",
+      "subcategory": "Relationships",
+      "severity": "CRITICAL",
+      "title": "SQLAlchemy Relationships rotte causano 403 Forbidden",
+      "symptom": "Endpoint admin ritorna 403 anche con is_admin=True nel DB",
+      "root_cause": "User model aveva relazioni commentate (payments, subscription, messages_sent, messages_received) ma altri modelli avevano back_populates puntanti a esse, causando failure inizializzazione SQLAlchemy PRIMA di raggiungere dependency get_current_admin_user",
+      "error_message": "Mapper 'Mapper[User(users)]' has no property 'payments'",
+      "files_affected": [
+        "models/user.py",
+        "models/communication.py",
+        "models/payment.py",
+        "models/user_video.py"
+      ],
+      "solution": {
+        "description": "Rimuovere back_populates da tutti i modelli che puntano a relazioni commentate in User",
+        "code_changes": [
+          {
+            "file": "models/user.py",
+            "change": "Commentare TUTTE le relazioni: subscriptions, viewing_history, favorites, purchases, payments, subscription, messages_sent, messages_received"
+          },
+          {
+            "file": "models/communication.py",
+            "before": "from_user = relationship(\"User\", foreign_keys=[from_user_id], back_populates=\"messages_sent\")",
+            "after": "from_user = relationship(\"User\", foreign_keys=[from_user_id])"
+          },
+          {
+            "file": "models/payment.py",
+            "before": "user = relationship(\"User\", back_populates=\"payments\")",
+            "after": "user = relationship(\"User\")"
+          },
+          {
+            "file": "models/user_video.py",
+            "before": "user = relationship(\"User\", back_populates=\"video_progress\")",
+            "after": "user = relationship(\"User\")"
+          }
+        ]
+      },
+      "prevention": "Quando si commentano relazioni in un model, cercare TUTTI i back_populates in altri file che puntano ad esse",
+      "search_command": "grep -r 'back_populates=' models/ | grep 'User'",
+      "time_to_debug": "4+ ore",
+      "time_saved_future": "4 ore"
+    },
+    
+    {
+      "id": "ERR-002",
+      "date": "2025-01-09",
+      "category": "PostgreSQL",
+      "subcategory": "ENUM Types",
+      "severity": "CRITICAL",
+      "title": "ENUM PostgreSQL incompatibile con SQLAlchemy/asyncpg",
+      "symptom": "500 Internal Server Error su tutti gli endpoint che usano colonne ENUM",
+      "root_cause": "SQLAlchemy passa valori uppercase (DRAFT, ACTIVE) ma PostgreSQL ENUM creato con valori lowercase. Anche con native_enum=False, SQLAlchemy genera cast ::project_status",
+      "error_message": "InvalidTextRepresentationError: la sintassi per l'enumerazione project_status non è valida: \"DRAFT\"",
+      "files_affected": [
+        "modules/special_projects/models.py"
+      ],
+      "solution": {
+        "description": "Rimuovere completamente SQLEnum e usare String(50) con validazione applicativa",
+        "steps": [
+          "1. Backup dati tabella (se presenti)",
+          "2. DROP TABLE special_projects CASCADE",
+          "3. DROP TYPE IF EXISTS project_status, eligibility_status",
+          "4. Modificare model: SQLEnum(...) → String(50)",
+          "5. Cambiare default: ProjectStatus.DRAFT → ProjectStatus.DRAFT.value",
+          "6. Ricreare tabelle con SQLAlchemy Base.metadata.create_all()"
+        ],
+        "code_changes": [
+          {
+            "file": "modules/special_projects/models.py",
+            "before": "status = Column(SQLEnum(ProjectStatus, name='project_status', native_enum=False), default=ProjectStatus.DRAFT)",
+            "after": "status = Column(String(50), default=ProjectStatus.DRAFT.value)"
+          }
+        ],
+        "sql_cleanup": [
+          "DROP TABLE IF EXISTS special_projects CASCADE;",
+          "DROP TABLE IF EXISTS special_project_votes CASCADE;",
+          "DROP TABLE IF EXISTS special_projects_eligibility CASCADE;",
+          "DROP TYPE IF EXISTS project_status;",
+          "DROP TYPE IF EXISTS eligibility_status;"
+        ]
+      },
+      "prevention": "Mai usare SQLEnum con PostgreSQL async. Preferire sempre String(50) con validazione Pydantic",
+      "time_to_debug": "3+ ore",
+      "time_saved_future": "3 ore"
+    },
+    
+    {
+      "id": "ERR-003",
+      "date": "2025-01-09",
+      "category": "FastAPI",
+      "subcategory": "Route Ordering",
+      "severity": "HIGH",
+      "title": "Route specifiche matchate come parametri dinamici (422 Unprocessable Entity)",
+      "symptom": "Endpoint /my-eligibility, /my-vote, /my-history ritornano 422 con errore UUID parsing",
+      "root_cause": "In FastAPI, la route /{project_id} viene definita PRIMA delle route specifiche, quindi /my-eligibility viene interpretato come UUID",
+      "error_message": "value is not a valid uuid",
+      "files_affected": [
+        "modules/special_projects/router.py"
+      ],
+      "solution": {
+        "description": "Riordinare le route: specifiche PRIMA, dinamiche DOPO",
+        "code_pattern": {
+          "wrong_order": [
+            "@router.get('/{project_id}')",
+            "@router.get('/my-eligibility')"
+          ],
+          "correct_order": [
+            "@router.get('/health')",
+            "@router.get('/my-eligibility')",
+            "@router.get('/my-vote')",
+            "@router.get('/my-history')",
+            "@router.get('/slug/{slug}')",
+            "@router.get('/{project_id}')"
+          ]
+        }
+      },
+      "prevention": "SEMPRE definire route specifiche PRIMA di route con parametri dinamici. Aggiungere commento: '# NOTE: Specific routes MUST come BEFORE /{param}'",
+      "time_to_debug": "30 minuti",
+      "time_saved_future": "1 ora"
+    },
+    
+    {
+      "id": "ERR-004",
+      "date": "2025-01-09",
+      "category": "Python",
+      "subcategory": "AttributeError",
+      "severity": "MEDIUM",
+      "title": "AttributeError .value dopo migrazione ENUM → VARCHAR",
+      "symptom": "500 Internal Server Error su endpoint che accedono a status",
+      "root_cause": "Dopo cambio da ENUM a VARCHAR, eligibility.status è una stringa, non un enum con attributo .value",
+      "error_message": "AttributeError: 'str' object has no attribute 'value'",
+      "files_affected": [
+        "modules/special_projects/router.py"
+      ],
+      "solution": {
+        "description": "Rimuovere .value quando si accede a colonne migrate da ENUM a VARCHAR",
+        "code_changes": [
+          {
+            "file": "modules/special_projects/router.py",
+            "line": 162,
+            "before": "status=EligibilityStatusEnum(eligibility.status.value)",
+            "after": "status=EligibilityStatusEnum(eligibility.status)"
+          },
+          {
+            "file": "modules/special_projects/router.py",
+            "line": 222,
+            "before": "eligibility_status=EligibilityStatusEnum(eligibility.status.value)",
+            "after": "eligibility_status=EligibilityStatusEnum(eligibility.status)"
+          }
+        ]
+      },
+      "prevention": "Quando si migra da ENUM a VARCHAR, cercare tutti gli usi di .value nel codice: grep -r '\\.status\\.value' modules/",
+      "time_to_debug": "15 minuti",
+      "time_saved_future": "30 minuti"
+    },
+    
+    {
+      "id": "ERR-005",
+      "date": "2025-01-09",
+      "category": "SQLAlchemy",
+      "subcategory": "Query Optimization",
+      "severity": "MEDIUM",
+      "title": "SQLAlchemy carica relazioni rotte causando errori",
+      "symptom": "get_current_user fallisce silenziosamente",
+      "root_cause": "SQLAlchemy tenta di caricare tutte le relazioni di User, incluse quelle rotte",
+      "error_message": "Various relationship loading errors",
+      "files_affected": [
+        "core/security.py"
+      ],
+      "solution": {
+        "description": "Usare load_only() per caricare solo i campi necessari, evitando il caricamento delle relazioni",
+        "code_changes": [
+          {
+            "file": "core/security.py",
+            "before": "result = await db.execute(select(User).where(...))",
+            "after": "result = await db.execute(select(User).options(load_only(User.id, User.email, User.username, User.hashed_password, User.full_name, User.is_active, User.is_admin, User.tier, User.email_verified, User.created_at, User.last_login)).where(...))"
+          }
+        ]
+      },
+      "prevention": "Quando un model ha molte relazioni, usare load_only() per query di autenticazione",
+      "time_to_debug": "1 ora",
+      "time_saved_future": "1 ora"
+    }
+  ],
+  
+  "patterns": {
+    "sqlalchemy_relationships": {
+      "rule": "Se commenti una relazione in Model A, cerca e rimuovi TUTTI i back_populates in altri modelli",
+      "command": "grep -r 'back_populates=\"NOME_RELAZIONE\"' models/"
+    },
+    "postgresql_enums": {
+      "rule": "Mai usare SQLEnum con PostgreSQL async. Usare String(50) + validazione Pydantic",
+      "alternative": "Column(String(50), default=MyEnum.VALUE.value)"
+    },
+    "fastapi_routing": {
+      "rule": "Route specifiche SEMPRE prima di route con parametri dinamici",
+      "order": ["static paths", "specific paths", "dynamic paths with regex", "catch-all paths"]
+    }
+  },
+  
+  "quick_fixes": {
+    "403_on_admin": "Controllare relazioni SQLAlchemy rotte: grep -r 'back_populates' models/",
+    "500_with_enum": "Verificare tipi ENUM nel DB: SELECT typname FROM pg_type WHERE typname LIKE '%status%'",
+    "422_uuid_parse": "Controllare ordine route in router.py",
+    "attribute_error_value": "Cercare .value su colonne VARCHAR: grep -r '\\.value' modules/"
+  },
+  
+  "test_commands": {
+    "run_all_tests": "python -m pytest tests/real/ -v --tb=short",
+    "run_special_projects": "python -m pytest tests/real/test_special_projects_real.py -v",
+    "check_backend_health": "curl -s http://localhost:8000/health",
+    "check_admin_endpoint": "curl -s -H 'Authorization: Bearer TOKEN' http://localhost:8000/api/v1/special-projects/admin/config"
+  }
+}

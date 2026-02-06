@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}Posto Disponibile! - {{ event_title }}{% endblock %}
+
+{% block content %}
+<h2 style="margin: 0 0 24px; font-size: 22px; font-weight: 600; color: #111827;">
+    Un posto si è liberato!
+</h2>
+
+<p style="margin: 0 0 24px; font-size: 16px; color: #374151; line-height: 1.6;">
+    Ciao <strong>{{ user_name }}</strong>,
+</p>
+
+<p style="margin: 0 0 24px; font-size: 16px; color: #374151; line-height: 1.6;">
+    Ottime notizie! Un posto si è liberato per l'evento che stavi aspettando.
+</p>
+
+<!-- Urgency Banner -->
+<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #fef3c7; border-radius: 8px; margin-bottom: 24px;">
+    <tr>
+        <td style="padding: 16px 20px; text-align: center;">
+            <p style="margin: 0; font-size: 14px; font-weight: 600; color: #92400e;">
+                Hai {{ expires_in_hours }} ore per completare l'iscrizione prima che il posto venga assegnato ad altri.
+            </p>
+        </td>
+    </tr>
+</table>
+
+<!-- Event Card -->
+<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #f0f9ff; border-radius: 8px; border-left: 4px solid #2563eb; margin-bottom: 24px;">
+    <tr>
+        <td style="padding: 20px;">
+            <h3 style="margin: 0 0 12px; font-size: 18px; font-weight: 600; color: #1e40af;">
+                {{ event_title }}
+            </h3>
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                    <td style="padding: 4px 0; font-size: 14px; color: #374151;">
+                        <strong>Data:</strong> {{ event_date }}
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+<!-- CTA Button -->
+<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin-bottom: 24px;">
+    <tr>
+        <td align="center">
+            <a href="{{ checkout_url }}" style="display: inline-block; padding: 16px 40px; background-color: #2563eb; color: #ffffff; font-size: 18px; font-weight: 700; text-decoration: none; border-radius: 6px;">
+                Iscriviti Ora
+            </a>
+        </td>
+    </tr>
+</table>
+
+<p style="margin: 0; font-size: 14px; color: #6b7280; line-height: 1.6;">
+    Se non sei più interessato, non è necessario fare nulla.
+    Il posto verrà offerto alla prossima persona in lista d'attesa.
+</p>
+{% endblock %}

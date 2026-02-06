@@ -1,0 +1,31 @@
+{
+  "columns": [
+    "id",
+    "title",
+    "slug",
+    "description",
+    "short_description",
+    "image_url",
+    "video_url",
+    "estimated_budget_cents",
+    "estimated_days",
+    "funding_goal_cents",
+    "current_funding_cents",
+    "status",
+    "voting_start_date",
+    "voting_end_date",
+    "total_votes",
+    "total_weighted_votes",
+    "unique_voters",
+    "created_by",
+    "created_at",
+    "updated_at",
+    "published_at",
+    "completed_at",
+    "is_deleted",
+    "deleted_at",
+    "metadata_json",
+    "tags"
+  ],
+  "rows": []
+}

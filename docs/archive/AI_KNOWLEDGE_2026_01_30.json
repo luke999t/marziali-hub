@@ -1,0 +1,211 @@
+{
+  "metadata": {
+    "date": "2026-01-30",
+    "version": "2.0.0",
+    "project": "Media Center Arti Marziali",
+    "component": "Frontend Staff App",
+    "ai_agent": "Claude Opus 4.5",
+    "session_type": "Bug Fix + Test Validation"
+  },
+  
+  "test_execution": {
+    "date": "2026-01-30",
+    "total_tests": 27,
+    "passed": 14,
+    "partial": 2,
+    "failed_bugs": 8,
+    "missing_pages": 3,
+    "pass_rate_before_fix": "51.8%",
+    "expected_pass_rate_after_fix": "85%+"
+  },
+  
+  "bugs_fixed": [
+    {
+      "id": "BUG-001",
+      "file": "frontend/src/app/login/page.tsx",
+      "error_type": "React Render Error",
+      "error_message": "Objects are not valid as a React child",
+      "root_cause": "Pydantic validation errors returned as array of objects",
+      "fix_applied": "Added extractErrorMessage() function",
+      "pattern": "API_ERROR_HANDLING",
+      "severity": "CRITICAL",
+      "status": "FIXED"
+    },
+    {
+      "id": "BUG-002", 
+      "file": "frontend/src/app/register/page.tsx",
+      "error_type": "React Render Error",
+      "error_message": "Same as BUG-001",
+      "fix_applied": "Added extractErrorMessage() with field name extraction",
+      "pattern": "API_ERROR_HANDLING",
+      "severity": "CRITICAL",
+      "status": "FIXED"
+    },
+    {
+      "id": "BUG-003",
+      "file": "frontend/src/app/skeletons/page.tsx",
+      "error_type": "TypeError",
+      "error_message": "Cannot read properties of undefined (reading 'toLocaleString')",
+      "fix_applied": "Made interface fields optional, added formatNumber/formatPercentage helpers",
+      "pattern": "NULL_SAFE_RENDERING",
+      "severity": "HIGH",
+      "status": "FIXED"
+    },
+    {
+      "id": "BUG-004",
+      "file": "frontend/src/app/translation/page.tsx",
+      "error_type": "Empty UI Element",
+      "error_message": "Target Language dropdown empty",
+      "fix_applied": "Added FALLBACK_LANGUAGES constant, loading state",
+      "pattern": "GRACEFUL_DEGRADATION",
+      "severity": "MEDIUM",
+      "status": "FIXED"
+    },
+    {
+      "id": "BUG-005",
+      "file": "frontend/src/hooks/useEvents.ts",
+      "error_type": "Potential Runtime Error",
+      "error_message": "API may return null instead of array",
+      "fix_applied": "Added Array.isArray() checks, fallback to empty array",
+      "pattern": "NULL_SAFE_ARRAYS",
+      "severity": "MEDIUM",
+      "status": "FIXED"
+    },
+    {
+      "id": "BUG-006",
+      "file": "frontend/src/hooks/useFusion.ts",
+      "error_type": "Authentication Error",
+      "error_message": "Not authenticated",
+      "root_cause": "Hook used 'auth_token' but login saves 'access_token'",
+      "fix_applied": "Created getAuthToken() that tries both keys, added Pydantic error handling",
+      "pattern": "AUTH_TOKEN_CONSISTENCY",
+      "severity": "HIGH",
+      "status": "FIXED"
+    },
+    {
+      "id": "BUG-007",
+      "file": "frontend/src/app/me/page.tsx",
+      "error_type": "404 Not Found",
+      "error_message": "Page not found",
+      "root_cause": "Directory existed but page.tsx was missing",
+      "fix_applied": "Created full user profile dashboard page",
+      "pattern": "MISSING_PAGE",
+      "severity": "HIGH",
+      "status": "CREATED"
+    },
+    {
+      "id": "BUG-008",
+      "file": "frontend/src/app/maestro/page.tsx",
+      "error_type": "404 Not Found",
+      "error_message": "Page not found",
+      "root_cause": "Directory existed but page.tsx was missing",
+      "fix_applied": "Created full maestro dashboard page with stats and video list",
+      "pattern": "MISSING_PAGE",
+      "severity": "HIGH",
+      "status": "CREATED"
+    }
+  ],
+  
+  "patterns_learned": {
+    "API_ERROR_HANDLING": {
+      "description": "FastAPI/Pydantic returns validation errors as array of {type, loc, msg, input} objects",
+      "solution": "Always check if error.detail is string, array, or object before rendering",
+      "code_pattern": "typeof detail === 'string' ? detail : Array.isArray(detail) ? detail.map(e => e.msg).join(', ') : detail.msg"
+    },
+    "NULL_SAFE_RENDERING": {
+      "description": "API responses may have optional/undefined fields",
+      "solution": "Use optional chaining (?.) and nullish coalescing (??) or helper functions",
+      "code_pattern": "value?.toLocaleString() ?? 'N/A'"
+    },
+    "GRACEFUL_DEGRADATION": {
+      "description": "API endpoints may be unavailable",
+      "solution": "Initialize state with fallback values, show loading states, handle fetch errors gracefully",
+      "code_pattern": "const [data, setData] = useState(FALLBACK_DATA)"
+    },
+    "NULL_SAFE_ARRAYS": {
+      "description": "API may return null/undefined instead of array",
+      "solution": "Always validate with Array.isArray() before using array methods",
+      "code_pattern": "const items = Array.isArray(response?.items) ? response.items : []"
+    },
+    "AUTH_TOKEN_CONSISTENCY": {
+      "description": "Different parts of app may use different localStorage keys for auth token",
+      "solution": "Create centralized getAuthToken() that checks multiple possible keys",
+      "code_pattern": "localStorage.getItem('access_token') || localStorage.getItem('auth_token')"
+    },
+    "MISSING_PAGE": {
+      "description": "Next.js app directory may have folder but no page.tsx",
+      "solution": "Always verify page.tsx exists in addition to folder",
+      "check_command": "ls -la frontend/src/app/[route]/"
+    }
+  },
+  
+  "files_modified": [
+    "frontend/src/app/login/page.tsx",
+    "frontend/src/app/register/page.tsx",
+    "frontend/src/app/skeletons/page.tsx",
+    "frontend/src/app/translation/page.tsx",
+    "frontend/src/hooks/useEvents.ts",
+    "frontend/src/hooks/useFusion.ts"
+  ],
+  
+  "files_created": [
+    "frontend/src/app/me/page.tsx",
+    "frontend/src/app/maestro/page.tsx",
+    "BUG_FIX_REPORT_2026_01_30.md",
+    "AI_KNOWLEDGE_2026_01_30.json"
+  ],
+  
+  "test_plan_for_verification": {
+    "priority_1_critical": [
+      "Login con credenziali errate → deve mostrare messaggio leggibile",
+      "Register con email invalida → deve mostrare messaggio leggibile",
+      "Fusion page → deve caricare (non 'Not authenticated')"
+    ],
+    "priority_2_high": [
+      "/me → deve caricare dashboard profilo",
+      "/maestro → deve caricare dashboard maestro",
+      "/skeletons → deve mostrare N/A per campi mancanti",
+      "/translation → dropdown lingue deve avere opzioni"
+    ],
+    "priority_3_medium": [
+      "/events → non deve crashare con API vuota",
+      "/asd-dashboard → deve caricare"
+    ]
+  },
+  
+  "recommendations": {
+    "immediate": [
+      "Run Chrome Extension tests to verify all fixes",
+      "Test login/register with intentionally wrong data",
+      "Test fusion page after logging in"
+    ],
+    "short_term": [
+      "Create utils/apiErrors.ts for reusable error handling",
+      "Add ErrorBoundary component for graceful crash handling",
+      "Standardize auth token key across entire frontend"
+    ]
+  },
+  
+  "chrome_extension_retest_commands": {
+    "pages_to_test": [
+      "/login",
+      "/register", 
+      "/skeletons",
+      "/translation",
+      "/fusion",
+      "/me",
+      "/maestro",
+      "/events",
+      "/asd-dashboard"
+    ],
+    "test_actions": {
+      "login": "Submit with invalid credentials, verify error message is readable",
+      "register": "Submit with invalid email, verify error message shows field name",
+      "skeletons": "Page should load without errors even if API returns partial data",
+      "translation": "Target Language dropdown should have options even if API fails",
+      "fusion": "Page should load without 'Not authenticated' error",
+      "me": "Page should show user profile (requires login first)",
+      "maestro": "Page should show maestro dashboard (requires maestro role)"
+    }
+  }
+}

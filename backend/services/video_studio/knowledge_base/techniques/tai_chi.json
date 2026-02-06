@@ -1,0 +1,253 @@
+{
+  "_metadata": {
+    "type": "martial_arts_techniques",
+    "style": "tai_chi",
+    "style_name": "TAI_CHI",
+    "source": "martial_arts_patterns.py",
+    "exported_at": "2026-01-21T09:22:27.600673",
+    "pattern_count": 4,
+    "ai_indexable": true,
+    "rag_enabled": true
+  },
+  "techniques": [
+    {
+      "id": "yun_shou",
+      "name": "云手 (Yun Shou - Cloud Hands)",
+      "style": "tai_chi",
+      "description": "Movimento circolare continuo delle braccia, simbolo del Tai Chi",
+      "keywords": [
+        "yun shou",
+        "cloud hands",
+        "mani nuvola",
+        "circular",
+        "circolare"
+      ],
+      "velocity_profile": "slow",
+      "temporal_signature": "cyclic",
+      "duration_range": [
+        3.0,
+        8.0
+      ],
+      "key_landmarks": [
+        11,
+        12,
+        15,
+        16,
+        33,
+        34,
+        54,
+        55
+      ],
+      "angle_ranges": {
+        "left_elbow": [
+          90,
+          150
+        ],
+        "right_elbow": [
+          90,
+          150
+        ],
+        "left_shoulder": [
+          30,
+          120
+        ],
+        "right_shoulder": [
+          30,
+          120
+        ]
+      },
+      "hand_positions": {
+        "left": "open_palm_relaxed",
+        "right": "open_palm_relaxed"
+      },
+      "distance_ratios": {
+        "hands_distance": [
+          0.5,
+          1.5
+        ],
+        "center_alignment": [
+          0.8,
+          1.2
+        ]
+      },
+      "confidence_threshold": 0.8,
+      "text_for_rag": "云手 (Yun Shou - Cloud Hands) - Movimento circolare continuo delle braccia, simbolo del Tai Chi. Keywords: yun shou, cloud hands, mani nuvola, circular, circolare"
+    },
+    {
+      "id": "single_whip",
+      "name": "单鞭 (Dan Bian - Single Whip)",
+      "style": "tai_chi",
+      "description": "Posizione iconica con una mano a becco d'uccello",
+      "keywords": [
+        "single whip",
+        "dan bian",
+        "frusta",
+        "whip",
+        "becco"
+      ],
+      "velocity_profile": "gradual",
+      "temporal_signature": "discrete",
+      "duration_range": [
+        2.0,
+        5.0
+      ],
+      "key_landmarks": [
+        11,
+        12,
+        15,
+        16,
+        54,
+        55,
+        56,
+        57
+      ],
+      "angle_ranges": {
+        "left_shoulder": [
+          70,
+          110
+        ],
+        "right_shoulder": [
+          30,
+          60
+        ],
+        "left_elbow": [
+          160,
+          180
+        ],
+        "right_elbow": [
+          90,
+          130
+        ]
+      },
+      "hand_positions": {
+        "left": "hook_hand",
+        "right": "open_palm"
+      },
+      "distance_ratios": {
+        "arm_span": [
+          1.8,
+          2.2
+        ],
+        "stance_width": [
+          1.0,
+          1.5
+        ]
+      },
+      "confidence_threshold": 0.75,
+      "text_for_rag": "单鞭 (Dan Bian - Single Whip) - Posizione iconica con una mano a becco d'uccello. Keywords: single whip, dan bian, frusta, whip, becco"
+    },
+    {
+      "id": "grasp_sparrows_tail",
+      "name": "揽雀尾 (Lan Que Wei - Grasp Sparrow's Tail)",
+      "style": "tai_chi",
+      "description": "Sequenza di 4 movimenti: Ward Off, Roll Back, Press, Push",
+      "keywords": [
+        "lan que wei",
+        "grasp sparrow",
+        "ward off",
+        "roll back",
+        "press",
+        "push"
+      ],
+      "velocity_profile": "slow",
+      "temporal_signature": "cyclic",
+      "duration_range": [
+        8.0,
+        15.0
+      ],
+      "key_landmarks": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        33,
+        54
+      ],
+      "angle_ranges": {
+        "left_elbow": [
+          100,
+          140
+        ],
+        "right_elbow": [
+          100,
+          140
+        ],
+        "torso_rotation": [
+          -30,
+          30
+        ]
+      },
+      "hand_positions": {
+        "left": "curved_palm",
+        "right": "curved_palm"
+      },
+      "distance_ratios": {
+        "hands_vertical_offset": [
+          0.1,
+          0.4
+        ],
+        "center_distance": [
+          0.3,
+          0.8
+        ]
+      },
+      "confidence_threshold": 0.7,
+      "text_for_rag": "揽雀尾 (Lan Que Wei - Grasp Sparrow's Tail) - Sequenza di 4 movimenti: Ward Off, Roll Back, Press, Push. Keywords: lan que wei, grasp sparrow, ward off, roll back, press, push"
+    },
+    {
+      "id": "push_hands",
+      "name": "推手 (Tui Shou - Push Hands)",
+      "style": "tai_chi",
+      "description": "Esercizio a due per sviluppare sensibilità",
+      "keywords": [
+        "push hands",
+        "tui shou",
+        "sticky hands",
+        "sensing",
+        "two person"
+      ],
+      "velocity_profile": "slow",
+      "temporal_signature": "cyclic",
+      "duration_range": [
+        5.0,
+        20.0
+      ],
+      "key_landmarks": [
+        11,
+        12,
+        15,
+        16,
+        33,
+        54
+      ],
+      "angle_ranges": {
+        "elbow_angle": [
+          90,
+          120
+        ],
+        "shoulder_forward": [
+          10,
+          40
+        ]
+      },
+      "hand_positions": {
+        "left": "open_palm",
+        "right": "open_palm"
+      },
+      "distance_ratios": {
+        "contact_distance": [
+          0.1,
+          0.3
+        ],
+        "body_distance": [
+          0.5,
+          1.0
+        ]
+      },
+      "confidence_threshold": 0.65,
+      "text_for_rag": "推手 (Tui Shou - Push Hands) - Esercizio a due per sviluppare sensibilità. Keywords: push hands, tui shou, sticky hands, sensing, two person"
+    }
+  ]
+}

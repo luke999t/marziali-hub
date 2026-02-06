@@ -1,0 +1,1683 @@
+﻿00:00 +0: loading C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart
+00:00 +0: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart: Holistic Application Tests User Journey: New User Onboarding complete onboarding flow should work end-to-end
+00:00 +1: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart: Holistic Application Tests User Journey: New User Onboarding should handle onboarding interruption gracefully
+00:00 +2: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart: Holistic Application Tests User Journey: Content Discovery user can discover content through multiple paths
+00:00 +3: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart: Holistic Application Tests User Journey: Content Discovery search results should be relevant
+00:00 +4: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart: Holistic Application Tests User Journey: Video Playback video playback flow should work smoothly
+00:00 +5: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart: Holistic Application Tests User Journey: Video Playback should resume playback from last position
+00:00 +6: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart: Holistic Application Tests User Journey: Video Playback should handle quality changes smoothly
+00:00 +7: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart: Holistic Application Tests User Journey: Offline Usage download flow should work correctly
+00:00 +8: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart: Holistic Application Tests User Journey: Offline Usage should handle download interruption
+00:00 +9: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart: Holistic Application Tests User Journey: Offline Usage should manage storage efficiently
+00:00 +10: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart: Holistic Application Tests User Journey: Account Management profile management should work correctly
+00:00 +11: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart: Holistic Application Tests User Journey: Account Management should sync preferences across devices
+00:00 +12: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart: Holistic Application Tests Cross-Cutting Concerns Error Handling should handle network errors gracefully
+00:00 +13: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart: Holistic Application Tests Cross-Cutting Concerns Error Handling should handle server errors gracefully
+00:00 +14: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart: Holistic Application Tests Cross-Cutting Concerns Error Handling should recover from crashes
+00:00 +15: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart: Holistic Application Tests Cross-Cutting Concerns Performance app should start within 3 seconds
+00:00 +16: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart: Holistic Application Tests Cross-Cutting Concerns Performance navigation should be instant
+00:00 +17: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart: Holistic Application Tests Cross-Cutting Concerns Performance scrolling should be smooth at 60fps
+00:00 +18: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart: Holistic Application Tests Cross-Cutting Concerns Performance memory usage should stay below threshold
+00:00 +19: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart: Holistic Application Tests Cross-Cutting Concerns Performance battery usage should be optimized
+00:00 +20: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart: Holistic Application Tests Cross-Cutting Concerns Security should enforce HTTPS for all requests
+00:00 +21: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart: Holistic Application Tests Cross-Cutting Concerns Security should not log sensitive data
+00:00 +22: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart: Holistic Application Tests Cross-Cutting Concerns Security should validate all user input
+00:00 +23: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart: Holistic Application Tests Cross-Cutting Concerns Security should handle session expiry
+00:00 +24: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart: Holistic Application Tests Cross-Cutting Concerns Accessibility should support dynamic text sizes
+00:00 +25: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart: Holistic Application Tests Cross-Cutting Concerns Accessibility should be usable with VoiceOver/TalkBack
+00:00 +26: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart: Holistic Application Tests Cross-Cutting Concerns Accessibility should have proper focus management
+00:00 +27: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart: Holistic Application Tests Cross-Cutting Concerns Localization should support multiple languages
+00:00 +28: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart: Holistic Application Tests Cross-Cutting Concerns Localization should format dates according to locale
+00:00 +29: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart: Holistic Application Tests Cross-Cutting Concerns Localization should format numbers according to locale
+00:00 +30: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart: Holistic Application Tests Edge Cases should handle extremely long content titles
+00:00 +31: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart: Holistic Application Tests Edge Cases should handle special characters in search
+00:00 +32: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart: Holistic Application Tests Edge Cases should handle rapid user interactions
+00:00 +33: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart: Holistic Application Tests Edge Cases should handle device rotation
+00:00 +34: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart: Holistic Application Tests Edge Cases should handle multi-window mode
+00:00 +35: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart: Holistic Application Tests Edge Cases should handle deep links
+00:00 +36: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart: Holistic Application Tests Data Integrity should not lose user data on app update
+00:00 +37: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart: Holistic Application Tests Data Integrity should handle database migrations
+00:00 +38: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart: Holistic Application Tests Data Integrity should sync data consistently
+00:00 +39: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart: Holistic Application Tests Feature Flags should support remote feature flags
+00:00 +40: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart: Holistic Application Tests Feature Flags should gracefully handle disabled features
+00:00 +41: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart: Holistic Application Tests Analytics & Monitoring should track key user actions
+00:00 +42: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart: Holistic Application Tests Analytics & Monitoring should report errors to monitoring service
+00:00 +43: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/holistic/app_holistic_test.dart: Holistic Application Tests Analytics & Monitoring should track performance metrics
+00:04 +44: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: (setUpAll)
+00:04 +44: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow successful login navigates to home
+C:\flutter\bin\flutter.bat : test/security/auth/auth_security_test.dart:240:58: Error: A non-null value must be 
+returned since the return type 'Response<dynamic>' doesn't allow null.
+In riga:1 car:81
++ ... i\flutter_app'; C:\flutter\bin\flutter.bat test --no-pub 2>&1 | Out-F ...
++                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (test/security/a...n't allow null.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+ - 'Response' is from 'package:dio/src/response.dart' 
+('../../../../AppData/Local/Pub/Cache/hosted/pub.dev/dio-5.9.0/lib/src/response.dart').
+        when(() => mockApiClient.post(any())).thenAnswer((_) async {});
+                                                         ^
+00:05 +44: loading C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/security/auth/auth_security_test.dart
+Retrying load of C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/security/auth/auth_security_test.dart in 1s (1 remaining)
+00:05 +44: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow successful login navigates to home
+00:06 +45: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow successful login navigates to home
+00:06 +46: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow successful login navigates to home
+00:06 +47: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow successful login navigates to home
+00:06 +48: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow successful login navigates to home
+00:06 +49: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow successful login navigates to home
+00:06 +50: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow successful login navigates to home
+00:06 +51: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow successful login navigates to home
+00:06 +52: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow successful login navigates to home
+00:06 +53: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow successful login navigates to home
+00:06 +54: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow successful login navigates to home
+00:06 +55: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow successful login navigates to home
+00:06 +56: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow successful login navigates to home
+00:06 +57: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow successful login navigates to home
+00:06 +58: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow successful login navigates to home
+00:06 +59: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow successful login navigates to home
+00:06 +60: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow successful login navigates to home
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Ôò×ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following assertion was thrown running a test:
+No GoRouter found in context
+'package:go_router/src/router.dart':
+Failed assertion: line 507 pos 12: 'inherited != null'
+
+When the exception was thrown, this was the stack:
+#2      GoRouter.of (package:go_router/src/router.dart:507:12)
+#3      GoRouterHelper.go (package:go_router/src/misc/extensions.dart:25:16)
+#4      _LoginPageState.build.<anonymous closure> (package:martial_arts_streaming/features/auth/presentation/pages/login_page.dart:79:21)
+#5      _BlocListenerBaseState._subscribe.<anonymous closure> (package:flutter_bloc/src/bloc_listener.dart:215:24)
+#22     FakeAsync.flushMicrotasks (package:fake_async/fake_async.dart:197:32)
+#23     AutomatedTestWidgetsFlutterBinding.runTest.<anonymous closure> (package:flutter_test/src/binding.dart:1507:17)
+(elided 33 frames from class _AssertionError, dart:async, and package:stack_trace)
+
+The test description was:
+  successful login navigates to home
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+test/security/auth/auth_security_test.dart:240:58: Error: A non-null value must be returned since the return type 
+'Response<dynamic>' doesn't allow null.
+ - 'Response' is from 'package:dio/src/response.dart' 
+('../../../../AppData/Local/Pub/Cache/hosted/pub.dev/dio-5.9.0/lib/src/response.dart').
+        when(() => mockApiClient.post(any())).thenAnswer((_) async {});
+                                                         ^
+00:12 +60: loading C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/security/auth/auth_security_test.dart
+Retrying load of C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/security/auth/auth_security_test.dart in 1s (0 remaining)
+00:12 +60 -1: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow successful login navigates to home [E]
+  Test failed. See exception logs above.
+  The test description was: successful login navigates to home
+  
+Retry: Auth Flow Integration Tests Login Flow successful login navigates to home
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Ôò×ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following assertion was thrown running a test:
+No GoRouter found in context
+'package:go_router/src/router.dart':
+Failed assertion: line 507 pos 12: 'inherited != null'
+
+When the exception was thrown, this was the stack:
+#2      GoRouter.of (package:go_router/src/router.dart:507:12)
+#3      GoRouterHelper.go (package:go_router/src/misc/extensions.dart:25:16)
+#4      _LoginPageState.build.<anonymous closure> (package:martial_arts_streaming/features/auth/presentation/pages/login_page.dart:79:21)
+#5      _BlocListenerBaseState._subscribe.<anonymous closure> (package:flutter_bloc/src/bloc_listener.dart:215:24)
+#27     FakeAsync.flushMicrotasks (package:fake_async/fake_async.dart:197:32)
+#28     AutomatedTestWidgetsFlutterBinding.runTest.<anonymous closure> (package:flutter_test/src/binding.dart:1507:17)
+(elided 42 frames from class _AssertionError, dart:async, and package:stack_trace)
+
+The test description was:
+  successful login navigates to home
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+  Test failed. See exception logs above.
+  The test description was: successful login navigates to home
+  
+Retry: Auth Flow Integration Tests Login Flow successful login navigates to home
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Ôò×ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following assertion was thrown running a test:
+No GoRouter found in context
+'package:go_router/src/router.dart':
+Failed assertion: line 507 pos 12: 'inherited != null'
+
+When the exception was thrown, this was the stack:
+#2      GoRouter.of (package:go_router/src/router.dart:507:12)
+#3      GoRouterHelper.go (package:go_router/src/misc/extensions.dart:25:16)
+#4      _LoginPageState.build.<anonymous closure> (package:martial_arts_streaming/features/auth/presentation/pages/login_page.dart:79:21)
+#5      _BlocListenerBaseState._subscribe.<anonymous closure> (package:flutter_bloc/src/bloc_listener.dart:215:24)
+#32     FakeAsync.flushMicrotasks (package:fake_async/fake_async.dart:197:32)
+#33     AutomatedTestWidgetsFlutterBinding.runTest.<anonymous closure> (package:flutter_test/src/binding.dart:1507:17)
+(elided 51 frames from class _AssertionError, dart:async, and package:stack_trace)
+
+The test description was:
+  successful login navigates to home
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+00:13 +60 -1: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/security/penetration/penetration_test.dart: (setUpAll)
+00:13 +60 -1: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow successful login navigates to home [E]
+  Test failed. See exception logs above.
+  The test description was: successful login navigates to home
+  
+00:13 +60 -1: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow shows error message on invalid credentials
+00:13 +61 -1: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow shows error message on invalid credentials
+00:13 +62 -1: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow shows error message on invalid credentials
+00:13 +63 -1: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow shows error message on invalid credentials
+00:13 +64 -1: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow shows error message on invalid credentials
+00:13 +65 -1: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow shows error message on invalid credentials
+00:13 +65 -2: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow shows error message on invalid credentials
+00:13 +65 -2: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/security/penetration/penetration_test.dart: Penetration Tests SQL Injection Attempts should prevent SQL injection in login [E]
+  Expected: false
+    Actual: <true>
+  Should reject SQL injection: 1; DELETE FROM videos WHERE 1=1
+  
+  package:matcher                                        expect
+  package:flutter_test/src/widget_tester.dart 480:18     expect
+  test\security\penetration\penetration_test.dart 93:11  main.<fn>.<fn>.<fn>
+  
+Retry: Penetration Tests SQL Injection Attempts should prevent SQL injection in login
+00:13 +65 -2: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow shows error message on invalid credentials
+00:13 +65 -2: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/security/penetration/penetration_test.dart: Penetration Tests SQL Injection Attempts should prevent SQL injection in login [E]
+  Expected: false
+    Actual: <true>
+  Should reject SQL injection: 1; DELETE FROM videos WHERE 1=1
+  
+  package:matcher                                        expect
+  package:flutter_test/src/widget_tester.dart 480:18     expect
+  test\security\penetration\penetration_test.dart 93:11  main.<fn>.<fn>.<fn>
+  
+Retry: Penetration Tests SQL Injection Attempts should prevent SQL injection in login
+00:13 +65 -2: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow shows error message on invalid credentials
+00:13 +65 -2: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/security/penetration/penetration_test.dart: Penetration Tests SQL Injection Attempts should prevent SQL injection in login [E]
+  Expected: false
+    Actual: <true>
+  Should reject SQL injection: 1; DELETE FROM videos WHERE 1=1
+  
+  package:matcher                                        expect
+  package:flutter_test/src/widget_tester.dart 480:18     expect
+  test\security\penetration\penetration_test.dart 93:11  main.<fn>.<fn>.<fn>
+  
+00:13 +66 -2: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow shows error message on invalid credentials
+00:13 +67 -2: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow shows error message on invalid credentials
+00:13 +68 -2: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow shows error message on invalid credentials
+00:13 +69 -2: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow shows error message on invalid credentials
+00:13 +70 -2: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow shows error message on invalid credentials
+00:13 +71 -2: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow shows error message on invalid credentials
+00:13 +72 -2: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow shows error message on invalid credentials
+00:13 +73 -2: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow shows error message on invalid credentials
+00:13 +74 -2: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow shows error message on invalid credentials
+00:13 +75 -2: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow shows error message on invalid credentials
+00:13 +76 -2: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow shows error message on invalid credentials
+00:13 +77 -2: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow shows error message on invalid credentials
+00:13 +78 -2: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow shows error message on invalid credentials
+00:13 +79 -2: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow shows error message on invalid credentials
+00:13 +80 -2: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow shows error message on invalid credentials
+00:13 +81 -2: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow shows error message on invalid credentials
+00:13 +82 -2: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow shows error message on invalid credentials
+00:13 +83 -2: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow shows error message on invalid credentials
+00:13 +84 -2: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow shows error message on invalid credentials
+00:13 +85 -2: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow shows error message on invalid credentials
+00:13 +86 -2: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow shows error message on invalid credentials
+00:13 +87 -2: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow shows error message on invalid credentials
+00:13 +88 -2: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow shows network error when offline
+00:14 +89 -2: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow validates email format before submission
+00:14 +90 -2: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow validates password is not empty
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Ôò×ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following TestFailure was thrown running a test:
+Expected: exactly one matching candidate
+  Actual: _TextContainingWidgetFinder:<Found 0 widgets with text containing password: []>
+   Which: means none were found but one was expected
+
+When the exception was thrown, this was the stack:
+#4      main.<anonymous closure>.<anonymous closure>.<anonymous closure> (file:///C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart:173:9)
+<asynchronous suspension>
+#5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:189:15)
+<asynchronous suspension>
+#6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1032:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+This was caught by the test expectation on the following line:
+  file:///C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart line 173
+The test description was:
+  validates password is not empty
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+00:17 +90 -3: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow validates password is not empty [E]
+  Test failed. See exception logs above.
+  The test description was: validates password is not empty
+  
+Retry: Auth Flow Integration Tests Login Flow validates password is not empty
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Ôò×ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following TestFailure was thrown running a test:
+Expected: exactly one matching candidate
+  Actual: _TextContainingWidgetFinder:<Found 0 widgets with text containing password: []>
+   Which: means none were found but one was expected
+
+When the exception was thrown, this was the stack:
+#4      main.<anonymous closure>.<anonymous closure>.<anonymous closure> (file:///C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart:173:9)
+<asynchronous suspension>
+#5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:189:15)
+<asynchronous suspension>
+#6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1032:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+This was caught by the test expectation on the following line:
+  file:///C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart line 173
+The test description was:
+  validates password is not empty
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+  Test failed. See exception logs above.
+  The test description was: validates password is not empty
+  
+Retry: Auth Flow Integration Tests Login Flow validates password is not empty
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Ôò×ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following TestFailure was thrown running a test:
+Expected: exactly one matching candidate
+  Actual: _TextContainingWidgetFinder:<Found 0 widgets with text containing password: []>
+   Which: means none were found but one was expected
+
+When the exception was thrown, this was the stack:
+#4      main.<anonymous closure>.<anonymous closure>.<anonymous closure> (file:///C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart:173:9)
+<asynchronous suspension>
+#5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:189:15)
+<asynchronous suspension>
+#6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1032:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+This was caught by the test expectation on the following line:
+  file:///C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart line 173
+The test description was:
+  validates password is not empty
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+  Test failed. See exception logs above.
+  The test description was: validates password is not empty
+  
+00:17 +90 -3: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow shows loading indicator during login
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Ôò×ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following assertion was thrown running a test:
+No GoRouter found in context
+'package:go_router/src/router.dart':
+Failed assertion: line 507 pos 12: 'inherited != null'
+
+When the exception was thrown, this was the stack:
+#2      GoRouter.of (package:go_router/src/router.dart:507:12)
+#3      GoRouterHelper.go (package:go_router/src/misc/extensions.dart:25:16)
+#4      _LoginPageState.build.<anonymous closure> (package:martial_arts_streaming/features/auth/presentation/pages/login_page.dart:79:21)
+#5      _BlocListenerBaseState._subscribe.<anonymous closure> (package:flutter_bloc/src/bloc_listener.dart:215:24)
+#22     FakeAsync.flushMicrotasks (package:fake_async/fake_async.dart:197:32)
+#23     FakeAsync._fireTimersWhile (package:fake_async/fake_async.dart:245:7)
+#24     FakeAsync.elapse (package:fake_async/fake_async.dart:141:5)
+#25     AutomatedTestWidgetsFlutterBinding.pump.<anonymous closure> (package:flutter_test/src/binding.dart:1279:28)
+#28     TestAsyncUtils.guard (package:flutter_test/src/test_async_utils.dart:74:41)
+#29     AutomatedTestWidgetsFlutterBinding.pump (package:flutter_test/src/binding.dart:1275:27)
+#30     WidgetTester.pumpAndSettle.<anonymous closure> (package:flutter_test/src/widget_tester.dart:726:23)
+<asynchronous suspension>
+#31     TestAsyncUtils.guard.<anonymous closure> (package:flutter_test/src/test_async_utils.dart:120:7)
+<asynchronous suspension>
+#32     main.<anonymous closure>.<anonymous closure>.<anonymous closure> (file:///C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart:203:9)
+<asynchronous suspension>
+#33     testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:189:15)
+<asynchronous suspension>
+#34     TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1032:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided 21 frames from class _AssertionError, dart:async, and package:stack_trace)
+
+The test description was:
+  shows loading indicator during login
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+test/security/auth/auth_security_test.dart:240:58: Error: A non-null value must be returned since the return type 
+'Response<dynamic>' doesn't allow null.
+ - 'Response' is from 'package:dio/src/response.dart' 
+('../../../../AppData/Local/Pub/Cache/hosted/pub.dev/dio-5.9.0/lib/src/response.dart').
+        when(() => mockApiClient.post(any())).thenAnswer((_) async {});
+                                                         ^
+00:19 +90 -5: loading C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/security/auth/auth_security_test.dart [E]
+  Failed to load "C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/security/auth/auth_security_test.dart": Compilation failed for testPath=C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/security/auth/auth_security_test.dart
+00:20 +90 -5: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/slow/performance_test.dart: Performance Tests Startup Performance cold start should complete within 3 seconds
+00:20 +91 -5: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/slow/performance_test.dart: Performance Tests Startup Performance warm start should complete within 1 second
+00:20 +91 -5: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow shows loading indicator during login [E]
+  Test failed. See exception logs above.
+  The test description was: shows loading indicator during login
+  
+Retry: Auth Flow Integration Tests Login Flow shows loading indicator during login
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Ôò×ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following assertion was thrown running a test:
+No GoRouter found in context
+'package:go_router/src/router.dart':
+Failed assertion: line 507 pos 12: 'inherited != null'
+
+When the exception was thrown, this was the stack:
+#2      GoRouter.of (package:go_router/src/router.dart:507:12)
+#3      GoRouterHelper.go (package:go_router/src/misc/extensions.dart:25:16)
+#4      _LoginPageState.build.<anonymous closure> (package:martial_arts_streaming/features/auth/presentation/pages/login_page.dart:79:21)
+#5      _BlocListenerBaseState._subscribe.<anonymous closure> (package:flutter_bloc/src/bloc_listener.dart:215:24)
+#27     FakeAsync.flushMicrotasks (package:fake_async/fake_async.dart:197:32)
+#28     FakeAsync._fireTimersWhile (package:fake_async/fake_async.dart:245:7)
+#29     FakeAsync.elapse (package:fake_async/fake_async.dart:141:5)
+#30     AutomatedTestWidgetsFlutterBinding.pump.<anonymous closure> (package:flutter_test/src/binding.dart:1279:28)
+#33     TestAsyncUtils.guard (package:flutter_test/src/test_async_utils.dart:74:41)
+#34     AutomatedTestWidgetsFlutterBinding.pump (package:flutter_test/src/binding.dart:1275:27)
+#35     WidgetTester.pumpAndSettle.<anonymous closure> (package:flutter_test/src/widget_tester.dart:726:23)
+<asynchronous suspension>
+#36     TestAsyncUtils.guard.<anonymous closure> (package:flutter_test/src/test_async_utils.dart:120:7)
+<asynchronous suspension>
+#37     main.<anonymous closure>.<anonymous closure>.<anonymous closure> (file:///C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart:203:9)
+<asynchronous suspension>
+#38     testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:189:15)
+<asynchronous suspension>
+#39     TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1032:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided 26 frames from class _AssertionError, dart:async, and package:stack_trace)
+
+The test description was:
+  shows loading indicator during login
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+00:20 +91 -5: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/slow/performance_test.dart: Performance Tests Startup Performance warm start should complete within 1 second
+00:20 +91 -5: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow shows loading indicator during login [E]
+  Test failed. See exception logs above.
+  The test description was: shows loading indicator during login
+  
+Retry: Auth Flow Integration Tests Login Flow shows loading indicator during login
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Ôò×ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following assertion was thrown running a test:
+No GoRouter found in context
+'package:go_router/src/router.dart':
+Failed assertion: line 507 pos 12: 'inherited != null'
+
+When the exception was thrown, this was the stack:
+#2      GoRouter.of (package:go_router/src/router.dart:507:12)
+#3      GoRouterHelper.go (package:go_router/src/misc/extensions.dart:25:16)
+#4      _LoginPageState.build.<anonymous closure> (package:martial_arts_streaming/features/auth/presentation/pages/login_page.dart:79:21)
+#5      _BlocListenerBaseState._subscribe.<anonymous closure> (package:flutter_bloc/src/bloc_listener.dart:215:24)
+#32     FakeAsync.flushMicrotasks (package:fake_async/fake_async.dart:197:32)
+#33     FakeAsync._fireTimersWhile (package:fake_async/fake_async.dart:245:7)
+#34     FakeAsync.elapse (package:fake_async/fake_async.dart:141:5)
+#35     AutomatedTestWidgetsFlutterBinding.pump.<anonymous closure> (package:flutter_test/src/binding.dart:1279:28)
+#38     TestAsyncUtils.guard (package:flutter_test/src/test_async_utils.dart:74:41)
+#39     AutomatedTestWidgetsFlutterBinding.pump (package:flutter_test/src/binding.dart:1275:27)
+#40     WidgetTester.pumpAndSettle.<anonymous closure> (package:flutter_test/src/widget_tester.dart:726:23)
+<asynchronous suspension>
+#41     TestAsyncUtils.guard.<anonymous closure> (package:flutter_test/src/test_async_utils.dart:120:7)
+<asynchronous suspension>
+#42     main.<anonymous closure>.<anonymous closure>.<anonymous closure> (file:///C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart:203:9)
+<asynchronous suspension>
+#43     testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:189:15)
+<asynchronous suspension>
+#44     TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1032:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided 31 frames from class _AssertionError, dart:async, and package:stack_trace)
+
+The test description was:
+  shows loading indicator during login
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+00:20 +91 -5: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/slow/performance_test.dart: Performance Tests Startup Performance warm start should complete within 1 second
+00:20 +91 -5: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow shows loading indicator during login [E]
+  Test failed. See exception logs above.
+  The test description was: shows loading indicator during login
+  
+00:20 +92 -5: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow remember me checkbox works correctly
+00:20 +93 -5: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow remember me checkbox works correctly
+00:20 +94 -5: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow remember me checkbox works correctly
+00:20 +95 -5: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow remember me checkbox works correctly
+00:20 +96 -5: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow remember me checkbox works correctly
+00:20 +97 -5: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow remember me checkbox works correctly
+00:20 +98 -5: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow remember me checkbox works correctly
+00:20 +99 -5: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow remember me checkbox works correctly
+00:20 +100 -5: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow remember me checkbox works correctly
+00:21 +101 -5: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow remember me checkbox works correctly
+00:21 +102 -5: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow remember me checkbox works correctly
+00:21 +103 -5: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow remember me checkbox works correctly
+00:21 +104 -5: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow remember me checkbox works correctly
+00:21 +105 -5: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow remember me checkbox works correctly
+00:21 +106 -5: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow remember me checkbox works correctly
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Ôò×ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following assertion was thrown running a test:
+No GoRouter found in context
+'package:go_router/src/router.dart':
+Failed assertion: line 507 pos 12: 'inherited != null'
+
+When the exception was thrown, this was the stack:
+#2      GoRouter.of (package:go_router/src/router.dart:507:12)
+#3      GoRouterHelper.go (package:go_router/src/misc/extensions.dart:25:16)
+#4      _LoginPageState.build.<anonymous closure> (package:martial_arts_streaming/features/auth/presentation/pages/login_page.dart:79:21)
+#5      _BlocListenerBaseState._subscribe.<anonymous closure> (package:flutter_bloc/src/bloc_listener.dart:215:24)
+#22     FakeAsync.flushMicrotasks (package:fake_async/fake_async.dart:197:32)
+#23     AutomatedTestWidgetsFlutterBinding.runTest.<anonymous closure> (package:flutter_test/src/binding.dart:1507:17)
+(elided 33 frames from class _AssertionError, dart:async, and package:stack_trace)
+
+The test description was:
+  remember me checkbox works correctly
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+00:21 +107 -5: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow remember me checkbox works correctly
+00:21 +108 -5: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow remember me checkbox works correctly
+00:21 +109 -5: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow remember me checkbox works correctly
+00:21 +110 -5: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow remember me checkbox works correctly
+00:21 +111 -5: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow remember me checkbox works correctly
+00:21 +112 -5: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow remember me checkbox works correctly
+00:21 +113 -5: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow remember me checkbox works correctly
+00:21 +114 -5: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow remember me checkbox works correctly
+00:22 +114 -6: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/slow/performance_test.dart: Performance Tests Load Testing should handle rapid state changes
+00:23 +114 -6: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow remember me checkbox works correctly [E]
+  Test failed. See exception logs above.
+  The test description was: remember me checkbox works correctly
+  
+Retry: Auth Flow Integration Tests Login Flow remember me checkbox works correctly
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Ôò×ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following assertion was thrown running a test:
+No GoRouter found in context
+'package:go_router/src/router.dart':
+Failed assertion: line 507 pos 12: 'inherited != null'
+
+When the exception was thrown, this was the stack:
+#2      GoRouter.of (package:go_router/src/router.dart:507:12)
+#3      GoRouterHelper.go (package:go_router/src/misc/extensions.dart:25:16)
+#4      _LoginPageState.build.<anonymous closure> (package:martial_arts_streaming/features/auth/presentation/pages/login_page.dart:79:21)
+#5      _BlocListenerBaseState._subscribe.<anonymous closure> (package:flutter_bloc/src/bloc_listener.dart:215:24)
+#27     FakeAsync.flushMicrotasks (package:fake_async/fake_async.dart:197:32)
+#28     AutomatedTestWidgetsFlutterBinding.runTest.<anonymous closure> (package:flutter_test/src/binding.dart:1507:17)
+(elided 42 frames from class _AssertionError, dart:async, and package:stack_trace)
+
+The test description was:
+  remember me checkbox works correctly
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+00:23 +114 -6: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/slow/performance_test.dart: Performance Tests Load Testing should handle rapid state changes
+00:23 +114 -6: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow remember me checkbox works correctly [E]
+  Test failed. See exception logs above.
+  The test description was: remember me checkbox works correctly
+  
+Retry: Auth Flow Integration Tests Login Flow remember me checkbox works correctly
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Ôò×ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following assertion was thrown running a test:
+No GoRouter found in context
+'package:go_router/src/router.dart':
+Failed assertion: line 507 pos 12: 'inherited != null'
+
+When the exception was thrown, this was the stack:
+#2      GoRouter.of (package:go_router/src/router.dart:507:12)
+#3      GoRouterHelper.go (package:go_router/src/misc/extensions.dart:25:16)
+#4      _LoginPageState.build.<anonymous closure> (package:martial_arts_streaming/features/auth/presentation/pages/login_page.dart:79:21)
+#5      _BlocListenerBaseState._subscribe.<anonymous closure> (package:flutter_bloc/src/bloc_listener.dart:215:24)
+#32     FakeAsync.flushMicrotasks (package:fake_async/fake_async.dart:197:32)
+#33     AutomatedTestWidgetsFlutterBinding.runTest.<anonymous closure> (package:flutter_test/src/binding.dart:1507:17)
+(elided 51 frames from class _AssertionError, dart:async, and package:stack_trace)
+
+The test description was:
+  remember me checkbox works correctly
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+00:23 +114 -6: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/slow/performance_test.dart: Performance Tests Load Testing should handle rapid state changes
+00:23 +114 -6: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow remember me checkbox works correctly [E]
+  Test failed. See exception logs above.
+  The test description was: remember me checkbox works correctly
+  
+00:23 +115 -6: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow password visibility toggle works
+00:23 +116 -6: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow password visibility toggle works
+test/static_analysis/code_quality_test.dart:321:15: Error: 'usesComputation' isn't a type.
+        const usesComputation caching = true;
+              ^^^^^^^^^^^^^^^
+test/static_analysis/code_quality_test.dart:322:16: Error: Undefined name 'usesCaching'.
+        expect(usesCaching, isTrue);
+               ^^^^^^^^^^^
+00:24 +116 -6: loading C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/static_analysis/code_quality_test.dart
+Retrying load of C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/static_analysis/code_quality_test.dart in 1s (1 remaining)
+00:24 +116 -6: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow password visibility toggle works
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Ôò×ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following _TypeError was thrown running a test:
+type 'TextFormField' is not a subtype of type 'TextField' in type cast
+
+When the exception was thrown, this was the stack:
+#0      WidgetController.widget (package:flutter_test/src/controller.dart:809:44)
+#1      main.<anonymous closure>.<anonymous closure>.<anonymous closure> (file:///C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart:244:34)
+<asynchronous suspension>
+#2      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:189:15)
+<asynchronous suspension>
+#3      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1032:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+The test description was:
+  password visibility toggle works
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+00:24 +116 -7: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Login Flow password visibility toggle works [E]
+  Test failed. See exception logs above.
+  The test description was: password visibility toggle works
+  
+Retry: Auth Flow Integration Tests Login Flow password visibility toggle works
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Ôò×ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following _TypeError was thrown running a test:
+type 'TextFormField' is not a subtype of type 'TextField' in type cast
+
+When the exception was thrown, this was the stack:
+#0      WidgetController.widget (package:flutter_test/src/controller.dart:809:44)
+#1      main.<anonymous closure>.<anonymous closure>.<anonymous closure> (file:///C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart:244:34)
+<asynchronous suspension>
+#2      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:189:15)
+<asynchronous suspension>
+#3      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1032:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+The test description was:
+  password visibility toggle works
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+  Test failed. See exception logs above.
+  The test description was: password visibility toggle works
+  
+Retry: Auth Flow Integration Tests Login Flow password visibility toggle works
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Ôò×ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following _TypeError was thrown running a test:
+type 'TextFormField' is not a subtype of type 'TextField' in type cast
+
+When the exception was thrown, this was the stack:
+#0      WidgetController.widget (package:flutter_test/src/controller.dart:809:44)
+#1      main.<anonymous closure>.<anonymous closure>.<anonymous closure> (file:///C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart:244:34)
+<asynchronous suspension>
+#2      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:189:15)
+<asynchronous suspension>
+#3      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1032:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+The test description was:
+  password visibility toggle works
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+  Test failed. See exception logs above.
+  The test description was: password visibility toggle works
+  
+00:24 +116 -7: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Navigation can navigate to registration page
+
+Warning: A call to tap() with finder "Found 1 widget with key [<'register_link'>]: [
+  TextButton-[<'register_link'>](dependencies: [InheritedCupertinoTheme, MediaQuery, _InheritedTheme, _LocalizationsScope-[GlobalKey#b1709]], state: _ButtonStyleState#71a2b),
+]" derived an Offset (Offset(563.9, 744.0)) that would not hit test on the specified widget.
+Maybe the widget is actually off-screen, or another widget is obscuring it, or the widget cannot receive pointer events.
+Indeed, Offset(563.9, 744.0) is outside the bounds of the root of the render tree, Size(800.0, 600.0).
+The finder corresponds to this RenderBox: RenderSemanticsAnnotations#9a37a relayoutBoundary=up15
+The hit test result at that offset is: HitTestResult(HitTestEntry<HitTestTarget>#9dd24(_ReusableRenderView#97d0e), HitTestEntry<HitTestTarget>#31024(<AutomatedTestWidgetsFlutterBinding>))
+#0      WidgetController._getElementPoint (package:flutter_test/src/controller.dart:1941:25)
+#1      WidgetController.getCenter (package:flutter_test/src/controller.dart:1792:12)
+#2      WidgetController.tap (package:flutter_test/src/controller.dart:1040:18)
+#3      main.<anonymous closure>.<anonymous closure>.<anonymous closure> (file:///C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart:263:22)
+<asynchronous suspension>
+#4      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:189:15)
+<asynchronous suspension>
+#5      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1032:5)
+<asynchronous suspension>
+#6      StackZoneSpecification._registerCallback.<anonymous closure> (package:stack_trace/src/stack_zone_specification.dart:114:42)
+<asynchronous suspension>
+To silence this warning, pass "warnIfMissed: false" to "tap()".
+To make this warning fatal, set WidgetController.hitTestWarningShouldBeFatal to true.
+
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Ôò×ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following TestFailure was thrown running a test:
+Expected: exactly one matching candidate
+  Actual: _TextContainingWidgetFinder:<Found 0 widgets with text containing Create Account: []>
+   Which: means none were found but one was expected
+
+When the exception was thrown, this was the stack:
+#4      main.<anonymous closure>.<anonymous closure>.<anonymous closure> (file:///C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart:267:9)
+<asynchronous suspension>
+#5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:189:15)
+<asynchronous suspension>
+#6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1032:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+This was caught by the test expectation on the following line:
+  file:///C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart line 267
+The test description was:
+  can navigate to registration page
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+00:26 +116 -8: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Navigation can navigate to registration page [E]
+  Test failed. See exception logs above.
+  The test description was: can navigate to registration page
+  
+Retry: Auth Flow Integration Tests Navigation can navigate to registration page
+
+Warning: A call to tap() with finder "Found 1 widget with key [<'register_link'>]: [
+  TextButton-[<'register_link'>](dependencies: [InheritedCupertinoTheme, MediaQuery, _InheritedTheme, _LocalizationsScope-[GlobalKey#92c40]], state: _ButtonStyleState#02b0b),
+]" derived an Offset (Offset(563.9, 744.0)) that would not hit test on the specified widget.
+Maybe the widget is actually off-screen, or another widget is obscuring it, or the widget cannot receive pointer events.
+Indeed, Offset(563.9, 744.0) is outside the bounds of the root of the render tree, Size(800.0, 600.0).
+The finder corresponds to this RenderBox: RenderSemanticsAnnotations#70ce3 relayoutBoundary=up15
+The hit test result at that offset is: HitTestResult(HitTestEntry<HitTestTarget>#23dcd(_ReusableRenderView#97d0e), HitTestEntry<HitTestTarget>#3e9b3(<AutomatedTestWidgetsFlutterBinding>))
+#0      WidgetController._getElementPoint (package:flutter_test/src/controller.dart:1941:25)
+#1      WidgetController.getCenter (package:flutter_test/src/controller.dart:1792:12)
+#2      WidgetController.tap (package:flutter_test/src/controller.dart:1040:18)
+#3      main.<anonymous closure>.<anonymous closure>.<anonymous closure> (file:///C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart:263:22)
+<asynchronous suspension>
+#4      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:189:15)
+<asynchronous suspension>
+#5      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1032:5)
+<asynchronous suspension>
+#6      StackZoneSpecification._registerCallback.<anonymous closure> (package:stack_trace/src/stack_zone_specification.dart:114:42)
+<asynchronous suspension>
+To silence this warning, pass "warnIfMissed: false" to "tap()".
+To make this warning fatal, set WidgetController.hitTestWarningShouldBeFatal to true.
+
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Ôò×ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following TestFailure was thrown running a test:
+Expected: exactly one matching candidate
+  Actual: _TextContainingWidgetFinder:<Found 0 widgets with text containing Create Account: []>
+   Which: means none were found but one was expected
+
+When the exception was thrown, this was the stack:
+#4      main.<anonymous closure>.<anonymous closure>.<anonymous closure> (file:///C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart:267:9)
+<asynchronous suspension>
+#5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:189:15)
+<asynchronous suspension>
+#6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1032:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+This was caught by the test expectation on the following line:
+  file:///C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart line 267
+The test description was:
+  can navigate to registration page
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+  Test failed. See exception logs above.
+  The test description was: can navigate to registration page
+  
+Retry: Auth Flow Integration Tests Navigation can navigate to registration page
+
+Warning: A call to tap() with finder "Found 1 widget with key [<'register_link'>]: [
+  TextButton-[<'register_link'>](dependencies: [InheritedCupertinoTheme, MediaQuery, _InheritedTheme, _LocalizationsScope-[GlobalKey#bed8a]], state: _ButtonStyleState#dfab2),
+]" derived an Offset (Offset(563.9, 744.0)) that would not hit test on the specified widget.
+Maybe the widget is actually off-screen, or another widget is obscuring it, or the widget cannot receive pointer events.
+Indeed, Offset(563.9, 744.0) is outside the bounds of the root of the render tree, Size(800.0, 600.0).
+The finder corresponds to this RenderBox: RenderSemanticsAnnotations#19011 relayoutBoundary=up15
+The hit test result at that offset is: HitTestResult(HitTestEntry<HitTestTarget>#2f77c(_ReusableRenderView#97d0e), HitTestEntry<HitTestTarget>#4ed90(<AutomatedTestWidgetsFlutterBinding>))
+#0      WidgetController._getElementPoint (package:flutter_test/src/controller.dart:1941:25)
+#1      WidgetController.getCenter (package:flutter_test/src/controller.dart:1792:12)
+#2      WidgetController.tap (package:flutter_test/src/controller.dart:1040:18)
+#3      main.<anonymous closure>.<anonymous closure>.<anonymous closure> (file:///C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart:263:22)
+<asynchronous suspension>
+#4      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:189:15)
+<asynchronous suspension>
+#5      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1032:5)
+<asynchronous suspension>
+#6      StackZoneSpecification._registerCallback.<anonymous closure> (package:stack_trace/src/stack_zone_specification.dart:114:42)
+<asynchronous suspension>
+To silence this warning, pass "warnIfMissed: false" to "tap()".
+To make this warning fatal, set WidgetController.hitTestWarningShouldBeFatal to true.
+
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Ôò×ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following TestFailure was thrown running a test:
+Expected: exactly one matching candidate
+  Actual: _TextContainingWidgetFinder:<Found 0 widgets with text containing Create Account: []>
+   Which: means none were found but one was expected
+
+When the exception was thrown, this was the stack:
+#4      main.<anonymous closure>.<anonymous closure>.<anonymous closure> (file:///C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart:267:9)
+<asynchronous suspension>
+#5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:189:15)
+<asynchronous suspension>
+#6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1032:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+This was caught by the test expectation on the following line:
+  file:///C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart line 267
+The test description was:
+  can navigate to registration page
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+  Test failed. See exception logs above.
+  The test description was: can navigate to registration page
+  
+00:26 +116 -8: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Navigation can navigate to forgot password page
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY GESTURE Ôò×ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following assertion was thrown while handling a gesture:
+No GoRouter found in context
+'package:go_router/src/router.dart':
+Failed assertion: line 507 pos 12: 'inherited != null'
+
+When the exception was thrown, this was the stack:
+#2      GoRouter.of (package:go_router/src/router.dart:507:12)
+#3      GoRouterHelper.push (package:go_router/src/misc/extensions.dart:50:16)
+#4      _LoginPageState._onForgotPassword (package:martial_arts_streaming/features/auth/presentation/pages/login_page.dart:65:13)
+#5      _InkResponseState.handleTap (package:flutter/src/material/ink_well.dart:1170:21)
+#6      GestureRecognizer.invokeCallback (package:flutter/src/gestures/recognizer.dart:351:24)
+#7      TapGestureRecognizer.handleTapUp (package:flutter/src/gestures/tap.dart:656:11)
+#8      BaseTapGestureRecognizer._checkUp (package:flutter/src/gestures/tap.dart:313:5)
+#9      BaseTapGestureRecognizer.acceptGesture (package:flutter/src/gestures/tap.dart:283:7)
+#10     GestureArenaManager.sweep (package:flutter/src/gestures/arena.dart:169:27)
+#11     GestureBinding.handleEvent (package:flutter/src/gestures/binding.dart:505:20)
+#12     GestureBinding.dispatchEvent (package:flutter/src/gestures/binding.dart:481:22)
+#13     RendererBinding.dispatchEvent (package:flutter/src/rendering/binding.dart:450:11)
+#14     GestureBinding._handlePointerEventImmediately (package:flutter/src/gestures/binding.dart:426:7)
+#15     GestureBinding.handlePointerEvent (package:flutter/src/gestures/binding.dart:389:5)
+#16     TestWidgetsFlutterBinding.handlePointerEventForSource.<anonymous closure> (package:flutter_test/src/binding.dart:677:42)
+#17     TestWidgetsFlutterBinding.withPointerEventSource (package:flutter_test/src/binding.dart:687:11)
+#18     TestWidgetsFlutterBinding.handlePointerEventForSource (package:flutter_test/src/binding.dart:677:5)
+#19     WidgetTester.sendEventToBinding.<anonymous closure> (package:flutter_test/src/widget_tester.dart:874:15)
+#22     TestAsyncUtils.guard (package:flutter_test/src/test_async_utils.dart:74:41)
+#23     WidgetTester.sendEventToBinding (package:flutter_test/src/widget_tester.dart:873:27)
+#24     TestGesture.up.<anonymous closure> (package:flutter_test/src/test_pointer.dart:558:26)
+#27     TestAsyncUtils.guard (package:flutter_test/src/test_async_utils.dart:74:41)
+#28     TestGesture.up (package:flutter_test/src/test_pointer.dart:551:27)
+#29     WidgetController.tapAt.<anonymous closure> (package:flutter_test/src/controller.dart:1093:21)
+<asynchronous suspension>
+#30     TestAsyncUtils.guard.<anonymous closure> (package:flutter_test/src/test_async_utils.dart:120:7)
+<asynchronous suspension>
+#31     main.<anonymous closure>.<anonymous closure>.<anonymous closure> (file:///C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart:275:9)
+<asynchronous suspension>
+#32     testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:189:15)
+<asynchronous suspension>
+#33     TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1032:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided 7 frames from class _AssertionError, dart:async, and package:stack_trace)
+
+Handler: "onTap"
+Recognizer:
+  TapGestureRecognizer#fe4a7
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Ôò×ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following TestFailure was thrown running a test:
+Expected: exactly one matching candidate
+  Actual: _TextContainingWidgetFinder:<Found 0 widgets with text containing Reset Password: []>
+   Which: means none were found but one was expected
+
+When the exception was thrown, this was the stack:
+#4      main.<anonymous closure>.<anonymous closure>.<anonymous closure> (file:///C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart:279:9)
+<asynchronous suspension>
+#5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:189:15)
+<asynchronous suspension>
+#6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1032:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+This was caught by the test expectation on the following line:
+  file:///C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart line 279
+The test description was:
+  can navigate to forgot password page
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Ôò×ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following message was thrown:
+Multiple exceptions (2) were detected during the running of the current test, and at least one was
+unexpected.
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+00:27 +116 -9: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Navigation can navigate to forgot password page [E]
+  Test failed. See exception logs above.
+  The test description was: can navigate to forgot password page
+  
+Retry: Auth Flow Integration Tests Navigation can navigate to forgot password page
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY GESTURE Ôò×ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following assertion was thrown while handling a gesture:
+No GoRouter found in context
+'package:go_router/src/router.dart':
+Failed assertion: line 507 pos 12: 'inherited != null'
+
+When the exception was thrown, this was the stack:
+#2      GoRouter.of (package:go_router/src/router.dart:507:12)
+#3      GoRouterHelper.push (package:go_router/src/misc/extensions.dart:50:16)
+#4      _LoginPageState._onForgotPassword (package:martial_arts_streaming/features/auth/presentation/pages/login_page.dart:65:13)
+#5      _InkResponseState.handleTap (package:flutter/src/material/ink_well.dart:1170:21)
+#6      GestureRecognizer.invokeCallback (package:flutter/src/gestures/recognizer.dart:351:24)
+#7      TapGestureRecognizer.handleTapUp (package:flutter/src/gestures/tap.dart:656:11)
+#8      BaseTapGestureRecognizer._checkUp (package:flutter/src/gestures/tap.dart:313:5)
+#9      BaseTapGestureRecognizer.acceptGesture (package:flutter/src/gestures/tap.dart:283:7)
+#10     GestureArenaManager.sweep (package:flutter/src/gestures/arena.dart:169:27)
+#11     GestureBinding.handleEvent (package:flutter/src/gestures/binding.dart:505:20)
+#12     GestureBinding.dispatchEvent (package:flutter/src/gestures/binding.dart:481:22)
+#13     RendererBinding.dispatchEvent (package:flutter/src/rendering/binding.dart:450:11)
+#14     GestureBinding._handlePointerEventImmediately (package:flutter/src/gestures/binding.dart:426:7)
+#15     GestureBinding.handlePointerEvent (package:flutter/src/gestures/binding.dart:389:5)
+#16     TestWidgetsFlutterBinding.handlePointerEventForSource.<anonymous closure> (package:flutter_test/src/binding.dart:677:42)
+#17     TestWidgetsFlutterBinding.withPointerEventSource (package:flutter_test/src/binding.dart:687:11)
+#18     TestWidgetsFlutterBinding.handlePointerEventForSource (package:flutter_test/src/binding.dart:677:5)
+#19     WidgetTester.sendEventToBinding.<anonymous closure> (package:flutter_test/src/widget_tester.dart:874:15)
+#22     TestAsyncUtils.guard (package:flutter_test/src/test_async_utils.dart:74:41)
+#23     WidgetTester.sendEventToBinding (package:flutter_test/src/widget_tester.dart:873:27)
+#24     TestGesture.up.<anonymous closure> (package:flutter_test/src/test_pointer.dart:558:26)
+#27     TestAsyncUtils.guard (package:flutter_test/src/test_async_utils.dart:74:41)
+#28     TestGesture.up (package:flutter_test/src/test_pointer.dart:551:27)
+#29     WidgetController.tapAt.<anonymous closure> (package:flutter_test/src/controller.dart:1093:21)
+<asynchronous suspension>
+#30     TestAsyncUtils.guard.<anonymous closure> (package:flutter_test/src/test_async_utils.dart:120:7)
+<asynchronous suspension>
+#31     main.<anonymous closure>.<anonymous closure>.<anonymous closure> (file:///C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart:275:9)
+<asynchronous suspension>
+#32     testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:189:15)
+<asynchronous suspension>
+#33     TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1032:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided 7 frames from class _AssertionError, dart:async, and package:stack_trace)
+
+Handler: "onTap"
+Recognizer:
+  TapGestureRecognizer#97382
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Ôò×ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following TestFailure was thrown running a test:
+Expected: exactly one matching candidate
+  Actual: _TextContainingWidgetFinder:<Found 0 widgets with text containing Reset Password: []>
+   Which: means none were found but one was expected
+
+When the exception was thrown, this was the stack:
+#4      main.<anonymous closure>.<anonymous closure>.<anonymous closure> (file:///C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart:279:9)
+<asynchronous suspension>
+#5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:189:15)
+<asynchronous suspension>
+#6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1032:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+This was caught by the test expectation on the following line:
+  file:///C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart line 279
+The test description was:
+  can navigate to forgot password page
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Ôò×ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following message was thrown:
+Multiple exceptions (2) were detected during the running of the current test, and at least one was
+unexpected.
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+  Test failed. See exception logs above.
+  The test description was: can navigate to forgot password page
+  
+Retry: Auth Flow Integration Tests Navigation can navigate to forgot password page
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY GESTURE Ôò×ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following assertion was thrown while handling a gesture:
+No GoRouter found in context
+'package:go_router/src/router.dart':
+Failed assertion: line 507 pos 12: 'inherited != null'
+
+When the exception was thrown, this was the stack:
+#2      GoRouter.of (package:go_router/src/router.dart:507:12)
+#3      GoRouterHelper.push (package:go_router/src/misc/extensions.dart:50:16)
+#4      _LoginPageState._onForgotPassword (package:martial_arts_streaming/features/auth/presentation/pages/login_page.dart:65:13)
+#5      _InkResponseState.handleTap (package:flutter/src/material/ink_well.dart:1170:21)
+#6      GestureRecognizer.invokeCallback (package:flutter/src/gestures/recognizer.dart:351:24)
+#7      TapGestureRecognizer.handleTapUp (package:flutter/src/gestures/tap.dart:656:11)
+#8      BaseTapGestureRecognizer._checkUp (package:flutter/src/gestures/tap.dart:313:5)
+#9      BaseTapGestureRecognizer.acceptGesture (package:flutter/src/gestures/tap.dart:283:7)
+#10     GestureArenaManager.sweep (package:flutter/src/gestures/arena.dart:169:27)
+#11     GestureBinding.handleEvent (package:flutter/src/gestures/binding.dart:505:20)
+#12     GestureBinding.dispatchEvent (package:flutter/src/gestures/binding.dart:481:22)
+#13     RendererBinding.dispatchEvent (package:flutter/src/rendering/binding.dart:450:11)
+#14     GestureBinding._handlePointerEventImmediately (package:flutter/src/gestures/binding.dart:426:7)
+#15     GestureBinding.handlePointerEvent (package:flutter/src/gestures/binding.dart:389:5)
+#16     TestWidgetsFlutterBinding.handlePointerEventForSource.<anonymous closure> (package:flutter_test/src/binding.dart:677:42)
+#17     TestWidgetsFlutterBinding.withPointerEventSource (package:flutter_test/src/binding.dart:687:11)
+#18     TestWidgetsFlutterBinding.handlePointerEventForSource (package:flutter_test/src/binding.dart:677:5)
+#19     WidgetTester.sendEventToBinding.<anonymous closure> (package:flutter_test/src/widget_tester.dart:874:15)
+#22     TestAsyncUtils.guard (package:flutter_test/src/test_async_utils.dart:74:41)
+#23     WidgetTester.sendEventToBinding (package:flutter_test/src/widget_tester.dart:873:27)
+#24     TestGesture.up.<anonymous closure> (package:flutter_test/src/test_pointer.dart:558:26)
+#27     TestAsyncUtils.guard (package:flutter_test/src/test_async_utils.dart:74:41)
+#28     TestGesture.up (package:flutter_test/src/test_pointer.dart:551:27)
+#29     WidgetController.tapAt.<anonymous closure> (package:flutter_test/src/controller.dart:1093:21)
+<asynchronous suspension>
+#30     TestAsyncUtils.guard.<anonymous closure> (package:flutter_test/src/test_async_utils.dart:120:7)
+<asynchronous suspension>
+#31     main.<anonymous closure>.<anonymous closure>.<anonymous closure> (file:///C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart:275:9)
+<asynchronous suspension>
+#32     testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:189:15)
+<asynchronous suspension>
+#33     TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1032:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided 7 frames from class _AssertionError, dart:async, and package:stack_trace)
+
+Handler: "onTap"
+Recognizer:
+  TapGestureRecognizer#00252
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Ôò×ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following TestFailure was thrown running a test:
+Expected: exactly one matching candidate
+  Actual: _TextContainingWidgetFinder:<Found 0 widgets with text containing Reset Password: []>
+   Which: means none were found but one was expected
+
+When the exception was thrown, this was the stack:
+#4      main.<anonymous closure>.<anonymous closure>.<anonymous closure> (file:///C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart:279:9)
+<asynchronous suspension>
+#5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:189:15)
+<asynchronous suspension>
+#6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1032:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+This was caught by the test expectation on the following line:
+  file:///C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart line 279
+The test description was:
+  can navigate to forgot password page
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Ôò×ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following message was thrown:
+Multiple exceptions (2) were detected during the running of the current test, and at least one was
+unexpected.
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+  Test failed. See exception logs above.
+  The test description was: can navigate to forgot password page
+  
+00:28 +116 -9: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Social Login Google sign-in button triggers auth
+test/unit/core/network/api_client_test.dart:249:29: Error: Operator '[]' cannot be called on 'Map<String, String>?' 
+because it is potentially null.
+ - 'Map' is from 'dart:core'.
+        expect(response.data['id'], equals('123'));
+                            ^
+test/unit/core/network/api_client_test.dart:250:29: Error: Operator '[]' cannot be called on 'Map<String, String>?' 
+because it is potentially null.
+ - 'Map' is from 'dart:core'.
+        expect(response.data['name'], equals('Test'));
+                            ^
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Ôò×ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following assertion was thrown running a test:
+No GoRouter found in context
+'package:go_router/src/router.dart':
+Failed assertion: line 507 pos 12: 'inherited != null'
+
+When the exception was thrown, this was the stack:
+#2      GoRouter.of (package:go_router/src/router.dart:507:12)
+#3      GoRouterHelper.go (package:go_router/src/misc/extensions.dart:25:16)
+#4      _LoginPageState.build.<anonymous closure> (package:martial_arts_streaming/features/auth/presentation/pages/login_page.dart:79:21)
+#5      _BlocListenerBaseState._subscribe.<anonymous closure> (package:flutter_bloc/src/bloc_listener.dart:215:24)
+#22     FakeAsync.flushMicrotasks (package:fake_async/fake_async.dart:197:32)
+#23     AutomatedTestWidgetsFlutterBinding.runTest.<anonymous closure> (package:flutter_test/src/binding.dart:1507:17)
+(elided 33 frames from class _AssertionError, dart:async, and package:stack_trace)
+
+The test description was:
+  Google sign-in button triggers auth
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+00:29 +116 -10: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Social Login Google sign-in button triggers auth [E]
+  Test failed. See exception logs above.
+  The test description was: Google sign-in button triggers auth
+  
+Retry: Auth Flow Integration Tests Social Login Google sign-in button triggers auth
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Ôò×ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following assertion was thrown running a test:
+No GoRouter found in context
+'package:go_router/src/router.dart':
+Failed assertion: line 507 pos 12: 'inherited != null'
+
+When the exception was thrown, this was the stack:
+#2      GoRouter.of (package:go_router/src/router.dart:507:12)
+#3      GoRouterHelper.go (package:go_router/src/misc/extensions.dart:25:16)
+#4      _LoginPageState.build.<anonymous closure> (package:martial_arts_streaming/features/auth/presentation/pages/login_page.dart:79:21)
+#5      _BlocListenerBaseState._subscribe.<anonymous closure> (package:flutter_bloc/src/bloc_listener.dart:215:24)
+#27     FakeAsync.flushMicrotasks (package:fake_async/fake_async.dart:197:32)
+#28     AutomatedTestWidgetsFlutterBinding.runTest.<anonymous closure> (package:flutter_test/src/binding.dart:1507:17)
+(elided 42 frames from class _AssertionError, dart:async, and package:stack_trace)
+
+The test description was:
+  Google sign-in button triggers auth
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+  Test failed. See exception logs above.
+  The test description was: Google sign-in button triggers auth
+  
+Retry: Auth Flow Integration Tests Social Login Google sign-in button triggers auth
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Ôò×ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following assertion was thrown running a test:
+No GoRouter found in context
+'package:go_router/src/router.dart':
+Failed assertion: line 507 pos 12: 'inherited != null'
+
+When the exception was thrown, this was the stack:
+#2      GoRouter.of (package:go_router/src/router.dart:507:12)
+#3      GoRouterHelper.go (package:go_router/src/misc/extensions.dart:25:16)
+#4      _LoginPageState.build.<anonymous closure> (package:martial_arts_streaming/features/auth/presentation/pages/login_page.dart:79:21)
+#5      _BlocListenerBaseState._subscribe.<anonymous closure> (package:flutter_bloc/src/bloc_listener.dart:215:24)
+#32     FakeAsync.flushMicrotasks (package:fake_async/fake_async.dart:197:32)
+#33     AutomatedTestWidgetsFlutterBinding.runTest.<anonymous closure> (package:flutter_test/src/binding.dart:1507:17)
+(elided 51 frames from class _AssertionError, dart:async, and package:stack_trace)
+
+The test description was:
+  Google sign-in button triggers auth
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+  Test failed. See exception logs above.
+  The test description was: Google sign-in button triggers auth
+  
+00:29 +116 -10: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Social Login Apple sign-in button is visible on iOS
+00:30 +117 -10: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Social Login shows error when Google sign-in fails
+00:30 +118 -10: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Form Interaction can tab between fields
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Ôò×ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following _TypeError was thrown running a test:
+type 'TextFormField' is not a subtype of type 'TextField' in type cast
+
+When the exception was thrown, this was the stack:
+#0      WidgetController.widget (package:flutter_test/src/controller.dart:809:44)
+#1      main.<anonymous closure>.<anonymous closure>.<anonymous closure> (file:///C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart:348:38)
+<asynchronous suspension>
+#2      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:189:15)
+<asynchronous suspension>
+#3      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1032:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+The test description was:
+  can tab between fields
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+00:31 +118 -10: loading C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/core/network/api_client_test.dart
+Retrying load of C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/core/network/api_client_test.dart in 1s (1 remaining)
+00:31 +118 -11: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Form Interaction can tab between fields [E]
+  Test failed. See exception logs above.
+  The test description was: can tab between fields
+  
+Retry: Auth Flow Integration Tests Form Interaction can tab between fields
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Ôò×ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following _TypeError was thrown running a test:
+type 'TextFormField' is not a subtype of type 'TextField' in type cast
+
+When the exception was thrown, this was the stack:
+#0      WidgetController.widget (package:flutter_test/src/controller.dart:809:44)
+#1      main.<anonymous closure>.<anonymous closure>.<anonymous closure> (file:///C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart:348:38)
+<asynchronous suspension>
+#2      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:189:15)
+<asynchronous suspension>
+#3      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1032:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+The test description was:
+  can tab between fields
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+  Test failed. See exception logs above.
+  The test description was: can tab between fields
+  
+Retry: Auth Flow Integration Tests Form Interaction can tab between fields
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Ôò×ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following _TypeError was thrown running a test:
+type 'TextFormField' is not a subtype of type 'TextField' in type cast
+
+When the exception was thrown, this was the stack:
+#0      WidgetController.widget (package:flutter_test/src/controller.dart:809:44)
+#1      main.<anonymous closure>.<anonymous closure>.<anonymous closure> (file:///C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart:348:38)
+<asynchronous suspension>
+#2      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:189:15)
+<asynchronous suspension>
+#3      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1032:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+The test description was:
+  can tab between fields
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+  Test failed. See exception logs above.
+  The test description was: can tab between fields
+  
+00:31 +118 -11: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Form Interaction keyboard submit triggers login
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Ôò×ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following assertion was thrown running a test:
+No GoRouter found in context
+'package:go_router/src/router.dart':
+Failed assertion: line 507 pos 12: 'inherited != null'
+
+When the exception was thrown, this was the stack:
+#2      GoRouter.of (package:go_router/src/router.dart:507:12)
+#3      GoRouterHelper.go (package:go_router/src/misc/extensions.dart:25:16)
+#4      _LoginPageState.build.<anonymous closure> (package:martial_arts_streaming/features/auth/presentation/pages/login_page.dart:79:21)
+#5      _BlocListenerBaseState._subscribe.<anonymous closure> (package:flutter_bloc/src/bloc_listener.dart:215:24)
+#22     FakeAsync.flushMicrotasks (package:fake_async/fake_async.dart:197:32)
+#23     FakeAsync._fireTimersWhile (package:fake_async/fake_async.dart:236:5)
+#24     FakeAsync.elapse (package:fake_async/fake_async.dart:141:5)
+#25     AutomatedTestWidgetsFlutterBinding.pump.<anonymous closure> (package:flutter_test/src/binding.dart:1279:28)
+#28     TestAsyncUtils.guard (package:flutter_test/src/test_async_utils.dart:74:41)
+#29     AutomatedTestWidgetsFlutterBinding.pump (package:flutter_test/src/binding.dart:1275:27)
+#30     WidgetTester.pumpAndSettle.<anonymous closure> (package:flutter_test/src/widget_tester.dart:726:23)
+#33     TestAsyncUtils.guard (package:flutter_test/src/test_async_utils.dart:74:41)
+#34     WidgetTester.pumpAndSettle (package:flutter_test/src/widget_tester.dart:719:27)
+#35     main.<anonymous closure>.<anonymous closure>.<anonymous closure> (file:///C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart:374:22)
+<asynchronous suspension>
+#36     testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:189:15)
+<asynchronous suspension>
+#37     TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1032:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided 23 frames from class _AssertionError, dart:async, and package:stack_trace)
+
+The test description was:
+  keyboard submit triggers login
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+00:33 +118 -12: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Form Interaction keyboard submit triggers login [E]
+  Test failed. See exception logs above.
+  The test description was: keyboard submit triggers login
+  
+Retry: Auth Flow Integration Tests Form Interaction keyboard submit triggers login
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Ôò×ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following assertion was thrown running a test:
+No GoRouter found in context
+'package:go_router/src/router.dart':
+Failed assertion: line 507 pos 12: 'inherited != null'
+
+When the exception was thrown, this was the stack:
+#2      GoRouter.of (package:go_router/src/router.dart:507:12)
+#3      GoRouterHelper.go (package:go_router/src/misc/extensions.dart:25:16)
+#4      _LoginPageState.build.<anonymous closure> (package:martial_arts_streaming/features/auth/presentation/pages/login_page.dart:79:21)
+#5      _BlocListenerBaseState._subscribe.<anonymous closure> (package:flutter_bloc/src/bloc_listener.dart:215:24)
+#27     FakeAsync.flushMicrotasks (package:fake_async/fake_async.dart:197:32)
+#28     FakeAsync._fireTimersWhile (package:fake_async/fake_async.dart:236:5)
+#29     FakeAsync.elapse (package:fake_async/fake_async.dart:141:5)
+#30     AutomatedTestWidgetsFlutterBinding.pump.<anonymous closure> (package:flutter_test/src/binding.dart:1279:28)
+#33     TestAsyncUtils.guard (package:flutter_test/src/test_async_utils.dart:74:41)
+#34     AutomatedTestWidgetsFlutterBinding.pump (package:flutter_test/src/binding.dart:1275:27)
+#35     WidgetTester.pumpAndSettle.<anonymous closure> (package:flutter_test/src/widget_tester.dart:726:23)
+#38     TestAsyncUtils.guard (package:flutter_test/src/test_async_utils.dart:74:41)
+#39     WidgetTester.pumpAndSettle (package:flutter_test/src/widget_tester.dart:719:27)
+#40     main.<anonymous closure>.<anonymous closure>.<anonymous closure> (file:///C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart:374:22)
+<asynchronous suspension>
+#41     testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:189:15)
+<asynchronous suspension>
+#42     TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1032:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided 28 frames from class _AssertionError, dart:async, and package:stack_trace)
+
+The test description was:
+  keyboard submit triggers login
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+  Test failed. See exception logs above.
+  The test description was: keyboard submit triggers login
+  
+Retry: Auth Flow Integration Tests Form Interaction keyboard submit triggers login
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Ôò×ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following assertion was thrown running a test:
+No GoRouter found in context
+'package:go_router/src/router.dart':
+Failed assertion: line 507 pos 12: 'inherited != null'
+
+When the exception was thrown, this was the stack:
+#2      GoRouter.of (package:go_router/src/router.dart:507:12)
+#3      GoRouterHelper.go (package:go_router/src/misc/extensions.dart:25:16)
+#4      _LoginPageState.build.<anonymous closure> (package:martial_arts_streaming/features/auth/presentation/pages/login_page.dart:79:21)
+#5      _BlocListenerBaseState._subscribe.<anonymous closure> (package:flutter_bloc/src/bloc_listener.dart:215:24)
+#32     FakeAsync.flushMicrotasks (package:fake_async/fake_async.dart:197:32)
+#33     FakeAsync._fireTimersWhile (package:fake_async/fake_async.dart:236:5)
+#34     FakeAsync.elapse (package:fake_async/fake_async.dart:141:5)
+#35     AutomatedTestWidgetsFlutterBinding.pump.<anonymous closure> (package:flutter_test/src/binding.dart:1279:28)
+#38     TestAsyncUtils.guard (package:flutter_test/src/test_async_utils.dart:74:41)
+#39     AutomatedTestWidgetsFlutterBinding.pump (package:flutter_test/src/binding.dart:1275:27)
+#40     WidgetTester.pumpAndSettle.<anonymous closure> (package:flutter_test/src/widget_tester.dart:726:23)
+#43     TestAsyncUtils.guard (package:flutter_test/src/test_async_utils.dart:74:41)
+#44     WidgetTester.pumpAndSettle (package:flutter_test/src/widget_tester.dart:719:27)
+#45     main.<anonymous closure>.<anonymous closure>.<anonymous closure> (file:///C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart:374:22)
+<asynchronous suspension>
+#46     testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:189:15)
+<asynchronous suspension>
+#47     TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1032:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided 33 frames from class _AssertionError, dart:async, and package:stack_trace)
+
+The test description was:
+  keyboard submit triggers login
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+  Test failed. See exception logs above.
+  The test description was: keyboard submit triggers login
+  
+00:33 +118 -12: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Error Recovery can retry after network error
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Ôò×ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following assertion was thrown running a test:
+No GoRouter found in context
+'package:go_router/src/router.dart':
+Failed assertion: line 507 pos 12: 'inherited != null'
+
+When the exception was thrown, this was the stack:
+#2      GoRouter.of (package:go_router/src/router.dart:507:12)
+#3      GoRouterHelper.go (package:go_router/src/misc/extensions.dart:25:16)
+#4      _LoginPageState.build.<anonymous closure> (package:martial_arts_streaming/features/auth/presentation/pages/login_page.dart:79:21)
+#5      _BlocListenerBaseState._subscribe.<anonymous closure> (package:flutter_bloc/src/bloc_listener.dart:215:24)
+#22     FakeAsync.flushMicrotasks (package:fake_async/fake_async.dart:197:32)
+#23     AutomatedTestWidgetsFlutterBinding.runTest.<anonymous closure> (package:flutter_test/src/binding.dart:1507:17)
+(elided 33 frames from class _AssertionError, dart:async, and package:stack_trace)
+
+The test description was:
+  can retry after network error
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+00:35 +118 -13: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Error Recovery can retry after network error [E]
+  Test failed. See exception logs above.
+  The test description was: can retry after network error
+  
+Retry: Auth Flow Integration Tests Error Recovery can retry after network error
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Ôò×ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following assertion was thrown running a test:
+No GoRouter found in context
+'package:go_router/src/router.dart':
+Failed assertion: line 507 pos 12: 'inherited != null'
+
+When the exception was thrown, this was the stack:
+#2      GoRouter.of (package:go_router/src/router.dart:507:12)
+#3      GoRouterHelper.go (package:go_router/src/misc/extensions.dart:25:16)
+#4      _LoginPageState.build.<anonymous closure> (package:martial_arts_streaming/features/auth/presentation/pages/login_page.dart:79:21)
+#5      _BlocListenerBaseState._subscribe.<anonymous closure> (package:flutter_bloc/src/bloc_listener.dart:215:24)
+#27     FakeAsync.flushMicrotasks (package:fake_async/fake_async.dart:197:32)
+#28     AutomatedTestWidgetsFlutterBinding.runTest.<anonymous closure> (package:flutter_test/src/binding.dart:1507:17)
+(elided 42 frames from class _AssertionError, dart:async, and package:stack_trace)
+
+The test description was:
+  can retry after network error
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+  Test failed. See exception logs above.
+  The test description was: can retry after network error
+  
+Retry: Auth Flow Integration Tests Error Recovery can retry after network error
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Ôò×ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following assertion was thrown running a test:
+No GoRouter found in context
+'package:go_router/src/router.dart':
+Failed assertion: line 507 pos 12: 'inherited != null'
+
+When the exception was thrown, this was the stack:
+#2      GoRouter.of (package:go_router/src/router.dart:507:12)
+#3      GoRouterHelper.go (package:go_router/src/misc/extensions.dart:25:16)
+#4      _LoginPageState.build.<anonymous closure> (package:martial_arts_streaming/features/auth/presentation/pages/login_page.dart:79:21)
+#5      _BlocListenerBaseState._subscribe.<anonymous closure> (package:flutter_bloc/src/bloc_listener.dart:215:24)
+#32     FakeAsync.flushMicrotasks (package:fake_async/fake_async.dart:197:32)
+#33     AutomatedTestWidgetsFlutterBinding.runTest.<anonymous closure> (package:flutter_test/src/binding.dart:1507:17)
+(elided 51 frames from class _AssertionError, dart:async, and package:stack_trace)
+
+The test description was:
+  can retry after network error
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+  Test failed. See exception logs above.
+  The test description was: can retry after network error
+  
+00:35 +118 -13: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: Auth Flow Integration Tests Error Recovery clears error when user starts typing
+test/unit/features/auth/data/datasources/auth_local_datasource_test.dart:24:41: Error: Too few positional arguments: 2 
+required, 1 given.
+    dataSource = AuthLocalDataSourceImpl(mockSecureStorage);
+                                        ^
+lib/features/auth/data/datasources/auth_local_datasource.dart:46:3: Context: Found this candidate, but the arguments 
+don't match.
+  AuthLocalDataSourceImpl(this._secureStorage, this._prefs);
+  ^^^^^^^^^^^^^^^^^^^^^^^
+test/unit/features/auth/data/datasources/auth_local_datasource_test.dart:182:9: Error: No named parameter with the 
+name 'isEmailVerified'.
+        isEmailVerified: true,
+        ^^^^^^^^^^^^^^^
+lib/features/auth/data/models/user_model.dart:4:9: Context: Found this candidate, but the arguments don't match.
+  const UserModel({
+        ^^^^^^^^^
+test/unit/features/auth/data/datasources/auth_local_datasource_test.dart:248:9: Error: No named parameter with the 
+name 'preferredLanguage'.
+        preferredLanguage: 'it',
+        ^^^^^^^^^^^^^^^^^
+lib/features/auth/data/models/user_model.dart:138:9: Context: Found this candidate, but the arguments don't match.
+  const UserProfileModel({
+        ^^^^^^^^^^^^^^^^
+test/unit/features/auth/data/datasources/auth_local_datasource_test.dart:195:23: Error: The getter 'isEmailVerified' 
+isn't defined for the class 'UserModel'.
+ - 'UserModel' is from 'package:martial_arts_streaming/features/auth/data/models/user_model.dart' 
+('lib/features/auth/data/models/user_model.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'isEmailVerified'.
+      expect(restored.isEmailVerified, equals(user.isEmailVerified));
+                      ^^^^^^^^^^^^^^^
+test/unit/features/auth/data/datasources/auth_local_datasource_test.dart:263:23: Error: The getter 'preferredLanguage' 
+isn't defined for the class 'UserProfileModel'.
+ - 'UserProfileModel' is from 'package:martial_arts_streaming/features/auth/data/models/user_model.dart' 
+('lib/features/auth/data/models/user_model.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'preferredLanguage'.
+      expect(restored.preferredLanguage, equals(profile.preferredLanguage));
+                      ^^^^^^^^^^^^^^^^^
+test/unit/features/auth/data/datasources/auth_local_datasource_test.dart:264:23: Error: The getter 'maturityLevel' 
+isn't defined for the class 'UserProfileModel'.
+ - 'UserProfileModel' is from 'package:martial_arts_streaming/features/auth/data/models/user_model.dart' 
+('lib/features/auth/data/models/user_model.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'maturityLevel'.
+      expect(restored.maturityLevel, equals(profile.maturityLevel));
+                      ^^^^^^^^^^^^^
+test/unit/features/auth/data/datasources/auth_local_datasource_test.dart:281:22: Error: The getter 'maturityLevel' 
+isn't defined for the class 'UserProfileModel'.
+ - 'UserProfileModel' is from 'package:martial_arts_streaming/features/auth/data/models/user_model.dart' 
+('lib/features/auth/data/models/user_model.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'maturityLevel'.
+      expect(profile.maturityLevel, equals(12));
+                     ^^^^^^^^^^^^^
+00:36 +119 -13: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/integration/auth/auth_flow_test.dart: (tearDownAll)
+00:37 +119 -13: loading C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/data/datasources/auth_local_datasource_test.dart
+Retrying load of C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/data/datasources/auth_local_datasource_test.dart in 1s (1 remaining)
+test/static_analysis/code_quality_test.dart:321:15: Error: 'usesComputation' isn't a type.
+        const usesComputation caching = true;
+              ^^^^^^^^^^^^^^^
+test/static_analysis/code_quality_test.dart:322:16: Error: Undefined name 'usesCaching'.
+        expect(usesCaching, isTrue);
+               ^^^^^^^^^^^
+00:40 +119 -13: loading C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/static_analysis/code_quality_test.dart
+Retrying load of C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/static_analysis/code_quality_test.dart in 1s (0 remaining)
+test/unit/core/network/api_client_test.dart:249:29: Error: Operator '[]' cannot be called on 'Map<String, String>?' 
+because it is potentially null.
+ - 'Map' is from 'dart:core'.
+        expect(response.data['id'], equals('123'));
+                            ^
+test/unit/core/network/api_client_test.dart:250:29: Error: Operator '[]' cannot be called on 'Map<String, String>?' 
+because it is potentially null.
+ - 'Map' is from 'dart:core'.
+        expect(response.data['name'], equals('Test'));
+                            ^
+00:46 +119 -13: loading C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/core/network/api_client_test.dart
+Retrying load of C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/core/network/api_client_test.dart in 1s (0 remaining)
+test/unit/features/auth/data/datasources/auth_remote_datasource_test.dart:145:45: Error: Too many positional 
+arguments: 1 allowed, but 2 found.
+Try removing the extra positional arguments.
+            )).thenThrow(ValidationException(
+                                            ^
+lib/core/error/exceptions.dart:32:3: Context: Found this candidate, but the arguments don't match.
+  ValidationException(
+  ^^^^^^^^^^^^^^^^^^^
+test/unit/features/auth/data/datasources/auth_remote_datasource_test.dart:340:57: Error: Too many positional 
+arguments: 0 allowed, but 1 found.
+Try removing the extra positional arguments.
+        final result = await dataSource.signInWithGoogle('google_id_token');
+                                                        ^
+test/unit/features/auth/data/datasources/auth_remote_datasource_test.dart:365:56: Error: Too many positional 
+arguments: 0 allowed, but 1 found.
+Try removing the extra positional arguments.
+        final result = await dataSource.signInWithApple('apple_identity_token');
+                                                       ^
+00:56 +119 -13: loading C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/data/datasources/auth_remote_datasource_test.dart
+Retrying load of C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/data/datasources/auth_remote_datasource_test.dart in 1s (1 remaining)
+test/unit/features/auth/data/datasources/auth_local_datasource_test.dart:24:41: Error: Too few positional arguments: 2 
+required, 1 given.
+    dataSource = AuthLocalDataSourceImpl(mockSecureStorage);
+                                        ^
+lib/features/auth/data/datasources/auth_local_datasource.dart:46:3: Context: Found this candidate, but the arguments 
+don't match.
+  AuthLocalDataSourceImpl(this._secureStorage, this._prefs);
+  ^^^^^^^^^^^^^^^^^^^^^^^
+test/unit/features/auth/data/datasources/auth_local_datasource_test.dart:182:9: Error: No named parameter with the 
+name 'isEmailVerified'.
+        isEmailVerified: true,
+        ^^^^^^^^^^^^^^^
+lib/features/auth/data/models/user_model.dart:4:9: Context: Found this candidate, but the arguments don't match.
+  const UserModel({
+        ^^^^^^^^^
+test/unit/features/auth/data/datasources/auth_local_datasource_test.dart:248:9: Error: No named parameter with the 
+name 'preferredLanguage'.
+        preferredLanguage: 'it',
+        ^^^^^^^^^^^^^^^^^
+lib/features/auth/data/models/user_model.dart:138:9: Context: Found this candidate, but the arguments don't match.
+  const UserProfileModel({
+        ^^^^^^^^^^^^^^^^
+test/unit/features/auth/data/datasources/auth_local_datasource_test.dart:195:23: Error: The getter 'isEmailVerified' 
+isn't defined for the class 'UserModel'.
+ - 'UserModel' is from 'package:martial_arts_streaming/features/auth/data/models/user_model.dart' 
+('lib/features/auth/data/models/user_model.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'isEmailVerified'.
+      expect(restored.isEmailVerified, equals(user.isEmailVerified));
+                      ^^^^^^^^^^^^^^^
+test/unit/features/auth/data/datasources/auth_local_datasource_test.dart:263:23: Error: The getter 'preferredLanguage' 
+isn't defined for the class 'UserProfileModel'.
+ - 'UserProfileModel' is from 'package:martial_arts_streaming/features/auth/data/models/user_model.dart' 
+('lib/features/auth/data/models/user_model.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'preferredLanguage'.
+      expect(restored.preferredLanguage, equals(profile.preferredLanguage));
+                      ^^^^^^^^^^^^^^^^^
+test/unit/features/auth/data/datasources/auth_local_datasource_test.dart:264:23: Error: The getter 'maturityLevel' 
+isn't defined for the class 'UserProfileModel'.
+ - 'UserProfileModel' is from 'package:martial_arts_streaming/features/auth/data/models/user_model.dart' 
+('lib/features/auth/data/models/user_model.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'maturityLevel'.
+      expect(restored.maturityLevel, equals(profile.maturityLevel));
+                      ^^^^^^^^^^^^^
+test/unit/features/auth/data/datasources/auth_local_datasource_test.dart:281:22: Error: The getter 'maturityLevel' 
+isn't defined for the class 'UserProfileModel'.
+ - 'UserProfileModel' is from 'package:martial_arts_streaming/features/auth/data/models/user_model.dart' 
+('lib/features/auth/data/models/user_model.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'maturityLevel'.
+      expect(profile.maturityLevel, equals(12));
+                     ^^^^^^^^^^^^^
+01:07 +119 -13: loading C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/data/datasources/auth_local_datasource_test.dart
+Retrying load of C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/data/datasources/auth_local_datasource_test.dart in 1s (0 remaining)
+test/static_analysis/code_quality_test.dart:321:15: Error: 'usesComputation' isn't a type.
+        const usesComputation caching = true;
+              ^^^^^^^^^^^^^^^
+test/static_analysis/code_quality_test.dart:322:16: Error: Undefined name 'usesCaching'.
+        expect(usesCaching, isTrue);
+               ^^^^^^^^^^^
+01:12 +119 -14: loading C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/static_analysis/code_quality_test.dart [E]
+  Failed to load "C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/static_analysis/code_quality_test.dart": Compilation failed for testPath=C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/static_analysis/code_quality_test.dart
+test/unit/core/network/api_client_test.dart:249:29: Error: Operator '[]' cannot be called on 'Map<String, String>?' 
+because it is potentially null.
+ - 'Map' is from 'dart:core'.
+        expect(response.data['id'], equals('123'));
+                            ^
+test/unit/core/network/api_client_test.dart:250:29: Error: Operator '[]' cannot be called on 'Map<String, String>?' 
+because it is potentially null.
+ - 'Map' is from 'dart:core'.
+        expect(response.data['name'], equals('Test'));
+                            ^
+01:19 +119 -15: loading C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/core/network/api_client_test.dart [E]
+  Failed to load "C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/core/network/api_client_test.dart": Compilation failed for testPath=C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/core/network/api_client_test.dart
+test/unit/features/auth/data/datasources/auth_remote_datasource_test.dart:145:45: Error: Too many positional 
+arguments: 1 allowed, but 2 found.
+Try removing the extra positional arguments.
+            )).thenThrow(ValidationException(
+                                            ^
+lib/core/error/exceptions.dart:32:3: Context: Found this candidate, but the arguments don't match.
+  ValidationException(
+  ^^^^^^^^^^^^^^^^^^^
+test/unit/features/auth/data/datasources/auth_remote_datasource_test.dart:340:57: Error: Too many positional 
+arguments: 0 allowed, but 1 found.
+Try removing the extra positional arguments.
+        final result = await dataSource.signInWithGoogle('google_id_token');
+                                                        ^
+test/unit/features/auth/data/datasources/auth_remote_datasource_test.dart:365:56: Error: Too many positional 
+arguments: 0 allowed, but 1 found.
+Try removing the extra positional arguments.
+        final result = await dataSource.signInWithApple('apple_identity_token');
+                                                       ^
+01:26 +119 -15: loading C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/data/datasources/auth_remote_datasource_test.dart
+Retrying load of C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/data/datasources/auth_remote_datasource_test.dart in 1s (0 remaining)
+test/unit/features/auth/data/datasources/auth_local_datasource_test.dart:24:41: Error: Too few positional arguments: 2 
+required, 1 given.
+    dataSource = AuthLocalDataSourceImpl(mockSecureStorage);
+                                        ^
+lib/features/auth/data/datasources/auth_local_datasource.dart:46:3: Context: Found this candidate, but the arguments 
+don't match.
+  AuthLocalDataSourceImpl(this._secureStorage, this._prefs);
+  ^^^^^^^^^^^^^^^^^^^^^^^
+test/unit/features/auth/data/datasources/auth_local_datasource_test.dart:182:9: Error: No named parameter with the 
+name 'isEmailVerified'.
+        isEmailVerified: true,
+        ^^^^^^^^^^^^^^^
+lib/features/auth/data/models/user_model.dart:4:9: Context: Found this candidate, but the arguments don't match.
+  const UserModel({
+        ^^^^^^^^^
+test/unit/features/auth/data/datasources/auth_local_datasource_test.dart:248:9: Error: No named parameter with the 
+name 'preferredLanguage'.
+        preferredLanguage: 'it',
+        ^^^^^^^^^^^^^^^^^
+lib/features/auth/data/models/user_model.dart:138:9: Context: Found this candidate, but the arguments don't match.
+  const UserProfileModel({
+        ^^^^^^^^^^^^^^^^
+test/unit/features/auth/data/datasources/auth_local_datasource_test.dart:195:23: Error: The getter 'isEmailVerified' 
+isn't defined for the class 'UserModel'.
+ - 'UserModel' is from 'package:martial_arts_streaming/features/auth/data/models/user_model.dart' 
+('lib/features/auth/data/models/user_model.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'isEmailVerified'.
+      expect(restored.isEmailVerified, equals(user.isEmailVerified));
+                      ^^^^^^^^^^^^^^^
+test/unit/features/auth/data/datasources/auth_local_datasource_test.dart:263:23: Error: The getter 'preferredLanguage' 
+isn't defined for the class 'UserProfileModel'.
+ - 'UserProfileModel' is from 'package:martial_arts_streaming/features/auth/data/models/user_model.dart' 
+('lib/features/auth/data/models/user_model.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'preferredLanguage'.
+      expect(restored.preferredLanguage, equals(profile.preferredLanguage));
+                      ^^^^^^^^^^^^^^^^^
+test/unit/features/auth/data/datasources/auth_local_datasource_test.dart:264:23: Error: The getter 'maturityLevel' 
+isn't defined for the class 'UserProfileModel'.
+ - 'UserProfileModel' is from 'package:martial_arts_streaming/features/auth/data/models/user_model.dart' 
+('lib/features/auth/data/models/user_model.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'maturityLevel'.
+      expect(restored.maturityLevel, equals(profile.maturityLevel));
+                      ^^^^^^^^^^^^^
+test/unit/features/auth/data/datasources/auth_local_datasource_test.dart:281:22: Error: The getter 'maturityLevel' 
+isn't defined for the class 'UserProfileModel'.
+ - 'UserProfileModel' is from 'package:martial_arts_streaming/features/auth/data/models/user_model.dart' 
+('lib/features/auth/data/models/user_model.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'maturityLevel'.
+      expect(profile.maturityLevel, equals(12));
+                     ^^^^^^^^^^^^^
+01:31 +119 -16: loading C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/data/datasources/auth_local_datasource_test.dart [E]
+  Failed to load "C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/data/datasources/auth_local_datasource_test.dart": Compilation failed for testPath=C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/data/datasources/auth_local_datasource_test.dart
+01:39 +119 -16: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/data/repositories/auth_repository_impl_test.dart: (setUpAll)
+01:39 +119 -16: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/data/repositories/auth_repository_impl_test.dart: AuthRepositoryImpl login should return User when login is successful with network
+01:39 +120 -16: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/data/repositories/auth_repository_impl_test.dart: AuthRepositoryImpl login should return NetworkFailure when no internet connection
+01:39 +121 -16: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/data/repositories/auth_repository_impl_test.dart: AuthRepositoryImpl login should return AuthFailure when credentials are invalid
+01:39 +122 -16: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/data/repositories/auth_repository_impl_test.dart: AuthRepositoryImpl login should return ServerFailure on server error
+01:39 +123 -16: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/data/repositories/auth_repository_impl_test.dart: AuthRepositoryImpl register should return User when registration is successful
+01:39 +124 -16: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/data/repositories/auth_repository_impl_test.dart: AuthRepositoryImpl register should return ValidationFailure when email already exists
+01:39 +125 -16: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/data/repositories/auth_repository_impl_test.dart: AuthRepositoryImpl register should return NetworkFailure when offline
+01:39 +126 -16: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/data/repositories/auth_repository_impl_test.dart: AuthRepositoryImpl logout should clear local data and return success on logout
+01:39 +127 -16: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/data/repositories/auth_repository_impl_test.dart: AuthRepositoryImpl logout should clear local data even if remote logout fails
+01:39 +128 -16: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/data/repositories/auth_repository_impl_test.dart: AuthRepositoryImpl getCurrentUser should return User from remote when online
+01:39 +129 -16: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/data/repositories/auth_repository_impl_test.dart: AuthRepositoryImpl getCurrentUser should return cached User when offline
+01:39 +130 -16: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/data/repositories/auth_repository_impl_test.dart: AuthRepositoryImpl getCurrentUser should return cached User when network fails
+01:39 +131 -16: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/data/repositories/auth_repository_impl_test.dart: AuthRepositoryImpl getCurrentUser should return NetworkFailure when offline and no cache
+01:39 +132 -16: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/data/repositories/auth_repository_impl_test.dart: AuthRepositoryImpl isAuthenticated should return true when access token exists
+01:39 +133 -16: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/data/repositories/auth_repository_impl_test.dart: AuthRepositoryImpl isAuthenticated should return false when access token does not exist
+01:39 +134 -16: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/data/repositories/auth_repository_impl_test.dart: AuthRepositoryImpl forgotPassword should return success when email is sent
+01:39 +135 -16: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/data/repositories/auth_repository_impl_test.dart: AuthRepositoryImpl forgotPassword should return NetworkFailure when offline
+01:39 +136 -16: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/data/repositories/auth_repository_impl_test.dart: AuthRepositoryImpl resetPassword should return success when password is reset
+01:39 +137 -16: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/data/repositories/auth_repository_impl_test.dart: AuthRepositoryImpl resetPassword should return AuthFailure when token is invalid
+01:39 +138 -16: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/data/repositories/auth_repository_impl_test.dart: AuthRepositoryImpl refreshToken should return success and cache new tokens
+01:39 +139 -16: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/data/repositories/auth_repository_impl_test.dart: AuthRepositoryImpl refreshToken should return AuthFailure when no refresh token available
+01:39 +140 -16: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/data/repositories/auth_repository_impl_test.dart: AuthRepositoryImpl refreshToken should clear tokens when refresh fails
+01:39 +141 -16: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/data/repositories/auth_repository_impl_test.dart: AuthRepositoryImpl signInWithGoogle should return User when Google sign-in succeeds
+01:39 +142 -16: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/data/repositories/auth_repository_impl_test.dart: AuthRepositoryImpl signInWithApple should return User when Apple sign-in succeeds
+01:39 +143 -16: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/data/repositories/auth_repository_impl_test.dart: AuthRepositoryImpl verifyEmail should return success when email is verified
+01:39 +144 -16: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/data/repositories/auth_repository_impl_test.dart: (tearDownAll)
+test/unit/features/auth/data/datasources/auth_remote_datasource_test.dart:145:45: Error: Too many positional 
+arguments: 1 allowed, but 2 found.
+Try removing the extra positional arguments.
+            )).thenThrow(ValidationException(
+                                            ^
+lib/core/error/exceptions.dart:32:3: Context: Found this candidate, but the arguments don't match.
+  ValidationException(
+  ^^^^^^^^^^^^^^^^^^^
+test/unit/features/auth/data/datasources/auth_remote_datasource_test.dart:340:57: Error: Too many positional 
+arguments: 0 allowed, but 1 found.
+Try removing the extra positional arguments.
+        final result = await dataSource.signInWithGoogle('google_id_token');
+                                                        ^
+test/unit/features/auth/data/datasources/auth_remote_datasource_test.dart:365:56: Error: Too many positional 
+arguments: 0 allowed, but 1 found.
+Try removing the extra positional arguments.
+        final result = await dataSource.signInWithApple('apple_identity_token');
+                                                       ^
+01:39 +144 -17: loading C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/data/datasources/auth_remote_datasource_test.dart [E]
+  Failed to load "C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/data/datasources/auth_remote_datasource_test.dart": Compilation failed for testPath=C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/data/datasources/auth_remote_datasource_test.dart
+01:40 +144 -17: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/presentation/bloc/auth_bloc_test.dart: (setUpAll)
+01:40 +144 -17: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/presentation/bloc/auth_bloc_test.dart: AuthBloc initial state should be AuthInitial
+01:40 +145 -17: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/presentation/bloc/auth_bloc_test.dart: AuthBloc CheckAuthStatusEvent emits [AuthLoading, AuthAuthenticated] when user is authenticated
+01:40 +146 -17: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/presentation/bloc/auth_bloc_test.dart: AuthBloc CheckAuthStatusEvent emits [AuthLoading, AuthUnauthenticated] when getting user fails
+01:40 +147 -17: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/presentation/bloc/auth_bloc_test.dart: AuthBloc LoginEvent emits [AuthLoading, AuthAuthenticated] when login succeeds
+01:40 +148 -17: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/presentation/bloc/auth_bloc_test.dart: AuthBloc LoginEvent emits [AuthLoading, AuthError] when login fails with invalid credentials
+01:40 +149 -17: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/presentation/bloc/auth_bloc_test.dart: AuthBloc LoginEvent emits [AuthLoading, AuthError] when login fails with network error
+01:40 +150 -17: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/presentation/bloc/auth_bloc_test.dart: AuthBloc LoginEvent emits [AuthLoading, AuthAuthenticated] with rememberMe option
+01:40 +151 -17: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/presentation/bloc/auth_bloc_test.dart: AuthBloc RegisterEvent emits [AuthLoading, AuthAuthenticated] when registration succeeds
+01:40 +152 -17: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/presentation/bloc/auth_bloc_test.dart: AuthBloc RegisterEvent emits [AuthLoading, AuthError] when email already exists
+01:40 +153 -17: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/presentation/bloc/auth_bloc_test.dart: AuthBloc RegisterEvent emits [AuthLoading, AuthError] when password is weak
+01:40 +154 -17: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/presentation/bloc/auth_bloc_test.dart: AuthBloc LogoutEvent emits [AuthLoading, AuthUnauthenticated] when logout succeeds
+01:40 +155 -17: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/presentation/bloc/auth_bloc_test.dart: AuthBloc LogoutEvent emits [AuthLoading, AuthError] when logout fails
+01:40 +156 -17: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/presentation/bloc/auth_bloc_test.dart: AuthBloc SelectProfileEvent updates selected profile in AuthAuthenticated state
+01:40 +157 -17: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/presentation/bloc/auth_bloc_test.dart: AuthBloc GoogleSignInEvent emits [AuthLoading, AuthAuthenticated] when Google sign-in succeeds
+01:40 +158 -17: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/presentation/bloc/auth_bloc_test.dart: AuthBloc GoogleSignInEvent emits [AuthLoading, AuthError] when Google sign-in fails
+01:40 +159 -17: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/presentation/bloc/auth_bloc_test.dart: AuthBloc GoogleSignInEvent emits [AuthLoading, AuthError] when Google sign-in is cancelled
+01:40 +160 -17: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/presentation/bloc/auth_bloc_test.dart: AuthBloc AppleSignInEvent emits [AuthLoading, AuthAuthenticated] when Apple sign-in succeeds
+01:40 +161 -17: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/presentation/bloc/auth_bloc_test.dart: AuthBloc ForgotPasswordEvent emits [AuthLoading, AuthPasswordResetSent] when password reset email is sent
+01:40 +162 -17: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/presentation/bloc/auth_bloc_test.dart: AuthBloc ForgotPasswordEvent emits [AuthLoading, AuthError] when email is invalid
+01:40 +163 -17: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/presentation/bloc/auth_bloc_test.dart: AuthBloc Edge cases handles multiple rapid login attempts gracefully
+01:41 +163 -18: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/presentation/bloc/auth_bloc_test.dart: AuthBloc Edge cases handles multiple rapid login attempts gracefully [E]
+  Expected: [
+              <<Instance of 'AuthLoading'>>,
+              <<Instance of 'AuthAuthenticated'>>,
+              <<Instance of 'AuthLoading'>>,
+              <<Instance of 'AuthAuthenticated'>>
+            ]
+    Actual: [
+              AuthLoading:AuthLoading(Signing in...),
+              AuthAuthenticated:AuthAuthenticated(UserModel(user_123, test@example.com, testuser, null, null, UserTier.premium, true, false, 2024-01-01 00:00:00.000, UserPreferencesModel(it, auto, true, false, it, true, true, true), 100), null, [])
+            ]
+     Which: at location [2] is [
+              AuthLoading:AuthLoading(Signing in...),
+              AuthAuthenticated:AuthAuthenticated(UserModel(user_123, test@example.com, testuser, null, null, UserTier.premium, true, false, 2024-01-01 00:00:00.000, UserPreferencesModel(it, auto, true, false, it, true, true, true), 100), null, [])
+            ] which shorter than expected
+  
+  package:matcher                              expect
+  package:bloc_test/src/bloc_test.dart 220:16  testBloc.<fn>
+  ===== asynchronous gap ===========================
+  dart:async                                   _Completer.completeError
+  package:bloc_test/src/bloc_test.dart 257:43  _runZonedGuarded.<fn>
+  ===== asynchronous gap ===========================
+  dart:async                                   _CustomZone.registerBinaryCallback
+  package:bloc_test/src/bloc_test.dart 254:5   _runZonedGuarded.<fn>
+  dart:async                                   runZonedGuarded
+  package:bloc_test/src/bloc_test.dart 253:3   _runZonedGuarded
+  package:bloc_test/src/bloc_test.dart 200:11  testBloc
+  package:bloc_test/src/bloc_test.dart 156:13  blocTest.<fn>
+  
+Retry: AuthBloc Edge cases handles multiple rapid login attempts gracefully
+  Expected: [
+              <<Instance of 'AuthLoading'>>,
+              <<Instance of 'AuthAuthenticated'>>,
+              <<Instance of 'AuthLoading'>>,
+              <<Instance of 'AuthAuthenticated'>>
+            ]
+    Actual: [
+              AuthLoading:AuthLoading(Signing in...),
+              AuthAuthenticated:AuthAuthenticated(UserModel(user_123, test@example.com, testuser, null, null, UserTier.premium, true, false, 2024-01-01 00:00:00.000, UserPreferencesModel(it, auto, true, false, it, true, true, true), 100), null, [])
+            ]
+     Which: at location [2] is [
+              AuthLoading:AuthLoading(Signing in...),
+              AuthAuthenticated:AuthAuthenticated(UserModel(user_123, test@example.com, testuser, null, null, UserTier.premium, true, false, 2024-01-01 00:00:00.000, UserPreferencesModel(it, auto, true, false, it, true, true, true), 100), null, [])
+            ] which shorter than expected
+  
+  package:matcher                              expect
+  package:bloc_test/src/bloc_test.dart 220:16  testBloc.<fn>
+  ===== asynchronous gap ===========================
+  dart:async                                   _Completer.completeError
+  package:bloc_test/src/bloc_test.dart 257:43  _runZonedGuarded.<fn>
+  ===== asynchronous gap ===========================
+  dart:async                                   _CustomZone.registerBinaryCallback
+  package:bloc_test/src/bloc_test.dart 254:5   _runZonedGuarded.<fn>
+  dart:async                                   runZonedGuarded
+  package:bloc_test/src/bloc_test.dart 253:3   _runZonedGuarded
+  package:bloc_test/src/bloc_test.dart 200:11  testBloc
+  package:bloc_test/src/bloc_test.dart 156:13  blocTest.<fn>
+  
+Retry: AuthBloc Edge cases handles multiple rapid login attempts gracefully
+  Expected: [
+              <<Instance of 'AuthLoading'>>,
+              <<Instance of 'AuthAuthenticated'>>,
+              <<Instance of 'AuthLoading'>>,
+              <<Instance of 'AuthAuthenticated'>>
+            ]
+    Actual: [
+              AuthLoading:AuthLoading(Signing in...),
+              AuthAuthenticated:AuthAuthenticated(UserModel(user_123, test@example.com, testuser, null, null, UserTier.premium, true, false, 2024-01-01 00:00:00.000, UserPreferencesModel(it, auto, true, false, it, true, true, true), 100), null, [])
+            ]
+     Which: at location [2] is [
+              AuthLoading:AuthLoading(Signing in...),
+              AuthAuthenticated:AuthAuthenticated(UserModel(user_123, test@example.com, testuser, null, null, UserTier.premium, true, false, 2024-01-01 00:00:00.000, UserPreferencesModel(it, auto, true, false, it, true, true, true), 100), null, [])
+            ] which shorter than expected
+  
+  package:matcher                              expect
+  package:bloc_test/src/bloc_test.dart 220:16  testBloc.<fn>
+  ===== asynchronous gap ===========================
+  dart:async                                   _Completer.completeError
+  package:bloc_test/src/bloc_test.dart 257:43  _runZonedGuarded.<fn>
+  ===== asynchronous gap ===========================
+  dart:async                                   _CustomZone.registerBinaryCallback
+  package:bloc_test/src/bloc_test.dart 254:5   _runZonedGuarded.<fn>
+  dart:async                                   runZonedGuarded
+  package:bloc_test/src/bloc_test.dart 253:3   _runZonedGuarded
+  package:bloc_test/src/bloc_test.dart 200:11  testBloc
+  package:bloc_test/src/bloc_test.dart 156:13  blocTest.<fn>
+  
+01:41 +163 -18: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/presentation/bloc/auth_bloc_test.dart: AuthBloc Edge cases handles logout while checking auth status
+01:41 +164 -18: C:/Users/utente/Desktop/GESTIONALI/media-center-arti-marziali/flutter_app/test/unit/features/auth/presentation/bloc/auth_bloc_test.dart: (tearDownAll)
+01:41 +164 -18: Some tests failed.

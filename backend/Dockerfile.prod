@@ -1,0 +1,87 @@
+# ========================================
+# PRODUCTION DOCKERFILE - Backend
+# Media Center Arti Marziali - FastAPI Backend
+# ========================================
+#
+# Multi-stage build for optimized production image
+# Stages:
+# 1. builder: Install dependencies
+# 2. production: Slim runtime image
+#
+# Build: docker build -f Dockerfile.prod -t martial-arts-backend:prod .
+# Run: docker run -p 8000:8000 --env-file .env.production martial-arts-backend:prod
+# ========================================
+
+# ========================================
+# STAGE 1: Builder
+# ========================================
+FROM python:3.11-slim as builder
+
+# Set working directory
+WORKDIR /app
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    gcc \
+    g++ \
+    libpq-dev \
+    libffi-dev \
+    libssl-dev \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy requirements
+COPY requirements.txt .
+
+# Install Python dependencies
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir --user -r requirements.txt
+
+# ========================================
+# STAGE 2: Production
+# ========================================
+FROM python:3.11-slim
+
+# Metadata
+LABEL maintainer="Media Center Arti Marziali"
+LABEL version="1.0.0"
+LABEL description="FastAPI Backend for Martial Arts Media Center"
+
+# Set environment variables
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONPATH=/app \
+    PATH=/root/.local/bin:$PATH \
+    ENV=production
+
+# Set working directory
+WORKDIR /app
+
+# Install runtime dependencies only
+RUN apt-get update && apt-get install -y \
+    libpq5 \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy Python dependencies from builder
+COPY --from=builder /root/.local /root/.local
+
+# Create non-root user for security
+RUN useradd -m -u 1000 appuser && \
+    chown -R appuser:appuser /app
+
+# Copy application code
+COPY --chown=appuser:appuser . .
+
+# Switch to non-root user
+USER appuser
+
+# Expose port
+EXPOSE 8000
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
+    CMD curl -f http://localhost:8000/health || exit 1
+
+# Run database migrations and start server
+CMD ["sh", "-c", "alembic upgrade head && uvicorn main:app --host 0.0.0.0 --port 8000 --workers 4"]

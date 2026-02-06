@@ -1,0 +1,131 @@
+{
+  "_metadata": {
+    "AI_MODULE": "Seed Data - Users",
+    "AI_DESCRIPTION": "Demo users with different roles and subscription tiers",
+    "AI_BUSINESS": "Enables testing of all user journeys and permissions",
+    "AI_TEACHING": "User modeling, role-based access, subscription tiers"
+  },
+  "users": [
+    {
+      "email": "admin@mediacenter.it",
+      "username": "admin",
+      "first_name": "System",
+      "last_name": "Administrator",
+      "role": "ADMIN",
+      "is_admin": true,
+      "is_active": true,
+      "email_verified": true,
+      "subscription_tier": "BUSINESS"
+    },
+    {
+      "email": "mario.rossi@example.com",
+      "username": "mario_studente",
+      "first_name": "Mario",
+      "last_name": "Rossi",
+      "role": "STUDENT",
+      "is_admin": false,
+      "is_active": true,
+      "email_verified": true,
+      "subscription_tier": "PREMIUM"
+    },
+    {
+      "email": "giulia.bianchi@example.com",
+      "username": "giulia_free",
+      "first_name": "Giulia",
+      "last_name": "Bianchi",
+      "role": "STUDENT",
+      "is_admin": false,
+      "is_active": true,
+      "email_verified": true,
+      "subscription_tier": "FREE"
+    },
+    {
+      "email": "luca.verdi@example.com",
+      "username": "luca_hybrid",
+      "first_name": "Luca",
+      "last_name": "Verdi",
+      "role": "STUDENT",
+      "is_admin": false,
+      "is_active": true,
+      "email_verified": true,
+      "subscription_tier": "HYBRID_STANDARD"
+    },
+    {
+      "email": "presidente@karatemilano.it",
+      "username": "asd_karate_milano",
+      "first_name": "Paolo",
+      "last_name": "Colombo",
+      "role": "ASD_ADMIN",
+      "is_admin": false,
+      "is_active": true,
+      "email_verified": true,
+      "subscription_tier": "BUSINESS"
+    },
+    {
+      "email": "tanaka.hiroshi@mediacenter.demo",
+      "username": "maestro_tanaka",
+      "first_name": "Hiroshi",
+      "last_name": "Tanaka",
+      "role": "MAESTRO",
+      "is_admin": false,
+      "is_active": true,
+      "email_verified": true,
+      "subscription_tier": "PREMIUM"
+    },
+    {
+      "email": "rossi.marco@mediacenter.demo",
+      "username": "maestro_rossi",
+      "first_name": "Marco",
+      "last_name": "Rossi",
+      "role": "MAESTRO",
+      "is_admin": false,
+      "is_active": true,
+      "email_verified": true,
+      "subscription_tier": "PREMIUM"
+    },
+    {
+      "email": "yamamoto.kenji@mediacenter.demo",
+      "username": "maestro_yamamoto",
+      "first_name": "Kenji",
+      "last_name": "Yamamoto",
+      "role": "MAESTRO",
+      "is_admin": false,
+      "is_active": true,
+      "email_verified": true,
+      "subscription_tier": "PREMIUM"
+    },
+    {
+      "email": "kim.soomin@mediacenter.demo",
+      "username": "maestro_kim",
+      "first_name": "Soo-Min",
+      "last_name": "Kim",
+      "role": "MAESTRO",
+      "is_admin": false,
+      "is_active": true,
+      "email_verified": true,
+      "subscription_tier": "PREMIUM"
+    },
+    {
+      "email": "chen.wei@mediacenter.demo",
+      "username": "maestro_chen",
+      "first_name": "Wei",
+      "last_name": "Chen",
+      "role": "MAESTRO",
+      "is_admin": false,
+      "is_active": true,
+      "email_verified": true,
+      "subscription_tier": "PREMIUM"
+    }
+  ],
+  "test_credentials": {
+    "note": "Password per tutti gli utenti: Test123!",
+    "admin": "admin@mediacenter.it",
+    "premium_student": "mario.rossi@example.com",
+    "free_student": "giulia.bianchi@example.com",
+    "hybrid_student": "luca.verdi@example.com",
+    "asd_admin": "presidente@karatemilano.it",
+    "maestro_karate": "tanaka.hiroshi@mediacenter.demo",
+    "maestro_judo": "rossi.marco@mediacenter.demo",
+    "maestro_aikido": "yamamoto.kenji@mediacenter.demo"
+  }
+}

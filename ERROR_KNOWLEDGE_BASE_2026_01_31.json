@@ -1,0 +1,252 @@
+{
+  "metadata": {
+    "project": "Media Center Arti Marziali",
+    "created_at": "2026-01-31T19:30:00Z",
+    "last_updated": "2026-01-31T19:30:00Z",
+    "version": "1.0.0",
+    "purpose": "Knowledge base errori per sviluppatori umani",
+    "session": "Critical Bug Fix Session - Analytics, Curriculum, Skeletons, Header"
+  },
+
+  "errors": [
+    {
+      "id": "ERR-2026-01-31-001",
+      "date": "2026-01-31",
+      "category": "Backend API",
+      "subcategory": "Endpoint Missing",
+      "severity": "CRITICAL",
+      "title": "Admin Analytics endpoint schema mismatch",
+      "symptom": "Dashboard admin analytics mostra 'Ops! Qualcosa è andato storto'",
+      "root_cause": "1) Endpoint esisteva ma con schema diverso dal frontend 2) Query usava Subscription.status ma tabella non migrata",
+      "error_message": "UndefinedColumnError: la colonna subscriptions.status non esiste",
+      "files_affected": [
+        "backend/api/v1/admin.py",
+        "frontend/src/app/admin/analytics/page.tsx"
+      ],
+      "solution": {
+        "description": "Riscritto endpoint con schema corretto + usato User.tier invece di Subscription.status",
+        "code_changes": [
+          {
+            "file": "backend/api/v1/admin.py",
+            "change": "Nuovo endpoint GET /api/v1/admin/analytics/platform (~250 righe)",
+            "key_fix": "User.tier.notin_([UserTier.FREE, UserTier.PAY_PER_VIEW]) invece di Subscription.status"
+          }
+        ],
+        "response_schema": {
+          "overview": {"total_views": "int", "total_watch_time": "int", "total_revenue": "float", "new_users": "int", "active_subscribers": "int"},
+          "daily_views": "[{date, views}]",
+          "top_videos": "[{title, views, revenue}]",
+          "user_growth": "[{date, users}]",
+          "revenue_by_type": "[{type, amount}]"
+        }
+      },
+      "prevention": "Sempre verificare che lo schema backend matchi quello atteso dal frontend prima di deploy",
+      "time_to_debug": "45 minuti",
+      "time_saved_future": "45 minuti"
+    },
+    {
+      "id": "ERR-2026-01-31-002",
+      "date": "2026-01-31",
+      "category": "Frontend API",
+      "subcategory": "Path Duplication",
+      "severity": "HIGH",
+      "title": "Curriculum API path duplicati causa 401/404",
+      "symptom": "Pagina curriculum non carica, errore 401 Unauthorized o 404 Not Found",
+      "root_cause": "curriculumApi.ts costruiva path /api/v1/curricula/curricula perché CURRICULUM_API_BASE già conteneva /curricula",
+      "error_message": "GET /api/v1/curricula/curricula 404 Not Found",
+      "files_affected": [
+        "frontend/src/services/curriculumApi.ts"
+      ],
+      "solution": {
+        "description": "Rimosso /curricula duplicato da 11 funzioni API",
+        "code_changes": [
+          {
+            "file": "frontend/src/services/curriculumApi.ts",
+            "before": "const url = `${CURRICULUM_API_BASE}/curricula?${searchParams}`",
+            "after": "const url = `${CURRICULUM_API_BASE}?${searchParams}`"
+          }
+        ],
+        "functions_fixed": ["getCurricula", "getCurriculum", "createCurriculum", "updateCurriculum", "deleteCurriculum", "getCurriculumLevels", "createLevel", "getCurriculumEnrollments", "enrollInCurriculum", "getCurriculumInviteCodes", "generateInviteCode"]
+      },
+      "prevention": "Controllare sempre che baseUrl non contenga già parte del path prima di concatenare",
+      "time_to_debug": "15 minuti",
+      "time_saved_future": "15 minuti"
+    },
+    {
+      "id": "ERR-2026-01-31-003",
+      "date": "2026-01-31",
+      "category": "Backend API",
+      "subcategory": "Endpoint Missing",
+      "severity": "HIGH",
+      "title": "Skeleton list endpoint non esistente causa date 1970",
+      "symptom": "Pagina skeletons mostra date '1 gennaio 1970' invece delle date reali",
+      "root_cause": "1) Route Next.js chiamava /api/v1/videos/skeletons che non esisteva 2) Fallback ritornava date null → JS le convertiva a epoch 0 (1970)",
+      "error_message": "GET /api/v1/videos/skeletons 404 Not Found",
+      "files_affected": [
+        "backend/api/v1/skeleton.py",
+        "frontend/src/app/api/studio/skeletons/route.ts",
+        "frontend/src/app/skeletons/page.tsx"
+      ],
+      "solution": {
+        "description": "Creato endpoint listing + corretto path nella route Next.js",
+        "code_changes": [
+          {
+            "file": "backend/api/v1/skeleton.py",
+            "change": "Nuovo endpoint GET /api/v1/skeleton/list (~112 righe)",
+            "logic": "Scannerizza data/skeletons/ per *_holistic.json e *_skeleton.json, ritorna metadata"
+          },
+          {
+            "file": "frontend/src/app/api/studio/skeletons/route.ts",
+            "before": "fetch(`${BACKEND_URL}/api/v1/videos/skeletons`)",
+            "after": "fetch(`${BACKEND_URL}/api/v1/skeleton/list`, {headers: {Authorization: ...}})"
+          }
+        ]
+      },
+      "prevention": "Verificare sempre che gli endpoint chiamati dal frontend esistano effettivamente nel backend",
+      "time_to_debug": "30 minuti",
+      "time_saved_future": "30 minuti"
+    },
+    {
+      "id": "ERR-2026-01-31-004",
+      "date": "2026-01-31",
+      "category": "Frontend UI",
+      "subcategory": "Missing Field",
+      "severity": "MEDIUM",
+      "title": "Header non mostra nome utente perché full_name manca in AuthContext",
+      "symptom": "Header/profilo utente non mostra il nome, solo email o vuoto",
+      "root_cause": "1) Interface User in AuthContext non includeva full_name 2) Backend ritorna full_name: null per alcuni utenti 3) Mancava fallback a username",
+      "error_message": "Campo undefined quando si accede a user.full_name",
+      "files_affected": [
+        "frontend/src/contexts/AuthContext.tsx",
+        "frontend/src/app/me/page.tsx",
+        "frontend/src/app/maestro/page.tsx"
+      ],
+      "solution": {
+        "description": "Aggiunto full_name all'interface + fallback pattern",
+        "code_changes": [
+          {
+            "file": "frontend/src/contexts/AuthContext.tsx",
+            "change": "Aggiunto 'full_name?: string' all'interface User"
+          },
+          {
+            "file": "frontend/src/app/me/page.tsx",
+            "pattern": "user.full_name || user.username"
+          },
+          {
+            "file": "frontend/src/app/maestro/page.tsx",
+            "pattern": "user?.full_name || user?.username || 'Maestro'"
+          }
+        ]
+      },
+      "prevention": "Sempre verificare che tutti i campi usati nel frontend siano inclusi nelle interface TypeScript",
+      "time_to_debug": "20 minuti",
+      "time_saved_future": "20 minuti"
+    },
+    {
+      "id": "ERR-2026-01-31-005",
+      "date": "2026-01-31",
+      "category": "TypeScript",
+      "subcategory": "Generic Constraint",
+      "severity": "MEDIUM",
+      "title": "DataTable generic constraint troppo restrittivo",
+      "symptom": "Errore TS2322: Type 'Column<Avatar3D>[]' is not assignable to type 'Column<Record<string, unknown>>[]'",
+      "root_cause": "DataTable<T extends Record<string, unknown>> non accetta tipi con proprietà enum o nested",
+      "error_message": "Type 'Column<Avatar3D>' is not assignable to type 'Column<Record<string, unknown>>'",
+      "files_affected": [
+        "frontend/src/components/shared/DataTable.tsx",
+        "frontend/src/app/admin/avatars/page.tsx"
+      ],
+      "solution": {
+        "description": "Cambiato constraint da Record<string, unknown> a object + type assertions",
+        "code_changes": [
+          {
+            "file": "frontend/src/components/shared/DataTable.tsx",
+            "before": "function DataTable<T extends Record<string, unknown>>",
+            "after": "function DataTable<T extends object>",
+            "additional": "Aggiunto (row as Record<string, unknown>)[key] per accesso dinamico"
+          }
+        ]
+      },
+      "prevention": "Usare constraint più permissivi per generic types quando devono accettare oggetti con proprietà tipizzate",
+      "time_to_debug": "15 minuti",
+      "time_saved_future": "15 minuti"
+    },
+    {
+      "id": "ERR-2026-01-31-006",
+      "date": "2026-01-31",
+      "category": "TypeScript",
+      "subcategory": "Type Casting",
+      "severity": "LOW",
+      "title": "AvatarViewer3D cast GLTFLoader → Error errato",
+      "symptom": "Errore TS2352: Conversion of type 'GLTFLoader' to type 'Error' may be a mistake",
+      "root_cause": "useGLTF callback error non è necessariamente Error, può essere unknown",
+      "error_message": "Type 'GLTFLoader' is missing properties from type 'Error': name, message",
+      "files_affected": [
+        "frontend/src/components/avatar/AvatarViewer3D.tsx"
+      ],
+      "solution": {
+        "description": "Usato instanceof check + fallback new Error()",
+        "code_changes": [
+          {
+            "file": "frontend/src/components/avatar/AvatarViewer3D.tsx",
+            "before": "onError?.(error as Error)",
+            "after": "onError?.(error instanceof Error ? error : new Error(String(error)))"
+          }
+        ]
+      },
+      "prevention": "Usare instanceof check prima di cast a Error per callback di librerie esterne",
+      "time_to_debug": "5 minuti",
+      "time_saved_future": "5 minuti"
+    }
+  ],
+
+  "patterns_learned": [
+    {
+      "id": "PATTERN-2026-01-31-001",
+      "category": "API Schema",
+      "title": "Frontend-Backend Schema Alignment",
+      "rule": "Prima di creare endpoint, verificare sempre lo schema atteso dal frontend leggendo il file che fa la chiamata",
+      "example": "Frontend si aspetta {overview: {...}, daily_views: [...]} ma backend ritorna {stats: {...}}"
+    },
+    {
+      "id": "PATTERN-2026-01-31-002",
+      "category": "API Paths",
+      "title": "Base URL Non-Duplication",
+      "rule": "Se baseUrl = '/api/v1/resource', l'endpoint è baseUrl + '/' non baseUrl + '/resource'",
+      "example": "CURRICULUM_API_BASE = '/api/v1/curricula' → chiamare `${base}?params` non `${base}/curricula?params`"
+    },
+    {
+      "id": "PATTERN-2026-01-31-003",
+      "category": "Date Handling",
+      "title": "Unix Timestamp vs ISO String",
+      "rule": "JavaScript new Date(null) o new Date(0) ritorna 1 gennaio 1970. Sempre gestire date null con fallback",
+      "example": "created_at ? new Date(created_at * 1000) : null"
+    },
+    {
+      "id": "PATTERN-2026-01-31-004",
+      "category": "TypeScript",
+      "title": "Optional Fields in Interface",
+      "rule": "Se API può ritornare campo null, usare fieldName?: Type | null nell'interface",
+      "example": "full_name?: string; invece di full_name: string;"
+    },
+    {
+      "id": "PATTERN-2026-01-31-005",
+      "category": "TypeScript Generics",
+      "title": "Object vs Record Constraint",
+      "rule": "Per generic che devono accettare classi/interfaces tipizzate, usare T extends object non T extends Record<string, unknown>",
+      "example": "DataTable<T extends object> accetta Avatar3D, DataTable<T extends Record<string, unknown>> no"
+    }
+  ],
+
+  "statistics": {
+    "session_date": "2026-01-31",
+    "bugs_fixed": 6,
+    "files_backend_modified": 2,
+    "files_frontend_modified": 7,
+    "typescript_errors_before": 3,
+    "typescript_errors_after": 0,
+    "new_endpoints_created": 2,
+    "lines_added": "~500",
+    "total_debug_time": "2.5 ore"
+  }
+}

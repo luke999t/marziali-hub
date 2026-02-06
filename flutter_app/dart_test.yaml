@@ -1,0 +1,143 @@
+# Test Configuration for Enterprise Test Suite
+# Target: 90%+ coverage, 95%+ pass rate
+
+# Global timeout for all tests
+timeout: 30s
+
+# Platform-specific settings
+platforms:
+  - vm
+
+# Test paths - pointing to test/real/ structure (zero-mock tests)
+paths:
+  - test/real/unit
+  - test/real/integration
+  - test/real/regression
+  - test/real/security
+  - test/real/holistic
+  - test/real/performance
+  - test/real/e2e
+  - test/real/audit
+  - test/real/stress
+  - test/real/penetration
+  - test/real/widget
+  - test/static_analysis
+
+# Tags for test categorization
+tags:
+  unit:
+    timeout: 10s
+    skip: false
+
+  integration:
+    timeout: 60s
+    skip: false
+
+  regression:
+    timeout: 30s
+    skip: false
+
+  security:
+    timeout: 30s
+    skip: false
+
+  penetration:
+    timeout: 60s
+    skip: false
+
+  slow:
+    timeout: 300s
+    # Set to true to skip slow tests in regular CI
+    skip: false
+
+  holistic:
+    timeout: 120s
+    skip: false
+
+  performance:
+    timeout: 120s
+    skip: false
+
+  smoke:
+    timeout: 10s
+    skip: false
+
+  e2e:
+    timeout: 180s
+    skip: false
+
+  audit:
+    timeout: 60s
+    skip: false
+
+  stress:
+    timeout: 300s
+    skip: false
+
+  widget:
+    timeout: 30s
+    skip: false
+
+# Reporter configuration
+reporter: expanded
+
+# Concurrency settings
+concurrency: 4
+
+# Coverage configuration (used with --coverage flag)
+coverage:
+  # Files to include in coverage
+  include:
+    - "lib/**/*.dart"
+  # Files to exclude from coverage
+  exclude:
+    - "lib/generated/**"
+    - "lib/**/*.g.dart"
+    - "lib/**/*.freezed.dart"
+    - "lib/core/constants/**"
+    - "lib/main.dart"
+
+# Retry configuration
+retry: 2
+
+# Verbose output
+verbose: true
+
+# Fail fast mode (stop on first failure)
+fail_fast: false
+
+# Chain stack traces for better debugging
+chain_stack_traces: true
+
+# JavaScript compilation for browser tests
+js:
+  compiler: dart2js
+  optimization_level: 0
+
+# Custom presets
+presets:
+  ci:
+    timeout: 60s
+    concurrency: 2
+    fail_fast: true
+    retry: 1
+    tags:
+      slow:
+        skip: true
+
+  full:
+    timeout: 300s
+    concurrency: 4
+    fail_fast: false
+    retry: 2
+
+  quick:
+    timeout: 30s
+    concurrency: 4
+    fail_fast: true
+    retry: 0
+    tags:
+      slow:
+        skip: true
+      holistic:
+        skip: true

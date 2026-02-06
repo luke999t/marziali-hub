@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block title %}Promemoria: {{ event_title }}{% endblock %}
+
+{% block content %}
+<h2 style="margin: 0 0 24px; font-size: 22px; font-weight: 600; color: #111827;">
+    {% if days_until == 1 %}
+    L'evento è domani!
+    {% elif days_until <= 3 %}
+    Mancano solo {{ days_until }} giorni!
+    {% else %}
+    Promemoria Evento
+    {% endif %}
+</h2>
+
+<p style="margin: 0 0 24px; font-size: 16px; color: #374151; line-height: 1.6;">
+    Ciao <strong>{{ user_name }}</strong>,
+</p>
+
+<p style="margin: 0 0 24px; font-size: 16px; color: #374151; line-height: 1.6;">
+    {% if days_until == 1 %}
+    Ti ricordiamo che l'evento a cui sei iscritto si terrà <strong>domani</strong>!
+    {% else %}
+    Ti ricordiamo che l'evento a cui sei iscritto si terrà <strong>{{ urgency }}</strong>.
+    {% endif %}
+</p>
+
+<!-- Event Card -->
+<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: {% if days_until == 1 %}#fef3c7{% elif days_until <= 3 %}#fff7ed{% else %}#f0f9ff{% endif %}; border-radius: 8px; border-left: 4px solid {% if days_until == 1 %}#f59e0b{% elif days_until <= 3 %}#f97316{% else %}#2563eb{% endif %}; margin-bottom: 24px;">
+    <tr>
+        <td style="padding: 20px;">
+            <h3 style="margin: 0 0 12px; font-size: 18px; font-weight: 600; color: {% if days_until == 1 %}#92400e{% elif days_until <= 3 %}#c2410c{% else %}#1e40af{% endif %};">
+                {{ event_title }}
+            </h3>
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                    <td style="padding: 4px 0; font-size: 14px; color: #374151;">
+                        <strong>Data:</strong> {{ event_date }}
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 4px 0; font-size: 14px; color: #374151;">
+                        <strong>Luogo:</strong> {{ event_location }}
+                    </td>
+                </tr>
+                {% if event_address %}
+                <tr>
+                    <td style="padding: 4px 0; font-size: 14px; color: #374151;">
+                        <strong>Indirizzo:</strong> {{ event_address }}
+                    </td>
+                </tr>
+                {% endif %}
+            </table>
+        </td>
+    </tr>
+</table>
+
+{% if days_until == 1 %}
+<!-- Checklist for tomorrow -->
+<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin-bottom: 24px;">
+    <tr>
+        <td>
+            <h4 style="margin: 0 0 12px; font-size: 14px; font-weight: 600; color: #374151;">
+                Cosa portare:
+            </h4>
+            <ul style="margin: 0; padding-left: 20px; color: #374151; font-size: 14px; line-height: 1.8;">
+                <li>Abbigliamento sportivo comodo</li>
+                <li>Documento di identità</li>
+                <li>Bottiglia d'acqua</li>
+                <li>Conferma iscrizione (questa email)</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+{% endif %}
+
+<p style="margin: 0; font-size: 14px; color: #6b7280; line-height: 1.6;">
+    Non vediamo l'ora di vederti! Se hai domande, non esitare a contattarci.
+</p>
+{% endblock %}

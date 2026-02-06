@@ -1,0 +1,1185 @@
+openapi: 3.0.3
+info:
+  title: Media Center Arti Marziali API
+  description: |
+    REST API for the Media Center Arti Marziali platform.
+
+    ## Authentication
+    Most endpoints require a Bearer token in the Authorization header.
+
+    ## User Tiers
+    - `free` - Basic access with ads
+    - `hybrid_light` - No ads, 1080p
+    - `hybrid_standard` - Downloads enabled
+    - `premium` - 4K, all features
+    - `business` - Bulk licenses, API access
+  version: 1.0.0
+  contact:
+    name: API Support
+    email: api@example.com
+
+servers:
+  - url: https://api.example.com/api/v1
+    description: Production server
+  - url: http://localhost:8000/api/v1
+    description: Development server
+
+tags:
+  - name: auth
+    description: Authentication endpoints
+  - name: users
+    description: User profile management
+  - name: videos
+    description: Video content operations
+  - name: ads
+    description: Advertising batch sessions and pause ads
+  - name: payments
+    description: Payments, stelline, and subscriptions
+  - name: live
+    description: Live streaming events
+  - name: blockchain
+    description: Blockchain data publication
+  - name: communication
+    description: Messages and correction requests
+  - name: moderation
+    description: Content moderation
+  - name: admin
+    description: Admin operations
+
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: JWT access token
+
+  schemas:
+    UserRegisterRequest:
+      type: object
+      required:
+        - email
+        - password
+        - username
+      properties:
+        email:
+          type: string
+          format: email
+        password:
+          type: string
+          minLength: 8
+        username:
+          type: string
+          minLength: 3
+          maxLength: 50
+        full_name:
+          type: string
+
+    UserLoginRequest:
+      type: object
+      required:
+        - email
+        - password
+      properties:
+        email:
+          type: string
+          format: email
+        password:
+          type: string
+
+    TokenResponse:
+      type: object
+      properties:
+        access_token:
+          type: string
+        refresh_token:
+          type: string
+        token_type:
+          type: string
+          enum: [bearer]
+        expires_in:
+          type: integer
+
+    UserResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        email:
+          type: string
+          format: email
+        username:
+          type: string
+        full_name:
+          type: string
+        tier:
+          type: string
+          enum: [free, hybrid_light, hybrid_standard, premium, business]
+        is_active:
+          type: boolean
+        is_verified:
+          type: boolean
+        created_at:
+          type: string
+          format: date-time
+
+    VideoResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        title:
+          type: string
+        description:
+          type: string
+        slug:
+          type: string
+        category:
+          type: string
+          enum: [technique, kata, combat, theory, workout, demo, other]
+        difficulty:
+          type: string
+          enum: [beginner, intermediate, advanced, expert]
+        style:
+          type: string
+        tags:
+          type: array
+          items:
+            type: string
+        thumbnail_url:
+          type: string
+        duration:
+          type: integer
+        view_count:
+          type: integer
+        tier_required:
+          type: string
+        created_at:
+          type: string
+          format: date-time
+
+    VideoListResponse:
+      type: object
+      properties:
+        videos:
+          type: array
+          items:
+            $ref: '#/components/schemas/VideoResponse'
+        total:
+          type: integer
+        skip:
+          type: integer
+        limit:
+          type: integer
+
+    VideoCreateRequest:
+      type: object
+      required:
+        - title
+        - category
+        - difficulty
+      properties:
+        title:
+          type: string
+        description:
+          type: string
+        category:
+          type: string
+          enum: [technique, kata, combat, theory, workout, demo, other]
+        difficulty:
+          type: string
+          enum: [beginner, intermediate, advanced, expert]
+        style:
+          type: string
+        tags:
+          type: array
+          items:
+            type: string
+        tier_required:
+          type: string
+          default: free
+        is_premium:
+          type: boolean
+          default: false
+        ppv_price:
+          type: integer
+        instructor_name:
+          type: string
+
+    StreamingResponse:
+      type: object
+      properties:
+        streaming_url:
+          type: string
+        token:
+          type: string
+        expires_in:
+          type: integer
+        quality:
+          type: string
+        available_qualities:
+          type: array
+          items:
+            type: string
+        subtitles:
+          type: object
+        duration:
+          type: integer
+
+    AdsSessionStartRequest:
+      type: object
+      required:
+        - batch_type
+      properties:
+        batch_type:
+          type: string
+          enum: [3_video, 5_video, 10_video]
+
+    AdsSessionResponse:
+      type: object
+      properties:
+        session_id:
+          type: string
+          format: uuid
+        batch_type:
+          type: string
+        status:
+          type: string
+        videos_to_unlock:
+          type: integer
+        ads_required_duration:
+          type: integer
+
+    PauseAdResponse:
+      type: object
+      properties:
+        suggested_video:
+          type: object
+        sponsor_ad:
+          type: object
+        impression_id:
+          type: string
+        show_overlay:
+          type: boolean
+
+    StellinePurchaseRequest:
+      type: object
+      required:
+        - package
+      properties:
+        package:
+          type: string
+          enum: [small, medium, large]
+
+    StellinePurchaseResponse:
+      type: object
+      properties:
+        payment_intent_id:
+          type: string
+        client_secret:
+          type: string
+        amount_eur:
+          type: number
+        stelline_amount:
+          type: integer
+        payment_id:
+          type: string
+
+    SubscriptionCreateRequest:
+      type: object
+      required:
+        - tier
+      properties:
+        tier:
+          type: string
+          enum: [HYBRID_LIGHT, HYBRID_STANDARD, PREMIUM, BUSINESS]
+
+    LiveEventCreateRequest:
+      type: object
+      required:
+        - title
+        - scheduled_start
+      properties:
+        title:
+          type: string
+        description:
+          type: string
+        scheduled_start:
+          type: string
+          format: date-time
+        scheduled_end:
+          type: string
+          format: date-time
+        tier_required:
+          type: string
+          default: free
+        max_viewers:
+          type: integer
+          default: 1000
+        recording_enabled:
+          type: boolean
+          default: false
+
+    LiveEventResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        title:
+          type: string
+        description:
+          type: string
+        stream_key:
+          type: string
+        rtmp_url:
+          type: string
+        hls_url:
+          type: string
+        is_active:
+          type: boolean
+        scheduled_start:
+          type: string
+          format: date-time
+
+    BlockchainBatchResponse:
+      type: object
+      properties:
+        batch_id:
+          type: string
+          format: uuid
+        batch_date:
+          type: string
+          format: date-time
+        period_start:
+          type: string
+          format: date-time
+        period_end:
+          type: string
+          format: date-time
+        status:
+          type: string
+        total_views:
+          type: integer
+        unique_users:
+          type: integer
+        total_watch_time:
+          type: integer
+        total_revenue:
+          type: number
+        data_hash:
+          type: string
+        blockchain_tx_hash:
+          type: string
+        explorer_url:
+          type: string
+
+    MessageCreate:
+      type: object
+      required:
+        - to_user_id
+        - content
+      properties:
+        to_user_id:
+          type: string
+          format: uuid
+        content:
+          type: string
+          maxLength: 5000
+        attachment_type:
+          type: string
+          enum: [text, image, video, audio, pdf]
+        attachment_url:
+          type: string
+
+    MessageResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        from_user_id:
+          type: string
+          format: uuid
+        to_user_id:
+          type: string
+          format: uuid
+        content:
+          type: string
+        is_read:
+          type: boolean
+        created_at:
+          type: string
+          format: date-time
+
+    CorrectionRequestCreate:
+      type: object
+      required:
+        - maestro_id
+        - video_url
+      properties:
+        maestro_id:
+          type: string
+          format: uuid
+        video_url:
+          type: string
+        video_duration:
+          type: number
+        notes:
+          type: string
+          maxLength: 2000
+
+    MessageResponseSimple:
+      type: object
+      properties:
+        message:
+          type: string
+        success:
+          type: boolean
+
+    Error:
+      type: object
+      properties:
+        detail:
+          type: string
+
+paths:
+  /auth/register:
+    post:
+      tags: [auth]
+      summary: Register new user
+      operationId: registerUser
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserRegisterRequest'
+      responses:
+        '201':
+          description: User registered successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserResponse'
+        '400':
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '409':
+          description: Email already registered
+
+  /auth/login:
+    post:
+      tags: [auth]
+      summary: Login user
+      operationId: loginUser
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserLoginRequest'
+      responses:
+        '200':
+          description: Login successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TokenResponse'
+        '401':
+          description: Invalid credentials
+
+  /auth/refresh:
+    post:
+      tags: [auth]
+      summary: Refresh access token
+      operationId: refreshToken
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                refresh_token:
+                  type: string
+      responses:
+        '200':
+          description: Token refreshed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TokenResponse'
+
+  /auth/me:
+    get:
+      tags: [auth]
+      summary: Get current user
+      operationId: getCurrentUser
+      security:
+        - BearerAuth: []
+      responses:
+        '200':
+          description: Current user profile
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserResponse'
+
+  /auth/logout:
+    post:
+      tags: [auth]
+      summary: Logout user
+      operationId: logoutUser
+      security:
+        - BearerAuth: []
+      responses:
+        '200':
+          description: Logged out successfully
+
+  /videos:
+    get:
+      tags: [videos]
+      summary: List videos
+      operationId: listVideos
+      parameters:
+        - name: skip
+          in: query
+          schema:
+            type: integer
+            default: 0
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 20
+            maximum: 100
+        - name: category
+          in: query
+          schema:
+            type: string
+            enum: [technique, kata, combat, theory, workout, demo, other]
+        - name: difficulty
+          in: query
+          schema:
+            type: string
+            enum: [beginner, intermediate, advanced, expert]
+        - name: search
+          in: query
+          schema:
+            type: string
+            minLength: 2
+        - name: sort_by
+          in: query
+          schema:
+            type: string
+            enum: [created_at, view_count, title]
+        - name: sort_order
+          in: query
+          schema:
+            type: string
+            enum: [asc, desc]
+      responses:
+        '200':
+          description: List of videos
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VideoListResponse'
+
+    post:
+      tags: [videos]
+      summary: Create video (admin)
+      operationId: createVideo
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VideoCreateRequest'
+      responses:
+        '201':
+          description: Video created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VideoResponse'
+
+  /videos/search:
+    get:
+      tags: [videos]
+      summary: Search videos
+      operationId: searchVideos
+      parameters:
+        - name: q
+          in: query
+          required: true
+          schema:
+            type: string
+            minLength: 2
+      responses:
+        '200':
+          description: Search results
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VideoListResponse'
+
+  /videos/home:
+    get:
+      tags: [videos]
+      summary: Get home feed
+      operationId: getHomeFeed
+      responses:
+        '200':
+          description: Home feed with featured and rows
+
+  /videos/{video_id}:
+    get:
+      tags: [videos]
+      summary: Get video details
+      operationId: getVideo
+      parameters:
+        - name: video_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Video details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VideoResponse'
+        '404':
+          description: Video not found
+
+    put:
+      tags: [videos]
+      summary: Update video (admin)
+      operationId: updateVideo
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: video_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Video updated
+
+    delete:
+      tags: [videos]
+      summary: Delete video (admin)
+      operationId: deleteVideo
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: video_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Video deleted
+
+  /videos/{video_id}/stream:
+    get:
+      tags: [videos]
+      summary: Get streaming URL
+      operationId: getStreamUrl
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: video_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+        - name: quality
+          in: query
+          schema:
+            type: string
+            enum: [360p, 720p, 1080p, 4k]
+      responses:
+        '200':
+          description: Streaming URL with token
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StreamingResponse'
+
+  /videos/{video_id}/favorite:
+    post:
+      tags: [videos]
+      summary: Add to favorites
+      operationId: addFavorite
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: video_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Added to favorites
+
+    delete:
+      tags: [videos]
+      summary: Remove from favorites
+      operationId: removeFavorite
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: video_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Removed from favorites
+
+  /ads/sessions/start:
+    post:
+      tags: [ads]
+      summary: Start ads batch session
+      operationId: startAdsSession
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AdsSessionStartRequest'
+      responses:
+        '200':
+          description: Session started
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AdsSessionResponse'
+
+  /ads/sessions/{session_id}/complete:
+    post:
+      tags: [ads]
+      summary: Complete ads session
+      operationId: completeAdsSession
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: session_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Videos unlocked
+
+  /ads/pause-ad:
+    get:
+      tags: [ads]
+      summary: Get pause ad overlay
+      operationId: getPauseAd
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: video_id
+          in: query
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Pause ad data
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PauseAdResponse'
+
+  /payments/stelline/purchase:
+    post:
+      tags: [payments]
+      summary: Purchase stelline
+      operationId: purchaseStelline
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StellinePurchaseRequest'
+      responses:
+        '200':
+          description: Payment intent created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StellinePurchaseResponse'
+
+  /payments/subscription/create:
+    post:
+      tags: [payments]
+      summary: Create subscription
+      operationId: createSubscription
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SubscriptionCreateRequest'
+      responses:
+        '200':
+          description: Subscription created
+
+  /payments/subscription/cancel:
+    post:
+      tags: [payments]
+      summary: Cancel subscription
+      operationId: cancelSubscription
+      security:
+        - BearerAuth: []
+      responses:
+        '200':
+          description: Subscription cancelled
+
+  /live/events:
+    get:
+      tags: [live]
+      summary: List live events
+      operationId: listLiveEvents
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: active_only
+          in: query
+          schema:
+            type: boolean
+            default: false
+      responses:
+        '200':
+          description: List of live events
+
+    post:
+      tags: [live]
+      summary: Create live event (admin)
+      operationId: createLiveEvent
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LiveEventCreateRequest'
+      responses:
+        '201':
+          description: Event created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LiveEventResponse'
+
+  /live/events/{event_id}/start:
+    post:
+      tags: [live]
+      summary: Start live event (admin)
+      operationId: startLiveEvent
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: event_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Event started
+
+  /blockchain/batches/create:
+    post:
+      tags: [blockchain]
+      summary: Create weekly batch (admin)
+      operationId: createBlockchainBatch
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: week_offset
+          in: query
+          schema:
+            type: integer
+            default: 0
+      responses:
+        '200':
+          description: Batch created
+
+  /blockchain/batches/{batch_id}:
+    get:
+      tags: [blockchain]
+      summary: Get batch status
+      operationId: getBatchStatus
+      parameters:
+        - name: batch_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Batch details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BlockchainBatchResponse'
+
+  /blockchain/batches/{batch_id}/publish:
+    post:
+      tags: [blockchain]
+      summary: Publish batch to blockchain (admin)
+      operationId: publishBatch
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: batch_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Batch published
+
+  /communication/messages:
+    get:
+      tags: [communication]
+      summary: List messages
+      operationId: listMessages
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: conversation_with
+          in: query
+          schema:
+            type: string
+            format: uuid
+        - name: unread_only
+          in: query
+          schema:
+            type: boolean
+            default: false
+        - name: page
+          in: query
+          schema:
+            type: integer
+            default: 1
+        - name: page_size
+          in: query
+          schema:
+            type: integer
+            default: 20
+      responses:
+        '200':
+          description: List of messages
+
+    post:
+      tags: [communication]
+      summary: Send message
+      operationId: sendMessage
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MessageCreate'
+      responses:
+        '201':
+          description: Message sent
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MessageResponse'
+
+  /communication/corrections:
+    get:
+      tags: [communication]
+      summary: List correction requests
+      operationId: listCorrectionRequests
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: role
+          in: query
+          schema:
+            type: string
+            enum: [student, maestro]
+        - name: status_filter
+          in: query
+          schema:
+            type: string
+            enum: [pending, in_progress, completed, rejected]
+      responses:
+        '200':
+          description: List of correction requests
+
+    post:
+      tags: [communication]
+      summary: Create correction request
+      operationId: createCorrectionRequest
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CorrectionRequestCreate'
+      responses:
+        '201':
+          description: Correction request created
+
+  /moderation/videos/pending:
+    get:
+      tags: [moderation]
+      summary: List pending videos (admin)
+      operationId: listPendingVideos
+      security:
+        - BearerAuth: []
+      responses:
+        '200':
+          description: List of pending videos
+
+  /moderation/videos/{video_id}/approve:
+    post:
+      tags: [moderation]
+      summary: Approve video (admin)
+      operationId: approveVideo
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: video_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Video approved
+
+  /moderation/videos/{video_id}/reject:
+    post:
+      tags: [moderation]
+      summary: Reject video (admin)
+      operationId: rejectVideo
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: video_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Video rejected
+
+  /admin/dashboard:
+    get:
+      tags: [admin]
+      summary: Admin dashboard
+      operationId: getAdminDashboard
+      security:
+        - BearerAuth: []
+      responses:
+        '200':
+          description: Dashboard KPIs
+
+  /admin/users:
+    get:
+      tags: [admin]
+      summary: List users (admin)
+      operationId: listUsers
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: skip
+          in: query
+          schema:
+            type: integer
+            default: 0
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 50
+        - name: search
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: List of users
+
+  /admin/users/{user_id}/ban:
+    post:
+      tags: [admin]
+      summary: Ban user (admin)
+      operationId: banUser
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: user_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - reason
+              properties:
+                reason:
+                  type: string
+                duration_days:
+                  type: integer
+      responses:
+        '200':
+          description: User banned

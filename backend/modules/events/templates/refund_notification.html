@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block title %}Richiesta Rimborso - {{ event_title }}{% endblock %}
+
+{% block content %}
+<h2 style="margin: 0 0 24px; font-size: 22px; font-weight: 600; color: #111827;">
+    {% if approved %}
+    Rimborso Approvato
+    {% else %}
+    Aggiornamento Richiesta Rimborso
+    {% endif %}
+</h2>
+
+<p style="margin: 0 0 24px; font-size: 16px; color: #374151; line-height: 1.6;">
+    Ciao <strong>{{ user_name }}</strong>,
+</p>
+
+{% if approved %}
+<!-- Approved -->
+<p style="margin: 0 0 24px; font-size: 16px; color: #374151; line-height: 1.6;">
+    La tua richiesta di rimborso per l'evento <strong>{{ event_title }}</strong> è stata approvata.
+</p>
+
+<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #f0fdf4; border-radius: 8px; border-left: 4px solid #16a34a; margin-bottom: 24px;">
+    <tr>
+        <td style="padding: 20px;">
+            <h3 style="margin: 0 0 12px; font-size: 16px; font-weight: 600; color: #166534;">
+                Dettagli Rimborso
+            </h3>
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                    <td style="padding: 4px 0; font-size: 14px; color: #374151;">
+                        <strong>Evento:</strong> {{ event_title }}
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 4px 0; font-size: 14px; color: #374151;">
+                        <strong>Importo rimborsato:</strong> {{ refund_amount }}
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+<p style="margin: 0 0 24px; font-size: 14px; color: #374151; line-height: 1.6;">
+    Il rimborso verrà accreditato sul metodo di pagamento originale entro 5-10 giorni lavorativi.
+</p>
+
+{% else %}
+<!-- Rejected -->
+<p style="margin: 0 0 24px; font-size: 16px; color: #374151; line-height: 1.6;">
+    Purtroppo non è stato possibile approvare la tua richiesta di rimborso per l'evento <strong>{{ event_title }}</strong>.
+</p>
+
+<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #fef2f2; border-radius: 8px; border-left: 4px solid #dc2626; margin-bottom: 24px;">
+    <tr>
+        <td style="padding: 20px;">
+            <h3 style="margin: 0 0 12px; font-size: 16px; font-weight: 600; color: #991b1b;">
+                Richiesta Non Approvata
+            </h3>
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                    <td style="padding: 4px 0; font-size: 14px; color: #374151;">
+                        <strong>Evento:</strong> {{ event_title }}
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 4px 0; font-size: 14px; color: #374151;">
+                        <strong>Importo richiesto:</strong> {{ refund_amount }}
+                    </td>
+                </tr>
+                {% if reason %}
+                <tr>
+                    <td style="padding: 8px 0 0; font-size: 14px; color: #374151;">
+                        <strong>Motivazione:</strong><br>{{ reason }}
+                    </td>
+                </tr>
+                {% endif %}
+            </table>
+        </td>
+    </tr>
+</table>
+
+<p style="margin: 0 0 24px; font-size: 14px; color: #374151; line-height: 1.6;">
+    Se ritieni che ci sia stato un errore o hai ulteriori domande,
+    puoi rispondere a questa email per contattare il nostro supporto.
+</p>
+{% endif %}
+
+<p style="margin: 0; font-size: 14px; color: #6b7280; line-height: 1.6;">
+    Grazie per la comprensione.
+</p>
+{% endblock %}

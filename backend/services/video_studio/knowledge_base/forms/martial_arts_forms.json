@@ -1,0 +1,135 @@
+{
+  "_metadata": {
+    "type": "martial_arts_forms",
+    "source": "martial_arts_patterns.py",
+    "exported_at": "2026-01-21T09:22:27.609785",
+    "ai_indexable": true
+  },
+  "forms": [
+    {
+      "id": "form_yun_shou",
+      "name": "云手 (Yun Shou - Cloud Hands)",
+      "style": "tai_chi",
+      "type": "sequence",
+      "description": "Movimento circolare continuo delle braccia, simbolo del Tai Chi",
+      "duration_range": [
+        3.0,
+        8.0
+      ],
+      "keywords": [
+        "yun shou",
+        "cloud hands",
+        "mani nuvola",
+        "circular",
+        "circolare"
+      ]
+    },
+    {
+      "id": "form_grasp_sparrows_tail",
+      "name": "揽雀尾 (Lan Que Wei - Grasp Sparrow's Tail)",
+      "style": "tai_chi",
+      "type": "sequence",
+      "description": "Sequenza di 4 movimenti: Ward Off, Roll Back, Press, Push",
+      "duration_range": [
+        8.0,
+        15.0
+      ],
+      "keywords": [
+        "lan que wei",
+        "grasp sparrow",
+        "ward off",
+        "roll back",
+        "press",
+        "push"
+      ]
+    },
+    {
+      "id": "form_push_hands",
+      "name": "推手 (Tui Shou - Push Hands)",
+      "style": "tai_chi",
+      "type": "sequence",
+      "description": "Esercizio a due per sviluppare sensibilità",
+      "duration_range": [
+        5.0,
+        20.0
+      ],
+      "keywords": [
+        "push hands",
+        "tui shou",
+        "sticky hands",
+        "sensing",
+        "two person"
+      ]
+    },
+    {
+      "id": "form_chain_punches",
+      "name": "连环冲拳 (Chain Punches)",
+      "style": "wing_chun",
+      "type": "sequence",
+      "description": "Pugni rapidi consecutivi sulla centerline",
+      "duration_range": [
+        0.5,
+        2.0
+      ],
+      "keywords": [
+        "chain punch",
+        "straight punch",
+        "lian huan",
+        "rapid fire"
+      ]
+    },
+    {
+      "id": "form_chi_sao",
+      "name": "黐手 (Chi Sao - Sticky Hands)",
+      "style": "wing_chun",
+      "type": "sequence",
+      "description": "Esercizio di sensibilità con contatto continuo",
+      "duration_range": [
+        5.0,
+        30.0
+      ],
+      "keywords": [
+        "chi sao",
+        "sticky hands",
+        "sensitivity",
+        "rolling",
+        "two person"
+      ]
+    },
+    {
+      "id": "form_circle_walking",
+      "name": "走圈 (Zou Quan - Circle Walking)",
+      "style": "bagua",
+      "type": "sequence",
+      "description": "Camminata circolare caratteristica del Bagua",
+      "duration_range": [
+        5.0,
+        30.0
+      ],
+      "keywords": [
+        "circle walk",
+        "zou quan",
+        "walking",
+        "circular",
+        "bagua"
+      ]
+    },
+    {
+      "id": "form_palm_changes",
+      "name": "换掌 (Huan Zhang - Palm Changes)",
+      "style": "bagua",
+      "type": "sequence",
+      "description": "Cambi di palmo durante la camminata",
+      "duration_range": [
+        2.0,
+        5.0
+      ],
+      "keywords": [
+        "palm change",
+        "huan zhang",
+        "transition",
+        "flow"
+      ]
+    }
+  ]
+}

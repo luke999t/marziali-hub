@@ -1,0 +1,1229 @@
+{
+  "info": {
+    "name": "Media Center Arti Marziali API",
+    "description": "Complete API collection for the Media Center Arti Marziali platform",
+    "version": "1.0.0",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8000/api/v1",
+      "type": "string"
+    },
+    {
+      "key": "accessToken",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "refreshToken",
+      "value": "",
+      "type": "string"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{accessToken}}",
+        "type": "string"
+      }
+    ]
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Register User",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"user@example.com\",\n  \"password\": \"SecurePass123!\",\n  \"username\": \"martial_artist\",\n  \"full_name\": \"John Doe\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/auth/register",
+              "host": ["{{baseUrl}}"],
+              "path": ["auth", "register"]
+            }
+          }
+        },
+        {
+          "name": "Login",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "var jsonData = pm.response.json();",
+                  "if (jsonData.access_token) {",
+                  "    pm.collectionVariables.set('accessToken', jsonData.access_token);",
+                  "}",
+                  "if (jsonData.refresh_token) {",
+                  "    pm.collectionVariables.set('refreshToken', jsonData.refresh_token);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"user@example.com\",\n  \"password\": \"SecurePass123!\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/auth/login",
+              "host": ["{{baseUrl}}"],
+              "path": ["auth", "login"]
+            }
+          }
+        },
+        {
+          "name": "Refresh Token",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "var jsonData = pm.response.json();",
+                  "if (jsonData.access_token) {",
+                  "    pm.collectionVariables.set('accessToken', jsonData.access_token);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"refresh_token\": \"{{refreshToken}}\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/auth/refresh",
+              "host": ["{{baseUrl}}"],
+              "path": ["auth", "refresh"]
+            }
+          }
+        },
+        {
+          "name": "Get Current User",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/auth/me",
+              "host": ["{{baseUrl}}"],
+              "path": ["auth", "me"]
+            }
+          }
+        },
+        {
+          "name": "Logout",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/auth/logout",
+              "host": ["{{baseUrl}}"],
+              "path": ["auth", "logout"]
+            }
+          }
+        },
+        {
+          "name": "Verify Email",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"token\": \"verification_token\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/auth/verify-email",
+              "host": ["{{baseUrl}}"],
+              "path": ["auth", "verify-email"]
+            }
+          }
+        },
+        {
+          "name": "Forgot Password",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"user@example.com\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/auth/forgot-password",
+              "host": ["{{baseUrl}}"],
+              "path": ["auth", "forgot-password"]
+            }
+          }
+        },
+        {
+          "name": "Reset Password",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"token\": \"reset_token\",\n  \"new_password\": \"NewSecurePass123!\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/auth/reset-password",
+              "host": ["{{baseUrl}}"],
+              "path": ["auth", "reset-password"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Videos",
+      "item": [
+        {
+          "name": "List Videos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/videos?skip=0&limit=20&sort_by=created_at&sort_order=desc",
+              "host": ["{{baseUrl}}"],
+              "path": ["videos"],
+              "query": [
+                {"key": "skip", "value": "0"},
+                {"key": "limit", "value": "20"},
+                {"key": "sort_by", "value": "created_at"},
+                {"key": "sort_order", "value": "desc"},
+                {"key": "category", "value": "kata", "disabled": true},
+                {"key": "difficulty", "value": "beginner", "disabled": true},
+                {"key": "search", "value": "karate", "disabled": true}
+              ]
+            }
+          }
+        },
+        {
+          "name": "Search Videos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/videos/search?q=karate&limit=20",
+              "host": ["{{baseUrl}}"],
+              "path": ["videos", "search"],
+              "query": [
+                {"key": "q", "value": "karate"},
+                {"key": "limit", "value": "20"}
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Home Feed",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/videos/home",
+              "host": ["{{baseUrl}}"],
+              "path": ["videos", "home"]
+            }
+          }
+        },
+        {
+          "name": "Get Continue Watching",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/videos/continue-watching?limit=10",
+              "host": ["{{baseUrl}}"],
+              "path": ["videos", "continue-watching"],
+              "query": [
+                {"key": "limit", "value": "10"}
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Video Details",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/videos/:video_id",
+              "host": ["{{baseUrl}}"],
+              "path": ["videos", ":video_id"],
+              "variable": [
+                {"key": "video_id", "value": "550e8400-e29b-41d4-a716-446655440000"}
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Streaming URL",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/videos/:video_id/stream?quality=1080p",
+              "host": ["{{baseUrl}}"],
+              "path": ["videos", ":video_id", "stream"],
+              "query": [
+                {"key": "quality", "value": "1080p"}
+              ],
+              "variable": [
+                {"key": "video_id", "value": "550e8400-e29b-41d4-a716-446655440000"}
+              ]
+            }
+          }
+        },
+        {
+          "name": "Add to Favorites",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/videos/:video_id/favorite",
+              "host": ["{{baseUrl}}"],
+              "path": ["videos", ":video_id", "favorite"],
+              "variable": [
+                {"key": "video_id", "value": "550e8400-e29b-41d4-a716-446655440000"}
+              ]
+            }
+          }
+        },
+        {
+          "name": "Remove from Favorites",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/videos/:video_id/favorite",
+              "host": ["{{baseUrl}}"],
+              "path": ["videos", ":video_id", "favorite"],
+              "variable": [
+                {"key": "video_id", "value": "550e8400-e29b-41d4-a716-446655440000"}
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get My Favorites",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/videos/favorites",
+              "host": ["{{baseUrl}}"],
+              "path": ["videos", "favorites"]
+            }
+          }
+        },
+        {
+          "name": "Update Progress",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"position_seconds\": 450\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/videos/:video_id/progress",
+              "host": ["{{baseUrl}}"],
+              "path": ["videos", ":video_id", "progress"],
+              "variable": [
+                {"key": "video_id", "value": "550e8400-e29b-41d4-a716-446655440000"}
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create Video (Admin)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Karate Kata Heian Shodan\",\n  \"description\": \"Basic kata for beginners\",\n  \"category\": \"kata\",\n  \"difficulty\": \"beginner\",\n  \"style\": \"Karate\",\n  \"tags\": [\"kata\", \"beginner\", \"heian\"],\n  \"tier_required\": \"free\",\n  \"instructor_name\": \"Sensei Mario\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/videos",
+              "host": ["{{baseUrl}}"],
+              "path": ["videos"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Ads",
+      "item": [
+        {
+          "name": "Start Ads Session",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"batch_type\": \"3_video\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/ads/sessions/start",
+              "host": ["{{baseUrl}}"],
+              "path": ["ads", "sessions", "start"]
+            }
+          }
+        },
+        {
+          "name": "Record Ad View",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/ads/sessions/:session_id/view?ad_id=ad-uuid&duration=30",
+              "host": ["{{baseUrl}}"],
+              "path": ["ads", "sessions", ":session_id", "view"],
+              "query": [
+                {"key": "ad_id", "value": "ad-uuid"},
+                {"key": "duration", "value": "30"}
+              ],
+              "variable": [
+                {"key": "session_id", "value": "session-uuid"}
+              ]
+            }
+          }
+        },
+        {
+          "name": "Complete Ads Session",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/ads/sessions/:session_id/complete",
+              "host": ["{{baseUrl}}"],
+              "path": ["ads", "sessions", ":session_id", "complete"],
+              "variable": [
+                {"key": "session_id", "value": "session-uuid"}
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Active Session",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/ads/sessions/active",
+              "host": ["{{baseUrl}}"],
+              "path": ["ads", "sessions", "active"]
+            }
+          }
+        },
+        {
+          "name": "Get Pause Ad",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/ads/pause-ad?video_id=video-uuid",
+              "host": ["{{baseUrl}}"],
+              "path": ["ads", "pause-ad"],
+              "query": [
+                {"key": "video_id", "value": "video-uuid"}
+              ]
+            }
+          }
+        },
+        {
+          "name": "Record Pause Ad Impression",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"impression_id\": \"impression-uuid\",\n  \"video_id\": \"video-uuid\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/ads/pause-ad/impression",
+              "host": ["{{baseUrl}}"],
+              "path": ["ads", "pause-ad", "impression"]
+            }
+          }
+        },
+        {
+          "name": "Record Pause Ad Click",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"impression_id\": \"impression-uuid\",\n  \"click_type\": \"ad\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/ads/pause-ad/click",
+              "host": ["{{baseUrl}}"],
+              "path": ["ads", "pause-ad", "click"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Payments",
+      "item": [
+        {
+          "name": "Purchase Stelline",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"package\": \"medium\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/payments/stelline/purchase",
+              "host": ["{{baseUrl}}"],
+              "path": ["payments", "stelline", "purchase"]
+            }
+          }
+        },
+        {
+          "name": "Confirm Stelline Purchase",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"payment_intent_id\": \"pi_xxx\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/payments/stelline/confirm",
+              "host": ["{{baseUrl}}"],
+              "path": ["payments", "stelline", "confirm"]
+            }
+          }
+        },
+        {
+          "name": "Create Subscription",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"tier\": \"PREMIUM\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/payments/subscription/create",
+              "host": ["{{baseUrl}}"],
+              "path": ["payments", "subscription", "create"]
+            }
+          }
+        },
+        {
+          "name": "Cancel Subscription",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/payments/subscription/cancel",
+              "host": ["{{baseUrl}}"],
+              "path": ["payments", "subscription", "cancel"]
+            }
+          }
+        },
+        {
+          "name": "Get Payment History",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/payments/history?limit=50",
+              "host": ["{{baseUrl}}"],
+              "path": ["payments", "history"],
+              "query": [
+                {"key": "limit", "value": "50"}
+              ]
+            }
+          }
+        },
+        {
+          "name": "Purchase Video (PPV)",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/payments/video/:video_id/purchase",
+              "host": ["{{baseUrl}}"],
+              "path": ["payments", "video", ":video_id", "purchase"],
+              "variable": [
+                {"key": "video_id", "value": "video-uuid"}
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Live Streaming",
+      "item": [
+        {
+          "name": "List Live Events",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/live/events?active_only=false",
+              "host": ["{{baseUrl}}"],
+              "path": ["live", "events"],
+              "query": [
+                {"key": "active_only", "value": "false"}
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create Live Event (Admin)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Live Seminar: Advanced Kata\",\n  \"description\": \"Interactive seminar with Q&A\",\n  \"scheduled_start\": \"2026-01-20T18:00:00Z\",\n  \"scheduled_end\": \"2026-01-20T20:00:00Z\",\n  \"tier_required\": \"premium\",\n  \"max_viewers\": 500,\n  \"recording_enabled\": true\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/live/events",
+              "host": ["{{baseUrl}}"],
+              "path": ["live", "events"]
+            }
+          }
+        },
+        {
+          "name": "Get Live Event",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/live/events/:event_id",
+              "host": ["{{baseUrl}}"],
+              "path": ["live", "events", ":event_id"],
+              "variable": [
+                {"key": "event_id", "value": "event-uuid"}
+              ]
+            }
+          }
+        },
+        {
+          "name": "Start Live Event (Admin)",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/live/events/:event_id/start",
+              "host": ["{{baseUrl}}"],
+              "path": ["live", "events", ":event_id", "start"],
+              "variable": [
+                {"key": "event_id", "value": "event-uuid"}
+              ]
+            }
+          }
+        },
+        {
+          "name": "Stop Live Event (Admin)",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/live/events/:event_id/stop",
+              "host": ["{{baseUrl}}"],
+              "path": ["live", "events", ":event_id", "stop"],
+              "variable": [
+                {"key": "event_id", "value": "event-uuid"}
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Blockchain",
+      "item": [
+        {
+          "name": "Create Weekly Batch (Admin)",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/blockchain/batches/create?week_offset=0",
+              "host": ["{{baseUrl}}"],
+              "path": ["blockchain", "batches", "create"],
+              "query": [
+                {"key": "week_offset", "value": "0"}
+              ]
+            }
+          }
+        },
+        {
+          "name": "Broadcast Batch (Admin)",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/blockchain/batches/:batch_id/broadcast",
+              "host": ["{{baseUrl}}"],
+              "path": ["blockchain", "batches", ":batch_id", "broadcast"],
+              "variable": [
+                {"key": "batch_id", "value": "batch-uuid"}
+              ]
+            }
+          }
+        },
+        {
+          "name": "Receive Validation",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/blockchain/batches/:batch_id/validate?node_id=node-1&is_valid=true&computed_hash=0x123abc",
+              "host": ["{{baseUrl}}"],
+              "path": ["blockchain", "batches", ":batch_id", "validate"],
+              "query": [
+                {"key": "node_id", "value": "node-1"},
+                {"key": "is_valid", "value": "true"},
+                {"key": "computed_hash", "value": "0x123abc"}
+              ],
+              "variable": [
+                {"key": "batch_id", "value": "batch-uuid"}
+              ]
+            }
+          }
+        },
+        {
+          "name": "Publish Batch (Admin)",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/blockchain/batches/:batch_id/publish",
+              "host": ["{{baseUrl}}"],
+              "path": ["blockchain", "batches", ":batch_id", "publish"],
+              "variable": [
+                {"key": "batch_id", "value": "batch-uuid"}
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Batch Status",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/blockchain/batches/:batch_id",
+              "host": ["{{baseUrl}}"],
+              "path": ["blockchain", "batches", ":batch_id"],
+              "variable": [
+                {"key": "batch_id", "value": "batch-uuid"}
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Communication",
+      "item": [
+        {
+          "name": "Send Message",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"to_user_id\": \"recipient-uuid\",\n  \"content\": \"Hello, I have a question about your kata video\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/communication/messages",
+              "host": ["{{baseUrl}}"],
+              "path": ["communication", "messages"]
+            }
+          }
+        },
+        {
+          "name": "List Messages",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/communication/messages?page=1&page_size=20",
+              "host": ["{{baseUrl}}"],
+              "path": ["communication", "messages"],
+              "query": [
+                {"key": "page", "value": "1"},
+                {"key": "page_size", "value": "20"},
+                {"key": "conversation_with", "value": "user-uuid", "disabled": true},
+                {"key": "unread_only", "value": "false", "disabled": true}
+              ]
+            }
+          }
+        },
+        {
+          "name": "Mark Message as Read",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/communication/messages/:message_id/read",
+              "host": ["{{baseUrl}}"],
+              "path": ["communication", "messages", ":message_id", "read"],
+              "variable": [
+                {"key": "message_id", "value": "message-uuid"}
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Unread Count",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/communication/messages/unread/count",
+              "host": ["{{baseUrl}}"],
+              "path": ["communication", "messages", "unread", "count"]
+            }
+          }
+        },
+        {
+          "name": "Delete Message",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/communication/messages/:message_id",
+              "host": ["{{baseUrl}}"],
+              "path": ["communication", "messages", ":message_id"],
+              "variable": [
+                {"key": "message_id", "value": "message-uuid"}
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create Correction Request",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"maestro_id\": \"maestro-uuid\",\n  \"video_url\": \"https://cdn.example.com/uploads/practice.mp4\",\n  \"video_duration\": 120.5,\n  \"notes\": \"Please review my kata form, especially the stances\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/communication/corrections",
+              "host": ["{{baseUrl}}"],
+              "path": ["communication", "corrections"]
+            }
+          }
+        },
+        {
+          "name": "List Correction Requests",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/communication/corrections?role=student",
+              "host": ["{{baseUrl}}"],
+              "path": ["communication", "corrections"],
+              "query": [
+                {"key": "role", "value": "student"},
+                {"key": "status_filter", "value": "pending", "disabled": true}
+              ]
+            }
+          }
+        },
+        {
+          "name": "Update Correction Request (Maestro)",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"completed\",\n  \"feedback_text\": \"Great progress! Focus on lowering your stance.\",\n  \"feedback_annotations\": [\n    {\"timestamp\": 15.5, \"note\": \"Lower stance here\"},\n    {\"timestamp\": 32.0, \"note\": \"Good technique!\"}\n  ]\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/communication/corrections/:request_id",
+              "host": ["{{baseUrl}}"],
+              "path": ["communication", "corrections", ":request_id"],
+              "variable": [
+                {"key": "request_id", "value": "request-uuid"}
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Moderation",
+      "item": [
+        {
+          "name": "List Pending Videos (Admin)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/moderation/videos/pending",
+              "host": ["{{baseUrl}}"],
+              "path": ["moderation", "videos", "pending"]
+            }
+          }
+        },
+        {
+          "name": "Approve Video (Admin)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"notes\": \"Approved - good content quality\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/moderation/videos/:video_id/approve",
+              "host": ["{{baseUrl}}"],
+              "path": ["moderation", "videos", ":video_id", "approve"],
+              "variable": [
+                {"key": "video_id", "value": "video-uuid"}
+              ]
+            }
+          }
+        },
+        {
+          "name": "Reject Video (Admin)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"rejection_reason\": \"Video quality too low\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/moderation/videos/:video_id/reject",
+              "host": ["{{baseUrl}}"],
+              "path": ["moderation", "videos", ":video_id", "reject"],
+              "variable": [
+                {"key": "video_id", "value": "video-uuid"}
+              ]
+            }
+          }
+        },
+        {
+          "name": "Request Changes (Admin)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"required_changes\": [\"Add better lighting\", \"Include audio explanation\"],\n  \"notes\": \"Good content, but needs improvements\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/moderation/videos/:video_id/request-changes",
+              "host": ["{{baseUrl}}"],
+              "path": ["moderation", "videos", ":video_id", "request-changes"],
+              "variable": [
+                {"key": "video_id", "value": "video-uuid"}
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Moderation Stats (Admin)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/moderation/stats",
+              "host": ["{{baseUrl}}"],
+              "path": ["moderation", "stats"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Admin",
+      "item": [
+        {
+          "name": "Get Dashboard",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/admin/dashboard",
+              "host": ["{{baseUrl}}"],
+              "path": ["admin", "dashboard"]
+            }
+          }
+        },
+        {
+          "name": "Get Platform Analytics",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/admin/analytics/platform?period=30d",
+              "host": ["{{baseUrl}}"],
+              "path": ["admin", "analytics", "platform"],
+              "query": [
+                {"key": "period", "value": "30d"}
+              ]
+            }
+          }
+        },
+        {
+          "name": "List Users",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/admin/users?skip=0&limit=50",
+              "host": ["{{baseUrl}}"],
+              "path": ["admin", "users"],
+              "query": [
+                {"key": "skip", "value": "0"},
+                {"key": "limit", "value": "50"},
+                {"key": "search", "value": "", "disabled": true}
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get User Detail",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/admin/users/:user_id",
+              "host": ["{{baseUrl}}"],
+              "path": ["admin", "users", ":user_id"],
+              "variable": [
+                {"key": "user_id", "value": "user-uuid"}
+              ]
+            }
+          }
+        },
+        {
+          "name": "Ban User",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"reason\": \"Violation of terms of service\",\n  \"duration_days\": 30\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/admin/users/:user_id/ban",
+              "host": ["{{baseUrl}}"],
+              "path": ["admin", "users", ":user_id", "ban"],
+              "variable": [
+                {"key": "user_id", "value": "user-uuid"}
+              ]
+            }
+          }
+        },
+        {
+          "name": "Unban User",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/admin/users/:user_id/unban",
+              "host": ["{{baseUrl}}"],
+              "path": ["admin", "users", ":user_id", "unban"],
+              "variable": [
+                {"key": "user_id", "value": "user-uuid"}
+              ]
+            }
+          }
+        },
+        {
+          "name": "List Withdrawals",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/admin/withdrawals?status=pending",
+              "host": ["{{baseUrl}}"],
+              "path": ["admin", "withdrawals"],
+              "query": [
+                {"key": "status", "value": "pending"}
+              ]
+            }
+          }
+        },
+        {
+          "name": "Process Withdrawal",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"action\": \"approve\",\n  \"notes\": \"Verified and approved\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/admin/withdrawals/:withdrawal_id/action",
+              "host": ["{{baseUrl}}"],
+              "path": ["admin", "withdrawals", ":withdrawal_id", "action"],
+              "variable": [
+                {"key": "withdrawal_id", "value": "withdrawal-uuid"}
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Subscriptions",
+      "item": [
+        {
+          "name": "Upgrade Subscription",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/subscriptions/upgrade/premium",
+              "host": ["{{baseUrl}}"],
+              "path": ["subscriptions", "upgrade", "premium"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

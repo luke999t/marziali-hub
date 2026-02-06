@@ -1,0 +1,339 @@
+{
+  "_comment": "Martial Arts Terminology Database - Translations for specialized terms",
+  "_version": "1.0",
+  "_last_updated": "2025-11-17",
+
+  "kata": {
+    "it": "kata",
+    "en": "kata",
+    "es": "kata",
+    "fr": "kata",
+    "de": "Kata",
+    "pt": "kata",
+    "description": "Pre-arranged forms/patterns of techniques"
+  },
+  "kumite": {
+    "it": "kumite",
+    "en": "kumite",
+    "es": "kumite",
+    "fr": "kumite",
+    "de": "Kumite",
+    "pt": "kumite",
+    "description": "Sparring"
+  },
+  "kihon": {
+    "it": "kihon",
+    "en": "kihon",
+    "es": "kihon",
+    "fr": "kihon",
+    "de": "Kihon",
+    "pt": "kihon",
+    "description": "Basic techniques"
+  },
+  "dojo": {
+    "it": "dojo",
+    "en": "dojo",
+    "es": "dojo",
+    "fr": "dojo",
+    "de": "Dojo",
+    "pt": "dojo",
+    "description": "Training hall"
+  },
+  "sensei": {
+    "it": "sensei",
+    "en": "sensei",
+    "es": "sensei",
+    "fr": "sensei",
+    "de": "Sensei",
+    "pt": "sensei",
+    "description": "Teacher/instructor"
+  },
+  "maestro": {
+    "it": "maestro",
+    "en": "master",
+    "es": "maestro",
+    "fr": "maître",
+    "de": "Meister",
+    "pt": "mestre",
+    "description": "Master/instructor"
+  },
+  "guardia": {
+    "it": "guardia",
+    "en": "guard position",
+    "es": "guardia",
+    "fr": "garde",
+    "de": "Stellung",
+    "pt": "guarda",
+    "description": "Defensive stance"
+  },
+  "posizione": {
+    "it": "posizione",
+    "en": "stance",
+    "es": "posición",
+    "fr": "position",
+    "de": "Stellung",
+    "pt": "posição",
+    "description": "Body position/stance"
+  },
+  "pugno": {
+    "it": "pugno",
+    "en": "punch",
+    "es": "puño",
+    "fr": "coup de poing",
+    "de": "Fauststoß",
+    "pt": "soco",
+    "description": "Punch technique"
+  },
+  "calcio": {
+    "it": "calcio",
+    "en": "kick",
+    "es": "patada",
+    "fr": "coup de pied",
+    "de": "Tritt",
+    "pt": "chute",
+    "description": "Kick technique"
+  },
+  "blocco": {
+    "it": "blocco",
+    "en": "block",
+    "es": "bloqueo",
+    "fr": "blocage",
+    "de": "Block",
+    "pt": "bloqueio",
+    "description": "Blocking technique"
+  },
+  "parata": {
+    "it": "parata",
+    "en": "parry",
+    "es": "parada",
+    "fr": "parade",
+    "de": "Parade",
+    "pt": "defesa",
+    "description": "Parrying/defensive move"
+  },
+  "cintura": {
+    "it": "cintura",
+    "en": "belt",
+    "es": "cinturón",
+    "fr": "ceinture",
+    "de": "Gürtel",
+    "pt": "faixa",
+    "description": "Belt rank"
+  },
+  "cintura nera": {
+    "it": "cintura nera",
+    "en": "black belt",
+    "es": "cinturón negro",
+    "fr": "ceinture noire",
+    "de": "schwarzer Gürtel",
+    "pt": "faixa preta",
+    "description": "Black belt rank"
+  },
+  "gi": {
+    "it": "gi",
+    "en": "gi",
+    "es": "gi",
+    "fr": "gi",
+    "de": "Gi",
+    "pt": "gi",
+    "description": "Training uniform"
+  },
+  "kimono": {
+    "it": "kimono",
+    "en": "kimono",
+    "es": "kimono",
+    "fr": "kimono",
+    "de": "Kimono",
+    "pt": "kimono",
+    "description": "Training uniform (alternative term)"
+  },
+  "tatami": {
+    "it": "tatami",
+    "en": "tatami",
+    "es": "tatami",
+    "fr": "tatami",
+    "de": "Tatami",
+    "pt": "tatami",
+    "description": "Training mat"
+  },
+  "hajime": {
+    "it": "hajime",
+    "en": "begin",
+    "es": "comenzar",
+    "fr": "commencez",
+    "de": "beginnen",
+    "pt": "começar",
+    "description": "Command: begin/start"
+  },
+  "yame": {
+    "it": "yame",
+    "en": "stop",
+    "es": "parar",
+    "fr": "arrêtez",
+    "de": "stopp",
+    "pt": "parar",
+    "description": "Command: stop"
+  },
+  "rei": {
+    "it": "rei",
+    "en": "bow",
+    "es": "saludo",
+    "fr": "salut",
+    "de": "Verbeugung",
+    "pt": "reverência",
+    "description": "Bow/salute"
+  },
+  "mae geri": {
+    "it": "mae geri",
+    "en": "front kick",
+    "es": "patada frontal",
+    "fr": "coup de pied frontal",
+    "de": "Vorwärtstritt",
+    "pt": "chute frontal",
+    "description": "Front kick technique"
+  },
+  "yoko geri": {
+    "it": "yoko geri",
+    "en": "side kick",
+    "es": "patada lateral",
+    "fr": "coup de pied latéral",
+    "de": "Seitwärtstritt",
+    "pt": "chute lateral",
+    "description": "Side kick technique"
+  },
+  "mawashi geri": {
+    "it": "mawashi geri",
+    "en": "roundhouse kick",
+    "es": "patada circular",
+    "fr": "coup de pied circulaire",
+    "de": "Rundtritt",
+    "pt": "chute circular",
+    "description": "Roundhouse kick technique"
+  },
+  "gyaku zuki": {
+    "it": "gyaku zuki",
+    "en": "reverse punch",
+    "es": "puño inverso",
+    "fr": "coup de poing inverse",
+    "de": "umgekehrter Fauststoß",
+    "pt": "soco reverso",
+    "description": "Reverse punch technique"
+  },
+  "oi zuki": {
+    "it": "oi zuki",
+    "en": "lunge punch",
+    "es": "puño de avance",
+    "fr": "coup de poing en avançant",
+    "de": "Stoßfauststoß",
+    "pt": "soco de avanço",
+    "description": "Lunge punch technique"
+  },
+  "gedan barai": {
+    "it": "gedan barai",
+    "en": "downward block",
+    "es": "bloqueo bajo",
+    "fr": "blocage vers le bas",
+    "de": "Abwärtsblock",
+    "pt": "bloqueio baixo",
+    "description": "Downward block technique"
+  },
+  "age uke": {
+    "it": "age uke",
+    "en": "rising block",
+    "es": "bloqueo ascendente",
+    "fr": "blocage montant",
+    "de": "Aufwärtsblock",
+    "pt": "bloqueio ascendente",
+    "description": "Rising/upward block"
+  },
+  "soto uke": {
+    "it": "soto uke",
+    "en": "outside block",
+    "es": "bloqueo exterior",
+    "fr": "blocage extérieur",
+    "de": "Außenblock",
+    "pt": "bloqueio externo",
+    "description": "Outside block technique"
+  },
+  "uchi uke": {
+    "it": "uchi uke",
+    "en": "inside block",
+    "es": "bloqueo interior",
+    "fr": "blocage intérieur",
+    "de": "Innenblock",
+    "pt": "bloqueio interno",
+    "description": "Inside block technique"
+  },
+  "shuto uke": {
+    "it": "shuto uke",
+    "en": "knife-hand block",
+    "es": "bloqueo de mano-cuchillo",
+    "fr": "blocage du tranchant de la main",
+    "de": "Handkantenblock",
+    "pt": "bloqueio de faca de mão",
+    "description": "Knife-hand block technique"
+  },
+  "kamae": {
+    "it": "kamae",
+    "en": "ready stance",
+    "es": "postura de preparación",
+    "fr": "position de garde",
+    "de": "Bereitschaftsstellung",
+    "pt": "postura de preparação",
+    "description": "Ready stance/guard position"
+  },
+  "mokuso": {
+    "it": "mokuso",
+    "en": "meditation",
+    "es": "meditación",
+    "fr": "méditation",
+    "de": "Meditation",
+    "pt": "meditação",
+    "description": "Meditation"
+  },
+  "kiritsu": {
+    "it": "kiritsu",
+    "en": "stand up",
+    "es": "levántense",
+    "fr": "levez-vous",
+    "de": "aufstehen",
+    "pt": "levantem-se",
+    "description": "Command: stand up"
+  },
+  "obi": {
+    "it": "obi",
+    "en": "belt",
+    "es": "cinturón",
+    "fr": "ceinture",
+    "de": "Gürtel",
+    "pt": "faixa",
+    "description": "Belt"
+  },
+  "hakama": {
+    "it": "hakama",
+    "en": "hakama",
+    "es": "hakama",
+    "fr": "hakama",
+    "de": "Hakama",
+    "pt": "hakama",
+    "description": "Traditional Japanese trousers"
+  },
+  "zanshin": {
+    "it": "zanshin",
+    "en": "awareness",
+    "es": "conciencia",
+    "fr": "vigilance",
+    "de": "Achtsamkeit",
+    "pt": "atenção",
+    "description": "Continued awareness/alertness"
+  },
+  "kiai": {
+    "it": "kiai",
+    "en": "spirit shout",
+    "es": "grito de espíritu",
+    "fr": "cri d'esprit",
+    "de": "Kampfschrei",
+    "pt": "grito de espírito",
+    "description": "Spirit shout/yell"
+  }
+}

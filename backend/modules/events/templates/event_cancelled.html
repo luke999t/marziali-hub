@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}Evento Annullato - {{ event_title }}{% endblock %}
+
+{% block content %}
+<h2 style="margin: 0 0 24px; font-size: 22px; font-weight: 600; color: #111827;">
+    Evento Annullato
+</h2>
+
+<p style="margin: 0 0 24px; font-size: 16px; color: #374151; line-height: 1.6;">
+    Ciao <strong>{{ user_name }}</strong>,
+</p>
+
+<p style="margin: 0 0 24px; font-size: 16px; color: #374151; line-height: 1.6;">
+    Siamo spiacenti di informarti che l'evento a cui eri iscritto è stato annullato.
+</p>
+
+<!-- Event Card -->
+<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #fef2f2; border-radius: 8px; border-left: 4px solid #dc2626; margin-bottom: 24px;">
+    <tr>
+        <td style="padding: 20px;">
+            <h3 style="margin: 0 0 12px; font-size: 18px; font-weight: 600; color: #991b1b;">
+                {{ event_title }}
+            </h3>
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                    <td style="padding: 4px 0; font-size: 14px; color: #374151;">
+                        <strong>Data prevista:</strong> {{ event_date }}
+                    </td>
+                </tr>
+                {% if cancellation_reason %}
+                <tr>
+                    <td style="padding: 8px 0 0; font-size: 14px; color: #374151;">
+                        <strong>Motivo:</strong><br>{{ cancellation_reason }}
+                    </td>
+                </tr>
+                {% endif %}
+            </table>
+        </td>
+    </tr>
+</table>
+
+<!-- Refund Info -->
+<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #f0fdf4; border-radius: 8px; border-left: 4px solid #16a34a; margin-bottom: 24px;">
+    <tr>
+        <td style="padding: 20px;">
+            <h3 style="margin: 0 0 12px; font-size: 16px; font-weight: 600; color: #166534;">
+                Informazioni Rimborso
+            </h3>
+            <p style="margin: 0; font-size: 14px; color: #374151; line-height: 1.6;">
+                {{ refund_info }}
+            </p>
+        </td>
+    </tr>
+</table>
+
+<p style="margin: 0; font-size: 14px; color: #6b7280; line-height: 1.6;">
+    Ci scusiamo per l'inconveniente.
+    Speriamo di vederti a uno dei nostri prossimi eventi!
+</p>
+{% endblock %}

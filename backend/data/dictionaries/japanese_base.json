@@ -1,0 +1,2350 @@
+{
+  "version": "1.0.0",
+  "language": "ja",
+  "language_name": "Japanese",
+  "last_updated": "2025-12-04",
+  "description": "Japanese martial arts terminology with kanji, romaji, and translations",
+  "total_terms": 180,
+  "categories": {
+    "title_rank": "Titles and Ranks",
+    "dojo": "Dojo and Etiquette",
+    "command": "Commands",
+    "number": "Numbers",
+    "direction": "Directions and Body Parts",
+    "technique_general": "General Techniques",
+    "punch": "Punches (Tsuki)",
+    "block": "Blocks (Uke)",
+    "kick": "Kicks (Geri)",
+    "strike": "Hand Strikes (Uchi)",
+    "stance": "Stances (Dachi)",
+    "judo": "Judo Specific",
+    "aikido": "Aikido Specific",
+    "weapon": "Weapons (Kobudo)",
+    "philosophy": "Philosophy and Concepts"
+  },
+  "terms": [
+    {
+      "id": "sensei",
+      "original": "先生",
+      "romanization": "sensei",
+      "translations": {
+        "it": "maestro",
+        "en": "teacher, master",
+        "es": "maestro",
+        "fr": "maître",
+        "de": "Meister"
+      },
+      "category": "title_rank",
+      "art": ["karate", "judo", "aikido", "kendo"],
+      "notes": "Literally 'born before' - one who has walked the path before"
+    },
+    {
+      "id": "shihan",
+      "original": "師範",
+      "romanization": "shihan",
+      "translations": {
+        "it": "maestro istruttore",
+        "en": "master instructor",
+        "es": "maestro instructor",
+        "fr": "maître instructeur",
+        "de": "Meisterlehrer"
+      },
+      "category": "title_rank",
+      "art": ["karate", "judo", "aikido"],
+      "notes": "Expert instructor, typically 6th Dan and above"
+    },
+    {
+      "id": "o_sensei",
+      "original": "大先生",
+      "romanization": "o-sensei",
+      "translations": {
+        "it": "grande maestro",
+        "en": "great master",
+        "es": "gran maestro",
+        "fr": "grand maître",
+        "de": "Großmeister"
+      },
+      "category": "title_rank",
+      "art": ["aikido"],
+      "notes": "Specifically used for Morihei Ueshiba, founder of Aikido"
+    },
+    {
+      "id": "hanshi",
+      "original": "範士",
+      "romanization": "hanshi",
+      "translations": {
+        "it": "maestro esemplare",
+        "en": "exemplary master",
+        "es": "maestro ejemplar",
+        "fr": "maître exemplaire",
+        "de": "vorbildlicher Meister"
+      },
+      "category": "title_rank",
+      "art": ["karate", "judo", "kendo"],
+      "notes": "Highest teaching title, 8th Dan and above"
+    },
+    {
+      "id": "kyoshi",
+      "original": "教士",
+      "romanization": "kyoshi",
+      "translations": {
+        "it": "professore esperto",
+        "en": "expert professor",
+        "es": "profesor experto",
+        "fr": "professeur expert",
+        "de": "Expertenprofessor"
+      },
+      "category": "title_rank",
+      "art": ["karate", "judo", "kendo"],
+      "notes": "6th-7th Dan level"
+    },
+    {
+      "id": "renshi",
+      "original": "錬士",
+      "romanization": "renshi",
+      "translations": {
+        "it": "persona di abilità raffinata",
+        "en": "person of refined skill",
+        "es": "persona de habilidad refinada",
+        "fr": "personne aux compétences raffinées",
+        "de": "Person mit verfeinerten Fähigkeiten"
+      },
+      "category": "title_rank",
+      "art": ["karate", "judo", "kendo"],
+      "notes": "5th Dan level"
+    },
+    {
+      "id": "senpai",
+      "original": "先輩",
+      "romanization": "senpai",
+      "translations": {
+        "it": "senior",
+        "en": "senior student",
+        "es": "estudiante senior",
+        "fr": "étudiant senior",
+        "de": "älterer Schüler"
+      },
+      "category": "title_rank",
+      "art": ["karate", "judo", "aikido", "kendo"]
+    },
+    {
+      "id": "kohai",
+      "original": "後輩",
+      "romanization": "kohai",
+      "translations": {
+        "it": "junior",
+        "en": "junior student",
+        "es": "estudiante junior",
+        "fr": "étudiant junior",
+        "de": "jüngerer Schüler"
+      },
+      "category": "title_rank",
+      "art": ["karate", "judo", "aikido", "kendo"]
+    },
+    {
+      "id": "deshi",
+      "original": "弟子",
+      "romanization": "deshi",
+      "translations": {
+        "it": "studente, discepolo",
+        "en": "student, disciple",
+        "es": "estudiante, discípulo",
+        "fr": "étudiant, disciple",
+        "de": "Schüler, Jünger"
+      },
+      "category": "title_rank",
+      "art": ["karate", "judo", "aikido"]
+    },
+    {
+      "id": "uchi_deshi",
+      "original": "内弟子",
+      "romanization": "uchi-deshi",
+      "translations": {
+        "it": "studente interno",
+        "en": "live-in student",
+        "es": "estudiante interno",
+        "fr": "étudiant interne",
+        "de": "interner Schüler"
+      },
+      "category": "title_rank",
+      "art": ["karate", "judo", "aikido"],
+      "notes": "Student who lives with the master"
+    },
+    {
+      "id": "dan",
+      "original": "段",
+      "romanization": "dan",
+      "translations": {
+        "it": "grado cintura nera",
+        "en": "black belt rank",
+        "es": "grado cinturón negro",
+        "fr": "grade ceinture noire",
+        "de": "Schwarzgurt-Rang"
+      },
+      "category": "title_rank",
+      "art": ["karate", "judo", "aikido", "kendo", "taekwondo"]
+    },
+    {
+      "id": "kyu",
+      "original": "級",
+      "romanization": "kyu",
+      "translations": {
+        "it": "grado pre-cintura nera",
+        "en": "grade before black belt",
+        "es": "grado antes del cinturón negro",
+        "fr": "grade avant ceinture noire",
+        "de": "Grad vor Schwarzgurt"
+      },
+      "category": "title_rank",
+      "art": ["karate", "judo", "aikido", "kendo"]
+    },
+    {
+      "id": "yudansha",
+      "original": "有段者",
+      "romanization": "yudansha",
+      "translations": {
+        "it": "praticante con dan",
+        "en": "dan holder",
+        "es": "poseedor de dan",
+        "fr": "détenteur de dan",
+        "de": "Dan-Inhaber"
+      },
+      "category": "title_rank",
+      "art": ["karate", "judo", "aikido"]
+    },
+    {
+      "id": "mudansha",
+      "original": "無段者",
+      "romanization": "mudansha",
+      "translations": {
+        "it": "praticante senza dan",
+        "en": "practitioner without dan",
+        "es": "practicante sin dan",
+        "fr": "pratiquant sans dan",
+        "de": "Übender ohne Dan"
+      },
+      "category": "title_rank",
+      "art": ["karate", "judo", "aikido"]
+    },
+    {
+      "id": "dojo",
+      "original": "道場",
+      "romanization": "dojo",
+      "translations": {
+        "it": "luogo dove si pratica la via",
+        "en": "training hall",
+        "es": "sala de entrenamiento",
+        "fr": "salle d'entraînement",
+        "de": "Trainingshalle"
+      },
+      "category": "dojo",
+      "art": ["karate", "judo", "aikido", "kendo"],
+      "notes": "Place of enlightenment"
+    },
+    {
+      "id": "hombu_dojo",
+      "original": "本部道場",
+      "romanization": "hombu dojo",
+      "translations": {
+        "it": "dojo principale",
+        "en": "headquarters dojo",
+        "es": "dojo central",
+        "fr": "dojo central",
+        "de": "Hauptdojo"
+      },
+      "category": "dojo",
+      "art": ["karate", "judo", "aikido"]
+    },
+    {
+      "id": "tatami",
+      "original": "畳",
+      "romanization": "tatami",
+      "translations": {
+        "it": "materassine",
+        "en": "training mats",
+        "es": "tatami",
+        "fr": "tatami",
+        "de": "Matten"
+      },
+      "category": "dojo",
+      "art": ["judo", "aikido", "karate"]
+    },
+    {
+      "id": "kamiza",
+      "original": "上座",
+      "romanization": "kamiza",
+      "translations": {
+        "it": "posto d'onore",
+        "en": "seat of honor",
+        "es": "asiento de honor",
+        "fr": "place d'honneur",
+        "de": "Ehrenplatz"
+      },
+      "category": "dojo",
+      "art": ["karate", "judo", "aikido"]
+    },
+    {
+      "id": "shimoza",
+      "original": "下座",
+      "romanization": "shimoza",
+      "translations": {
+        "it": "posto basso",
+        "en": "lower seat",
+        "es": "asiento inferior",
+        "fr": "place basse",
+        "de": "unterer Platz"
+      },
+      "category": "dojo",
+      "art": ["karate", "judo", "aikido"]
+    },
+    {
+      "id": "reigi",
+      "original": "礼儀",
+      "romanization": "reigi",
+      "translations": {
+        "it": "etichetta",
+        "en": "etiquette",
+        "es": "etiqueta",
+        "fr": "étiquette",
+        "de": "Etikette"
+      },
+      "category": "dojo",
+      "art": ["karate", "judo", "aikido", "kendo"]
+    },
+    {
+      "id": "rei",
+      "original": "礼",
+      "romanization": "rei",
+      "translations": {
+        "it": "inchino, saluto",
+        "en": "bow, salute",
+        "es": "reverencia, saludo",
+        "fr": "salut",
+        "de": "Verbeugung"
+      },
+      "category": "dojo",
+      "art": ["karate", "judo", "aikido", "kendo"]
+    },
+    {
+      "id": "seiza",
+      "original": "正座",
+      "romanization": "seiza",
+      "translations": {
+        "it": "posizione seduta formale",
+        "en": "formal sitting position",
+        "es": "posición sentada formal",
+        "fr": "position assise formelle",
+        "de": "formelle Sitzposition"
+      },
+      "category": "dojo",
+      "art": ["karate", "judo", "aikido", "kendo"]
+    },
+    {
+      "id": "za_rei",
+      "original": "座礼",
+      "romanization": "za-rei",
+      "translations": {
+        "it": "inchino da seduti",
+        "en": "seated bow",
+        "es": "reverencia sentado",
+        "fr": "salut assis",
+        "de": "Verbeugung im Sitzen"
+      },
+      "category": "dojo",
+      "art": ["karate", "judo", "aikido"]
+    },
+    {
+      "id": "ritsu_rei",
+      "original": "立礼",
+      "romanization": "ritsu-rei",
+      "translations": {
+        "it": "inchino in piedi",
+        "en": "standing bow",
+        "es": "reverencia de pie",
+        "fr": "salut debout",
+        "de": "Verbeugung im Stehen"
+      },
+      "category": "dojo",
+      "art": ["karate", "judo", "aikido"]
+    },
+    {
+      "id": "mokuso",
+      "original": "黙想",
+      "romanization": "mokuso",
+      "translations": {
+        "it": "meditazione",
+        "en": "meditation",
+        "es": "meditación",
+        "fr": "méditation",
+        "de": "Meditation"
+      },
+      "category": "dojo",
+      "art": ["karate", "judo", "aikido", "kendo"]
+    },
+    {
+      "id": "hajime",
+      "original": "始め",
+      "romanization": "hajime",
+      "translations": {
+        "it": "iniziare",
+        "en": "begin",
+        "es": "comenzar",
+        "fr": "commencer",
+        "de": "beginnen"
+      },
+      "category": "command",
+      "art": ["karate", "judo", "aikido", "kendo"]
+    },
+    {
+      "id": "yame",
+      "original": "止め",
+      "romanization": "yame",
+      "translations": {
+        "it": "fermare",
+        "en": "stop",
+        "es": "parar",
+        "fr": "arrêter",
+        "de": "stoppen"
+      },
+      "category": "command",
+      "art": ["karate", "judo", "aikido", "kendo"]
+    },
+    {
+      "id": "matte",
+      "original": "待て",
+      "romanization": "matte",
+      "translations": {
+        "it": "aspettare",
+        "en": "wait",
+        "es": "esperar",
+        "fr": "attendre",
+        "de": "warten"
+      },
+      "category": "command",
+      "art": ["judo", "karate"]
+    },
+    {
+      "id": "yoi",
+      "original": "用意",
+      "romanization": "yoi",
+      "translations": {
+        "it": "pronti",
+        "en": "ready",
+        "es": "listos",
+        "fr": "prêt",
+        "de": "bereit"
+      },
+      "category": "command",
+      "art": ["karate", "judo", "aikido"]
+    },
+    {
+      "id": "kamae",
+      "original": "構え",
+      "romanization": "kamae",
+      "translations": {
+        "it": "assumere posizione di guardia",
+        "en": "assume fighting stance",
+        "es": "tomar posición de guardia",
+        "fr": "prendre la garde",
+        "de": "Kampfstellung einnehmen"
+      },
+      "category": "command",
+      "art": ["karate", "kendo", "aikido"]
+    },
+    {
+      "id": "naore",
+      "original": "直れ",
+      "romanization": "naore",
+      "translations": {
+        "it": "tornare a riposo",
+        "en": "return to rest position",
+        "es": "volver a posición de descanso",
+        "fr": "revenir au repos",
+        "de": "zur Ruheposition zurückkehren"
+      },
+      "category": "command",
+      "art": ["karate", "judo"]
+    },
+    {
+      "id": "yasume",
+      "original": "休め",
+      "romanization": "yasume",
+      "translations": {
+        "it": "riposo",
+        "en": "rest",
+        "es": "descanso",
+        "fr": "repos",
+        "de": "Ruhe"
+      },
+      "category": "command",
+      "art": ["karate", "judo", "aikido"]
+    },
+    {
+      "id": "kiotsuke",
+      "original": "気をつけ",
+      "romanization": "kiotsuke",
+      "translations": {
+        "it": "attenzione",
+        "en": "attention",
+        "es": "atención",
+        "fr": "attention",
+        "de": "Achtung"
+      },
+      "category": "command",
+      "art": ["karate", "judo", "aikido"]
+    },
+    {
+      "id": "sore_made",
+      "original": "それまで",
+      "romanization": "sore made",
+      "translations": {
+        "it": "fine, basta così",
+        "en": "that's all, finish",
+        "es": "es todo, fin",
+        "fr": "c'est tout, fin",
+        "de": "das ist alles, Ende"
+      },
+      "category": "command",
+      "art": ["judo", "karate"]
+    },
+    {
+      "id": "ichi",
+      "original": "一",
+      "romanization": "ichi",
+      "translations": {
+        "it": "uno",
+        "en": "one",
+        "es": "uno",
+        "fr": "un",
+        "de": "eins"
+      },
+      "category": "number",
+      "art": ["karate", "judo", "aikido", "kendo"]
+    },
+    {
+      "id": "ni",
+      "original": "二",
+      "romanization": "ni",
+      "translations": {
+        "it": "due",
+        "en": "two",
+        "es": "dos",
+        "fr": "deux",
+        "de": "zwei"
+      },
+      "category": "number",
+      "art": ["karate", "judo", "aikido", "kendo"]
+    },
+    {
+      "id": "san",
+      "original": "三",
+      "romanization": "san",
+      "translations": {
+        "it": "tre",
+        "en": "three",
+        "es": "tres",
+        "fr": "trois",
+        "de": "drei"
+      },
+      "category": "number",
+      "art": ["karate", "judo", "aikido", "kendo"]
+    },
+    {
+      "id": "shi_yon",
+      "original": "四",
+      "romanization": "shi/yon",
+      "translations": {
+        "it": "quattro",
+        "en": "four",
+        "es": "cuatro",
+        "fr": "quatre",
+        "de": "vier"
+      },
+      "category": "number",
+      "art": ["karate", "judo", "aikido", "kendo"],
+      "notes": "Shi is avoided as it sounds like 'death'"
+    },
+    {
+      "id": "go",
+      "original": "五",
+      "romanization": "go",
+      "translations": {
+        "it": "cinque",
+        "en": "five",
+        "es": "cinco",
+        "fr": "cinq",
+        "de": "fünf"
+      },
+      "category": "number",
+      "art": ["karate", "judo", "aikido", "kendo"]
+    },
+    {
+      "id": "roku",
+      "original": "六",
+      "romanization": "roku",
+      "translations": {
+        "it": "sei",
+        "en": "six",
+        "es": "seis",
+        "fr": "six",
+        "de": "sechs"
+      },
+      "category": "number",
+      "art": ["karate", "judo", "aikido", "kendo"]
+    },
+    {
+      "id": "shichi_nana",
+      "original": "七",
+      "romanization": "shichi/nana",
+      "translations": {
+        "it": "sette",
+        "en": "seven",
+        "es": "siete",
+        "fr": "sept",
+        "de": "sieben"
+      },
+      "category": "number",
+      "art": ["karate", "judo", "aikido", "kendo"]
+    },
+    {
+      "id": "hachi",
+      "original": "八",
+      "romanization": "hachi",
+      "translations": {
+        "it": "otto",
+        "en": "eight",
+        "es": "ocho",
+        "fr": "huit",
+        "de": "acht"
+      },
+      "category": "number",
+      "art": ["karate", "judo", "aikido", "kendo"]
+    },
+    {
+      "id": "ku_kyu",
+      "original": "九",
+      "romanization": "ku/kyu",
+      "translations": {
+        "it": "nove",
+        "en": "nine",
+        "es": "nueve",
+        "fr": "neuf",
+        "de": "neun"
+      },
+      "category": "number",
+      "art": ["karate", "judo", "aikido", "kendo"]
+    },
+    {
+      "id": "ju",
+      "original": "十",
+      "romanization": "ju",
+      "translations": {
+        "it": "dieci",
+        "en": "ten",
+        "es": "diez",
+        "fr": "dix",
+        "de": "zehn"
+      },
+      "category": "number",
+      "art": ["karate", "judo", "aikido", "kendo"]
+    },
+    {
+      "id": "mae",
+      "original": "前",
+      "romanization": "mae",
+      "translations": {
+        "it": "avanti, frontale",
+        "en": "front, forward",
+        "es": "adelante, frontal",
+        "fr": "avant, frontal",
+        "de": "vorne, frontal"
+      },
+      "category": "direction",
+      "art": ["karate", "judo", "aikido"]
+    },
+    {
+      "id": "yoko",
+      "original": "横",
+      "romanization": "yoko",
+      "translations": {
+        "it": "lato, laterale",
+        "en": "side, lateral",
+        "es": "lado, lateral",
+        "fr": "côté, latéral",
+        "de": "Seite, seitlich"
+      },
+      "category": "direction",
+      "art": ["karate", "judo", "aikido"]
+    },
+    {
+      "id": "ushiro",
+      "original": "後",
+      "romanization": "ushiro",
+      "translations": {
+        "it": "dietro, posteriore",
+        "en": "back, rear",
+        "es": "atrás, posterior",
+        "fr": "arrière, postérieur",
+        "de": "hinten, rückwärtig"
+      },
+      "category": "direction",
+      "art": ["karate", "judo", "aikido"]
+    },
+    {
+      "id": "migi",
+      "original": "右",
+      "romanization": "migi",
+      "translations": {
+        "it": "destra",
+        "en": "right",
+        "es": "derecha",
+        "fr": "droite",
+        "de": "rechts"
+      },
+      "category": "direction",
+      "art": ["karate", "judo", "aikido"]
+    },
+    {
+      "id": "hidari",
+      "original": "左",
+      "romanization": "hidari",
+      "translations": {
+        "it": "sinistra",
+        "en": "left",
+        "es": "izquierda",
+        "fr": "gauche",
+        "de": "links"
+      },
+      "category": "direction",
+      "art": ["karate", "judo", "aikido"]
+    },
+    {
+      "id": "omote",
+      "original": "表",
+      "romanization": "omote",
+      "translations": {
+        "it": "esterno, fronte",
+        "en": "outside, front",
+        "es": "exterior, frente",
+        "fr": "extérieur, front",
+        "de": "außen, vorne"
+      },
+      "category": "direction",
+      "art": ["aikido", "karate"]
+    },
+    {
+      "id": "ura",
+      "original": "裏",
+      "romanization": "ura",
+      "translations": {
+        "it": "interno, retro",
+        "en": "inside, behind",
+        "es": "interior, detrás",
+        "fr": "intérieur, arrière",
+        "de": "innen, hinten"
+      },
+      "category": "direction",
+      "art": ["aikido", "karate"]
+    },
+    {
+      "id": "jodan",
+      "original": "上段",
+      "romanization": "jodan",
+      "translations": {
+        "it": "livello alto",
+        "en": "high level",
+        "es": "nivel alto",
+        "fr": "niveau haut",
+        "de": "obere Stufe"
+      },
+      "category": "direction",
+      "art": ["karate", "kendo"],
+      "notes": "Head level"
+    },
+    {
+      "id": "chudan",
+      "original": "中段",
+      "romanization": "chudan",
+      "translations": {
+        "it": "livello medio",
+        "en": "middle level",
+        "es": "nivel medio",
+        "fr": "niveau moyen",
+        "de": "mittlere Stufe"
+      },
+      "category": "direction",
+      "art": ["karate", "kendo"],
+      "notes": "Chest level"
+    },
+    {
+      "id": "gedan",
+      "original": "下段",
+      "romanization": "gedan",
+      "translations": {
+        "it": "livello basso",
+        "en": "low level",
+        "es": "nivel bajo",
+        "fr": "niveau bas",
+        "de": "untere Stufe"
+      },
+      "category": "direction",
+      "art": ["karate", "kendo"],
+      "notes": "Abdomen/legs level"
+    },
+    {
+      "id": "atama",
+      "original": "頭",
+      "romanization": "atama",
+      "translations": {
+        "it": "testa",
+        "en": "head",
+        "es": "cabeza",
+        "fr": "tête",
+        "de": "Kopf"
+      },
+      "category": "direction",
+      "art": ["karate", "judo"]
+    },
+    {
+      "id": "men",
+      "original": "面",
+      "romanization": "men",
+      "translations": {
+        "it": "viso",
+        "en": "face",
+        "es": "cara",
+        "fr": "visage",
+        "de": "Gesicht"
+      },
+      "category": "direction",
+      "art": ["kendo", "karate"]
+    },
+    {
+      "id": "mune",
+      "original": "胸",
+      "romanization": "mune",
+      "translations": {
+        "it": "petto",
+        "en": "chest",
+        "es": "pecho",
+        "fr": "poitrine",
+        "de": "Brust"
+      },
+      "category": "direction",
+      "art": ["karate", "judo"]
+    },
+    {
+      "id": "hara",
+      "original": "腹",
+      "romanization": "hara",
+      "translations": {
+        "it": "addome",
+        "en": "abdomen",
+        "es": "abdomen",
+        "fr": "abdomen",
+        "de": "Bauch"
+      },
+      "category": "direction",
+      "art": ["karate", "judo", "aikido"]
+    },
+    {
+      "id": "koshi",
+      "original": "腰",
+      "romanization": "koshi",
+      "translations": {
+        "it": "anca, vita",
+        "en": "hip, waist",
+        "es": "cadera, cintura",
+        "fr": "hanche, taille",
+        "de": "Hüfte, Taille"
+      },
+      "category": "direction",
+      "art": ["judo", "karate", "aikido"]
+    },
+    {
+      "id": "te",
+      "original": "手",
+      "romanization": "te",
+      "translations": {
+        "it": "mano",
+        "en": "hand",
+        "es": "mano",
+        "fr": "main",
+        "de": "Hand"
+      },
+      "category": "direction",
+      "art": ["karate", "judo", "aikido"]
+    },
+    {
+      "id": "ashi",
+      "original": "足",
+      "romanization": "ashi",
+      "translations": {
+        "it": "gamba, piede",
+        "en": "leg, foot",
+        "es": "pierna, pie",
+        "fr": "jambe, pied",
+        "de": "Bein, Fuß"
+      },
+      "category": "direction",
+      "art": ["karate", "judo", "aikido"]
+    },
+    {
+      "id": "hiji",
+      "original": "肘",
+      "romanization": "hiji",
+      "translations": {
+        "it": "gomito",
+        "en": "elbow",
+        "es": "codo",
+        "fr": "coude",
+        "de": "Ellbogen"
+      },
+      "category": "direction",
+      "art": ["karate", "judo", "aikido"]
+    },
+    {
+      "id": "hiza",
+      "original": "膝",
+      "romanization": "hiza",
+      "translations": {
+        "it": "ginocchio",
+        "en": "knee",
+        "es": "rodilla",
+        "fr": "genou",
+        "de": "Knie"
+      },
+      "category": "direction",
+      "art": ["karate", "judo"]
+    },
+    {
+      "id": "waza",
+      "original": "技",
+      "romanization": "waza",
+      "translations": {
+        "it": "tecnica",
+        "en": "technique",
+        "es": "técnica",
+        "fr": "technique",
+        "de": "Technik"
+      },
+      "category": "technique_general",
+      "art": ["karate", "judo", "aikido", "kendo"]
+    },
+    {
+      "id": "kihon",
+      "original": "基本",
+      "romanization": "kihon",
+      "translations": {
+        "it": "fondamentali",
+        "en": "basics, fundamentals",
+        "es": "fundamentos",
+        "fr": "fondamentaux",
+        "de": "Grundlagen"
+      },
+      "category": "technique_general",
+      "art": ["karate", "judo", "aikido"]
+    },
+    {
+      "id": "kata",
+      "original": "型",
+      "romanization": "kata",
+      "translations": {
+        "it": "forma, sequenza",
+        "en": "form, pattern",
+        "es": "forma, patrón",
+        "fr": "forme, séquence",
+        "de": "Form, Muster"
+      },
+      "category": "technique_general",
+      "art": ["karate", "judo", "aikido", "kendo"]
+    },
+    {
+      "id": "kumite",
+      "original": "組手",
+      "romanization": "kumite",
+      "translations": {
+        "it": "combattimento, sparring",
+        "en": "sparring, fighting",
+        "es": "combate, sparring",
+        "fr": "combat, sparring",
+        "de": "Kampf, Sparring"
+      },
+      "category": "technique_general",
+      "art": ["karate"]
+    },
+    {
+      "id": "randori",
+      "original": "乱取り",
+      "romanization": "randori",
+      "translations": {
+        "it": "pratica libera",
+        "en": "free practice",
+        "es": "práctica libre",
+        "fr": "pratique libre",
+        "de": "freie Übung"
+      },
+      "category": "technique_general",
+      "art": ["judo", "aikido"]
+    },
+    {
+      "id": "bunkai",
+      "original": "分解",
+      "romanization": "bunkai",
+      "translations": {
+        "it": "analisi, applicazione dei kata",
+        "en": "analysis, kata application",
+        "es": "análisis, aplicación de kata",
+        "fr": "analyse, application du kata",
+        "de": "Analyse, Kata-Anwendung"
+      },
+      "category": "technique_general",
+      "art": ["karate"]
+    },
+    {
+      "id": "kime",
+      "original": "極め",
+      "romanization": "kime",
+      "translations": {
+        "it": "focus dell'energia",
+        "en": "focus of energy",
+        "es": "enfoque de energía",
+        "fr": "concentration d'énergie",
+        "de": "Energiefokussierung"
+      },
+      "category": "technique_general",
+      "art": ["karate"]
+    },
+    {
+      "id": "kiai",
+      "original": "気合",
+      "romanization": "kiai",
+      "translations": {
+        "it": "grido di spirito",
+        "en": "spirit shout",
+        "es": "grito de espíritu",
+        "fr": "cri de l'esprit",
+        "de": "Kampfschrei"
+      },
+      "category": "technique_general",
+      "art": ["karate", "judo", "aikido", "kendo"]
+    },
+    {
+      "id": "ki",
+      "original": "気",
+      "romanization": "ki",
+      "translations": {
+        "it": "energia vitale",
+        "en": "vital energy",
+        "es": "energía vital",
+        "fr": "énergie vitale",
+        "de": "Lebensenergie"
+      },
+      "category": "technique_general",
+      "art": ["aikido", "karate", "judo"]
+    },
+    {
+      "id": "kokyu",
+      "original": "呼吸",
+      "romanization": "kokyu",
+      "translations": {
+        "it": "respirazione",
+        "en": "breathing",
+        "es": "respiración",
+        "fr": "respiration",
+        "de": "Atmung"
+      },
+      "category": "technique_general",
+      "art": ["aikido", "karate"]
+    },
+    {
+      "id": "ma_ai",
+      "original": "間合い",
+      "romanization": "ma-ai",
+      "translations": {
+        "it": "distanza",
+        "en": "distance, spacing",
+        "es": "distancia",
+        "fr": "distance",
+        "de": "Distanz"
+      },
+      "category": "technique_general",
+      "art": ["karate", "kendo", "aikido"]
+    },
+    {
+      "id": "zanshin",
+      "original": "残心",
+      "romanization": "zanshin",
+      "translations": {
+        "it": "consapevolezza continua",
+        "en": "continuous awareness",
+        "es": "conciencia continua",
+        "fr": "conscience continue",
+        "de": "fortdauernde Aufmerksamkeit"
+      },
+      "category": "technique_general",
+      "art": ["karate", "kendo", "aikido"]
+    },
+    {
+      "id": "tsuki",
+      "original": "突き",
+      "romanization": "tsuki",
+      "translations": {
+        "it": "pugno",
+        "en": "punch, thrust",
+        "es": "puñetazo",
+        "fr": "coup de poing",
+        "de": "Stoß, Schlag"
+      },
+      "category": "punch",
+      "art": ["karate", "aikido"]
+    },
+    {
+      "id": "seiken",
+      "original": "正拳",
+      "romanization": "seiken",
+      "translations": {
+        "it": "pugno dritto",
+        "en": "straight punch, forefist",
+        "es": "puño recto",
+        "fr": "poing droit",
+        "de": "gerader Fauststoß"
+      },
+      "category": "punch",
+      "art": ["karate"]
+    },
+    {
+      "id": "choku_zuki",
+      "original": "直突き",
+      "romanization": "choku-zuki",
+      "translations": {
+        "it": "pugno diretto",
+        "en": "direct punch",
+        "es": "golpe directo",
+        "fr": "coup direct",
+        "de": "direkter Schlag"
+      },
+      "category": "punch",
+      "art": ["karate"]
+    },
+    {
+      "id": "oi_zuki",
+      "original": "追い突き",
+      "romanization": "oi-zuki",
+      "translations": {
+        "it": "pugno in avanzamento",
+        "en": "lunge punch",
+        "es": "golpe en avance",
+        "fr": "coup en avançant",
+        "de": "Vorstoß-Schlag"
+      },
+      "category": "punch",
+      "art": ["karate"]
+    },
+    {
+      "id": "gyaku_zuki",
+      "original": "逆突き",
+      "romanization": "gyaku-zuki",
+      "translations": {
+        "it": "pugno inverso",
+        "en": "reverse punch",
+        "es": "golpe inverso",
+        "fr": "coup inversé",
+        "de": "umgekehrter Schlag"
+      },
+      "category": "punch",
+      "art": ["karate"]
+    },
+    {
+      "id": "kizami_zuki",
+      "original": "刻み突き",
+      "romanization": "kizami-zuki",
+      "translations": {
+        "it": "pugno jab",
+        "en": "jab punch",
+        "es": "jab",
+        "fr": "jab",
+        "de": "Jab"
+      },
+      "category": "punch",
+      "art": ["karate"]
+    },
+    {
+      "id": "morote_zuki",
+      "original": "諸手突き",
+      "romanization": "morote-zuki",
+      "translations": {
+        "it": "pugno con due mani",
+        "en": "two-hand punch",
+        "es": "golpe con dos manos",
+        "fr": "coup à deux mains",
+        "de": "Doppelfauststoß"
+      },
+      "category": "punch",
+      "art": ["karate"]
+    },
+    {
+      "id": "uraken",
+      "original": "裏拳",
+      "romanization": "uraken",
+      "translations": {
+        "it": "rovescio del pugno",
+        "en": "backfist",
+        "es": "revés del puño",
+        "fr": "revers du poing",
+        "de": "Faustrücken"
+      },
+      "category": "punch",
+      "art": ["karate"]
+    },
+    {
+      "id": "tate_ken",
+      "original": "立拳",
+      "romanization": "tate-ken",
+      "translations": {
+        "it": "pugno verticale",
+        "en": "vertical fist",
+        "es": "puño vertical",
+        "fr": "poing vertical",
+        "de": "vertikale Faust"
+      },
+      "category": "punch",
+      "art": ["karate"]
+    },
+    {
+      "id": "uke",
+      "original": "受け",
+      "romanization": "uke",
+      "translations": {
+        "it": "blocco, parata",
+        "en": "block, receive",
+        "es": "bloqueo",
+        "fr": "blocage",
+        "de": "Block"
+      },
+      "category": "block",
+      "art": ["karate", "aikido", "judo"]
+    },
+    {
+      "id": "age_uke",
+      "original": "上げ受け",
+      "romanization": "age-uke",
+      "translations": {
+        "it": "blocco ascendente",
+        "en": "rising block",
+        "es": "bloqueo ascendente",
+        "fr": "blocage montant",
+        "de": "steigender Block"
+      },
+      "category": "block",
+      "art": ["karate"]
+    },
+    {
+      "id": "soto_uke",
+      "original": "外受け",
+      "romanization": "soto-uke",
+      "translations": {
+        "it": "blocco dall'esterno",
+        "en": "outside block",
+        "es": "bloqueo exterior",
+        "fr": "blocage extérieur",
+        "de": "Außenblock"
+      },
+      "category": "block",
+      "art": ["karate"]
+    },
+    {
+      "id": "uchi_uke",
+      "original": "内受け",
+      "romanization": "uchi-uke",
+      "translations": {
+        "it": "blocco dall'interno",
+        "en": "inside block",
+        "es": "bloqueo interior",
+        "fr": "blocage intérieur",
+        "de": "Innenblock"
+      },
+      "category": "block",
+      "art": ["karate"]
+    },
+    {
+      "id": "gedan_barai",
+      "original": "下段払い",
+      "romanization": "gedan-barai",
+      "translations": {
+        "it": "spazzata bassa",
+        "en": "low sweep block",
+        "es": "barrido bajo",
+        "fr": "balayage bas",
+        "de": "tiefer Feger"
+      },
+      "category": "block",
+      "art": ["karate"]
+    },
+    {
+      "id": "shuto_uke",
+      "original": "手刀受け",
+      "romanization": "shuto-uke",
+      "translations": {
+        "it": "blocco con mano a taglio",
+        "en": "knife-hand block",
+        "es": "bloqueo con mano cuchillo",
+        "fr": "blocage main sabre",
+        "de": "Schwerthandblock"
+      },
+      "category": "block",
+      "art": ["karate"]
+    },
+    {
+      "id": "morote_uke",
+      "original": "諸手受け",
+      "romanization": "morote-uke",
+      "translations": {
+        "it": "blocco con due mani",
+        "en": "two-hand block",
+        "es": "bloqueo con dos manos",
+        "fr": "blocage à deux mains",
+        "de": "Zweihandblock"
+      },
+      "category": "block",
+      "art": ["karate"]
+    },
+    {
+      "id": "geri",
+      "original": "蹴り",
+      "romanization": "geri/keri",
+      "translations": {
+        "it": "calcio",
+        "en": "kick",
+        "es": "patada",
+        "fr": "coup de pied",
+        "de": "Tritt"
+      },
+      "category": "kick",
+      "art": ["karate"]
+    },
+    {
+      "id": "mae_geri",
+      "original": "前蹴り",
+      "romanization": "mae-geri",
+      "translations": {
+        "it": "calcio frontale",
+        "en": "front kick",
+        "es": "patada frontal",
+        "fr": "coup de pied frontal",
+        "de": "Fronttritt"
+      },
+      "category": "kick",
+      "art": ["karate"]
+    },
+    {
+      "id": "yoko_geri",
+      "original": "横蹴り",
+      "romanization": "yoko-geri",
+      "translations": {
+        "it": "calcio laterale",
+        "en": "side kick",
+        "es": "patada lateral",
+        "fr": "coup de pied latéral",
+        "de": "Seitwärtstritt"
+      },
+      "category": "kick",
+      "art": ["karate"]
+    },
+    {
+      "id": "mawashi_geri",
+      "original": "回し蹴り",
+      "romanization": "mawashi-geri",
+      "translations": {
+        "it": "calcio circolare",
+        "en": "roundhouse kick",
+        "es": "patada circular",
+        "fr": "coup de pied circulaire",
+        "de": "Rundtritt"
+      },
+      "category": "kick",
+      "art": ["karate"]
+    },
+    {
+      "id": "ushiro_geri",
+      "original": "後ろ蹴り",
+      "romanization": "ushiro-geri",
+      "translations": {
+        "it": "calcio all'indietro",
+        "en": "back kick",
+        "es": "patada hacia atrás",
+        "fr": "coup de pied arrière",
+        "de": "Rückwärtstritt"
+      },
+      "category": "kick",
+      "art": ["karate"]
+    },
+    {
+      "id": "ura_mawashi_geri",
+      "original": "裏回し蹴り",
+      "romanization": "ura-mawashi-geri",
+      "translations": {
+        "it": "calcio a gancio",
+        "en": "hook kick",
+        "es": "patada de gancho",
+        "fr": "coup de pied crochet",
+        "de": "Hakentritt"
+      },
+      "category": "kick",
+      "art": ["karate"]
+    },
+    {
+      "id": "mikazuki_geri",
+      "original": "三日月蹴り",
+      "romanization": "mikazuki-geri",
+      "translations": {
+        "it": "calcio a mezzaluna",
+        "en": "crescent kick",
+        "es": "patada creciente",
+        "fr": "coup de pied croissant",
+        "de": "Halbmondtritt"
+      },
+      "category": "kick",
+      "art": ["karate"]
+    },
+    {
+      "id": "fumikomi",
+      "original": "踏み込み",
+      "romanization": "fumikomi",
+      "translations": {
+        "it": "calcio spingente",
+        "en": "stomping kick",
+        "es": "patada de pisotón",
+        "fr": "coup de pied écrasant",
+        "de": "Stampftritt"
+      },
+      "category": "kick",
+      "art": ["karate", "kendo"]
+    },
+    {
+      "id": "tobi_geri",
+      "original": "飛び蹴り",
+      "romanization": "tobi-geri",
+      "translations": {
+        "it": "calcio in salto",
+        "en": "jumping kick",
+        "es": "patada con salto",
+        "fr": "coup de pied sauté",
+        "de": "Sprungtritt"
+      },
+      "category": "kick",
+      "art": ["karate"]
+    },
+    {
+      "id": "uchi",
+      "original": "打ち",
+      "romanization": "uchi",
+      "translations": {
+        "it": "colpo",
+        "en": "strike",
+        "es": "golpe",
+        "fr": "frappe",
+        "de": "Schlag"
+      },
+      "category": "strike",
+      "art": ["karate", "kendo"]
+    },
+    {
+      "id": "shuto",
+      "original": "手刀",
+      "romanization": "shuto",
+      "translations": {
+        "it": "taglio di mano",
+        "en": "knife hand, karate chop",
+        "es": "mano cuchillo",
+        "fr": "main sabre",
+        "de": "Schwerthand"
+      },
+      "category": "strike",
+      "art": ["karate"]
+    },
+    {
+      "id": "haito",
+      "original": "背刀",
+      "romanization": "haito",
+      "translations": {
+        "it": "cresta della mano",
+        "en": "ridge hand",
+        "es": "cresta de la mano",
+        "fr": "crête de la main",
+        "de": "Handkante"
+      },
+      "category": "strike",
+      "art": ["karate"]
+    },
+    {
+      "id": "teisho",
+      "original": "底掌",
+      "romanization": "teisho",
+      "translations": {
+        "it": "palmo",
+        "en": "palm heel",
+        "es": "base de la palma",
+        "fr": "paume",
+        "de": "Handballen"
+      },
+      "category": "strike",
+      "art": ["karate"]
+    },
+    {
+      "id": "empi",
+      "original": "肘",
+      "romanization": "empi/hiji",
+      "translations": {
+        "it": "colpo di gomito",
+        "en": "elbow strike",
+        "es": "golpe de codo",
+        "fr": "coup de coude",
+        "de": "Ellbogenschlag"
+      },
+      "category": "strike",
+      "art": ["karate"]
+    },
+    {
+      "id": "dachi",
+      "original": "立ち",
+      "romanization": "dachi/tachi",
+      "translations": {
+        "it": "posizione",
+        "en": "stance",
+        "es": "posición",
+        "fr": "position",
+        "de": "Stellung"
+      },
+      "category": "stance",
+      "art": ["karate"]
+    },
+    {
+      "id": "heisoku_dachi",
+      "original": "閉足立ち",
+      "romanization": "heisoku-dachi",
+      "translations": {
+        "it": "piedi uniti",
+        "en": "feet together stance",
+        "es": "pies juntos",
+        "fr": "pieds joints",
+        "de": "Füße zusammen"
+      },
+      "category": "stance",
+      "art": ["karate"]
+    },
+    {
+      "id": "musubi_dachi",
+      "original": "結び立ち",
+      "romanization": "musubi-dachi",
+      "translations": {
+        "it": "piedi a V",
+        "en": "V stance",
+        "es": "pies en V",
+        "fr": "pieds en V",
+        "de": "V-Stellung"
+      },
+      "category": "stance",
+      "art": ["karate"]
+    },
+    {
+      "id": "hachiji_dachi",
+      "original": "八字立ち",
+      "romanization": "hachiji-dachi",
+      "translations": {
+        "it": "posizione naturale",
+        "en": "natural stance",
+        "es": "posición natural",
+        "fr": "position naturelle",
+        "de": "natürliche Stellung"
+      },
+      "category": "stance",
+      "art": ["karate"]
+    },
+    {
+      "id": "zenkutsu_dachi",
+      "original": "前屈立ち",
+      "romanization": "zenkutsu-dachi",
+      "translations": {
+        "it": "posizione avanzata",
+        "en": "front stance",
+        "es": "posición adelantada",
+        "fr": "position avancée",
+        "de": "Vorwärtsstellung"
+      },
+      "category": "stance",
+      "art": ["karate"]
+    },
+    {
+      "id": "kokutsu_dachi",
+      "original": "後屈立ち",
+      "romanization": "kokutsu-dachi",
+      "translations": {
+        "it": "posizione arretrata",
+        "en": "back stance",
+        "es": "posición retrasada",
+        "fr": "position reculée",
+        "de": "Rückwärtsstellung"
+      },
+      "category": "stance",
+      "art": ["karate"]
+    },
+    {
+      "id": "kiba_dachi",
+      "original": "騎馬立ち",
+      "romanization": "kiba-dachi",
+      "translations": {
+        "it": "posizione del cavaliere",
+        "en": "horse stance",
+        "es": "posición del jinete",
+        "fr": "position du cavalier",
+        "de": "Reiterstellung"
+      },
+      "category": "stance",
+      "art": ["karate"]
+    },
+    {
+      "id": "shiko_dachi",
+      "original": "四股立ち",
+      "romanization": "shiko-dachi",
+      "translations": {
+        "it": "posizione del sumo",
+        "en": "sumo stance",
+        "es": "posición de sumo",
+        "fr": "position de sumo",
+        "de": "Sumo-Stellung"
+      },
+      "category": "stance",
+      "art": ["karate"]
+    },
+    {
+      "id": "neko_ashi_dachi",
+      "original": "猫足立ち",
+      "romanization": "neko-ashi-dachi",
+      "translations": {
+        "it": "posizione del gatto",
+        "en": "cat stance",
+        "es": "posición del gato",
+        "fr": "position du chat",
+        "de": "Katzenstellung"
+      },
+      "category": "stance",
+      "art": ["karate"]
+    },
+    {
+      "id": "sanchin_dachi",
+      "original": "三戦立ち",
+      "romanization": "sanchin-dachi",
+      "translations": {
+        "it": "posizione delle tre battaglie",
+        "en": "three battles stance",
+        "es": "posición de tres batallas",
+        "fr": "position des trois combats",
+        "de": "Drei-Kämpfe-Stellung"
+      },
+      "category": "stance",
+      "art": ["karate"]
+    },
+    {
+      "id": "nage_waza",
+      "original": "投げ技",
+      "romanization": "nage-waza",
+      "translations": {
+        "it": "tecniche di proiezione",
+        "en": "throwing techniques",
+        "es": "técnicas de proyección",
+        "fr": "techniques de projection",
+        "de": "Wurftechniken"
+      },
+      "category": "judo",
+      "art": ["judo"]
+    },
+    {
+      "id": "katame_waza",
+      "original": "固め技",
+      "romanization": "katame-waza",
+      "translations": {
+        "it": "tecniche di controllo",
+        "en": "grappling techniques",
+        "es": "técnicas de control",
+        "fr": "techniques de contrôle",
+        "de": "Kontrolltechniken"
+      },
+      "category": "judo",
+      "art": ["judo"]
+    },
+    {
+      "id": "tachi_waza",
+      "original": "立ち技",
+      "romanization": "tachi-waza",
+      "translations": {
+        "it": "tecniche in piedi",
+        "en": "standing techniques",
+        "es": "técnicas de pie",
+        "fr": "techniques debout",
+        "de": "Standtechniken"
+      },
+      "category": "judo",
+      "art": ["judo"]
+    },
+    {
+      "id": "ne_waza",
+      "original": "寝技",
+      "romanization": "ne-waza",
+      "translations": {
+        "it": "tecniche al suolo",
+        "en": "ground techniques",
+        "es": "técnicas de suelo",
+        "fr": "techniques au sol",
+        "de": "Bodentechniken"
+      },
+      "category": "judo",
+      "art": ["judo"]
+    },
+    {
+      "id": "te_waza",
+      "original": "手技",
+      "romanization": "te-waza",
+      "translations": {
+        "it": "tecniche di mano",
+        "en": "hand techniques",
+        "es": "técnicas de mano",
+        "fr": "techniques de main",
+        "de": "Handtechniken"
+      },
+      "category": "judo",
+      "art": ["judo"]
+    },
+    {
+      "id": "koshi_waza",
+      "original": "腰技",
+      "romanization": "koshi-waza",
+      "translations": {
+        "it": "tecniche di anca",
+        "en": "hip techniques",
+        "es": "técnicas de cadera",
+        "fr": "techniques de hanche",
+        "de": "Hüfttechniken"
+      },
+      "category": "judo",
+      "art": ["judo"]
+    },
+    {
+      "id": "ashi_waza",
+      "original": "足技",
+      "romanization": "ashi-waza",
+      "translations": {
+        "it": "tecniche di gamba",
+        "en": "leg techniques",
+        "es": "técnicas de pierna",
+        "fr": "techniques de jambe",
+        "de": "Beintechniken"
+      },
+      "category": "judo",
+      "art": ["judo"]
+    },
+    {
+      "id": "sutemi_waza",
+      "original": "捨て身技",
+      "romanization": "sutemi-waza",
+      "translations": {
+        "it": "tecniche di sacrificio",
+        "en": "sacrifice techniques",
+        "es": "técnicas de sacrificio",
+        "fr": "techniques de sacrifice",
+        "de": "Opfertechniken"
+      },
+      "category": "judo",
+      "art": ["judo"]
+    },
+    {
+      "id": "osaekomi",
+      "original": "押え込み",
+      "romanization": "osaekomi",
+      "translations": {
+        "it": "immobilizzazione",
+        "en": "pin, hold-down",
+        "es": "inmovilización",
+        "fr": "immobilisation",
+        "de": "Haltegriff"
+      },
+      "category": "judo",
+      "art": ["judo"]
+    },
+    {
+      "id": "shime_waza",
+      "original": "絞め技",
+      "romanization": "shime-waza",
+      "translations": {
+        "it": "strangolamenti",
+        "en": "chokes, strangles",
+        "es": "estrangulamientos",
+        "fr": "étranglements",
+        "de": "Würgetechniken"
+      },
+      "category": "judo",
+      "art": ["judo"]
+    },
+    {
+      "id": "kansetsu_waza",
+      "original": "関節技",
+      "romanization": "kansetsu-waza",
+      "translations": {
+        "it": "leve articolari",
+        "en": "joint locks",
+        "es": "llaves articulares",
+        "fr": "clés articulaires",
+        "de": "Gelenkhebel"
+      },
+      "category": "judo",
+      "art": ["judo"]
+    },
+    {
+      "id": "tori",
+      "original": "取り",
+      "romanization": "tori",
+      "translations": {
+        "it": "colui che esegue",
+        "en": "one who executes",
+        "es": "el que ejecuta",
+        "fr": "celui qui exécute",
+        "de": "der Ausführende"
+      },
+      "category": "judo",
+      "art": ["judo", "aikido"]
+    },
+    {
+      "id": "uke_judo",
+      "original": "受け",
+      "romanization": "uke",
+      "translations": {
+        "it": "colui che riceve",
+        "en": "one who receives",
+        "es": "el que recibe",
+        "fr": "celui qui reçoit",
+        "de": "der Empfänger"
+      },
+      "category": "judo",
+      "art": ["judo", "aikido"]
+    },
+    {
+      "id": "ippon",
+      "original": "一本",
+      "romanization": "ippon",
+      "translations": {
+        "it": "punto pieno, vittoria",
+        "en": "full point, victory",
+        "es": "punto completo, victoria",
+        "fr": "point complet, victoire",
+        "de": "voller Punkt, Sieg"
+      },
+      "category": "judo",
+      "art": ["judo", "karate"]
+    },
+    {
+      "id": "waza_ari",
+      "original": "技あり",
+      "romanization": "waza-ari",
+      "translations": {
+        "it": "mezzo punto",
+        "en": "half point",
+        "es": "medio punto",
+        "fr": "demi-point",
+        "de": "halber Punkt"
+      },
+      "category": "judo",
+      "art": ["judo", "karate"]
+    },
+    {
+      "id": "irimi",
+      "original": "入り身",
+      "romanization": "irimi",
+      "translations": {
+        "it": "entrare nel corpo",
+        "en": "entering body",
+        "es": "entrar en el cuerpo",
+        "fr": "entrer dans le corps",
+        "de": "in den Körper eintreten"
+      },
+      "category": "aikido",
+      "art": ["aikido"]
+    },
+    {
+      "id": "tenkan",
+      "original": "転換",
+      "romanization": "tenkan",
+      "translations": {
+        "it": "girare, pivotare",
+        "en": "turn, pivot",
+        "es": "girar, pivotar",
+        "fr": "tourner, pivoter",
+        "de": "drehen, schwenken"
+      },
+      "category": "aikido",
+      "art": ["aikido"]
+    },
+    {
+      "id": "kokyu_nage",
+      "original": "呼吸投げ",
+      "romanization": "kokyu-nage",
+      "translations": {
+        "it": "proiezione respiratoria",
+        "en": "breath throw",
+        "es": "proyección respiratoria",
+        "fr": "projection respiratoire",
+        "de": "Atemwurf"
+      },
+      "category": "aikido",
+      "art": ["aikido"]
+    },
+    {
+      "id": "ikkyo",
+      "original": "一教",
+      "romanization": "ikkyo",
+      "translations": {
+        "it": "primo principio",
+        "en": "first principle",
+        "es": "primer principio",
+        "fr": "premier principe",
+        "de": "erstes Prinzip"
+      },
+      "category": "aikido",
+      "art": ["aikido"]
+    },
+    {
+      "id": "nikyo",
+      "original": "二教",
+      "romanization": "nikyo",
+      "translations": {
+        "it": "secondo principio",
+        "en": "second principle",
+        "es": "segundo principio",
+        "fr": "deuxième principe",
+        "de": "zweites Prinzip"
+      },
+      "category": "aikido",
+      "art": ["aikido"]
+    },
+    {
+      "id": "sankyo",
+      "original": "三教",
+      "romanization": "sankyo",
+      "translations": {
+        "it": "terzo principio",
+        "en": "third principle",
+        "es": "tercer principio",
+        "fr": "troisième principe",
+        "de": "drittes Prinzip"
+      },
+      "category": "aikido",
+      "art": ["aikido"]
+    },
+    {
+      "id": "yonkyo",
+      "original": "四教",
+      "romanization": "yonkyo",
+      "translations": {
+        "it": "quarto principio",
+        "en": "fourth principle",
+        "es": "cuarto principio",
+        "fr": "quatrième principe",
+        "de": "viertes Prinzip"
+      },
+      "category": "aikido",
+      "art": ["aikido"]
+    },
+    {
+      "id": "gokyo",
+      "original": "五教",
+      "romanization": "gokyo",
+      "translations": {
+        "it": "quinto principio",
+        "en": "fifth principle",
+        "es": "quinto principio",
+        "fr": "cinquième principe",
+        "de": "fünftes Prinzip"
+      },
+      "category": "aikido",
+      "art": ["aikido"]
+    },
+    {
+      "id": "shiho_nage",
+      "original": "四方投げ",
+      "romanization": "shiho-nage",
+      "translations": {
+        "it": "proiezione quattro direzioni",
+        "en": "four-direction throw",
+        "es": "proyección cuatro direcciones",
+        "fr": "projection quatre directions",
+        "de": "Vier-Richtungen-Wurf"
+      },
+      "category": "aikido",
+      "art": ["aikido"]
+    },
+    {
+      "id": "kote_gaeshi",
+      "original": "小手返し",
+      "romanization": "kote-gaeshi",
+      "translations": {
+        "it": "torsione polso",
+        "en": "wrist twist",
+        "es": "torsión de muñeca",
+        "fr": "torsion du poignet",
+        "de": "Handgelenkdrehung"
+      },
+      "category": "aikido",
+      "art": ["aikido"]
+    },
+    {
+      "id": "bokken",
+      "original": "木剣",
+      "romanization": "bokken",
+      "translations": {
+        "it": "spada di legno",
+        "en": "wooden sword",
+        "es": "espada de madera",
+        "fr": "épée en bois",
+        "de": "Holzschwert"
+      },
+      "category": "weapon",
+      "art": ["aikido", "kendo", "karate"]
+    },
+    {
+      "id": "jo",
+      "original": "杖",
+      "romanization": "jo",
+      "translations": {
+        "it": "bastone medio",
+        "en": "medium staff",
+        "es": "bastón medio",
+        "fr": "bâton moyen",
+        "de": "mittlerer Stab"
+      },
+      "category": "weapon",
+      "art": ["aikido"]
+    },
+    {
+      "id": "tanto",
+      "original": "短刀",
+      "romanization": "tanto",
+      "translations": {
+        "it": "pugnale",
+        "en": "knife, dagger",
+        "es": "cuchillo, daga",
+        "fr": "couteau, poignard",
+        "de": "Messer, Dolch"
+      },
+      "category": "weapon",
+      "art": ["aikido", "kobudo"]
+    },
+    {
+      "id": "bo",
+      "original": "棒",
+      "romanization": "bo",
+      "translations": {
+        "it": "bastone lungo",
+        "en": "long staff",
+        "es": "bastón largo",
+        "fr": "bâton long",
+        "de": "langer Stab"
+      },
+      "category": "weapon",
+      "art": ["kobudo"]
+    },
+    {
+      "id": "shinai",
+      "original": "竹刀",
+      "romanization": "shinai",
+      "translations": {
+        "it": "spada di bambù",
+        "en": "bamboo sword",
+        "es": "espada de bambú",
+        "fr": "épée en bambou",
+        "de": "Bambusschwert"
+      },
+      "category": "weapon",
+      "art": ["kendo"]
+    },
+    {
+      "id": "katana",
+      "original": "刀",
+      "romanization": "katana",
+      "translations": {
+        "it": "spada giapponese",
+        "en": "Japanese sword",
+        "es": "espada japonesa",
+        "fr": "sabre japonais",
+        "de": "japanisches Schwert"
+      },
+      "category": "weapon",
+      "art": ["kendo", "iaido"]
+    },
+    {
+      "id": "wakizashi",
+      "original": "脇差",
+      "romanization": "wakizashi",
+      "translations": {
+        "it": "spada corta",
+        "en": "short sword",
+        "es": "espada corta",
+        "fr": "épée courte",
+        "de": "kurzes Schwert"
+      },
+      "category": "weapon",
+      "art": ["kendo", "iaido"]
+    },
+    {
+      "id": "naginata",
+      "original": "薙刀",
+      "romanization": "naginata",
+      "translations": {
+        "it": "alabarda",
+        "en": "halberd",
+        "es": "alabarda",
+        "fr": "hallebarde",
+        "de": "Hellebarde"
+      },
+      "category": "weapon",
+      "art": ["naginata-do"]
+    },
+    {
+      "id": "tonfa",
+      "original": "トンファー",
+      "romanization": "tonfa",
+      "translations": {
+        "it": "manganello",
+        "en": "side-handle baton",
+        "es": "tonfa",
+        "fr": "tonfa",
+        "de": "Tonfa"
+      },
+      "category": "weapon",
+      "art": ["kobudo"]
+    },
+    {
+      "id": "sai",
+      "original": "釵",
+      "romanization": "sai",
+      "translations": {
+        "it": "tridente corto",
+        "en": "short trident",
+        "es": "tridente corto",
+        "fr": "trident court",
+        "de": "kurzer Dreizack"
+      },
+      "category": "weapon",
+      "art": ["kobudo"]
+    },
+    {
+      "id": "nunchaku",
+      "original": "ヌンチャク",
+      "romanization": "nunchaku",
+      "translations": {
+        "it": "due bastoni collegati",
+        "en": "two connected sticks",
+        "es": "nunchaku",
+        "fr": "nunchaku",
+        "de": "Nunchaku"
+      },
+      "category": "weapon",
+      "art": ["kobudo"]
+    },
+    {
+      "id": "kama",
+      "original": "鎌",
+      "romanization": "kama",
+      "translations": {
+        "it": "falcetto",
+        "en": "sickle",
+        "es": "hoz",
+        "fr": "faucille",
+        "de": "Sichel"
+      },
+      "category": "weapon",
+      "art": ["kobudo"]
+    },
+    {
+      "id": "budo",
+      "original": "武道",
+      "romanization": "budo",
+      "translations": {
+        "it": "via marziale",
+        "en": "martial way",
+        "es": "camino marcial",
+        "fr": "voie martiale",
+        "de": "Weg der Kampfkünste"
+      },
+      "category": "philosophy",
+      "art": ["karate", "judo", "aikido", "kendo"]
+    },
+    {
+      "id": "bujutsu",
+      "original": "武術",
+      "romanization": "bujutsu",
+      "translations": {
+        "it": "arte marziale",
+        "en": "martial art",
+        "es": "arte marcial",
+        "fr": "art martial",
+        "de": "Kampfkunst"
+      },
+      "category": "philosophy",
+      "art": ["karate", "judo", "aikido"]
+    },
+    {
+      "id": "do",
+      "original": "道",
+      "romanization": "do",
+      "translations": {
+        "it": "via, cammino",
+        "en": "way, path",
+        "es": "camino, vía",
+        "fr": "voie, chemin",
+        "de": "Weg, Pfad"
+      },
+      "category": "philosophy",
+      "art": ["karate", "judo", "aikido", "kendo"]
+    },
+    {
+      "id": "jutsu",
+      "original": "術",
+      "romanization": "jutsu",
+      "translations": {
+        "it": "arte, tecnica",
+        "en": "art, technique",
+        "es": "arte, técnica",
+        "fr": "art, technique",
+        "de": "Kunst, Technik"
+      },
+      "category": "philosophy",
+      "art": ["jujutsu", "ninjutsu"]
+    },
+    {
+      "id": "bushido",
+      "original": "武士道",
+      "romanization": "bushido",
+      "translations": {
+        "it": "via del guerriero",
+        "en": "way of the warrior",
+        "es": "camino del guerrero",
+        "fr": "voie du guerrier",
+        "de": "Weg des Kriegers"
+      },
+      "category": "philosophy",
+      "art": ["karate", "kendo"]
+    },
+    {
+      "id": "shin_gi_tai",
+      "original": "心技体",
+      "romanization": "shin-gi-tai",
+      "translations": {
+        "it": "spirito-tecnica-corpo",
+        "en": "spirit-technique-body",
+        "es": "espíritu-técnica-cuerpo",
+        "fr": "esprit-technique-corps",
+        "de": "Geist-Technik-Körper"
+      },
+      "category": "philosophy",
+      "art": ["karate", "judo", "kendo"]
+    },
+    {
+      "id": "shu_ha_ri",
+      "original": "守破離",
+      "romanization": "shu-ha-ri",
+      "translations": {
+        "it": "obbedire-rompere-trascendere",
+        "en": "obey-break-transcend",
+        "es": "obedecer-romper-trascender",
+        "fr": "obéir-rompre-transcender",
+        "de": "gehorchen-brechen-transzendieren"
+      },
+      "category": "philosophy",
+      "art": ["karate", "aikido"]
+    },
+    {
+      "id": "mushin",
+      "original": "無心",
+      "romanization": "mushin",
+      "translations": {
+        "it": "mente vuota",
+        "en": "empty mind",
+        "es": "mente vacía",
+        "fr": "esprit vide",
+        "de": "leerer Geist"
+      },
+      "category": "philosophy",
+      "art": ["karate", "kendo", "aikido"]
+    },
+    {
+      "id": "fudoshin",
+      "original": "不動心",
+      "romanization": "fudoshin",
+      "translations": {
+        "it": "mente inamovibile",
+        "en": "immovable mind",
+        "es": "mente inamovible",
+        "fr": "esprit immuable",
+        "de": "unbeweglicher Geist"
+      },
+      "category": "philosophy",
+      "art": ["karate", "kendo"]
+    },
+    {
+      "id": "heijoshin",
+      "original": "平常心",
+      "romanization": "heijoshin",
+      "translations": {
+        "it": "mente ordinaria",
+        "en": "ordinary mind",
+        "es": "mente ordinaria",
+        "fr": "esprit ordinaire",
+        "de": "gewöhnlicher Geist"
+      },
+      "category": "philosophy",
+      "art": ["karate", "kendo"]
+    },
+    {
+      "id": "gaman",
+      "original": "我慢",
+      "romanization": "gaman",
+      "translations": {
+        "it": "perseveranza",
+        "en": "perseverance",
+        "es": "perseverancia",
+        "fr": "persévérance",
+        "de": "Ausdauer"
+      },
+      "category": "philosophy",
+      "art": ["karate", "judo"]
+    },
+    {
+      "id": "ganbare",
+      "original": "頑張れ",
+      "romanization": "ganbare",
+      "translations": {
+        "it": "fai del tuo meglio",
+        "en": "do your best",
+        "es": "da lo mejor de ti",
+        "fr": "fais de ton mieux",
+        "de": "gib dein Bestes"
+      },
+      "category": "philosophy",
+      "art": ["karate", "judo"]
+    },
+    {
+      "id": "osu",
+      "original": "押忍",
+      "romanization": "osu/oss",
+      "translations": {
+        "it": "espressione di rispetto",
+        "en": "expression of respect",
+        "es": "expresión de respeto",
+        "fr": "expression de respect",
+        "de": "Ausdruck des Respekts"
+      },
+      "category": "philosophy",
+      "art": ["karate"],
+      "notes": "Common response to indicate understanding and commitment"
+    }
+  ]
+}

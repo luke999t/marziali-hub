@@ -1,0 +1,288 @@
+{
+  "_metadata": {
+    "type": "martial_arts_techniques",
+    "style": "wing_chun",
+    "style_name": "WING_CHUN",
+    "source": "martial_arts_patterns.py",
+    "exported_at": "2026-01-21T09:22:27.607182",
+    "pattern_count": 5,
+    "ai_indexable": true,
+    "rag_enabled": true
+  },
+  "techniques": [
+    {
+      "id": "centerline_guard",
+      "name": "守中线 (Centerline Guard)",
+      "style": "wing_chun",
+      "description": "Guardia caratteristica con mani davanti al centro",
+      "keywords": [
+        "centerline",
+        "guard",
+        "man sao",
+        "wu sao",
+        "ready position"
+      ],
+      "velocity_profile": "medium",
+      "temporal_signature": "discrete",
+      "duration_range": [
+        1.0,
+        10.0
+      ],
+      "key_landmarks": [
+        11,
+        12,
+        15,
+        16,
+        33,
+        34,
+        54,
+        55
+      ],
+      "angle_ranges": {
+        "left_elbow": [
+          90,
+          120
+        ],
+        "right_elbow": [
+          90,
+          120
+        ],
+        "hands_vertical": [
+          70,
+          110
+        ]
+      },
+      "hand_positions": {
+        "left": "vertical_fist",
+        "right": "vertical_fist"
+      },
+      "distance_ratios": {
+        "centerline_distance": [
+          0.0,
+          0.2
+        ],
+        "hands_height": [
+          0.6,
+          0.8
+        ],
+        "elbow_in": [
+          0.8,
+          1.0
+        ]
+      },
+      "confidence_threshold": 0.8,
+      "text_for_rag": "守中线 (Centerline Guard) - Guardia caratteristica con mani davanti al centro. Keywords: centerline, guard, man sao, wu sao, ready position"
+    },
+    {
+      "id": "chain_punches",
+      "name": "连环冲拳 (Chain Punches)",
+      "style": "wing_chun",
+      "description": "Pugni rapidi consecutivi sulla centerline",
+      "keywords": [
+        "chain punch",
+        "straight punch",
+        "lian huan",
+        "rapid fire"
+      ],
+      "velocity_profile": "explosive",
+      "temporal_signature": "cyclic",
+      "duration_range": [
+        0.5,
+        2.0
+      ],
+      "key_landmarks": [
+        13,
+        14,
+        15,
+        16,
+        54,
+        55
+      ],
+      "angle_ranges": {
+        "elbow_extension": [
+          160,
+          180
+        ],
+        "punch_angle": [
+          0,
+          15
+        ]
+      },
+      "hand_positions": {
+        "alternating": "vertical_fist"
+      },
+      "distance_ratios": {
+        "punch_distance": [
+          1.0,
+          1.5
+        ],
+        "rotation_minimal": [
+          0.0,
+          0.1
+        ]
+      },
+      "confidence_threshold": 0.75,
+      "text_for_rag": "连环冲拳 (Chain Punches) - Pugni rapidi consecutivi sulla centerline. Keywords: chain punch, straight punch, lian huan, rapid fire"
+    },
+    {
+      "id": "tan_sao",
+      "name": "摊手 (Tan Sao - Palm Up Block)",
+      "style": "wing_chun",
+      "description": "Parata con palmo verso l'alto",
+      "keywords": [
+        "tan sao",
+        "palm up",
+        "dispersing hand",
+        "block"
+      ],
+      "velocity_profile": "fast",
+      "temporal_signature": "discrete",
+      "duration_range": [
+        0.3,
+        1.0
+      ],
+      "key_landmarks": [
+        11,
+        13,
+        15,
+        33
+      ],
+      "angle_ranges": {
+        "elbow_angle": [
+          100,
+          130
+        ],
+        "wrist_rotation": [
+          80,
+          100
+        ],
+        "shoulder_forward": [
+          20,
+          50
+        ]
+      },
+      "hand_positions": {
+        "executing_hand": "open_palm_up"
+      },
+      "distance_ratios": {
+        "arm_extension": [
+          0.6,
+          0.9
+        ],
+        "elbow_centerline": [
+          0.0,
+          0.2
+        ]
+      },
+      "confidence_threshold": 0.7,
+      "text_for_rag": "摊手 (Tan Sao - Palm Up Block) - Parata con palmo verso l'alto. Keywords: tan sao, palm up, dispersing hand, block"
+    },
+    {
+      "id": "bong_sao",
+      "name": "膀手 (Bong Sao - Wing Arm)",
+      "style": "wing_chun",
+      "description": "Parata con braccio a ala sollevato",
+      "keywords": [
+        "bong sao",
+        "wing arm",
+        "elbow up",
+        "deflection"
+      ],
+      "velocity_profile": "fast",
+      "temporal_signature": "discrete",
+      "duration_range": [
+        0.3,
+        1.0
+      ],
+      "key_landmarks": [
+        11,
+        13,
+        15,
+        33
+      ],
+      "angle_ranges": {
+        "elbow_angle": [
+          90,
+          110
+        ],
+        "shoulder_elevation": [
+          60,
+          90
+        ],
+        "elbow_out": [
+          30,
+          60
+        ]
+      },
+      "hand_positions": {
+        "executing_hand": "open_palm_side"
+      },
+      "distance_ratios": {
+        "elbow_height": [
+          0.7,
+          0.9
+        ],
+        "hand_position": [
+          0.4,
+          0.6
+        ]
+      },
+      "confidence_threshold": 0.7,
+      "text_for_rag": "膀手 (Bong Sao - Wing Arm) - Parata con braccio a ala sollevato. Keywords: bong sao, wing arm, elbow up, deflection"
+    },
+    {
+      "id": "chi_sao",
+      "name": "黐手 (Chi Sao - Sticky Hands)",
+      "style": "wing_chun",
+      "description": "Esercizio di sensibilità con contatto continuo",
+      "keywords": [
+        "chi sao",
+        "sticky hands",
+        "sensitivity",
+        "rolling",
+        "two person"
+      ],
+      "velocity_profile": "medium",
+      "temporal_signature": "cyclic",
+      "duration_range": [
+        5.0,
+        30.0
+      ],
+      "key_landmarks": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        33,
+        54
+      ],
+      "angle_ranges": {
+        "contact_angle": [
+          90,
+          120
+        ],
+        "rolling_motion": [
+          -45,
+          45
+        ]
+      },
+      "hand_positions": {
+        "both": "contact_rolling"
+      },
+      "distance_ratios": {
+        "arm_contact": [
+          0.1,
+          0.3
+        ],
+        "circular_motion": [
+          0.3,
+          0.5
+        ]
+      },
+      "confidence_threshold": 0.65,
+      "text_for_rag": "黐手 (Chi Sao - Sticky Hands) - Esercizio di sensibilità con contatto continuo. Keywords: chi sao, sticky hands, sensitivity, rolling, two person"
+    }
+  ]
+}

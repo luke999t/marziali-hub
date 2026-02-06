@@ -1,0 +1,193 @@
+{
+  "metadata": {
+    "project": "Media Center Arti Marziali",
+    "created_at": "2025-01-26T12:00:00Z",
+    "last_updated": "2025-01-26T12:00:00Z",
+    "version": "1.2.0",
+    "purpose": "AI-First error tracking per manutenzione automatica",
+    "session": "Fix asyncpg event loop errors - Conversione test da async a sync"
+  },
+
+  "errors": [
+    {
+      "id": "ERR-009",
+      "date": "2025-01-26",
+      "category": "Testing",
+      "subcategory": "asyncpg/pytest",
+      "severity": "CRITICAL",
+      "title": "ASGITransport causa errori event loop con asyncpg",
+      "symptom": "121 test errors con 'Event loop is closed', 'another operation in progress', 'generator didn't stop after athrow()'",
+      "root_cause": "ASGITransport bypassa la rete e crea connessioni asyncpg in-process. Pytest crea nuovo event loop per ogni test ma asyncpg mantiene pool connessioni che richiedono loop attivo. Quando pytest distrugge il loop, le connessioni zombie causano errori.",
+      "error_messages": [
+        "RuntimeError: Event loop is closed",
+        "InterfaceError: cannot perform operation: another operation is in progress",
+        "RuntimeError: generator didn't stop after athrow()",
+        "AttributeError: 'NoneType' object has no attribute 'send'"
+      ],
+      "files_affected": [
+        "tests/api/test_videos_api.py",
+        "tests/api/test_users_api.py",
+        "tests/api/test_notifications_api.py",
+        "tests/api/test_curriculum_api.py",
+        "tests/api/test_scheduler_api.py",
+        "tests/api/test_export_api.py"
+      ],
+      "solution": {
+        "description": "Convertire test da async (ASGITransport) a sync (httpx.Client) con chiamate HTTP reali a localhost:8000",
+        "pattern_before": {
+          "imports": "from httpx import ASGITransport",
+          "fixture": "@pytest.fixture async def async_client(): transport = ASGITransport(app=app); async with httpx.AsyncClient(transport=transport, base_url='http://test') as client: yield client",
+          "test": "@pytest.mark.anyio async def test_example(async_client): response = await async_client.get('/endpoint')"
+        },
+        "pattern_after": {
+          "imports": "import httpx; import os",
+          "config": "BASE_URL = os.getenv('TEST_BACKEND_URL', 'http://localhost:8000')",
+          "fixture": "@pytest.fixture(scope='module') def http_client(): with httpx.Client(base_url=BASE_URL, timeout=30.0) as client: response = client.get('/health'); if response.status_code != 200: pytest.skip('Backend not healthy'); yield client",
+          "test": "def test_example(http_client): response = http_client.get('/endpoint')"
+        },
+        "steps": [
+          "1. Rimuovere 'from httpx import ASGITransport'",
+          "2. Rimuovere '@pytest.fixture def anyio_backend()' ",
+          "3. Rimuovere tutti '@pytest.mark.anyio'",
+          "4. Convertire 'async def' → 'def' in tutti i test",
+          "5. Rimuovere 'await' da tutte le chiamate client",
+          "6. Sostituire 'async_client' con 'http_client'",
+          "7. Aggiungere BASE_URL configurabile via env",
+          "8. Usare scope='module' per fixture client e auth_headers",
+          "9. Aggiungere health check in fixture per skip se backend spento"
+        ]
+      },
+      "prevention": "MAI usare ASGITransport per test con database asyncpg. Preferire sempre chiamate HTTP reali al backend.",
+      "time_to_debug": "4 ore",
+      "time_saved_future": "4 ore per progetto",
+      "impact": {
+        "before": {"passed": 533, "failed": 26, "errors": 121, "skipped": 42},
+        "after": {"passed": 674, "failed": 12, "errors": 0, "skipped": 36}
+      }
+    },
+    {
+      "id": "ERR-010",
+      "date": "2025-01-26",
+      "category": "Testing",
+      "subcategory": "Fixture Scope",
+      "severity": "MEDIUM",
+      "title": "Fixture scope='function' causa riautenticazione per ogni test",
+      "symptom": "Test lenti, login ripetuto 50+ volte nella stessa suite",
+      "root_cause": "Fixture auth_headers con scope='function' esegue login per ogni singolo test invece di riutilizzare token",
+      "solution": {
+        "description": "Usare scope='module' per fixture http_client e auth_headers",
+        "code_change": "@pytest.fixture(scope='module') def auth_headers(http_client): ..."
+      },
+      "prevention": "Per fixture che non cambiano stato (client HTTP, token auth), usare sempre scope='module' o 'session'",
+      "time_saved_future": "2 minuti per suite test"
+    },
+    {
+      "id": "ERR-011",
+      "date": "2025-01-26",
+      "category": "Backend",
+      "subcategory": "API Notifications",
+      "severity": "HIGH",
+      "title": "GET /notifications/device-tokens e /preferences ritornano 500",
+      "symptom": "Test test_list_device_tokens e test_get_preferences falliscono con 500 Internal Server Error",
+      "root_cause": "Bug nel backend - endpoint non gestisce correttamente query utente senza device tokens/preferences esistenti",
+      "files_affected": [
+        "api/v1/notifications.py"
+      ],
+      "solution": {
+        "description": "TODO: Investigare backend - gestire caso utente senza device tokens o preferences con risposta vuota invece di 500",
+        "status": "PENDING"
+      },
+      "time_to_debug": "30 minuti stimati"
+    },
+    {
+      "id": "ERR-012",
+      "date": "2025-01-26",
+      "category": "Backend",
+      "subcategory": "API Videos",
+      "severity": "HIGH",
+      "title": "GET /videos/search ritorna 500 su query valide",
+      "symptom": "test_search_videos e test_search_videos_special_chars falliscono con 500",
+      "root_cause": "Endpoint search non gestisce correttamente query o caratteri speciali",
+      "files_affected": [
+        "api/v1/videos.py"
+      ],
+      "solution": {
+        "description": "TODO: Investigare backend - sanitizzare input search e gestire errori database",
+        "status": "PENDING"
+      }
+    },
+    {
+      "id": "ERR-013",
+      "date": "2025-01-26",
+      "category": "Backend",
+      "subcategory": "API Favorites",
+      "severity": "MEDIUM",
+      "title": "GET /videos/favorites ritorna 422 invece di 401",
+      "symptom": "test_favorites_requires_auth riceve 422 invece di 401/403",
+      "root_cause": "Endpoint valida body prima di verificare auth, o richiede parametri anche senza auth",
+      "files_affected": [
+        "api/v1/videos.py"
+      ],
+      "solution": {
+        "description": "TODO: Verificare ordine middleware - auth DEVE precedere validation",
+        "status": "PENDING"
+      }
+    },
+    {
+      "id": "ERR-014",
+      "date": "2025-01-26",
+      "category": "Security",
+      "subcategory": "Path Traversal",
+      "severity": "MEDIUM",
+      "title": "Export API espone path traversal payload nel messaggio errore",
+      "symptom": "test_path_traversal_prevention fallisce perché risposta contiene '../../../etc/passwd'",
+      "root_cause": "Backend ritorna input non sanitizzato nel messaggio di errore: 'Skeleton not found for video: ../../../etc/passwd'",
+      "files_affected": [
+        "api/v1/export.py"
+      ],
+      "solution": {
+        "description": "Sanitizzare input prima di includerlo in messaggi di errore. Usare solo ID validati o messaggi generici.",
+        "status": "PENDING"
+      },
+      "prevention": "MAI includere input utente raw nei messaggi di errore. Sempre sanitizzare o usare placeholder."
+    }
+  ],
+
+  "patterns_learned": [
+    {
+      "id": "PATTERN-001",
+      "category": "Testing",
+      "title": "Test API con asyncpg: Sync > Async",
+      "rule": "Per test di API FastAPI che usano asyncpg, preferire httpx.Client sync con chiamate HTTP reali invece di ASGITransport async",
+      "rationale": "ASGITransport bypassa rete creando problemi di event loop con asyncpg connection pool"
+    },
+    {
+      "id": "PATTERN-002",
+      "category": "Testing",
+      "title": "Fixture scope per risorse condivise",
+      "rule": "Usare scope='module' o 'session' per fixture che creano risorse riutilizzabili (HTTP client, auth tokens)",
+      "rationale": "Evita overhead di ricreazione e riautenticazione per ogni test"
+    },
+    {
+      "id": "PATTERN-003",
+      "category": "Security",
+      "title": "Sanitizzazione messaggi errore",
+      "rule": "Mai includere input utente raw nei messaggi di errore API",
+      "rationale": "Evita information disclosure e XSS in client che mostrano errori"
+    }
+  ],
+
+  "statistics": {
+    "session_date": "2025-01-26",
+    "tests_before": {"passed": 533, "failed": 26, "errors": 121, "skipped": 42, "total": 722},
+    "tests_after": {"passed": 674, "failed": 12, "errors": 0, "skipped": 36, "total": 722},
+    "improvement": {
+      "passed_delta": "+141",
+      "errors_eliminated": 121,
+      "pass_rate_before": "73.8%",
+      "pass_rate_after": "93.4%"
+    },
+    "files_fixed": 6,
+    "time_spent": "4 ore"
+  }
+}

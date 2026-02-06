@@ -1,0 +1,696 @@
+{
+  "_metadata": {
+    "AI_MODULE": "Seed Data - Curricula",
+    "AI_DESCRIPTION": "Demo curriculum structures for martial arts progression",
+    "AI_BUSINESS": "Showcases curriculum system with complete belt progression",
+    "AI_TEACHING": "Curriculum modeling, hierarchical data, progression systems"
+  },
+  "curricula": [
+    {
+      "id": "c1-karate-shotokan",
+      "name": "Karate Shotokan - Percorso Tradizionale",
+      "description": "Curriculum ufficiale Shotokan basato sul programma JKA. Dalla cintura bianca alla cintura nera, seguendo la tradizione del Maestro Funakoshi.",
+      "martial_art": "Karate",
+      "style": "Shotokan",
+      "maestro_id": "m1-karate-shotokan",
+      "is_public": true,
+      "is_official": true,
+      "max_levels": 10,
+      "status": "PUBLISHED",
+      "levels": [
+        {
+          "level_number": 1,
+          "name": "Cintura Bianca",
+          "japanese_name": "Shiro Obi (9° Kyu)",
+          "belt_color": "#FFFFFF",
+          "minimum_months_training": 0,
+          "requirements": [
+            {
+              "type": "TECHNIQUE",
+              "name": "Posizioni Base",
+              "description": "Zenkutsu-dachi, Kokutsu-dachi, Kiba-dachi",
+              "is_mandatory": true,
+              "passing_score": 60
+            },
+            {
+              "type": "TECHNIQUE",
+              "name": "Pugni Base",
+              "description": "Oi-zuki, Gyaku-zuki, Choku-zuki",
+              "is_mandatory": true,
+              "passing_score": 60
+            },
+            {
+              "type": "TECHNIQUE",
+              "name": "Parate Base",
+              "description": "Gedan-barai, Age-uke, Soto-uke",
+              "is_mandatory": true,
+              "passing_score": 60
+            },
+            {
+              "type": "KATA",
+              "name": "Taikyoku Shodan",
+              "description": "Primo kata fondamentale",
+              "is_mandatory": true,
+              "passing_score": 65
+            }
+          ]
+        },
+        {
+          "level_number": 2,
+          "name": "Cintura Gialla",
+          "japanese_name": "Kiiro Obi (8° Kyu)",
+          "belt_color": "#FFD700",
+          "minimum_months_training": 3,
+          "requirements": [
+            {
+              "type": "TECHNIQUE",
+              "name": "Calci Base",
+              "description": "Mae-geri, Yoko-geri keage, Mawashi-geri",
+              "is_mandatory": true,
+              "passing_score": 65
+            },
+            {
+              "type": "KATA",
+              "name": "Heian Shodan",
+              "description": "Primo kata della serie Heian",
+              "is_mandatory": true,
+              "passing_score": 70
+            },
+            {
+              "type": "KUMITE",
+              "name": "Kihon Kumite",
+              "description": "Combattimento base a 5 passi",
+              "is_mandatory": true,
+              "passing_score": 60
+            }
+          ]
+        },
+        {
+          "level_number": 3,
+          "name": "Cintura Arancione",
+          "japanese_name": "Orenji Obi (7° Kyu)",
+          "belt_color": "#FFA500",
+          "minimum_months_training": 6,
+          "requirements": [
+            {
+              "type": "KATA",
+              "name": "Heian Nidan",
+              "description": "Secondo kata della serie Heian",
+              "is_mandatory": true,
+              "passing_score": 70
+            },
+            {
+              "type": "TECHNIQUE",
+              "name": "Combinazioni",
+              "description": "Combinazioni di tecniche in movimento",
+              "is_mandatory": true,
+              "passing_score": 65
+            },
+            {
+              "type": "KUMITE",
+              "name": "Sanbon Kumite",
+              "description": "Combattimento a 3 passi",
+              "is_mandatory": true,
+              "passing_score": 65
+            }
+          ]
+        },
+        {
+          "level_number": 4,
+          "name": "Cintura Verde",
+          "japanese_name": "Midori Obi (6° Kyu)",
+          "belt_color": "#228B22",
+          "minimum_months_training": 9,
+          "requirements": [
+            {
+              "type": "KATA",
+              "name": "Heian Sandan",
+              "description": "Terzo kata della serie Heian",
+              "is_mandatory": true,
+              "passing_score": 70
+            },
+            {
+              "type": "THEORY",
+              "name": "Terminologia",
+              "description": "Conoscenza terminologia giapponese base",
+              "is_mandatory": true,
+              "passing_score": 70
+            }
+          ]
+        },
+        {
+          "level_number": 5,
+          "name": "Cintura Blu",
+          "japanese_name": "Ao Obi (5° Kyu)",
+          "belt_color": "#0000CD",
+          "minimum_months_training": 12,
+          "requirements": [
+            {
+              "type": "KATA",
+              "name": "Heian Yondan",
+              "description": "Quarto kata della serie Heian",
+              "is_mandatory": true,
+              "passing_score": 72
+            },
+            {
+              "type": "KUMITE",
+              "name": "Ippon Kumite",
+              "description": "Combattimento a 1 passo",
+              "is_mandatory": true,
+              "passing_score": 68
+            }
+          ]
+        },
+        {
+          "level_number": 6,
+          "name": "Cintura Marrone 3°",
+          "japanese_name": "Cha Obi (3° Kyu)",
+          "belt_color": "#8B4513",
+          "minimum_months_training": 18,
+          "requirements": [
+            {
+              "type": "KATA",
+              "name": "Heian Godan",
+              "description": "Quinto kata della serie Heian",
+              "is_mandatory": true,
+              "passing_score": 75
+            },
+            {
+              "type": "KATA",
+              "name": "Tekki Shodan",
+              "description": "Primo kata della serie Tekki",
+              "is_mandatory": true,
+              "passing_score": 72
+            }
+          ]
+        },
+        {
+          "level_number": 7,
+          "name": "Cintura Marrone 2°",
+          "japanese_name": "Cha Obi (2° Kyu)",
+          "belt_color": "#8B4513",
+          "minimum_months_training": 24,
+          "requirements": [
+            {
+              "type": "KATA",
+              "name": "Bassai Dai",
+              "description": "Kata superiore - Penetrare la fortezza",
+              "is_mandatory": true,
+              "passing_score": 75
+            },
+            {
+              "type": "KUMITE",
+              "name": "Jiyu Kumite",
+              "description": "Combattimento libero",
+              "is_mandatory": true,
+              "passing_score": 70
+            }
+          ]
+        },
+        {
+          "level_number": 8,
+          "name": "Cintura Marrone 1°",
+          "japanese_name": "Cha Obi (1° Kyu)",
+          "belt_color": "#5C4033",
+          "minimum_months_training": 30,
+          "requirements": [
+            {
+              "type": "KATA",
+              "name": "Kanku Dai",
+              "description": "Kata superiore - Guardare il cielo",
+              "is_mandatory": true,
+              "passing_score": 78
+            },
+            {
+              "type": "KATA",
+              "name": "Jion",
+              "description": "Kata del tempio Jion",
+              "is_mandatory": true,
+              "passing_score": 75
+            }
+          ]
+        },
+        {
+          "level_number": 9,
+          "name": "Cintura Nera 1° Dan",
+          "japanese_name": "Kuro Obi (Shodan)",
+          "belt_color": "#000000",
+          "minimum_months_training": 36,
+          "minimum_age": 16,
+          "requirements": [
+            {
+              "type": "KATA",
+              "name": "Tutti i kata Heian",
+              "description": "Esecuzione di tutti e 5 i kata Heian a scelta dell'esaminatore",
+              "is_mandatory": true,
+              "passing_score": 80
+            },
+            {
+              "type": "KATA",
+              "name": "Kata Superiore",
+              "description": "Uno tra Bassai Dai, Kanku Dai, Jion, Empi, Hangetsu",
+              "is_mandatory": true,
+              "passing_score": 80
+            },
+            {
+              "type": "KUMITE",
+              "name": "Jiyu Kumite Avanzato",
+              "description": "3 combattimenti liberi consecutivi",
+              "is_mandatory": true,
+              "passing_score": 75
+            },
+            {
+              "type": "THEORY",
+              "name": "Esame Teorico",
+              "description": "Storia del Karate, principi, terminologia completa",
+              "is_mandatory": true,
+              "passing_score": 75
+            }
+          ]
+        },
+        {
+          "level_number": 10,
+          "name": "Cintura Nera 2° Dan",
+          "japanese_name": "Kuro Obi (Nidan)",
+          "belt_color": "#000000",
+          "secondary_color": "#FFD700",
+          "minimum_months_training": 60,
+          "minimum_age": 18,
+          "requirements": [
+            {
+              "type": "KATA",
+              "name": "Kata Superiori Avanzati",
+              "description": "Due kata tra Sochin, Nijushiho, Gojushiho, Unsu",
+              "is_mandatory": true,
+              "passing_score": 82
+            },
+            {
+              "type": "KATA",
+              "name": "Bunkai",
+              "description": "Applicazione pratica di un kata",
+              "is_mandatory": true,
+              "passing_score": 80
+            },
+            {
+              "type": "LIVE_DEMO",
+              "name": "Dimostrazione Pubblica",
+              "description": "Esecuzione kata e bunkai davanti alla commissione",
+              "is_mandatory": true,
+              "passing_score": 80
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c2-judo-kodokan",
+      "name": "Judo Kodokan - Percorso Ufficiale",
+      "description": "Programma ufficiale basato sul Gokyo del Kodokan. Include tutte le tecniche fondamentali di proiezione e controllo a terra.",
+      "martial_art": "Judo",
+      "style": "Kodokan",
+      "maestro_id": "m2-judo-kodokan",
+      "is_public": true,
+      "is_official": true,
+      "max_levels": 6,
+      "status": "PUBLISHED",
+      "levels": [
+        {
+          "level_number": 1,
+          "name": "Cintura Bianca",
+          "japanese_name": "Shiro Obi (6° Kyu)",
+          "belt_color": "#FFFFFF",
+          "minimum_months_training": 0,
+          "requirements": [
+            {
+              "type": "TECHNIQUE",
+              "name": "Ukemi",
+              "description": "Tutte le cadute: mae, ushiro, yoko ukemi",
+              "is_mandatory": true,
+              "passing_score": 70
+            },
+            {
+              "type": "TECHNIQUE",
+              "name": "Kuzushi e Tsukuri",
+              "description": "Principi di squilibrio e preparazione",
+              "is_mandatory": true,
+              "passing_score": 65
+            },
+            {
+              "type": "TECHNIQUE",
+              "name": "De Ashi Harai",
+              "description": "Spazzata del piede avanzato",
+              "is_mandatory": true,
+              "passing_score": 65
+            }
+          ]
+        },
+        {
+          "level_number": 2,
+          "name": "Cintura Gialla",
+          "japanese_name": "Kiiro Obi (5° Kyu)",
+          "belt_color": "#FFD700",
+          "minimum_months_training": 4,
+          "requirements": [
+            {
+              "type": "TECHNIQUE",
+              "name": "O-Soto-Gari",
+              "description": "Grande falciata esterna",
+              "is_mandatory": true,
+              "passing_score": 70
+            },
+            {
+              "type": "TECHNIQUE",
+              "name": "Ippon-Seoi-Nage",
+              "description": "Proiezione di spalla",
+              "is_mandatory": true,
+              "passing_score": 70
+            },
+            {
+              "type": "TECHNIQUE",
+              "name": "Kesa-Gatame",
+              "description": "Controllo a sciarpa",
+              "is_mandatory": true,
+              "passing_score": 68
+            }
+          ]
+        },
+        {
+          "level_number": 3,
+          "name": "Cintura Arancione",
+          "japanese_name": "Orenji Obi (4° Kyu)",
+          "belt_color": "#FFA500",
+          "minimum_months_training": 8,
+          "requirements": [
+            {
+              "type": "TECHNIQUE",
+              "name": "Tai-Otoshi",
+              "description": "Caduta del corpo",
+              "is_mandatory": true,
+              "passing_score": 72
+            },
+            {
+              "type": "TECHNIQUE",
+              "name": "Uchi-Mata",
+              "description": "Coscia interna",
+              "is_mandatory": true,
+              "passing_score": 70
+            },
+            {
+              "type": "TECHNIQUE",
+              "name": "Ne-Waza Base",
+              "description": "Tecniche a terra: immobilizzazioni e transizioni",
+              "is_mandatory": true,
+              "passing_score": 68
+            }
+          ]
+        },
+        {
+          "level_number": 4,
+          "name": "Cintura Verde",
+          "japanese_name": "Midori Obi (3° Kyu)",
+          "belt_color": "#228B22",
+          "minimum_months_training": 14,
+          "requirements": [
+            {
+              "type": "TECHNIQUE",
+              "name": "Harai-Goshi",
+              "description": "Spazzata d'anca",
+              "is_mandatory": true,
+              "passing_score": 72
+            },
+            {
+              "type": "TECHNIQUE",
+              "name": "Juji-Gatame",
+              "description": "Leva articolare al braccio",
+              "is_mandatory": true,
+              "passing_score": 70
+            },
+            {
+              "type": "KUMITE",
+              "name": "Randori",
+              "description": "Pratica libera controllata",
+              "is_mandatory": true,
+              "passing_score": 68
+            }
+          ]
+        },
+        {
+          "level_number": 5,
+          "name": "Cintura Blu",
+          "japanese_name": "Ao Obi (2° Kyu)",
+          "belt_color": "#0000CD",
+          "minimum_months_training": 20,
+          "requirements": [
+            {
+              "type": "TECHNIQUE",
+              "name": "Tecniche di Combinazione",
+              "description": "Renraku-waza: combinazioni di proiezioni",
+              "is_mandatory": true,
+              "passing_score": 74
+            },
+            {
+              "type": "TECHNIQUE",
+              "name": "Strangolamenti",
+              "description": "Shime-waza base",
+              "is_mandatory": true,
+              "passing_score": 72
+            }
+          ]
+        },
+        {
+          "level_number": 6,
+          "name": "Cintura Marrone / Nera",
+          "japanese_name": "Cha/Kuro Obi (1° Kyu - 1° Dan)",
+          "belt_color": "#8B4513",
+          "minimum_months_training": 30,
+          "minimum_age": 15,
+          "requirements": [
+            {
+              "type": "KATA",
+              "name": "Nage-no-Kata",
+              "description": "Kata delle proiezioni",
+              "is_mandatory": true,
+              "passing_score": 78
+            },
+            {
+              "type": "KUMITE",
+              "name": "Randori Avanzato",
+              "description": "5 randori consecutivi",
+              "is_mandatory": true,
+              "passing_score": 75
+            },
+            {
+              "type": "THEORY",
+              "name": "Esame Teorico",
+              "description": "Storia, principi, regolamento gara",
+              "is_mandatory": true,
+              "passing_score": 75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c3-aikido-aikikai",
+      "name": "Aikido Aikikai - Via dell'Armonia",
+      "description": "Percorso tradizionale Aikikai basato sull'insegnamento di O-Sensei Morihei Ueshiba. Focus su armonia, fluidità e non-resistenza.",
+      "martial_art": "Aikido",
+      "style": "Aikikai",
+      "maestro_id": "m3-aikido-aikikai",
+      "is_public": true,
+      "is_official": true,
+      "max_levels": 6,
+      "status": "PUBLISHED",
+      "levels": [
+        {
+          "level_number": 1,
+          "name": "6° Kyu",
+          "japanese_name": "Rokkyu",
+          "belt_color": "#FFFFFF",
+          "minimum_months_training": 0,
+          "requirements": [
+            {
+              "type": "TECHNIQUE",
+              "name": "Ukemi",
+              "description": "Mae, Ushiro, Yoko ukemi base",
+              "is_mandatory": true,
+              "passing_score": 65
+            },
+            {
+              "type": "TECHNIQUE",
+              "name": "Tai Sabaki",
+              "description": "Movimenti del corpo: irimi, tenkan, tenshin",
+              "is_mandatory": true,
+              "passing_score": 65
+            },
+            {
+              "type": "TECHNIQUE",
+              "name": "Ikkyo Omote",
+              "description": "Prima tecnica - forma frontale",
+              "is_mandatory": true,
+              "passing_score": 60
+            }
+          ]
+        },
+        {
+          "level_number": 2,
+          "name": "5° Kyu",
+          "japanese_name": "Gokyu",
+          "belt_color": "#FFD700",
+          "minimum_months_training": 3,
+          "requirements": [
+            {
+              "type": "TECHNIQUE",
+              "name": "Ikkyo Omote/Ura",
+              "description": "Prima tecnica - entrambe le forme",
+              "is_mandatory": true,
+              "passing_score": 68
+            },
+            {
+              "type": "TECHNIQUE",
+              "name": "Nikyo",
+              "description": "Seconda tecnica",
+              "is_mandatory": true,
+              "passing_score": 65
+            },
+            {
+              "type": "TECHNIQUE",
+              "name": "Shomen-uchi Irimi-nage",
+              "description": "Tecnica di entrata da attacco frontale",
+              "is_mandatory": true,
+              "passing_score": 65
+            }
+          ]
+        },
+        {
+          "level_number": 3,
+          "name": "4° Kyu",
+          "japanese_name": "Yonkyu",
+          "belt_color": "#FFA500",
+          "minimum_months_training": 6,
+          "requirements": [
+            {
+              "type": "TECHNIQUE",
+              "name": "Sankyo",
+              "description": "Terza tecnica",
+              "is_mandatory": true,
+              "passing_score": 70
+            },
+            {
+              "type": "TECHNIQUE",
+              "name": "Shiho-nage",
+              "description": "Proiezione nelle quattro direzioni",
+              "is_mandatory": true,
+              "passing_score": 70
+            },
+            {
+              "type": "TECHNIQUE",
+              "name": "Kote-gaeshi",
+              "description": "Ritorno del polso",
+              "is_mandatory": true,
+              "passing_score": 68
+            }
+          ]
+        },
+        {
+          "level_number": 4,
+          "name": "3° Kyu",
+          "japanese_name": "Sankyu",
+          "belt_color": "#228B22",
+          "minimum_months_training": 12,
+          "requirements": [
+            {
+              "type": "TECHNIQUE",
+              "name": "Yonkyo",
+              "description": "Quarta tecnica",
+              "is_mandatory": true,
+              "passing_score": 72
+            },
+            {
+              "type": "TECHNIQUE",
+              "name": "Suwari-waza",
+              "description": "Tecniche in ginocchio",
+              "is_mandatory": true,
+              "passing_score": 70
+            },
+            {
+              "type": "TECHNIQUE",
+              "name": "Kokyu-ho",
+              "description": "Esercizi di respirazione",
+              "is_mandatory": true,
+              "passing_score": 68
+            }
+          ]
+        },
+        {
+          "level_number": 5,
+          "name": "2° Kyu",
+          "japanese_name": "Nikyu",
+          "belt_color": "#0000CD",
+          "minimum_months_training": 18,
+          "requirements": [
+            {
+              "type": "TECHNIQUE",
+              "name": "Gokyo",
+              "description": "Quinta tecnica",
+              "is_mandatory": true,
+              "passing_score": 74
+            },
+            {
+              "type": "TECHNIQUE",
+              "name": "Hanmi-handachi",
+              "description": "Tecniche con uke in piedi e tori in ginocchio",
+              "is_mandatory": true,
+              "passing_score": 72
+            },
+            {
+              "type": "TECHNIQUE",
+              "name": "Jiyu-waza",
+              "description": "Tecniche libere da attacchi multipli",
+              "is_mandatory": true,
+              "passing_score": 70
+            }
+          ]
+        },
+        {
+          "level_number": 6,
+          "name": "1° Kyu / 1° Dan",
+          "japanese_name": "Ikkyu - Shodan",
+          "belt_color": "#8B4513",
+          "minimum_months_training": 30,
+          "minimum_age": 16,
+          "requirements": [
+            {
+              "type": "TECHNIQUE",
+              "name": "Tutte le tecniche base",
+              "description": "Dimostrazione completa Ikkyo-Gokyo, Irimi-nage, Shiho-nage, Kote-gaeshi",
+              "is_mandatory": true,
+              "passing_score": 78
+            },
+            {
+              "type": "TECHNIQUE",
+              "name": "Tachi-waza, Suwari-waza, Hanmi-handachi",
+              "description": "Tecniche da tutte le posizioni",
+              "is_mandatory": true,
+              "passing_score": 76
+            },
+            {
+              "type": "TECHNIQUE",
+              "name": "Randori",
+              "description": "Pratica libera contro 2-3 attaccanti",
+              "is_mandatory": true,
+              "passing_score": 75
+            },
+            {
+              "type": "THEORY",
+              "name": "Filosofia Aikido",
+              "description": "Principi di O-Sensei, storia, etica",
+              "is_mandatory": true,
+              "passing_score": 75
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

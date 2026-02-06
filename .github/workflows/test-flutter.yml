@@ -1,0 +1,46 @@
+name: Flutter Tests
+
+on:
+  push:
+    branches: [main, develop]
+    paths:
+      - 'flutter_app/**'
+  pull_request:
+    branches: [main, develop]
+    paths:
+      - 'flutter_app/**'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.24.0'
+          channel: 'stable'
+          cache: true
+
+      - name: Install dependencies
+        run: |
+          cd flutter_app
+          flutter pub get
+
+      - name: Analyze code
+        run: |
+          cd flutter_app
+          flutter analyze --no-fatal-infos
+
+      - name: Run tests
+        run: |
+          cd flutter_app
+          flutter test --coverage
+
+      - name: Upload coverage
+        uses: codecov/codecov-action@v4
+        with:
+          files: flutter_app/coverage/lcov.info
+          fail_ci_if_error: false

@@ -1,0 +1,260 @@
+{
+  "metadata": {
+    "project": "Media Center Arti Marziali",
+    "date": "2026-02-01",
+    "version": "2026_02_01_A",
+    "source": "Backend logs analysis",
+    "purpose": "AI Agent knowledge base for error resolution"
+  },
+  
+  "critical_errors": [
+    {
+      "id": "BUG-DB-001",
+      "severity": "CRITICAL",
+      "category": "DATABASE_SCHEMA",
+      "error_type": "UndefinedColumnError",
+      "message": "la colonna subscriptions.status non esiste",
+      "file": "backend/api/v1/admin.py",
+      "line": 229,
+      "endpoint": "GET /api/v1/admin/analytics/platform",
+      "http_status": 500,
+      "sql_query": "SELECT count(*) AS count_1 FROM subscriptions WHERE subscriptions.status IN ($1::subscriptionstatus, $2::subscriptionstatus)",
+      "root_cause": "Model references column 'status' not present in PostgreSQL table. Migration not executed or schema mismatch.",
+      "fix_options": [
+        {
+          "option": "run_migration",
+          "command": "alembic upgrade head",
+          "priority": 1
+        },
+        {
+          "option": "manual_sql",
+          "command": "ALTER TABLE subscriptions ADD COLUMN status VARCHAR(20) DEFAULT 'ACTIVE';",
+          "priority": 2
+        },
+        {
+          "option": "code_fix",
+          "description": "Modify admin.py to use existing column or remove query",
+          "priority": 3
+        }
+      ],
+      "related_files": ["backend/models/subscription.py", "backend/alembic/versions/"],
+      "tags": ["database", "postgresql", "sqlalchemy", "migration", "schema"]
+    },
+    {
+      "id": "BUG-REDIRECT-307",
+      "severity": "CRITICAL",
+      "status": "RESOLVED",
+      "resolved_date": "2026-02-01",
+      "category": "API_ROUTING",
+      "error_type": "TokenLostOnRedirect",
+      "message": "307 Temporary Redirect causes Authorization header loss",
+      "endpoint": "/api/v1/curricula",
+      "redirect_to": "/api/v1/curricula/",
+      "http_status_sequence": [307, 401],
+      "root_cause": "FastAPI redirect_slashes=True (default) redirects requests without trailing slash. Browser does not resend Authorization header on redirect.",
+      "fix_applied": {
+        "file": "backend/main.py",
+        "line": 95,
+        "change": "Added redirect_slashes=False to FastAPI() constructor",
+        "code": "app = FastAPI(title=..., redirect_slashes=False)"
+      },
+      "fix_options": [
+        {
+          "option": "backend_disable_redirect",
+          "code": "app = FastAPI(redirect_slashes=False)",
+          "file": "backend/main.py",
+          "priority": 1,
+          "status": "APPLIED"
+        },
+        {
+          "option": "frontend_add_trailing_slash",
+          "pattern": "Always use trailing slash in API URLs",
+          "file": "frontend/src/services/curriculumApi.ts",
+          "priority": 2,
+          "status": "ALSO_APPLIED_PREVIOUSLY"
+        }
+      ],
+      "affected_endpoints": ["/api/v1/curricula", "/api/v1/ingest/projects"],
+      "tags": ["fastapi", "redirect", "authentication", "jwt", "cors"],
+      "lesson_learned": "Sempre usare redirect_slashes=False in FastAPI quando si usa JWT authentication. Il browser non rinvia header Authorization su redirect 307."
+    }
+  ],
+  
+  "medium_errors": [
+    {
+      "id": "BUG-SKELETON-404",
+      "severity": "MEDIUM",
+      "category": "FRONTEND_API_MISMATCH",
+      "error_type": "EndpointNotFound",
+      "message": "Frontend calls wrong skeleton endpoint",
+      "wrong_endpoints": [
+        "/api/v1/skeletons",
+        "/api/v1/skeleton",
+        "/api/studio/skeletons"
+      ],
+      "correct_endpoint": "/api/v1/videos/skeletons",
+      "http_status": 404,
+      "root_cause": "Frontend services use incorrect API path. Backend router mounted at /api/v1/videos/skeletons",
+      "fix": {
+        "files_to_check": [
+          "frontend/src/services/skeletonApi.ts",
+          "frontend/src/hooks/useSkeleton*.ts",
+          "frontend/src/app/skeletons/page.tsx"
+        ],
+        "pattern": "Replace '/api/v1/skeletons' or '/api/studio/skeletons' with '/api/v1/videos/skeletons'"
+      },
+      "tags": ["frontend", "api", "routing", "skeleton"]
+    },
+    {
+      "id": "BUG-AUTH-401",
+      "severity": "MEDIUM",
+      "category": "AUTHENTICATION_TIMING",
+      "error_type": "PrematureApiCall",
+      "message": "API called before AuthContext loads token",
+      "affected_endpoints": ["/api/v1/users/me", "/api/v1/sections"],
+      "http_status": 401,
+      "root_cause": "React component calls API in useEffect before AuthContext finishes loading token from localStorage",
+      "correct_pattern": {
+        "code": "const { token, isLoading: authLoading } = useAuth();\n\nuseEffect(() => {\n  if (!authLoading && token) {\n    fetchData();\n  }\n}, [token, authLoading]);",
+        "explanation": "Wait for authLoading=false AND token to be available before API calls"
+      },
+      "files_with_fix": ["frontend/src/hooks/useIngestProjects.ts"],
+      "files_to_verify": [
+        "frontend/src/hooks/useCurricula.ts",
+        "frontend/src/app/*/page.tsx"
+      ],
+      "tags": ["react", "context", "authentication", "timing", "useEffect"]
+    }
+  ],
+  
+  "low_errors": [
+    {
+      "id": "BUG-LOGIN-422",
+      "severity": "LOW",
+      "category": "INPUT_VALIDATION",
+      "error_type": "UnprocessableEntity",
+      "message": "Login payload validation failed",
+      "endpoint": "POST /api/v1/auth/login",
+      "http_status": 422,
+      "root_cause": "Frontend sometimes sends malformed payload (missing fields or wrong format)",
+      "fix": "Add frontend validation before API call",
+      "tags": ["validation", "login", "pydantic"]
+    }
+  ],
+  
+  "warnings": [
+    {
+      "id": "WARN-MEMORY",
+      "category": "SYSTEM_RESOURCES",
+      "message": "Health check: Memory HIGH (95.7%)",
+      "threshold": "90%",
+      "action": "Close unnecessary applications, restart services",
+      "tags": ["system", "memory", "performance"]
+    },
+    {
+      "id": "WARN-DISK",
+      "category": "SYSTEM_RESOURCES", 
+      "message": "Health check: Disk HIGH (99.7%)",
+      "threshold": "90%",
+      "action": "Free disk space: clear temp files, old logs, docker images",
+      "commands": ["del /q/f/s %TEMP%\\*", "docker system prune -a"],
+      "tags": ["system", "disk", "storage"]
+    },
+    {
+      "id": "WARN-BCRYPT",
+      "category": "DEPENDENCY",
+      "message": "module 'bcrypt' has no attribute '__about__'",
+      "impact": "None - cosmetic warning only",
+      "root_cause": "bcrypt version incompatible with passlib version detection",
+      "action": "Ignorable, or upgrade: pip install --upgrade bcrypt passlib",
+      "tags": ["bcrypt", "passlib", "dependency"]
+    },
+    {
+      "id": "WARN-OPTIONAL-LIBS",
+      "category": "OPTIONAL_FEATURES",
+      "missing_libraries": ["fastdtw", "web3", "ipfshttpclient", "merkletools"],
+      "impact": "Some features disabled (blockchain, IPFS, DTW comparison)",
+      "action": "pip install fastdtw web3 ipfshttpclient merkletools",
+      "tags": ["optional", "blockchain", "ipfs"]
+    }
+  ],
+  
+  "endpoint_status": {
+    "working": [
+      {"endpoint": "GET /health", "status": 200},
+      {"endpoint": "POST /api/v1/auth/login", "status": 200},
+      {"endpoint": "GET /api/v1/users/me", "status": 200, "note": "requires valid token"},
+      {"endpoint": "GET /api/v1/curricula/", "status": 200, "note": "requires trailing slash + token"},
+      {"endpoint": "GET /api/v1/videos/skeletons", "status": 200},
+      {"endpoint": "GET /api/v1/content-types", "status": 200},
+      {"endpoint": "GET /api/v1/admin/dashboard", "status": 200}
+    ],
+    "broken": [
+      {"endpoint": "GET /api/v1/admin/analytics/platform", "status": 500, "bug_id": "BUG-DB-001"},
+      {"endpoint": "GET /api/v1/skeletons", "status": 404, "bug_id": "BUG-SKELETON-404"}
+    ],
+    "fixed_today": [
+      {"endpoint": "GET /api/v1/curricula", "was": 307, "now": 200, "bug_id": "BUG-REDIRECT-307", "fix": "redirect_slashes=False"}
+    ]
+  },
+  
+  "routers_loaded": [
+    "auth", "users", "videos", "subscriptions", "ads", "blockchain",
+    "maestro", "live", "asd", "admin", "Communication", "Library",
+    "Moderation", "Payments", "Live translation", "Ingest Projects",
+    "Content Classification", "Temp Zone", "Audio System", "Staff Contributions",
+    "Glasses WebSocket", "Video Studio", "Royalties Blockchain",
+    "Special Projects Voting", "Events/ASD", "GDPR", "Notifications",
+    "Downloads", "Scheduler Admin", "Skeleton API", "Fusion API",
+    "Export API", "Avatar API", "AI Coach API", "Curriculum"
+  ],
+  
+  "test_commands": {
+    "health": "curl http://localhost:8000/health",
+    "login": "curl -X POST http://localhost:8000/api/v1/auth/login -H 'Content-Type: application/json' -d '{\"email\":\"admin@mediacenter.it\",\"password\":\"Admin2024!\"}'",
+    "curricula": "curl http://localhost:8000/api/v1/curricula/ -H 'Authorization: Bearer TOKEN'",
+    "skeletons": "curl http://localhost:8000/api/v1/videos/skeletons",
+    "analytics": "curl http://localhost:8000/api/v1/admin/analytics/platform -H 'Authorization: Bearer TOKEN'"
+  },
+  
+  "resolution_priority": [
+    {
+      "order": 1,
+      "bug_id": "BUG-DB-001",
+      "reason": "Blocks admin analytics dashboard"
+    },
+    {
+      "order": 2,
+      "bug_id": "BUG-REDIRECT-307",
+      "reason": "Blocks curriculum access for all users"
+    },
+    {
+      "order": 3,
+      "bug_id": "BUG-SKELETON-404",
+      "reason": "Blocks skeleton listing UI"
+    },
+    {
+      "order": 4,
+      "bug_id": "BUG-AUTH-401",
+      "reason": "Intermittent auth failures"
+    }
+  ],
+  
+  "learned_patterns": {
+    "fastapi_redirect_slashes": {
+      "problem": "FastAPI default redirect_slashes=True causes token loss",
+      "solution": "Either disable redirect_slashes or ensure all frontend URLs have trailing slash",
+      "applies_to": "All FastAPI projects with JWT auth"
+    },
+    "react_auth_timing": {
+      "problem": "useEffect runs before AuthContext loads token",
+      "solution": "Check both isLoading=false AND token exists before API calls",
+      "applies_to": "All React apps with AuthContext"
+    },
+    "db_migration_check": {
+      "problem": "Code uses columns not in database",
+      "solution": "Always run alembic upgrade head after pulling code changes",
+      "applies_to": "All SQLAlchemy projects with Alembic"
+    }
+  }
+}

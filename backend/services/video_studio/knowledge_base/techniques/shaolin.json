@@ -1,0 +1,288 @@
+{
+  "_metadata": {
+    "type": "martial_arts_techniques",
+    "style": "shaolin",
+    "style_name": "SHAOLIN",
+    "source": "martial_arts_patterns.py",
+    "exported_at": "2026-01-21T09:22:27.607182",
+    "pattern_count": 5,
+    "ai_indexable": true,
+    "rag_enabled": true
+  },
+  "techniques": [
+    {
+      "id": "tiger_claw",
+      "name": "虎爪 (Hu Zhua - Tiger Claw)",
+      "style": "shaolin",
+      "description": "Artiglio di tigre con dita curve",
+      "keywords": [
+        "tiger claw",
+        "hu zhua",
+        "claw",
+        "grab",
+        "tiger"
+      ],
+      "velocity_profile": "explosive",
+      "temporal_signature": "discrete",
+      "duration_range": [
+        0.5,
+        1.5
+      ],
+      "key_landmarks": [
+        15,
+        16,
+        33,
+        34,
+        54,
+        55
+      ],
+      "angle_ranges": {
+        "fingers_curl": [
+          60,
+          90
+        ],
+        "wrist_tension": [
+          10,
+          30
+        ],
+        "elbow_angle": [
+          120,
+          160
+        ]
+      },
+      "hand_positions": {
+        "both": "claw_shape"
+      },
+      "distance_ratios": {
+        "claw_spread": [
+          0.15,
+          0.25
+        ],
+        "strike_distance": [
+          0.8,
+          1.2
+        ]
+      },
+      "confidence_threshold": 0.75,
+      "text_for_rag": "虎爪 (Hu Zhua - Tiger Claw) - Artiglio di tigre con dita curve. Keywords: tiger claw, hu zhua, claw, grab, tiger"
+    },
+    {
+      "id": "dragon_fist",
+      "name": "龙拳 (Long Quan - Dragon Fist)",
+      "style": "shaolin",
+      "description": "Pugno del drago con forma speciale",
+      "keywords": [
+        "dragon fist",
+        "long quan",
+        "spiral",
+        "phoenix eye"
+      ],
+      "velocity_profile": "explosive",
+      "temporal_signature": "discrete",
+      "duration_range": [
+        0.3,
+        0.8
+      ],
+      "key_landmarks": [
+        15,
+        16,
+        54,
+        55
+      ],
+      "angle_ranges": {
+        "fist_formation": [
+          15,
+          30
+        ],
+        "wrist_straight": [
+          170,
+          180
+        ],
+        "punch_spiral": [
+          10,
+          30
+        ]
+      },
+      "hand_positions": {
+        "executing": "dragon_fist"
+      },
+      "distance_ratios": {
+        "extension_full": [
+          0.9,
+          1.1
+        ],
+        "body_twist": [
+          0.3,
+          0.6
+        ]
+      },
+      "confidence_threshold": 0.7,
+      "text_for_rag": "龙拳 (Long Quan - Dragon Fist) - Pugno del drago con forma speciale. Keywords: dragon fist, long quan, spiral, phoenix eye"
+    },
+    {
+      "id": "buddha_palm",
+      "name": "佛掌 (Fo Zhang - Buddha Palm)",
+      "style": "shaolin",
+      "description": "Palmo aperto potente",
+      "keywords": [
+        "buddha palm",
+        "fo zhang",
+        "palm strike",
+        "open hand"
+      ],
+      "velocity_profile": "explosive",
+      "temporal_signature": "discrete",
+      "duration_range": [
+        0.4,
+        1.0
+      ],
+      "key_landmarks": [
+        15,
+        16,
+        33,
+        54
+      ],
+      "angle_ranges": {
+        "palm_open": [
+          170,
+          180
+        ],
+        "fingers_together": [
+          0,
+          10
+        ],
+        "wrist_firm": [
+          170,
+          180
+        ]
+      },
+      "hand_positions": {
+        "striking": "open_palm_firm"
+      },
+      "distance_ratios": {
+        "palm_strike": [
+          0.8,
+          1.1
+        ],
+        "body_power": [
+          0.5,
+          0.8
+        ]
+      },
+      "confidence_threshold": 0.75,
+      "text_for_rag": "佛掌 (Fo Zhang - Buddha Palm) - Palmo aperto potente. Keywords: buddha palm, fo zhang, palm strike, open hand"
+    },
+    {
+      "id": "monkey_stance",
+      "name": "猴式 (Hou Shi - Monkey Stance)",
+      "style": "shaolin",
+      "description": "Posizione bassa imitando la scimmia",
+      "keywords": [
+        "monkey",
+        "hou",
+        "low stance",
+        "agile",
+        "animal form"
+      ],
+      "velocity_profile": "fast",
+      "temporal_signature": "discrete",
+      "duration_range": [
+        1.0,
+        3.0
+      ],
+      "key_landmarks": [
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "angle_ranges": {
+        "knee_bend": [
+          60,
+          90
+        ],
+        "hip_low": [
+          30,
+          60
+        ],
+        "back_curve": [
+          20,
+          40
+        ]
+      },
+      "hand_positions": {
+        "both": "relaxed_claw"
+      },
+      "distance_ratios": {
+        "stance_low": [
+          0.4,
+          0.6
+        ],
+        "agile_movement": [
+          0.5,
+          1.0
+        ]
+      },
+      "confidence_threshold": 0.7,
+      "text_for_rag": "猴式 (Hou Shi - Monkey Stance) - Posizione bassa imitando la scimmia. Keywords: monkey, hou, low stance, agile, animal form"
+    },
+    {
+      "id": "crane_kick",
+      "name": "鹤腿 (He Tui - Crane Kick)",
+      "style": "shaolin",
+      "description": "Calcio alto su una gamba come la gru",
+      "keywords": [
+        "crane kick",
+        "he tui",
+        "high kick",
+        "bird",
+        "one leg"
+      ],
+      "velocity_profile": "explosive",
+      "temporal_signature": "discrete",
+      "duration_range": [
+        0.5,
+        1.5
+      ],
+      "key_landmarks": [
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "angle_ranges": {
+        "standing_leg": [
+          170,
+          180
+        ],
+        "kicking_leg": [
+          90,
+          150
+        ],
+        "hip_flexibility": [
+          60,
+          120
+        ]
+      },
+      "hand_positions": {
+        "both": "wings_extended"
+      },
+      "distance_ratios": {
+        "kick_height": [
+          0.8,
+          1.2
+        ],
+        "balance": [
+          0.9,
+          1.0
+        ]
+      },
+      "confidence_threshold": 0.75,
+      "text_for_rag": "鹤腿 (He Tui - Crane Kick) - Calcio alto su una gamba come la gru. Keywords: crane kick, he tui, high kick, bird, one leg"
+    }
+  ]
+}

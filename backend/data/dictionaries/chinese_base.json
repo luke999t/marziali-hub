@@ -1,0 +1,1456 @@
+{
+  "version": "1.0.0",
+  "language": "zh",
+  "language_name": "Chinese (Mandarin)",
+  "description": "Chinese martial arts terminology dictionary for translation services",
+  "romanization_system": "Pinyin with tone marks",
+  "last_updated": "2024-12-04",
+  "categories": {
+    "title_rank": "Titles and Ranks",
+    "concept": "Fundamental Concepts",
+    "energy": "Energy and Internal Work",
+    "taijiquan": "Tai Chi Chuan",
+    "wing_chun": "Wing Chun",
+    "shaolin": "Shaolin Kung Fu",
+    "stance": "Stances",
+    "technique": "Techniques",
+    "weapon": "Weapons",
+    "body_part": "Body Parts",
+    "training": "Training Methods",
+    "philosophy": "Philosophy and Principles",
+    "form": "Forms and Patterns",
+    "animal": "Animal Styles"
+  },
+  "terms": [
+    {
+      "id": "shifu",
+      "original": "師父",
+      "simplified": "师父",
+      "pinyin": "shī fù",
+      "translations": {
+        "it": "maestro",
+        "en": "master, teacher"
+      },
+      "category": "title_rank",
+      "art": ["kung_fu", "wushu", "taijiquan"],
+      "notes": "Respectful term for teacher, like a father figure"
+    },
+    {
+      "id": "sifu",
+      "original": "師傅",
+      "simplified": "师傅",
+      "pinyin": "shī fu",
+      "translations": {
+        "it": "maestro",
+        "en": "master (Cantonese pronunciation)"
+      },
+      "category": "title_rank",
+      "art": ["wing_chun", "hung_gar"],
+      "notes": "Cantonese variant commonly used in Southern styles"
+    },
+    {
+      "id": "shixiong",
+      "original": "師兄",
+      "simplified": "师兄",
+      "pinyin": "shī xiōng",
+      "translations": {
+        "it": "fratello maggiore di pratica",
+        "en": "senior brother (in martial arts)"
+      },
+      "category": "title_rank",
+      "art": ["kung_fu", "wushu"],
+      "notes": "Senior student who started training before you"
+    },
+    {
+      "id": "shidi",
+      "original": "師弟",
+      "simplified": "师弟",
+      "pinyin": "shī dì",
+      "translations": {
+        "it": "fratello minore di pratica",
+        "en": "junior brother (in martial arts)"
+      },
+      "category": "title_rank",
+      "art": ["kung_fu", "wushu"],
+      "notes": "Junior student who started training after you"
+    },
+    {
+      "id": "shijie",
+      "original": "師姐",
+      "simplified": "师姐",
+      "pinyin": "shī jiě",
+      "translations": {
+        "it": "sorella maggiore di pratica",
+        "en": "senior sister (in martial arts)"
+      },
+      "category": "title_rank",
+      "art": ["kung_fu", "wushu"],
+      "notes": "Senior female student"
+    },
+    {
+      "id": "shimei",
+      "original": "師妹",
+      "simplified": "师妹",
+      "pinyin": "shī mèi",
+      "translations": {
+        "it": "sorella minore di pratica",
+        "en": "junior sister (in martial arts)"
+      },
+      "category": "title_rank",
+      "art": ["kung_fu", "wushu"],
+      "notes": "Junior female student"
+    },
+    {
+      "id": "tudi",
+      "original": "徒弟",
+      "simplified": "徒弟",
+      "pinyin": "tú dì",
+      "translations": {
+        "it": "discepolo, allievo",
+        "en": "disciple, student"
+      },
+      "category": "title_rank",
+      "art": ["kung_fu", "wushu"],
+      "notes": "Formal student of a master"
+    },
+    {
+      "id": "laoshi",
+      "original": "老師",
+      "simplified": "老师",
+      "pinyin": "lǎo shī",
+      "translations": {
+        "it": "insegnante",
+        "en": "teacher"
+      },
+      "category": "title_rank",
+      "art": ["kung_fu", "wushu"],
+      "notes": "General term for teacher"
+    },
+    {
+      "id": "dashi",
+      "original": "大師",
+      "simplified": "大师",
+      "pinyin": "dà shī",
+      "translations": {
+        "it": "gran maestro",
+        "en": "grandmaster"
+      },
+      "category": "title_rank",
+      "art": ["kung_fu", "wushu"],
+      "notes": "Title for highly accomplished masters"
+    },
+    {
+      "id": "wushu",
+      "original": "武術",
+      "simplified": "武术",
+      "pinyin": "wǔ shù",
+      "translations": {
+        "it": "arti marziali, arte della guerra",
+        "en": "martial arts"
+      },
+      "category": "concept",
+      "art": ["wushu"],
+      "notes": "General term for Chinese martial arts"
+    },
+    {
+      "id": "gongfu",
+      "original": "功夫",
+      "simplified": "功夫",
+      "pinyin": "gōng fu",
+      "translations": {
+        "it": "abilità acquisita con il tempo, kung fu",
+        "en": "skill achieved through hard work, kung fu"
+      },
+      "category": "concept",
+      "art": ["kung_fu"],
+      "notes": "Literally 'skill/effort' - mastery through practice"
+    },
+    {
+      "id": "wuxia",
+      "original": "武俠",
+      "simplified": "武侠",
+      "pinyin": "wǔ xiá",
+      "translations": {
+        "it": "cavaliere errante marziale",
+        "en": "martial hero, chivalric warrior"
+      },
+      "category": "concept",
+      "art": ["kung_fu"],
+      "notes": "Genre of fiction featuring martial arts heroes"
+    },
+    {
+      "id": "wulin",
+      "original": "武林",
+      "simplified": "武林",
+      "pinyin": "wǔ lín",
+      "translations": {
+        "it": "mondo delle arti marziali",
+        "en": "martial arts world/community"
+      },
+      "category": "concept",
+      "art": ["kung_fu"],
+      "notes": "The martial arts community/underworld"
+    },
+    {
+      "id": "jianghu",
+      "original": "江湖",
+      "simplified": "江湖",
+      "pinyin": "jiāng hú",
+      "translations": {
+        "it": "mondo dei vagabondi, sottobosco marziale",
+        "en": "rivers and lakes, martial world"
+      },
+      "category": "concept",
+      "art": ["kung_fu"],
+      "notes": "The world outside conventional society"
+    },
+    {
+      "id": "qi",
+      "original": "氣",
+      "simplified": "气",
+      "pinyin": "qì",
+      "translations": {
+        "it": "energia vitale, soffio vitale",
+        "en": "vital energy, life force"
+      },
+      "category": "energy",
+      "art": ["kung_fu", "taijiquan", "qigong"],
+      "notes": "Fundamental concept of internal energy"
+    },
+    {
+      "id": "jin",
+      "original": "勁",
+      "simplified": "劲",
+      "pinyin": "jìn",
+      "translations": {
+        "it": "forza interna, potenza",
+        "en": "internal power, trained force"
+      },
+      "category": "energy",
+      "art": ["kung_fu", "taijiquan"],
+      "notes": "Refined force developed through training"
+    },
+    {
+      "id": "neigong",
+      "original": "內功",
+      "simplified": "内功",
+      "pinyin": "nèi gōng",
+      "translations": {
+        "it": "lavoro interno",
+        "en": "internal work, inner cultivation"
+      },
+      "category": "energy",
+      "art": ["kung_fu", "taijiquan", "qigong"],
+      "notes": "Internal training methods"
+    },
+    {
+      "id": "waigong",
+      "original": "外功",
+      "simplified": "外功",
+      "pinyin": "wài gōng",
+      "translations": {
+        "it": "lavoro esterno",
+        "en": "external work"
+      },
+      "category": "energy",
+      "art": ["kung_fu", "shaolin"],
+      "notes": "External/physical training methods"
+    },
+    {
+      "id": "qigong",
+      "original": "氣功",
+      "simplified": "气功",
+      "pinyin": "qì gōng",
+      "translations": {
+        "it": "lavoro sull'energia, qi gong",
+        "en": "energy work, breath work"
+      },
+      "category": "energy",
+      "art": ["qigong", "taijiquan", "kung_fu"],
+      "notes": "Exercises for cultivating vital energy"
+    },
+    {
+      "id": "dantian",
+      "original": "丹田",
+      "simplified": "丹田",
+      "pinyin": "dān tián",
+      "translations": {
+        "it": "centro energetico, campo dell'elisir",
+        "en": "elixir field, energy center"
+      },
+      "category": "energy",
+      "art": ["qigong", "taijiquan", "kung_fu"],
+      "notes": "Lower abdomen energy center"
+    },
+    {
+      "id": "fajin",
+      "original": "發勁",
+      "simplified": "发劲",
+      "pinyin": "fā jìn",
+      "translations": {
+        "it": "emissione della forza",
+        "en": "explosive power release"
+      },
+      "category": "energy",
+      "art": ["taijiquan", "xingyiquan"],
+      "notes": "Releasing internal power explosively"
+    },
+    {
+      "id": "taijiquan",
+      "original": "太極拳",
+      "simplified": "太极拳",
+      "pinyin": "tài jí quán",
+      "translations": {
+        "it": "pugno del supremo polo, tai chi",
+        "en": "supreme ultimate fist, tai chi"
+      },
+      "category": "taijiquan",
+      "art": ["taijiquan"],
+      "notes": "Internal martial art based on yin-yang philosophy"
+    },
+    {
+      "id": "taiji",
+      "original": "太極",
+      "simplified": "太极",
+      "pinyin": "tài jí",
+      "translations": {
+        "it": "supremo polo, yin e yang",
+        "en": "supreme ultimate"
+      },
+      "category": "taijiquan",
+      "art": ["taijiquan"],
+      "notes": "The concept of yin-yang duality"
+    },
+    {
+      "id": "peng",
+      "original": "掤",
+      "simplified": "掤",
+      "pinyin": "péng",
+      "translations": {
+        "it": "parare, respingere",
+        "en": "ward off"
+      },
+      "category": "taijiquan",
+      "art": ["taijiquan"],
+      "notes": "One of the eight basic energies - expansive"
+    },
+    {
+      "id": "lu",
+      "original": "捋",
+      "simplified": "捋",
+      "pinyin": "lǚ",
+      "translations": {
+        "it": "tirare, deviare",
+        "en": "roll back"
+      },
+      "category": "taijiquan",
+      "art": ["taijiquan"],
+      "notes": "One of the eight basic energies - yielding"
+    },
+    {
+      "id": "ji",
+      "original": "擠",
+      "simplified": "挤",
+      "pinyin": "jǐ",
+      "translations": {
+        "it": "premere, spingere",
+        "en": "press, squeeze"
+      },
+      "category": "taijiquan",
+      "art": ["taijiquan"],
+      "notes": "One of the eight basic energies - pressing"
+    },
+    {
+      "id": "an",
+      "original": "按",
+      "simplified": "按",
+      "pinyin": "àn",
+      "translations": {
+        "it": "spingere verso il basso",
+        "en": "push down"
+      },
+      "category": "taijiquan",
+      "art": ["taijiquan"],
+      "notes": "One of the eight basic energies - push"
+    },
+    {
+      "id": "cai",
+      "original": "採",
+      "simplified": "采",
+      "pinyin": "cǎi",
+      "translations": {
+        "it": "afferrare, cogliere",
+        "en": "pluck, grab"
+      },
+      "category": "taijiquan",
+      "art": ["taijiquan"],
+      "notes": "One of the eight basic energies"
+    },
+    {
+      "id": "lie",
+      "original": "挒",
+      "simplified": "挒",
+      "pinyin": "liè",
+      "translations": {
+        "it": "dividere, separare",
+        "en": "split"
+      },
+      "category": "taijiquan",
+      "art": ["taijiquan"],
+      "notes": "One of the eight basic energies"
+    },
+    {
+      "id": "zhou",
+      "original": "肘",
+      "simplified": "肘",
+      "pinyin": "zhǒu",
+      "translations": {
+        "it": "gomito",
+        "en": "elbow"
+      },
+      "category": "taijiquan",
+      "art": ["taijiquan"],
+      "notes": "One of the eight basic energies - elbow strike"
+    },
+    {
+      "id": "kao",
+      "original": "靠",
+      "simplified": "靠",
+      "pinyin": "kào",
+      "translations": {
+        "it": "appoggiarsi, colpo di spalla",
+        "en": "shoulder strike, lean"
+      },
+      "category": "taijiquan",
+      "art": ["taijiquan"],
+      "notes": "One of the eight basic energies - body strike"
+    },
+    {
+      "id": "tuishou",
+      "original": "推手",
+      "simplified": "推手",
+      "pinyin": "tuī shǒu",
+      "translations": {
+        "it": "mani che spingono",
+        "en": "push hands"
+      },
+      "category": "taijiquan",
+      "art": ["taijiquan"],
+      "notes": "Partner practice for sensitivity"
+    },
+    {
+      "id": "siu_nim_tao",
+      "original": "小念頭",
+      "simplified": "小念头",
+      "pinyin": "xiǎo niàn tóu",
+      "translations": {
+        "it": "piccola idea",
+        "en": "little idea"
+      },
+      "category": "wing_chun",
+      "art": ["wing_chun"],
+      "notes": "First Wing Chun form"
+    },
+    {
+      "id": "chum_kiu",
+      "original": "尋橋",
+      "simplified": "寻桥",
+      "pinyin": "xún qiáo",
+      "translations": {
+        "it": "cercare il ponte",
+        "en": "seeking the bridge"
+      },
+      "category": "wing_chun",
+      "art": ["wing_chun"],
+      "notes": "Second Wing Chun form"
+    },
+    {
+      "id": "biu_jee",
+      "original": "標指",
+      "simplified": "标指",
+      "pinyin": "biāo zhǐ",
+      "translations": {
+        "it": "dita che trafiggono",
+        "en": "thrusting fingers"
+      },
+      "category": "wing_chun",
+      "art": ["wing_chun"],
+      "notes": "Third Wing Chun form"
+    },
+    {
+      "id": "chi_sao",
+      "original": "黐手",
+      "simplified": "黐手",
+      "pinyin": "chī shǒu",
+      "translations": {
+        "it": "mani appiccicose",
+        "en": "sticky hands"
+      },
+      "category": "wing_chun",
+      "art": ["wing_chun"],
+      "notes": "Sensitivity training drill"
+    },
+    {
+      "id": "muk_yan_jong",
+      "original": "木人樁",
+      "simplified": "木人桩",
+      "pinyin": "mù rén zhuāng",
+      "translations": {
+        "it": "uomo di legno",
+        "en": "wooden dummy"
+      },
+      "category": "wing_chun",
+      "art": ["wing_chun"],
+      "notes": "Training apparatus and form"
+    },
+    {
+      "id": "tan_sao",
+      "original": "攤手",
+      "simplified": "摊手",
+      "pinyin": "tān shǒu",
+      "translations": {
+        "it": "mano che disperde",
+        "en": "dispersing hand"
+      },
+      "category": "wing_chun",
+      "art": ["wing_chun"],
+      "notes": "Basic Wing Chun defensive technique"
+    },
+    {
+      "id": "bong_sao",
+      "original": "膀手",
+      "simplified": "膀手",
+      "pinyin": "bǎng shǒu",
+      "translations": {
+        "it": "mano ad ala",
+        "en": "wing arm"
+      },
+      "category": "wing_chun",
+      "art": ["wing_chun"],
+      "notes": "Basic Wing Chun defensive technique"
+    },
+    {
+      "id": "fuk_sao",
+      "original": "伏手",
+      "simplified": "伏手",
+      "pinyin": "fú shǒu",
+      "translations": {
+        "it": "mano che sottomette",
+        "en": "subduing hand"
+      },
+      "category": "wing_chun",
+      "art": ["wing_chun"],
+      "notes": "Basic Wing Chun technique"
+    },
+    {
+      "id": "pak_sao",
+      "original": "拍手",
+      "simplified": "拍手",
+      "pinyin": "pāi shǒu",
+      "translations": {
+        "it": "mano che schiaffeggia",
+        "en": "slapping hand"
+      },
+      "category": "wing_chun",
+      "art": ["wing_chun"],
+      "notes": "Deflecting technique"
+    },
+    {
+      "id": "shaolin",
+      "original": "少林",
+      "simplified": "少林",
+      "pinyin": "shào lín",
+      "translations": {
+        "it": "giovane foresta",
+        "en": "young forest"
+      },
+      "category": "shaolin",
+      "art": ["shaolin", "kung_fu"],
+      "notes": "Famous temple and martial arts origin"
+    },
+    {
+      "id": "shaolin_quan",
+      "original": "少林拳",
+      "simplified": "少林拳",
+      "pinyin": "shào lín quán",
+      "translations": {
+        "it": "pugno di Shaolin",
+        "en": "Shaolin fist"
+      },
+      "category": "shaolin",
+      "art": ["shaolin"],
+      "notes": "Shaolin boxing/martial arts"
+    },
+    {
+      "id": "luohan_quan",
+      "original": "羅漢拳",
+      "simplified": "罗汉拳",
+      "pinyin": "luó hàn quán",
+      "translations": {
+        "it": "pugno dell'Arhat",
+        "en": "Arhat fist"
+      },
+      "category": "shaolin",
+      "art": ["shaolin"],
+      "notes": "Buddhist disciple boxing style"
+    },
+    {
+      "id": "hongquan",
+      "original": "洪拳",
+      "simplified": "洪拳",
+      "pinyin": "hóng quán",
+      "translations": {
+        "it": "pugno Hung",
+        "en": "Hung Gar fist"
+      },
+      "category": "shaolin",
+      "art": ["hung_gar", "shaolin"],
+      "notes": "Southern Shaolin style"
+    },
+    {
+      "id": "mabu",
+      "original": "馬步",
+      "simplified": "马步",
+      "pinyin": "mǎ bù",
+      "translations": {
+        "it": "posizione del cavaliere",
+        "en": "horse stance"
+      },
+      "category": "stance",
+      "art": ["kung_fu", "wushu"],
+      "notes": "Fundamental wide stance"
+    },
+    {
+      "id": "gongbu",
+      "original": "弓步",
+      "simplified": "弓步",
+      "pinyin": "gōng bù",
+      "translations": {
+        "it": "posizione dell'arco",
+        "en": "bow stance"
+      },
+      "category": "stance",
+      "art": ["kung_fu", "wushu"],
+      "notes": "Forward weighted stance"
+    },
+    {
+      "id": "xubu",
+      "original": "虛步",
+      "simplified": "虚步",
+      "pinyin": "xū bù",
+      "translations": {
+        "it": "posizione vuota",
+        "en": "empty stance"
+      },
+      "category": "stance",
+      "art": ["kung_fu", "wushu", "taijiquan"],
+      "notes": "Weight on back leg"
+    },
+    {
+      "id": "pubu",
+      "original": "僕步",
+      "simplified": "仆步",
+      "pinyin": "pū bù",
+      "translations": {
+        "it": "posizione del servo",
+        "en": "crouching stance"
+      },
+      "category": "stance",
+      "art": ["kung_fu", "wushu"],
+      "notes": "Low sideways stance"
+    },
+    {
+      "id": "dingbu",
+      "original": "丁步",
+      "simplified": "丁步",
+      "pinyin": "dīng bù",
+      "translations": {
+        "it": "posizione a T",
+        "en": "T-stance"
+      },
+      "category": "stance",
+      "art": ["kung_fu", "wushu"],
+      "notes": "Feet in T-shape"
+    },
+    {
+      "id": "xiebu",
+      "original": "歇步",
+      "simplified": "歇步",
+      "pinyin": "xiē bù",
+      "translations": {
+        "it": "posizione incrociata seduta",
+        "en": "resting stance"
+      },
+      "category": "stance",
+      "art": ["kung_fu", "wushu"],
+      "notes": "Cross-legged sitting stance"
+    },
+    {
+      "id": "quan",
+      "original": "拳",
+      "simplified": "拳",
+      "pinyin": "quán",
+      "translations": {
+        "it": "pugno",
+        "en": "fist"
+      },
+      "category": "technique",
+      "art": ["kung_fu", "wushu"],
+      "notes": "Basic fist/boxing"
+    },
+    {
+      "id": "zhang",
+      "original": "掌",
+      "simplified": "掌",
+      "pinyin": "zhǎng",
+      "translations": {
+        "it": "palmo",
+        "en": "palm"
+      },
+      "category": "technique",
+      "art": ["kung_fu", "wushu", "taijiquan"],
+      "notes": "Palm strike/technique"
+    },
+    {
+      "id": "zhua",
+      "original": "抓",
+      "simplified": "抓",
+      "pinyin": "zhuā",
+      "translations": {
+        "it": "artiglio, afferrare",
+        "en": "claw, grab"
+      },
+      "category": "technique",
+      "art": ["kung_fu", "wushu"],
+      "notes": "Grabbing/claw technique"
+    },
+    {
+      "id": "ti",
+      "original": "踢",
+      "simplified": "踢",
+      "pinyin": "tī",
+      "translations": {
+        "it": "calcio",
+        "en": "kick"
+      },
+      "category": "technique",
+      "art": ["kung_fu", "wushu"],
+      "notes": "Basic kick"
+    },
+    {
+      "id": "tui",
+      "original": "腿",
+      "simplified": "腿",
+      "pinyin": "tuǐ",
+      "translations": {
+        "it": "gamba",
+        "en": "leg"
+      },
+      "category": "technique",
+      "art": ["kung_fu", "wushu"],
+      "notes": "Leg/leg technique"
+    },
+    {
+      "id": "shuai",
+      "original": "摔",
+      "simplified": "摔",
+      "pinyin": "shuāi",
+      "translations": {
+        "it": "proiezione",
+        "en": "throw"
+      },
+      "category": "technique",
+      "art": ["kung_fu", "shuai_jiao"],
+      "notes": "Throwing technique"
+    },
+    {
+      "id": "na",
+      "original": "拿",
+      "simplified": "拿",
+      "pinyin": "ná",
+      "translations": {
+        "it": "presa, controllo articolare",
+        "en": "seize, joint lock"
+      },
+      "category": "technique",
+      "art": ["kung_fu", "qinna"],
+      "notes": "Grappling/locking technique"
+    },
+    {
+      "id": "qinna",
+      "original": "擒拿",
+      "simplified": "擒拿",
+      "pinyin": "qín ná",
+      "translations": {
+        "it": "catturare e controllare",
+        "en": "seize and control"
+      },
+      "category": "technique",
+      "art": ["kung_fu", "qinna"],
+      "notes": "Joint locking system"
+    },
+    {
+      "id": "dianxue",
+      "original": "點穴",
+      "simplified": "点穴",
+      "pinyin": "diǎn xué",
+      "translations": {
+        "it": "colpire i punti vitali",
+        "en": "pressure point striking"
+      },
+      "category": "technique",
+      "art": ["kung_fu"],
+      "notes": "Targeting vital points"
+    },
+    {
+      "id": "sanda",
+      "original": "散打",
+      "simplified": "散打",
+      "pinyin": "sǎn dǎ",
+      "translations": {
+        "it": "combattimento libero",
+        "en": "free fighting, kickboxing"
+      },
+      "category": "technique",
+      "art": ["sanda", "wushu"],
+      "notes": "Chinese kickboxing sport"
+    },
+    {
+      "id": "shuai_jiao",
+      "original": "摔跤",
+      "simplified": "摔跤",
+      "pinyin": "shuāi jiāo",
+      "translations": {
+        "it": "lotta cinese",
+        "en": "Chinese wrestling"
+      },
+      "category": "technique",
+      "art": ["shuai_jiao"],
+      "notes": "Traditional Chinese wrestling"
+    },
+    {
+      "id": "jian",
+      "original": "劍",
+      "simplified": "剑",
+      "pinyin": "jiàn",
+      "translations": {
+        "it": "spada dritta",
+        "en": "straight sword"
+      },
+      "category": "weapon",
+      "art": ["kung_fu", "wushu", "taijiquan"],
+      "notes": "Double-edged straight sword"
+    },
+    {
+      "id": "dao",
+      "original": "刀",
+      "simplified": "刀",
+      "pinyin": "dāo",
+      "translations": {
+        "it": "sciabola",
+        "en": "broadsword, saber"
+      },
+      "category": "weapon",
+      "art": ["kung_fu", "wushu"],
+      "notes": "Single-edged curved sword"
+    },
+    {
+      "id": "gun",
+      "original": "棍",
+      "simplified": "棍",
+      "pinyin": "gùn",
+      "translations": {
+        "it": "bastone lungo",
+        "en": "staff"
+      },
+      "category": "weapon",
+      "art": ["kung_fu", "wushu", "shaolin"],
+      "notes": "Long wooden staff"
+    },
+    {
+      "id": "qiang",
+      "original": "槍",
+      "simplified": "枪",
+      "pinyin": "qiāng",
+      "translations": {
+        "it": "lancia",
+        "en": "spear"
+      },
+      "category": "weapon",
+      "art": ["kung_fu", "wushu"],
+      "notes": "Spear weapon"
+    },
+    {
+      "id": "dadao",
+      "original": "大刀",
+      "simplified": "大刀",
+      "pinyin": "dà dāo",
+      "translations": {
+        "it": "grande sciabola",
+        "en": "great sword"
+      },
+      "category": "weapon",
+      "art": ["kung_fu", "wushu"],
+      "notes": "Large two-handed saber"
+    },
+    {
+      "id": "shuangjian",
+      "original": "雙劍",
+      "simplified": "双剑",
+      "pinyin": "shuāng jiàn",
+      "translations": {
+        "it": "spade doppie",
+        "en": "double swords"
+      },
+      "category": "weapon",
+      "art": ["kung_fu", "wushu"],
+      "notes": "Twin straight swords"
+    },
+    {
+      "id": "sanjiegun",
+      "original": "三節棍",
+      "simplified": "三节棍",
+      "pinyin": "sān jié gùn",
+      "translations": {
+        "it": "bastone a tre sezioni",
+        "en": "three-section staff"
+      },
+      "category": "weapon",
+      "art": ["kung_fu", "wushu"],
+      "notes": "Flexible weapon with three connected sections"
+    },
+    {
+      "id": "nunchaku_chinese",
+      "original": "雙節棍",
+      "simplified": "双节棍",
+      "pinyin": "shuāng jié gùn",
+      "translations": {
+        "it": "nunchaku",
+        "en": "nunchaku, two-section staff"
+      },
+      "category": "weapon",
+      "art": ["kung_fu", "wushu"],
+      "notes": "Two-section flail"
+    },
+    {
+      "id": "hu_die_dao",
+      "original": "蝴蝶刀",
+      "simplified": "蝴蝶刀",
+      "pinyin": "hú dié dāo",
+      "translations": {
+        "it": "coltelli a farfalla",
+        "en": "butterfly swords"
+      },
+      "category": "weapon",
+      "art": ["wing_chun", "kung_fu"],
+      "notes": "Short double swords"
+    },
+    {
+      "id": "liuxingchui",
+      "original": "流星錘",
+      "simplified": "流星锤",
+      "pinyin": "liú xīng chuí",
+      "translations": {
+        "it": "martello meteora",
+        "en": "meteor hammer"
+      },
+      "category": "weapon",
+      "art": ["kung_fu", "wushu"],
+      "notes": "Flexible weapon with weighted ends"
+    },
+    {
+      "id": "shou",
+      "original": "手",
+      "simplified": "手",
+      "pinyin": "shǒu",
+      "translations": {
+        "it": "mano",
+        "en": "hand"
+      },
+      "category": "body_part",
+      "art": ["kung_fu", "wushu"],
+      "notes": "Hand"
+    },
+    {
+      "id": "jiao",
+      "original": "腳",
+      "simplified": "脚",
+      "pinyin": "jiǎo",
+      "translations": {
+        "it": "piede",
+        "en": "foot"
+      },
+      "category": "body_part",
+      "art": ["kung_fu", "wushu"],
+      "notes": "Foot"
+    },
+    {
+      "id": "tou",
+      "original": "頭",
+      "simplified": "头",
+      "pinyin": "tóu",
+      "translations": {
+        "it": "testa",
+        "en": "head"
+      },
+      "category": "body_part",
+      "art": ["kung_fu", "wushu"],
+      "notes": "Head"
+    },
+    {
+      "id": "yao",
+      "original": "腰",
+      "simplified": "腰",
+      "pinyin": "yāo",
+      "translations": {
+        "it": "vita, fianchi",
+        "en": "waist"
+      },
+      "category": "body_part",
+      "art": ["kung_fu", "wushu", "taijiquan"],
+      "notes": "Waist - important for power generation"
+    },
+    {
+      "id": "jian_shoulder",
+      "original": "肩",
+      "simplified": "肩",
+      "pinyin": "jiān",
+      "translations": {
+        "it": "spalla",
+        "en": "shoulder"
+      },
+      "category": "body_part",
+      "art": ["kung_fu", "wushu"],
+      "notes": "Shoulder"
+    },
+    {
+      "id": "kua",
+      "original": "胯",
+      "simplified": "胯",
+      "pinyin": "kuà",
+      "translations": {
+        "it": "anche",
+        "en": "hips, kua"
+      },
+      "category": "body_part",
+      "art": ["kung_fu", "taijiquan"],
+      "notes": "Hip joints - crucial for internal arts"
+    },
+    {
+      "id": "taolu",
+      "original": "套路",
+      "simplified": "套路",
+      "pinyin": "tào lù",
+      "translations": {
+        "it": "forma, sequenza",
+        "en": "form, routine"
+      },
+      "category": "form",
+      "art": ["kung_fu", "wushu"],
+      "notes": "Choreographed sequence of movements"
+    },
+    {
+      "id": "changquan",
+      "original": "長拳",
+      "simplified": "长拳",
+      "pinyin": "cháng quán",
+      "translations": {
+        "it": "pugno lungo",
+        "en": "long fist"
+      },
+      "category": "form",
+      "art": ["wushu", "kung_fu"],
+      "notes": "Northern style with extended movements"
+    },
+    {
+      "id": "nanquan",
+      "original": "南拳",
+      "simplified": "南拳",
+      "pinyin": "nán quán",
+      "translations": {
+        "it": "pugno del sud",
+        "en": "southern fist"
+      },
+      "category": "form",
+      "art": ["wushu", "kung_fu"],
+      "notes": "Southern style with strong stances"
+    },
+    {
+      "id": "xingyiquan",
+      "original": "形意拳",
+      "simplified": "形意拳",
+      "pinyin": "xíng yì quán",
+      "translations": {
+        "it": "pugno della forma e dell'intenzione",
+        "en": "form-intention fist"
+      },
+      "category": "form",
+      "art": ["xingyiquan"],
+      "notes": "Internal art based on five elements"
+    },
+    {
+      "id": "baguazhang",
+      "original": "八卦掌",
+      "simplified": "八卦掌",
+      "pinyin": "bā guà zhǎng",
+      "translations": {
+        "it": "palmo degli otto trigrammi",
+        "en": "eight trigrams palm"
+      },
+      "category": "form",
+      "art": ["baguazhang"],
+      "notes": "Internal art based on circle walking"
+    },
+    {
+      "id": "yongchunquan",
+      "original": "詠春拳",
+      "simplified": "咏春拳",
+      "pinyin": "yǒng chūn quán",
+      "translations": {
+        "it": "pugno della primavera eterna",
+        "en": "Wing Chun fist"
+      },
+      "category": "form",
+      "art": ["wing_chun"],
+      "notes": "Southern close-range combat system"
+    },
+    {
+      "id": "huquan",
+      "original": "虎拳",
+      "simplified": "虎拳",
+      "pinyin": "hǔ quán",
+      "translations": {
+        "it": "pugno della tigre",
+        "en": "tiger fist"
+      },
+      "category": "animal",
+      "art": ["shaolin", "kung_fu"],
+      "notes": "Tiger style - powerful and fierce"
+    },
+    {
+      "id": "hequan",
+      "original": "鶴拳",
+      "simplified": "鹤拳",
+      "pinyin": "hè quán",
+      "translations": {
+        "it": "pugno della gru",
+        "en": "crane fist"
+      },
+      "category": "animal",
+      "art": ["shaolin", "kung_fu"],
+      "notes": "Crane style - balance and precision"
+    },
+    {
+      "id": "shequan",
+      "original": "蛇拳",
+      "simplified": "蛇拳",
+      "pinyin": "shé quán",
+      "translations": {
+        "it": "pugno del serpente",
+        "en": "snake fist"
+      },
+      "category": "animal",
+      "art": ["shaolin", "kung_fu"],
+      "notes": "Snake style - flexible and targeting vital points"
+    },
+    {
+      "id": "longquan",
+      "original": "龍拳",
+      "simplified": "龙拳",
+      "pinyin": "lóng quán",
+      "translations": {
+        "it": "pugno del drago",
+        "en": "dragon fist"
+      },
+      "category": "animal",
+      "art": ["shaolin", "kung_fu"],
+      "notes": "Dragon style - spiritual and powerful"
+    },
+    {
+      "id": "baoquan",
+      "original": "豹拳",
+      "simplified": "豹拳",
+      "pinyin": "bào quán",
+      "translations": {
+        "it": "pugno del leopardo",
+        "en": "leopard fist"
+      },
+      "category": "animal",
+      "art": ["shaolin", "kung_fu"],
+      "notes": "Leopard style - speed and power"
+    },
+    {
+      "id": "tanglangquan",
+      "original": "螳螂拳",
+      "simplified": "螳螂拳",
+      "pinyin": "táng láng quán",
+      "translations": {
+        "it": "pugno della mantide",
+        "en": "praying mantis fist"
+      },
+      "category": "animal",
+      "art": ["tanglang", "kung_fu"],
+      "notes": "Praying mantis style"
+    },
+    {
+      "id": "houquan",
+      "original": "猴拳",
+      "simplified": "猴拳",
+      "pinyin": "hóu quán",
+      "translations": {
+        "it": "pugno della scimmia",
+        "en": "monkey fist"
+      },
+      "category": "animal",
+      "art": ["shaolin", "kung_fu"],
+      "notes": "Monkey style - agile and unpredictable"
+    },
+    {
+      "id": "yingzhaoquan",
+      "original": "鷹爪拳",
+      "simplified": "鹰爪拳",
+      "pinyin": "yīng zhǎo quán",
+      "translations": {
+        "it": "pugno dell'artiglio d'aquila",
+        "en": "eagle claw fist"
+      },
+      "category": "animal",
+      "art": ["eagle_claw", "kung_fu"],
+      "notes": "Eagle claw style - grabbing techniques"
+    },
+    {
+      "id": "zuiquan",
+      "original": "醉拳",
+      "simplified": "醉拳",
+      "pinyin": "zuì quán",
+      "translations": {
+        "it": "pugno dell'ubriaco",
+        "en": "drunken fist"
+      },
+      "category": "animal",
+      "art": ["shaolin", "kung_fu"],
+      "notes": "Drunken style - deceptive movements"
+    },
+    {
+      "id": "wude",
+      "original": "武德",
+      "simplified": "武德",
+      "pinyin": "wǔ dé",
+      "translations": {
+        "it": "virtù marziale",
+        "en": "martial virtue"
+      },
+      "category": "philosophy",
+      "art": ["kung_fu", "wushu"],
+      "notes": "Moral character in martial arts"
+    },
+    {
+      "id": "yin",
+      "original": "陰",
+      "simplified": "阴",
+      "pinyin": "yīn",
+      "translations": {
+        "it": "yin, principio femminile",
+        "en": "yin, feminine principle"
+      },
+      "category": "philosophy",
+      "art": ["taijiquan", "kung_fu"],
+      "notes": "Dark, passive, yielding force"
+    },
+    {
+      "id": "yang",
+      "original": "陽",
+      "simplified": "阳",
+      "pinyin": "yáng",
+      "translations": {
+        "it": "yang, principio maschile",
+        "en": "yang, masculine principle"
+      },
+      "category": "philosophy",
+      "art": ["taijiquan", "kung_fu"],
+      "notes": "Light, active, expanding force"
+    },
+    {
+      "id": "li",
+      "original": "理",
+      "simplified": "理",
+      "pinyin": "lǐ",
+      "translations": {
+        "it": "principio, ragione",
+        "en": "principle, reason"
+      },
+      "category": "philosophy",
+      "art": ["kung_fu", "taijiquan"],
+      "notes": "Underlying principle"
+    },
+    {
+      "id": "fa",
+      "original": "法",
+      "simplified": "法",
+      "pinyin": "fǎ",
+      "translations": {
+        "it": "metodo, legge",
+        "en": "method, law"
+      },
+      "category": "philosophy",
+      "art": ["kung_fu", "wushu"],
+      "notes": "Method or technique"
+    },
+    {
+      "id": "shen",
+      "original": "神",
+      "simplified": "神",
+      "pinyin": "shén",
+      "translations": {
+        "it": "spirito",
+        "en": "spirit"
+      },
+      "category": "philosophy",
+      "art": ["kung_fu", "taijiquan"],
+      "notes": "Spirit/consciousness"
+    },
+    {
+      "id": "yi",
+      "original": "意",
+      "simplified": "意",
+      "pinyin": "yì",
+      "translations": {
+        "it": "intenzione",
+        "en": "intention, mind"
+      },
+      "category": "philosophy",
+      "art": ["kung_fu", "taijiquan", "xingyiquan"],
+      "notes": "Mental intention directing movement"
+    },
+    {
+      "id": "jing_essence",
+      "original": "精",
+      "simplified": "精",
+      "pinyin": "jīng",
+      "translations": {
+        "it": "essenza",
+        "en": "essence"
+      },
+      "category": "philosophy",
+      "art": ["kung_fu", "qigong"],
+      "notes": "Vital essence/reproductive energy"
+    },
+    {
+      "id": "song",
+      "original": "鬆",
+      "simplified": "松",
+      "pinyin": "sōng",
+      "translations": {
+        "it": "rilassamento",
+        "en": "relaxation"
+      },
+      "category": "philosophy",
+      "art": ["taijiquan", "kung_fu"],
+      "notes": "Relaxed but not limp"
+    },
+    {
+      "id": "ting",
+      "original": "聽",
+      "simplified": "听",
+      "pinyin": "tīng",
+      "translations": {
+        "it": "ascoltare, sentire",
+        "en": "listening, sensing"
+      },
+      "category": "philosophy",
+      "art": ["taijiquan"],
+      "notes": "Sensing opponent's intention through touch"
+    },
+    {
+      "id": "hua",
+      "original": "化",
+      "simplified": "化",
+      "pinyin": "huà",
+      "translations": {
+        "it": "trasformare, neutralizzare",
+        "en": "transform, neutralize"
+      },
+      "category": "philosophy",
+      "art": ["taijiquan"],
+      "notes": "Transforming opponent's force"
+    },
+    {
+      "id": "zhongding",
+      "original": "中定",
+      "simplified": "中定",
+      "pinyin": "zhōng dìng",
+      "translations": {
+        "it": "equilibrio centrale",
+        "en": "central equilibrium"
+      },
+      "category": "philosophy",
+      "art": ["taijiquan"],
+      "notes": "Maintaining center and balance"
+    },
+    {
+      "id": "lian",
+      "original": "練",
+      "simplified": "练",
+      "pinyin": "liàn",
+      "translations": {
+        "it": "praticare, allenare",
+        "en": "practice, train"
+      },
+      "category": "training",
+      "art": ["kung_fu", "wushu"],
+      "notes": "To practice/train"
+    },
+    {
+      "id": "jibengong",
+      "original": "基本功",
+      "simplified": "基本功",
+      "pinyin": "jī běn gōng",
+      "translations": {
+        "it": "tecniche di base",
+        "en": "basic skills"
+      },
+      "category": "training",
+      "art": ["kung_fu", "wushu"],
+      "notes": "Fundamental training exercises"
+    },
+    {
+      "id": "tieshazhang",
+      "original": "鐵砂掌",
+      "simplified": "铁砂掌",
+      "pinyin": "tiě shā zhǎng",
+      "translations": {
+        "it": "palmo di sabbia di ferro",
+        "en": "iron sand palm"
+      },
+      "category": "training",
+      "art": ["kung_fu", "shaolin"],
+      "notes": "Hand conditioning training"
+    },
+    {
+      "id": "zhanzhuang",
+      "original": "站樁",
+      "simplified": "站桩",
+      "pinyin": "zhàn zhuāng",
+      "translations": {
+        "it": "stare come un palo",
+        "en": "standing post"
+      },
+      "category": "training",
+      "art": ["kung_fu", "taijiquan", "xingyiquan"],
+      "notes": "Standing meditation practice"
+    },
+    {
+      "id": "paida",
+      "original": "拍打",
+      "simplified": "拍打",
+      "pinyin": "pāi dǎ",
+      "translations": {
+        "it": "battere, condizionamento",
+        "en": "slapping, body conditioning"
+      },
+      "category": "training",
+      "art": ["kung_fu"],
+      "notes": "Body conditioning through striking"
+    }
+  ]
+}

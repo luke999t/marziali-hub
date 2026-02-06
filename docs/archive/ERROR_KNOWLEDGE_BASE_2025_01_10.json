@@ -1,0 +1,179 @@
+{
+  "metadata": {
+    "project": "Media Center Arti Marziali",
+    "created_at": "2025-01-10T21:30:00Z",
+    "last_updated": "2025-01-10T21:30:00Z",
+    "version": "1.1.0",
+    "purpose": "AI-First error tracking per manutenzione automatica",
+    "session": "Fix autenticazione e database PostgreSQL locale"
+  },
+  
+  "errors": [
+    {
+      "id": "ERR-006",
+      "date": "2025-01-10",
+      "category": "Infrastructure",
+      "subcategory": "Docker vs Local PostgreSQL",
+      "severity": "CRITICAL",
+      "title": "Docker blocca porta PostgreSQL locale",
+      "symptom": "Backend va in timeout su tutte le chiamate database, /health risponde ma /login timeout",
+      "root_cause": "Docker Desktop aveva un container mcam-postgres che occupava porta 5432, impedendo al PostgreSQL locale Windows di avviarsi. Il .env puntava a localhost:5432 (PostgreSQL locale) ma Docker intercettava la connessione",
+      "error_message": "TimeoutError - asyncpg connection timeout",
+      "diagnosis_steps": [
+        "1. Backend risponde a /health ma timeout su /login",
+        "2. netstat -ano | findstr :5432 mostra PID Docker",
+        "3. Servizio postgresql-x64-15 è STOPPED",
+        "4. Container mcam-postgres esiste ma non risponde"
+      ],
+      "files_affected": [
+        ".env (DATABASE_URL)",
+        "docker-compose.yml"
+      ],
+      "solution": {
+        "description": "Chiudere Docker Desktop e avviare PostgreSQL locale Windows",
+        "steps": [
+          "1. Chiudi Docker Desktop completamente",
+          "2. Apri PowerShell come Amministratore",
+          "3. net start postgresql-x64-15",
+          "4. Verifica: psql -U postgres -c '\\l'",
+          "5. Riavvia backend"
+        ]
+      },
+      "prevention": "Decidere se usare Docker O PostgreSQL locale, non entrambi. Documentare la scelta nel README",
+      "time_to_debug": "1 ora",
+      "time_saved_future": "1 ora"
+    },
+    
+    {
+      "id": "ERR-007",
+      "date": "2025-01-10",
+      "category": "SQLAlchemy",
+      "subcategory": "Relationships",
+      "severity": "HIGH",
+      "title": "Relationship user_progress mancante in Video model",
+      "symptom": "500 Internal Server Error su login con errore SQLAlchemy mapper",
+      "root_cause": "UserVideo model aveva back_populates='user_progress' ma Video model non aveva la relazione corrispondente",
+      "error_message": "InvalidRequestError: Mapper 'Mapper[Video(videos)]' has no property 'user_progress'",
+      "files_affected": [
+        "models/video.py",
+        "models/user_video.py"
+      ],
+      "solution": {
+        "description": "Aggiungere relazione mancante in Video model",
+        "code_changes": [
+          {
+            "file": "models/video.py",
+            "line": 150,
+            "change": "Aggiunto: user_progress = relationship(\"UserVideo\", back_populates=\"video\")"
+          }
+        ]
+      },
+      "prevention": "Ogni back_populates DEVE avere la relazione corrispondente nell'altro model. Usare grep per verificare: grep -r 'back_populates' models/",
+      "search_command": "grep -r 'user_progress' models/",
+      "time_to_debug": "15 minuti",
+      "time_saved_future": "30 minuti"
+    },
+    
+    {
+      "id": "ERR-008",
+      "date": "2025-01-10",
+      "category": "PostgreSQL",
+      "subcategory": "Schema Mismatch",
+      "severity": "HIGH",
+      "title": "Colonne mancanti nella tabella users",
+      "symptom": "500 Internal Server Error: la colonna users.tier non esiste",
+      "root_cause": "Il model User aveva nuove colonne (tier, subscription_end, auto_renew, ads_unlocked_videos, etc.) ma la tabella PostgreSQL non era stata aggiornata",
+      "error_message": "ProgrammingError: la colonna users.tier non esiste",
+      "files_affected": [
+        "models/user.py",
+        "migrations/add_user_columns.sql"
+      ],
+      "solution": {
+        "description": "Eseguire migrazione SQL per aggiungere colonne mancanti",
+        "sql": [
+          "ALTER TABLE users ADD COLUMN IF NOT EXISTS tier usertier DEFAULT 'free';",
+          "ALTER TABLE users ADD COLUMN IF NOT EXISTS subscription_end TIMESTAMP;",
+          "ALTER TABLE users ADD COLUMN IF NOT EXISTS auto_renew BOOLEAN NOT NULL DEFAULT true;",
+          "ALTER TABLE users ADD COLUMN IF NOT EXISTS stripe_customer_id VARCHAR(100);",
+          "ALTER TABLE users ADD COLUMN IF NOT EXISTS ads_unlocked_videos INTEGER NOT NULL DEFAULT 0;",
+          "ALTER TABLE users ADD COLUMN IF NOT EXISTS ads_unlock_valid_until TIMESTAMP;",
+          "ALTER TABLE users ADD COLUMN IF NOT EXISTS language_preference VARCHAR(10) NOT NULL DEFAULT 'it';",
+          "ALTER TABLE users ADD COLUMN IF NOT EXISTS subtitle_preference VARCHAR(10) NOT NULL DEFAULT 'it';",
+          "ALTER TABLE users ADD COLUMN IF NOT EXISTS quality_preference VARCHAR(10) NOT NULL DEFAULT '720p';",
+          "ALTER TABLE users ADD COLUMN IF NOT EXISTS last_seen TIMESTAMP;"
+        ],
+        "script": "python migrations/run_migration.py"
+      },
+      "prevention": "Usare Alembic per migrazioni automatiche. Ogni modifica al model DEVE avere migrazione corrispondente",
+      "time_to_debug": "30 minuti",
+      "time_saved_future": "1 ora"
+    },
+    
+    {
+      "id": "ERR-009",
+      "date": "2025-01-10",
+      "category": "SQLAlchemy",
+      "subcategory": "ENUM Types",
+      "severity": "CRITICAL",
+      "title": "Mismatch tra SQLAlchemy Enum e PostgreSQL Enum (case sensitivity)",
+      "symptom": "500 Internal Server Error: 'premium' is not among the defined enum values. Possible values: FREE, HYBRID_LIGHT...",
+      "root_cause": "PostgreSQL ENUM usertier ha valori lowercase (free, premium), ma SQLAlchemy Enum usava i NOMI degli enum (FREE, PREMIUM) invece dei VALORI",
+      "error_message": "'premium' is not among the defined enum values. Enum name: usertier. Possible values: FREE, HYBRID_LIGH.., HYBRID_STAN.., ..., BUSINESS",
+      "files_affected": [
+        "models/user.py"
+      ],
+      "solution": {
+        "description": "Aggiungere values_callable per forzare SQLAlchemy a usare i valori lowercase",
+        "code_changes": [
+          {
+            "file": "models/user.py",
+            "before": "tier = Column(Enum(UserTier), default=UserTier.FREE, nullable=False, index=True)",
+            "after": "tier = Column(Enum(UserTier, values_callable=lambda x: [e.value for e in x], name='usertier', create_type=False), default=UserTier.FREE, nullable=False, index=True)"
+          }
+        ],
+        "explanation": "values_callable=lambda x: [e.value for e in x] dice a SQLAlchemy di usare i .value degli enum (lowercase) invece dei nomi (UPPERCASE)"
+      },
+      "prevention": "Quando si definisce un Enum SQLAlchemy che deve matchare un ENUM PostgreSQL esistente, SEMPRE specificare values_callable e create_type=False",
+      "verification": {
+        "check_db_enum": "SELECT enum_range(NULL::usertier);",
+        "check_python_enum": "python -c \"from models.user import UserTier; print([e.value for e in UserTier])\""
+      },
+      "time_to_debug": "45 minuti",
+      "time_saved_future": "1 ora"
+    }
+  ],
+  
+  "patterns_learned": {
+    "docker_vs_local_db": {
+      "rule": "Scegliere UNA sola modalità: Docker O PostgreSQL locale. Mai entrambi sulla stessa porta",
+      "check_command": "netstat -ano | findstr :5432"
+    },
+    "sqlalchemy_enum_postgresql": {
+      "rule": "Usare values_callable per matchare enum PostgreSQL esistenti",
+      "pattern": "Enum(MyEnum, values_callable=lambda x: [e.value for e in x], name='enum_name', create_type=False)"
+    },
+    "bidirectional_relationships": {
+      "rule": "Ogni back_populates='X' richiede una relazione X= nell'altro model",
+      "verify": "grep -r 'back_populates' models/ | grep 'NOME'"
+    },
+    "schema_migrations": {
+      "rule": "Ogni modifica al model SQLAlchemy richiede migrazione database",
+      "tool": "Alembic o script SQL manuale"
+    }
+  },
+  
+  "quick_fixes": {
+    "timeout_on_login": "Verificare che PostgreSQL sia attivo e Docker non blocchi la porta: net start postgresql-x64-15",
+    "mapper_has_no_property": "Aggiungere relazione mancante o rimuovere back_populates",
+    "column_does_not_exist": "Eseguire migrazione: python migrations/run_migration.py",
+    "enum_value_not_valid": "Aggiungere values_callable all'Enum SQLAlchemy"
+  },
+  
+  "session_summary": {
+    "total_errors_fixed": 4,
+    "test_results_before": "9/12 (75%) con timeout",
+    "test_results_after": "11/12 (92%) + 1 skip corretto",
+    "login_status": "FUNZIONANTE",
+    "register_status": "FUNZIONANTE"
+  }
+}

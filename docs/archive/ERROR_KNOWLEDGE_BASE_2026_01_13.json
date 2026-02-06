@@ -1,0 +1,159 @@
+{
+  "metadata": {
+    "project": "Media Center Arti Marziali",
+    "created_at": "2026-01-13T18:30:00Z",
+    "last_updated": "2026-01-13T18:30:00Z",
+    "version": "1.0.0",
+    "purpose": "AI-First error tracking per manutenzione automatica",
+    "session": "Events/ASD Module - Coverage push, Stripe, Email, GDPR"
+  },
+
+  "errors": [
+    {
+      "id": "ERR-001",
+      "date": "2026-01-13",
+      "category": "Coverage",
+      "subcategory": "Test Gap",
+      "severity": "HIGH",
+      "title": "Coverage sotto target (74.75% vs 90%)",
+      "symptom": "Coverage globale 74.75%, alcuni file sotto 60%",
+      "root_cause": "File critici non testati completamente: router.py (58%), notifications.py (62%), stripe_connect.py (68%)",
+      "files_affected": [
+        "modules/events/router.py",
+        "modules/events/notifications.py",
+        "modules/events/stripe_connect.py",
+        "modules/events/email_service.py",
+        "modules/events/service.py"
+      ],
+      "solution": {
+        "description": "Scrivere test mirati per linee non coperte usando ZERO MOCK policy",
+        "steps": [
+          "1. Run: python -m pytest tests/ --cov=modules/events/[filename] --cov-report=term-missing -q",
+          "2. Identificare linee non coperte",
+          "3. Scrivere test che le esercitano",
+          "4. Ripetere fino a 90%+"
+        ],
+        "coverage_gaps": {
+          "router.py": {"current": "58%", "target": "90%", "gap": "-32%"},
+          "notifications.py": {"current": "62%", "target": "90%", "gap": "-28%"},
+          "stripe_connect.py": {"current": "68%", "target": "90%", "gap": "-22%"},
+          "email_service.py": {"current": "73%", "target": "90%", "gap": "-17%"},
+          "service.py": {"current": "71%", "target": "90%", "gap": "-19%"}
+        }
+      },
+      "prevention": "Monitorare coverage dopo ogni PR, non accettare merge sotto 85%",
+      "time_to_debug": "2-3 ore stimate per raggiungere target"
+    },
+    {
+      "id": "ERR-002",
+      "date": "2026-01-13",
+      "category": "Stripe",
+      "subcategory": "Field Naming",
+      "severity": "MEDIUM",
+      "title": "Mismatch nomi campi Stripe",
+      "symptom": "Errori AttributeError o KeyError su campi Stripe",
+      "root_cause": "Nomi campi inconsistenti tra model e service",
+      "error_messages": [
+        "stripe_verified vs stripe_onboarding_complete",
+        "current_capacity vs current_subscriptions",
+        "PENDING_PAYMENT vs PENDING",
+        "EXPIRED vs CANCELLED"
+      ],
+      "files_affected": [
+        "modules/events/stripe_connect.py",
+        "modules/events/models.py"
+      ],
+      "solution": {
+        "description": "Allineare nomi campi tra model e service",
+        "code_changes": [
+          {"before": "stripe_verified", "after": "stripe_onboarding_complete"},
+          {"before": "current_capacity", "after": "current_subscriptions"},
+          {"before": "PENDING_PAYMENT", "after": "PENDING"},
+          {"before": "EXPIRED", "after": "CANCELLED"}
+        ]
+      },
+      "prevention": "Usare constants file per enum values condivisi"
+    },
+    {
+      "id": "ERR-003",
+      "date": "2026-01-13",
+      "category": "Email",
+      "subcategory": "Testing",
+      "severity": "LOW",
+      "title": "Email testing richiede MailHog",
+      "symptom": "Test email falliscono senza mail server locale",
+      "root_cause": "SendGrid in produzione, serve mock SMTP per test locali",
+      "solution": {
+        "description": "Usare MailHog per test email locali",
+        "setup": "docker run -d -p 1025:1025 -p 8025:8025 mailhog/mailhog",
+        "config": {
+          "SMTP_HOST": "localhost",
+          "SMTP_PORT": 1025,
+          "WEB_UI": "http://localhost:8025"
+        }
+      },
+      "prevention": "Includere MailHog in docker-compose per development"
+    }
+  ],
+
+  "completed_today": [
+    {
+      "task": "Integration Tests Frontend",
+      "file": "frontend/src/__tests__/integration/events-user-pages.test.tsx",
+      "tests": 33,
+      "policy": "ZERO MOCK"
+    },
+    {
+      "task": "Seed Data Script",
+      "file": "backend/scripts/seed_events.py",
+      "data": "3 ASD Partners, 8 Eventi, Options, Subscriptions",
+      "note": "Idempotente"
+    },
+    {
+      "task": "Email Service + Templates",
+      "file": "backend/modules/events/email_service.py",
+      "size": "17KB",
+      "templates": 7
+    },
+    {
+      "task": "GDPR System",
+      "file": "backend/modules/events/gdpr_router.py",
+      "size": "13KB",
+      "features": "Campi GDPR in EventSubscription, checkbox frontend"
+    },
+    {
+      "task": "Sentry Frontend",
+      "files": ["sentry.client.config.ts", "sentry.server.config.ts", "sentry.edge.config.ts"]
+    }
+  ],
+
+  "patterns_learned": [
+    {
+      "id": "PATTERN-001",
+      "category": "Testing",
+      "title": "Coverage incrementale",
+      "rule": "Usare --cov-report=term-missing per vedere esattamente quali linee mancano"
+    },
+    {
+      "id": "PATTERN-002",
+      "category": "Stripe",
+      "title": "Testing con Stripe TEST keys",
+      "rule": "Usare chiavi sk_test_* per test reali Stripe senza processare pagamenti veri"
+    },
+    {
+      "id": "PATTERN-003",
+      "category": "Email",
+      "title": "MailHog per development",
+      "rule": "MailHog cattura email SMTP senza inviarle, perfetto per test ZERO MOCK"
+    }
+  ],
+
+  "statistics": {
+    "session_date": "2026-01-13",
+    "tests_total": 679,
+    "coverage_current": "74.75%",
+    "coverage_target": "90%",
+    "coverage_gap": "-15.25%",
+    "new_tests_created": 33
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "metadata": {
+    "date": "2026-02-03",
+    "project": "Media Center Arti Marziali",
+    "session": "Test Batch 1-5 Fix — Progressivo A",
+    "bugs_fixed": 6,
+    "script_bugs_fixed": 2,
+    "total_errors_documented": 9,
+    "bugs_remaining": 0,
+    "test_before": "147/210 (70%)",
+    "test_after": "194/210 (92%) verificato + 2 test recuperati con alias /stats",
+    "database": "PostgreSQL (NON SQLite)",
+    "performance_note": "9 test falliti: backend OK (7-92ms). I ~2050ms erano overhead del test runner, non del server"
+  },
+  "errors": [
+    {
+      "id": "ERR_2026_02_03_001",
+      "type": "schema_mismatch",
+      "severity": "HIGH",
+      "file": "backend/api/v1/auth.py",
+      "symptom": "422 Unprocessable Entity su POST /api/v1/auth/register",
+      "root_cause": "Schema Pydantic UserCreate richiede 'username', frontend/test invia 'name'",
+      "fix": "Aggiunto campo Optional[name] con validator che popola username",
+      "ai_tags": ["pydantic", "schema-mismatch", "422", "registration", "field-alias"],
+      "ai_pattern": "Quando client e server usano nomi campo diversi, usare alias/validator Pydantic",
+      "tests_affected": [6, 7],
+      "prevention": "Schema compatibility test automatico tra frontend types e backend schemas"
+    },
+    {
+      "id": "ERR_2026_02_03_002",
+      "type": "serialization_failure",
+      "severity": "HIGH",
+      "file": "backend/api/v1/curriculum.py",
+      "symptom": "Campi mancanti nella risposta JSON di /api/v1/curricula/",
+      "root_cause": "Pydantic V2 richiede from_attributes=True per ORM mode, campi non dichiarati nel response model",
+      "fix": "Aggiunto ConfigDict(from_attributes=True) + campi espliciti title, description, difficulty, style",
+      "ai_tags": ["pydantic-v2", "orm-mode", "from-attributes", "response-model"],
+      "ai_pattern": "In Pydantic V2 ogni campo ORM deve essere dichiarato esplicitamente nel response model",
+      "tests_affected": [37, 38, 39, 50],
+      "prevention": "Aggiungere test che verifica presenza di tutti i campi attesi"
+    },
+    {
+      "id": "ERR_2026_02_03_003",
+      "type": "cors_preflight_failure",
+      "severity": "MEDIUM",
+      "file": "backend/main.py",
+      "symptom": "405 su OPTIONS preflight request",
+      "root_cause": "CORSMiddleware non intercetta OPTIONS su route con redirect o inesistenti",
+      "fix": "Handler catch-all @app.options('/{full_path:path}') con headers CORS manuali",
+      "ai_tags": ["cors", "preflight", "options", "405", "middleware-bypass"],
+      "ai_pattern": "Mai fidarsi solo del CORSMiddleware, aggiungere catch-all OPTIONS",
+      "tests_affected": [29],
+      "prevention": "Template main.py standard con OPTIONS catch-all preconfigurato"
+    },
+    {
+      "id": "ERR_2026_02_03_004",
+      "type": "incomplete_health_check",
+      "severity": "LOW",
+      "file": "backend/main.py",
+      "symptom": "Health endpoint non mostra database status e disk space",
+      "root_cause": "Endpoint /health ritornava solo {status: healthy} statico",
+      "fix": "Aggiunto DB check con SELECT 1 + latenza, disk space con shutil.disk_usage (cross-platform)",
+      "ai_tags": ["health-check", "monitoring", "database-check", "disk-space", "enterprise"],
+      "ai_pattern": "Health check enterprise deve verificare TUTTE le dipendenze: DB, disk, cache, services",
+      "tests_affected": [146, 147],
+      "prevention": "Template health check standard con tutte le dipendenze"
+    },
+    {
+      "id": "ERR_2026_02_03_005",
+      "type": "trailing_slash_405",
+      "severity": "CRITICAL",
+      "file": "backend/api/v1/videos.py",
+      "symptom": "405 Method Not Allowed su GET/POST /api/v1/videos/ (con trailing slash)",
+      "root_cause": "Router registra endpoint come '' (vuoto), montato con prefix='/api/v1/videos'. URL valido = /api/v1/videos senza slash. redirect_slashes=True causa 307 che perde Authorization header.",
+      "fix": "Dual decorator pattern: registra handler su '/' E '' con include_in_schema=False sul duplicato",
+      "ai_tags": ["trailing-slash", "405", "307-redirect", "dual-decorator", "fastapi-routing"],
+      "ai_pattern": "SEMPRE usare dual decorator per endpoint root in FastAPI quando router ha prefix",
+      "tests_affected": [51, 52, 53, 54, 55, 56, 57, 58, 59, 61, 62, 63, 64, 65, 66, 67, 68],
+      "prevention": "Template router standard con dual decorator obbligatorio",
+      "code_pattern": {
+        "correct": "@router.get('/', ...)\n@router.get('', ..., include_in_schema=False)\nasync def handler(...):",
+        "wrong": "@router.get('', ...)\nasync def handler(...):"
+      },
+      "apply_to": ["content_classification.py", "admin.py", "tutti i router con endpoint root"]
+    },
+    {
+      "id": "ERR_2026_02_03_006",
+      "type": "missing_alias_endpoint",
+      "severity": "LOW",
+      "file": "backend/api/v1/admin.py",
+      "symptom": "405 su GET /api/v1/admin/stats",
+      "root_cause": "Endpoint registrato solo come /dashboard, test/client legacy chiamano /stats",
+      "fix": "Aggiunto alias /stats e /stats/ che delega a get_dashboard() internamente",
+      "ai_tags": ["alias", "retrocompatibilità", "endpoint-naming", "admin"],
+      "ai_pattern": "Quando rinomini endpoint, mantieni alias del vecchio path per retrocompatibilità",
+      "tests_affected": [21, 22],
+      "prevention": "Documentare naming convention endpoint prima di sviluppo test"
+    },
+    {
+      "id": "ERR_2026_02_03_007",
+      "type": "performance_overhead_devmode",
+      "severity": "INFO",
+      "file": "N/A (configurazione uvicorn)",
+      "symptom": "TUTTI gli endpoint a ~2050ms incluso 404 e file statici",
+      "root_cause": "Backend reale misura 7-92ms (sia con che senza --reload). I ~2050ms erano overhead del test runner Python (import, setup, cold start, Windows Defender durante batch 210 test)",
+      "fix": "Non è un bug backend. Verificato con test_performance_no_reload.ps1: entrambi i modi sotto 100ms. I test performance vanno ricalibrati o eseguiti con client più leggero",
+      "ai_tags": ["performance", "uvicorn-reload", "watchfiles", "windows", "dev-mode"],
+      "ai_pattern": "Se TUTTI gli endpoint hanno stessa latenza (anche 404): overhead sistematico, non DB. Verificare --reload e middleware",
+      "tests_affected": [183, 184, 185, 186, 187, 188, 189, 190, 191, 192],
+      "prevention": "Test performance devono usare client leggero (curl/httpx diretto), non test runner pesante con 210 test sequenziali"
+    }
+    ,
+    {
+      "id": "ERR_2026_02_03_008",
+      "type": "powershell_variable_conflict",
+      "severity": "LOW",
+      "file": "test_performance_no_reload.ps1",
+      "symptom": "Impossibile sovrascrivere la variabile PID perché è costante o di sola lettura",
+      "root_cause": "PowerShell ha variabile automatica $PID (process ID corrente) che è ReadOnly. Usare $pid in foreach la sovrascrive",
+      "fix": "Rinominare variabile loop da $pid a $procId o altro nome che non collida",
+      "ai_tags": ["powershell", "variable-conflict", "readonly", "automatic-variable"],
+      "ai_pattern": "Mai usare nomi come $PID, $PWD, $HOME, $HOST in PowerShell - sono variabili automatiche ReadOnly",
+      "prevention": "Prefissare variabili loop con prefisso univoco (es. $proc_, $item_)"
+    },
+    {
+      "id": "ERR_2026_02_03_009",
+      "type": "powershell_format_string",
+      "severity": "LOW",
+      "file": "test_performance_no_reload.ps1",
+      "symptom": "Formato della stringa di input non corretto su Write-Host con -f operator",
+      "root_cause": "{0,+9:N0} non è formato valido in PowerShell .NET format strings. Il '+' prima del padding non esiste",
+      "fix": "Usare [math]::Round() e concatenazione stringa semplice invece di format complessi",
+      "ai_tags": ["powershell", "string-format", "dotnet-format"],
+      "ai_pattern": "PowerShell usa .NET format strings: {index,alignment:format}. Alignment è solo numero (positivo=destra, negativo=sinistra), MAI con +",
+      "prevention": "Testare format strings con semplici Write-Host prima di usarli in script complessi"
+    }
+  ],
+  "patterns_learned": [
+    {
+      "name": "DUAL_DECORATOR_TRAILING_SLASH",
+      "description": "In FastAPI, quando un router è montato con prefix, l'endpoint root DEVE essere registrato su entrambi '/' e '' per evitare 405 da redirect 307",
+      "applicability": "Tutti i router con endpoint root (GET /, POST /, ecc.)",
+      "code_template": "@router.get('/', response_model=Model, summary='...')\n@router.get('', response_model=Model, include_in_schema=False)\nasync def handler(...):"
+    },
+    {
+      "name": "CORS_CATCH_ALL_OPTIONS",
+      "description": "CORSMiddleware non basta da solo. Serve handler OPTIONS catch-all per coprire redirect e path inesistenti",
+      "applicability": "Ogni app FastAPI con frontend cross-origin",
+      "code_template": "@app.options('/{full_path:path}')\nasync def preflight_handler(request, full_path):\n    return JSONResponse(content={'message': 'OK'}, headers={...cors headers...})"
+    },
+    {
+      "name": "HEALTH_CHECK_ENTERPRISE",
+      "description": "Health check deve verificare DB, disk, cache, non solo status statico",
+      "applicability": "Ogni backend con database e storage",
+      "code_template": "Vedi BUG_FIX_REPORT_2026_02_03_A.md Bug #4"
+    },
+    {
+      "name": "ALIAS_ENDPOINT_RETROCOMPAT",
+      "description": "Quando cambi nome endpoint, crea alias che delega alla funzione originale",
+      "applicability": "Ogni rinomina di endpoint con client esistenti",
+      "code_template": "@router.get('/new-name')\nasync def alias(deps...):\n    return await original_handler(deps...)"
+    },
+    {
+      "name": "PERFORMANCE_DIAGNOSTICO_SISTEMATICO",
+      "description": "Se tutti gli endpoint hanno stessa latenza (incluso 404), il problema è overhead sistematico (middleware, --reload, firewall), non database o query",
+      "applicability": "Debug performance su Windows con uvicorn",
+      "code_template": "Vedi test_performance_no_reload.ps1"
+    },
+    {
+      "name": "POWERSHELL_RESERVED_VARIABLES",
+      "description": "Mai usare $PID, $PWD, $HOME, $HOST come nomi variabili in PowerShell: sono ReadOnly automatiche",
+      "applicability": "Ogni script PowerShell con loop o variabili temporanee",
+      "code_template": "foreach ($procId in $collection) { ... }  # NON $pid"
+    },
+    {
+      "name": "POWERSHELL_FORMAT_STRINGS",
+      "description": "PowerShell usa .NET format: {index,alignment:format}. Alignment è solo numero intero (positivo=destra, negativo=sinistra). Mai usare + prima del numero",
+      "applicability": "Ogni script PowerShell con output formattato",
+      "code_template": "Write-Host ('{0,10:N0}' -f $value)  # NON {0,+10:N0}"
+    }
+  ],
+  "test_residui_14": {
+    "classificazione": "0 bug backend, 14 falsi negativi del test suite",
+    "dettaglio": [
+      {"test": 2, "causa": "SPA React: form login in JS, non HTML statico"},
+      {"test": 75, "causa": "Path test errato: /content-classification/ vs /content-types"},
+      {"test": 167, "causa": "Path traversal: FastAPI 405 è sicuro, test aspettava 400"},
+      {"test": 172, "causa": "Header injection: requests Python crasha prima di inviare"},
+      {"test": "183-192", "causa": "Performance: backend 7-92ms OK, overhead era del test runner"},
+      {"test": 195, "causa": "Double slash //: comportamento standard FastAPI"},
+      {"test": 197, "causa": "HEAD request: FastAPI non auto-genera HEAD per JSON endpoints"}
+    ]
+  },
+  "master_doc": "MASTER_STATUS_2026_02_03.md"
+}

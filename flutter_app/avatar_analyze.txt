@@ -1,0 +1,39 @@
+﻿Analyzing avatar...                                             
+
+  error - Target of URI doesn't exist: '../../../core/error/failures.dart' - lib\features\avatar\domain\repositories\avatar_repository.dart:10:8 - uri_does_not_exist
+  error - The name 'Failure' isn't a type, so it can't be used as a type argument - lib\features\avatar\domain\repositories\avatar_repository.dart:15:17 - non_type_as_type_argument
+  error - The name 'Failure' isn't a type, so it can't be used as a type argument - lib\features\avatar\domain\repositories\avatar_repository.dart:22:17 - non_type_as_type_argument
+  error - The name 'Failure' isn't a type, so it can't be used as a type argument - lib\features\avatar\domain\repositories\avatar_repository.dart:25:17 - non_type_as_type_argument
+  error - The name 'Failure' isn't a type, so it can't be used as a type argument - lib\features\avatar\domain\repositories\avatar_repository.dart:28:17 - non_type_as_type_argument
+  error - The name 'Failure' isn't a type, so it can't be used as a type argument - lib\features\avatar\domain\repositories\avatar_repository.dart:36:17 - non_type_as_type_argument
+  error - Target of URI doesn't exist: '../../../core/error/failures.dart' - lib\features\avatar\domain\usecases\apply_skeleton.dart:9:8 - uri_does_not_exist
+  error - The name 'Failure' isn't a type, so it can't be used as a type argument - lib\features\avatar\domain\usecases\apply_skeleton.dart:18:17 - non_type_as_type_argument
+  error - Target of URI doesn't exist: '../../../core/error/failures.dart' - lib\features\avatar\domain\usecases\get_avatar_detail.dart:6:8 - uri_does_not_exist
+  error - The name 'Failure' isn't a type, so it can't be used as a type argument - lib\features\avatar\domain\usecases\get_avatar_detail.dart:15:17 - non_type_as_type_argument
+  error - Target of URI doesn't exist: '../../../core/error/failures.dart' - lib\features\avatar\domain\usecases\get_avatars.dart:7:8 - uri_does_not_exist
+  error - The name 'Failure' isn't a type, so it can't be used as a type argument - lib\features\avatar\domain\usecases\get_avatars.dart:16:17 - non_type_as_type_argument
+  error - The property 'message' can't be unconditionally accessed because the receiver can be 'null' - lib\features\avatar\presentation\bloc\avatar_bloc.dart:51:31 - unchecked_use_of_nullable_value
+  error - The property 'message' can't be unconditionally accessed because the receiver can be 'null' - lib\features\avatar\presentation\bloc\avatar_bloc.dart:72:31 - unchecked_use_of_nullable_value
+  error - The property 'message' can't be unconditionally accessed because the receiver can be 'null' - lib\features\avatar\presentation\bloc\avatar_bloc.dart:110:31 - unchecked_use_of_nullable_value
+  error - The method 'withValues' isn't defined for the type 'Color' - lib\features\avatar\presentation\pages\avatar_gallery_page.dart:80:52 - undefined_method
+  error - The method 'withValues' isn't defined for the type 'Color' - lib\features\avatar\presentation\pages\avatar_gallery_page.dart:252:33 - undefined_method
+  error - The method 'withValues' isn't defined for the type 'Color' - lib\features\avatar\presentation\pages\avatar_gallery_page.dart:258:35 - undefined_method
+  error - The method 'withValues' isn't defined for the type 'Color' - lib\features\avatar\presentation\pages\avatar_viewer_page.dart:152:46 - undefined_method
+  error - The named parameter 'onLoad' isn't defined - lib\features\avatar\presentation\widgets\avatar_3d_viewer.dart:84:7 - undefined_named_parameter
+  error - The named parameter 'onError' isn't defined - lib\features\avatar\presentation\widgets\avatar_3d_viewer.dart:92:7 - undefined_named_parameter
+  error - The method 'resetCamera' isn't defined for the type 'Flutter3DController' - lib\features\avatar\presentation\widgets\avatar_3d_viewer.dart:179:27 - undefined_method
+  error - The method 'withValues' isn't defined for the type 'Color' - lib\features\avatar\presentation\widgets\avatar_3d_viewer.dart:253:23 - undefined_method
+  error - The method 'withValues' isn't defined for the type 'Color' - lib\features\avatar\presentation\widgets\avatar_card.dart:88:45 - undefined_method
+  error - The method 'withValues' isn't defined for the type 'Color' - lib\features\avatar\presentation\widgets\avatar_card.dart:139:33 - undefined_method
+  error - The method 'withValues' isn't defined for the type 'Color' - lib\features\avatar\presentation\widgets\avatar_controls.dart:110:45 - undefined_method
+  error - The method 'withValues' isn't defined for the type 'Color' - lib\features\avatar\presentation\widgets\bone_visualization.dart:117:24 - undefined_method
+  error - The method 'withValues' isn't defined for the type 'Color' - lib\features\avatar\presentation\widgets\bone_visualization.dart:119:43 - undefined_method
+  error - The method 'withValues' isn't defined for the type 'Color' - lib\features\avatar\presentation\widgets\bone_visualization.dart:135:30 - undefined_method
+
+flutter.bat : 29 issues found. (ran in 12.9s)
+In riga:1 car:81
++ ... utter_app'; & 'C:\flutter\bin\flutter.bat' analyze lib/features/avata ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (29 issues found. (ran in 12.9s):String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 

@@ -1,0 +1,151 @@
+{
+  "metadata": {
+    "created": "2025-01-10",
+    "project": "Media Center Arti Marziali",
+    "session": "Fix PostgreSQL + ENUM + Schema",
+    "result": "29 passed, 1 skipped"
+  },
+  "errors_resolved": [
+    {
+      "id": "ERR-010",
+      "severity": "CRITICAL",
+      "category": "database",
+      "error_message": "Docker container mcam-postgres blocca porta 5432",
+      "root_cause": "Docker Desktop con container PostgreSQL attivo impedisce connessione a PostgreSQL locale Windows",
+      "symptoms": [
+        "Timeout su login endpoint",
+        "Backend parte ma query falliscono",
+        "netstat mostra porta 5432 usata da Docker"
+      ],
+      "solution": {
+        "steps": [
+          "Chiudere Docker Desktop",
+          "PowerShell Admin: net start postgresql-x64-15",
+          "Verificare: psql -U martial_user -d martial_arts_db -c '\\dt'"
+        ]
+      },
+      "prevention": "Documentare nel README se usare Docker o PostgreSQL locale. Mai entrambi."
+    },
+    {
+      "id": "ERR-011",
+      "severity": "HIGH",
+      "category": "schema",
+      "error_message": "la colonna users.tier non esiste",
+      "root_cause": "Model User ha colonne nuove non presenti in PostgreSQL",
+      "symptoms": [
+        "500 Internal Server Error su login",
+        "UndefinedColumnError in log"
+      ],
+      "solution": {
+        "steps": [
+          "Creare migrazione SQL con colonne mancanti",
+          "Eseguire: psql -U martial_user -d martial_arts_db -f migrations/add_user_columns.sql"
+        ],
+        "columns_added": [
+          "tier (usertier ENUM)",
+          "subscription_end",
+          "auto_renew",
+          "stripe_customer_id",
+          "ads_unlocked_videos",
+          "ads_unlock_valid_until",
+          "language_preference",
+          "subtitle_preference",
+          "quality_preference",
+          "last_seen"
+        ]
+      },
+      "prevention": "Usare Alembic per migrazioni automatiche"
+    },
+    {
+      "id": "ERR-012",
+      "severity": "CRITICAL",
+      "category": "enum",
+      "error_message": "'premium' is not among the defined enum values",
+      "root_cause": "PostgreSQL ENUM usertier ha valori lowercase, SQLAlchemy invia uppercase",
+      "symptoms": [
+        "LookupError su login",
+        "KeyError: 'premium'"
+      ],
+      "solution": {
+        "file": "models/user.py",
+        "before": "tier = Column(Enum(UserTier), default=UserTier.FREE, nullable=False, index=True)",
+        "after": "tier = Column(Enum(UserTier, values_callable=lambda x: [e.value for e in x], name='usertier', create_type=False), default=UserTier.FREE, nullable=False, index=True)"
+      },
+      "prevention": "Sempre usare values_callable per ENUM esistenti in PostgreSQL"
+    },
+    {
+      "id": "ERR-013",
+      "severity": "HIGH",
+      "category": "schema",
+      "error_message": "la colonna ads_sessions.status non esiste",
+      "root_cause": "Tabella ads_sessions non ha colonna status richiesta dal codice",
+      "symptoms": [
+        "500 su /api/v1/special-projects/my-eligibility",
+        "UndefinedColumnError: ads_sessions.status"
+      ],
+      "solution": {
+        "sql": "CREATE TYPE adssessionstatus AS ENUM ('active', 'completed', 'abandoned', 'failed'); ALTER TABLE ads_sessions ADD COLUMN status adssessionstatus NOT NULL DEFAULT 'active';"
+      },
+      "prevention": "Verificare schema DB vs models prima di deploy"
+    },
+    {
+      "id": "ERR-014",
+      "severity": "CRITICAL",
+      "category": "enum",
+      "error_message": "la sintassi per l'enumerazione adssessionstatus non è valida: 'COMPLETED'",
+      "root_cause": "SQLAlchemy invia nome ENUM (COMPLETED) invece di valore (completed)",
+      "symptoms": [
+        "InvalidTextRepresentationError",
+        "500 su eligibility check"
+      ],
+      "solution": {
+        "file": "models/ads.py",
+        "line": 94,
+        "before": "status = Column(Enum(AdsSessionStatus), default=AdsSessionStatus.ACTIVE, nullable=False)",
+        "after": "status = Column(Enum(AdsSessionStatus, values_callable=lambda x: [e.value for e in x], name='adssessionstatus', create_type=False), default=AdsSessionStatus.ACTIVE, nullable=False)"
+      },
+      "prevention": "Pattern standard: ogni Enum con DB esistente usa values_callable"
+    },
+    {
+      "id": "ERR-015",
+      "severity": "MEDIUM",
+      "category": "relationship",
+      "error_message": "Mapper[Video(videos)] has no property 'user_progress'",
+      "root_cause": "UserVideo ha back_populates='video' ma Video non ha relationship corrispondente",
+      "symptoms": [
+        "Errore all'avvio SQLAlchemy",
+        "InvalidRequestError"
+      ],
+      "solution": {
+        "file": "models/video.py",
+        "add": "user_progress = relationship('UserVideo', back_populates='video')"
+      },
+      "prevention": "Ogni back_populates richiede relationship bidirezionale"
+    }
+  ],
+  "commands_reference": {
+    "start_postgresql": "net start postgresql-x64-15",
+    "stop_postgresql": "net stop postgresql-x64-15",
+    "check_port": "netstat -ano | findstr :5432",
+    "psql_connect": "psql -U martial_user -d martial_arts_db",
+    "list_enums": "SELECT typname FROM pg_type WHERE typtype = 'e';",
+    "describe_table": "\\d table_name",
+    "run_tests": "python -m pytest tests/real/ -v --tb=short",
+    "start_backend": "python -m uvicorn main:app --host 0.0.0.0 --port 8000 --reload"
+  },
+  "patterns_learned": {
+    "enum_fix_pattern": {
+      "description": "Fix ENUM case mismatch SQLAlchemy + PostgreSQL esistente",
+      "template": "Column(Enum(EnumClass, values_callable=lambda x: [e.value for e in x], name='enumname', create_type=False), ...)"
+    },
+    "transaction_aborted": {
+      "description": "Errore 'transazione corrente è interrotta' indica errore precedente",
+      "action": "Riavviare backend per pulire connessioni, guardare log per errore originale"
+    }
+  },
+  "test_results": {
+    "royalties": "11/12 (1 skip by design - PUT /admin/config not implemented)",
+    "special_projects": "18/18",
+    "total": "29 passed, 1 skipped"
+  }
+}

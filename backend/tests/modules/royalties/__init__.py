@@ -1,0 +1,1 @@
+"""Royalties module tests."""

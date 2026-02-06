@@ -1,0 +1,188 @@
+{
+  "metadata": {
+    "project": "Media Center Arti Marziali",
+    "created_at": "2025-01-09T18:00:00Z",
+    "last_updated": "2025-01-09T18:00:00Z",
+    "version": "1.0.0",
+    "purpose": "AI-First error tracking per manutenzione automatica",
+    "session": "Fix SQLAlchemy relationships, ENUM PostgreSQL, FastAPI routing"
+  },
+
+  "errors": [
+    {
+      "id": "ERR-001",
+      "date": "2025-01-09",
+      "category": "SQLAlchemy",
+      "subcategory": "Relationships",
+      "severity": "CRITICAL",
+      "title": "SQLAlchemy Relationships Rotte - back_populates orfani",
+      "symptom": "Endpoint admin ritorna 403 Forbidden nonostante is_admin=True, debug logging mai chiamato",
+      "root_cause": "Relazioni commentate in User model ma altri modelli avevano ancora back_populates attivi che puntavano a relazioni morte. SQLAlchemy falliva durante inizializzazione PRIMA del codice auth.",
+      "error_message": "403 Forbidden (silenzioso, nessun log)",
+      "files_affected": [
+        "models/user.py",
+        "models/payment.py",
+        "models/communication.py",
+        "models/user_video.py"
+      ],
+      "solution": {
+        "description": "Rimuovere back_populates da tutti i modelli che puntano a relazioni commentate in User",
+        "code_changes": [
+          {
+            "file": "models/payment.py",
+            "before": "user = relationship(\"User\", back_populates=\"payments\")",
+            "after": "user = relationship(\"User\")"
+          },
+          {
+            "file": "models/communication.py",
+            "before": "from_user = relationship(\"User\", foreign_keys=[from_user_id], back_populates=\"sent_messages\")",
+            "after": "from_user = relationship(\"User\", foreign_keys=[from_user_id])"
+          }
+        ]
+      },
+      "prevention": "Prima di commentare relazioni, cercare chi le usa: grep -r 'back_populates=' models/ | grep 'NOME_RELAZIONE'",
+      "search_command": "grep -r 'back_populates=' models/ | grep -i user",
+      "time_to_debug": "4 ore",
+      "time_saved_future": "4 ore"
+    },
+    {
+      "id": "ERR-002",
+      "date": "2025-01-09",
+      "category": "PostgreSQL",
+      "subcategory": "ENUM Types",
+      "severity": "CRITICAL",
+      "title": "ENUM PostgreSQL incompatibile con asyncpg",
+      "symptom": "500 Internal Server Error su tutti gli endpoint, InvalidTextRepresentationError",
+      "root_cause": "SQLAlchemy passa valori UPPERCASE (DRAFT, ACTIVE) ma PostgreSQL ENUM richiede lowercase. Anche native_enum=False non risolve perché genera cast ::enum_type",
+      "error_message": "InvalidTextRepresentationError: la sintassi per l'enumerazione project_status non è valida: \"DRAFT\"",
+      "files_affected": [
+        "modules/special_projects/models.py",
+        "modules/royalties/models.py"
+      ],
+      "solution": {
+        "description": "Rimuovere completamente SQLEnum e usare String(50)",
+        "code_changes": [
+          {
+            "file": "models.py",
+            "before": "from sqlalchemy import Enum as SQLEnum\nstatus = Column(SQLEnum(ProjectStatus, name='project_status'), default=ProjectStatus.DRAFT)",
+            "after": "status = Column(String(50), default=ProjectStatus.DRAFT.value)"
+          }
+        ],
+        "sql_cleanup": [
+          "DROP TABLE IF EXISTS special_projects CASCADE;",
+          "DROP TYPE IF EXISTS project_status;",
+          "DROP TYPE IF EXISTS eligibility_status;"
+        ]
+      },
+      "prevention": "MAI usare SQLEnum con PostgreSQL async (asyncpg). Usare sempre String(50) con validazione Pydantic",
+      "time_to_debug": "3 ore",
+      "time_saved_future": "3 ore"
+    },
+    {
+      "id": "ERR-003",
+      "date": "2025-01-09",
+      "category": "FastAPI",
+      "subcategory": "Routing",
+      "severity": "HIGH",
+      "title": "FastAPI Route Ordering - parametri dinamici intercettano route specifiche",
+      "symptom": "Endpoint /my-eligibility, /my-vote ritornano 422 Unprocessable Entity con 'value is not a valid uuid'",
+      "root_cause": "FastAPI matcha route nell'ordine di definizione. /{project_id} definito prima di /my-eligibility cattura tutto",
+      "error_message": "422 Unprocessable Entity: value is not a valid uuid",
+      "files_affected": [
+        "modules/special_projects/router.py"
+      ],
+      "solution": {
+        "description": "Definire route specifiche PRIMA delle route con parametri dinamici",
+        "code_pattern": {
+          "correct_order": [
+            "@router.get(\"/health\")           # 1. Static paths",
+            "@router.get(\"/my-eligibility\")   # 2. Specific paths",
+            "@router.get(\"/my-vote\")",
+            "@router.get(\"/slug/{slug}\")      # 3. Paths con parametri specifici",
+            "@router.get(\"/{project_id}\")     # 4. Catch-all ULTIMO!"
+          ]
+        }
+      },
+      "prevention": "Aggiungere commento: # ⚠️ NOTE: Specific routes MUST come BEFORE /{param} routes!",
+      "time_to_debug": "30 minuti",
+      "time_saved_future": "1 ora"
+    },
+    {
+      "id": "ERR-004",
+      "date": "2025-01-09",
+      "category": "Python",
+      "subcategory": "Type Mismatch",
+      "severity": "MEDIUM",
+      "title": "AttributeError .value dopo migrazione ENUM → VARCHAR",
+      "symptom": "500 Internal Server Error dopo migrazione, AttributeError: 'str' object has no attribute 'value'",
+      "root_cause": "Dopo cambio da ENUM a VARCHAR, la colonna è stringa, non enum. Codice ancora usava .value",
+      "error_message": "AttributeError: 'str' object has no attribute 'value'",
+      "solution": {
+        "description": "Rimuovere .value da tutti gli accessi alla colonna",
+        "code_changes": [
+          {
+            "before": "status = EligibilityStatusEnum(eligibility.status.value)",
+            "after": "status = EligibilityStatusEnum(eligibility.status)"
+          }
+        ]
+      },
+      "prevention": "Dopo migrazione ENUM → VARCHAR: grep -r '\\.status\\.value' modules/",
+      "search_command": "grep -r '\\.status\\.value' modules/",
+      "time_to_debug": "15 minuti",
+      "time_saved_future": "30 minuti"
+    },
+    {
+      "id": "ERR-005",
+      "date": "2025-01-09",
+      "category": "SQLAlchemy",
+      "subcategory": "Query Optimization",
+      "severity": "MEDIUM",
+      "title": "SQLAlchemy carica tutte le relazioni di default",
+      "symptom": "get_current_user fallisce silenziosamente, errori di relazione durante query semplici",
+      "root_cause": "SQLAlchemy carica tutte le relazioni di default, incluse quelle rotte",
+      "solution": {
+        "description": "Usare load_only() per caricare solo i campi necessari",
+        "code_pattern": "from sqlalchemy.orm import load_only\n\nresult = await db.execute(\n    select(User).options(\n        load_only(User.id, User.email, User.username, User.hashed_password, User.is_admin, User.is_active)\n    ).where(...)\n)"
+      },
+      "prevention": "Usare sempre load_only() per query auth/security",
+      "time_to_debug": "1 ora",
+      "time_saved_future": "1 ora"
+    }
+  ],
+
+  "patterns_learned": [
+    {
+      "id": "PATTERN-001",
+      "category": "SQLAlchemy",
+      "title": "Gestione back_populates",
+      "rule": "Se commenti una relazione in Model A, DEVI rimuovere back_populates in TUTTI i modelli che la referenziano"
+    },
+    {
+      "id": "PATTERN-002",
+      "category": "PostgreSQL",
+      "title": "ENUM con asyncpg",
+      "rule": "Mai usare SQLEnum con asyncpg. Usa String(50) + validazione Pydantic"
+    },
+    {
+      "id": "PATTERN-003",
+      "category": "FastAPI",
+      "title": "Route Ordering",
+      "rule": "Route specifiche PRIMA, parametri dinamici DOPO: /health → /my-vote → /{id}"
+    },
+    {
+      "id": "PATTERN-004",
+      "category": "Database",
+      "title": "Migrazione colonne",
+      "rule": "Dopo cambio tipo colonna, cercare e aggiornare tutti gli accessi nel codice Python"
+    }
+  ],
+
+  "statistics": {
+    "session_date": "2025-01-09",
+    "debug_time_hours": 9,
+    "errors_resolved": 5,
+    "tests_before": {"passed": 11, "total": 30, "pass_rate": "37%"},
+    "tests_after": {"passed": 18, "total": 18, "pass_rate": "100%"},
+    "time_saved_future_hours": 10
+  }
+}

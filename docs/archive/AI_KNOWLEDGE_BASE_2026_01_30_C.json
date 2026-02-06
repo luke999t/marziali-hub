@@ -1,0 +1,192 @@
+{
+  "report_id": "BUG_FIX_2026_01_30_C",
+  "project": "Media Center Arti Marziali",
+  "date": "2026-01-30",
+  "severity": "CRITICAL",
+  "status": "DOCUMENTED",
+  
+  "bugs_fixed": [
+    {
+      "id": "BUG_006",
+      "title": "Webpack Factory Crash - TypeError undefined call",
+      "severity": "CRITICAL",
+      "symptom": "TypeError: Cannot read properties of undefined (reading 'call') at webpack.js:715:31",
+      "root_cause": "Frontend API calls to non-existent or non-loading backend endpoints cause React lazy component crash",
+      "affected_files": [
+        "frontend/src/app/special-projects/page.tsx",
+        "frontend/src/app/donations/page.tsx",
+        "frontend/src/app/page.tsx"
+      ],
+      "network_errors": [
+        {
+          "url": "localhost:8000/special-projects/votable",
+          "status": 404,
+          "reason": "Backend module not loaded or import error"
+        },
+        {
+          "url": "localhost:3100/donations",
+          "status": 503,
+          "reason": "SSR failure due to API error"
+        },
+        {
+          "url": "localhost:3100/special-projects",
+          "status": 503,
+          "reason": "SSR failure due to API error"
+        }
+      ],
+      "fix_description": "Added robust error handling with fallback UI, fixed port from 8100 to 8000, made stats loading non-blocking",
+      "verification": [
+        "Frontend loads without crash",
+        "Pages show fallback UI if API unavailable",
+        "No TypeError in console"
+      ]
+    }
+  ],
+  
+  "patterns_identified": [
+    {
+      "id": "PATTERN_C1",
+      "name": "API Endpoint Non Esistente",
+      "trigger": "404 Not Found on API call",
+      "root_cause": "Frontend developed before backend implementation",
+      "solution": "Add fallback with default data, never crash on API failure, show user-friendly message",
+      "prevention": "Verify backend endpoints exist before frontend integration"
+    },
+    {
+      "id": "PATTERN_C2",
+      "name": "Wrong Backend Port",
+      "trigger": "Connection refused or CORS error",
+      "root_cause": "Hardcoded wrong port or missing .env configuration",
+      "solution": "Always use environment variable with correct fallback: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'",
+      "prevention": "Centralize API config, never hardcode ports"
+    },
+    {
+      "id": "PATTERN_C3",
+      "name": "React Lazy Component Crash",
+      "trigger": "Cannot read properties of undefined (reading 'call')",
+      "root_cause": "Component receives undefined props from failed API",
+      "solution": "Wrap in ErrorBoundary, validate data before passing to components, use optional chaining",
+      "prevention": "Always validate API response data, provide default values"
+    }
+  ],
+  
+  "backend_modules_status": {
+    "special_projects": {
+      "path": "/api/v1/special-projects/*",
+      "exists": true,
+      "loads": "UNKNOWN",
+      "note": "Module exists but may have import errors preventing load"
+    },
+    "donations": {
+      "path": "/api/v1/donations/*",
+      "exists": false,
+      "loads": false,
+      "note": "MODULE DOES NOT EXIST - Frontend calls non-existent endpoint"
+    },
+    "library": {
+      "path": "/api/v1/library/*",
+      "exists": true,
+      "loads": true,
+      "note": "Working"
+    },
+    "auth": {
+      "path": "/api/v1/auth/*",
+      "exists": true,
+      "loads": true,
+      "note": "Working"
+    }
+  },
+  
+  "frontend_api_issues": [
+    {
+      "file": "frontend/src/app/donations/page.tsx",
+      "line": 37,
+      "issue": "Wrong port 8100 instead of 8000",
+      "endpoint_called": "/api/v1/donations/wallet",
+      "backend_exists": false,
+      "fix": "Change port to 8000, add fallback for missing endpoint"
+    },
+    {
+      "file": "frontend/src/app/special-projects/page.tsx",
+      "line": 12,
+      "issue": "Calls /special-projects/votable which may not load",
+      "endpoint_called": "/api/v1/special-projects/votable",
+      "backend_exists": true,
+      "fix": "Add robust error handling with graceful degradation"
+    },
+    {
+      "file": "frontend/src/app/page.tsx",
+      "line": 45,
+      "issue": "Calls non-existent stats endpoints",
+      "endpoints_called": [
+        "/api/library/videos",
+        "/api/streaming/sessions",
+        "/api/studio/stats"
+      ],
+      "fix": "Make stats loading non-blocking, use correct API paths"
+    }
+  ],
+  
+  "verification_commands": {
+    "backend_health": "curl http://localhost:8000/health",
+    "special_projects_health": "curl http://localhost:8000/api/v1/special-projects/health",
+    "special_projects_votable": "curl http://localhost:8000/api/v1/special-projects/votable",
+    "frontend_home": "curl http://localhost:3100",
+    "frontend_donations": "curl http://localhost:3100/donations",
+    "frontend_special_projects": "curl http://localhost:3100/special-projects"
+  },
+  
+  "agent_instructions": {
+    "when_webpack_crash": [
+      "1. Check browser Network tab for 404/500/503 errors",
+      "2. Identify which API endpoint is failing",
+      "3. Verify backend module loads (check startup logs)",
+      "4. If endpoint doesn't exist: add fallback UI in frontend",
+      "5. If endpoint exists but fails: fix backend import/logic",
+      "6. Always add try-catch around fetch calls",
+      "7. Never let API failure crash the entire React tree"
+    ],
+    "when_port_mismatch": [
+      "1. Check frontend API_BASE configuration",
+      "2. Verify backend running port (default 8000)",
+      "3. Update frontend to use environment variable",
+      "4. Test with: curl http://localhost:8000/health"
+    ],
+    "when_module_not_loading": [
+      "1. Check backend startup logs for [ERROR] or [WARNING]",
+      "2. Look for import errors in the module",
+      "3. Verify all dependencies installed",
+      "4. Test module health endpoint if available",
+      "5. Try loading module manually in Python REPL"
+    ]
+  },
+  
+  "impact": {
+    "before": "App completely crashed with white screen on all pages",
+    "after": "App works with graceful degradation if APIs unavailable",
+    "resilience": "Frontend degrades gracefully when backend partially available"
+  },
+  
+  "recommendations": {
+    "immediate": [
+      "Verify backend loads all modules at startup",
+      "Implement /api/v1/donations/* endpoints if needed",
+      "Add health check page in frontend"
+    ],
+    "long_term": [
+      "Create mock server for independent frontend development",
+      "Implement retry logic with exponential backoff",
+      "Add Sentry monitoring for 404/503 errors"
+    ]
+  },
+  
+  "metadata": {
+    "created_by": "Claude AI",
+    "created_at": "2026-01-30T22:45:00Z",
+    "version": "1.0.0",
+    "related_reports": [
+      "BUG_FIX_REPORT_2026_01_30_B.md",
+      "AI_KNOWLEDGE_BASE_2026_01_30_B.json"
+    ]
+  }
+}

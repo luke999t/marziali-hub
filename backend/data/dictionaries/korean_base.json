@@ -1,0 +1,1418 @@
+{
+  "version": "1.0.0",
+  "language": "ko",
+  "language_name": "Korean",
+  "description": "Korean martial arts terminology dictionary for translation services",
+  "romanization_system": "Revised Romanization of Korean",
+  "last_updated": "2024-12-04",
+  "categories": {
+    "title_rank": "Titles and Ranks",
+    "dojang": "Training Hall and Etiquette",
+    "command": "Commands",
+    "number": "Numbers (Sino-Korean)",
+    "native_number": "Numbers (Native Korean)",
+    "body_part": "Body Parts",
+    "stance": "Stances",
+    "block": "Blocks",
+    "punch": "Punches and Strikes",
+    "kick": "Kicks",
+    "form": "Forms (Poomsae/Hyeong)",
+    "philosophy": "Philosophy and Principles",
+    "competition": "Competition Terms",
+    "training": "Training Methods"
+  },
+  "terms": [
+    {
+      "id": "sabomnim",
+      "original": "사범님",
+      "romanization": "sabomnim",
+      "translations": {
+        "it": "maestro",
+        "en": "master instructor"
+      },
+      "category": "title_rank",
+      "art": ["taekwondo", "hapkido", "tang_soo_do"],
+      "notes": "Respectful title for instructor (4th dan and above)"
+    },
+    {
+      "id": "gwanjangnim",
+      "original": "관장님",
+      "romanization": "gwanjangnim",
+      "translations": {
+        "it": "gran maestro, direttore",
+        "en": "grandmaster, school owner"
+      },
+      "category": "title_rank",
+      "art": ["taekwondo", "hapkido"],
+      "notes": "School owner/head master"
+    },
+    {
+      "id": "seonsaengnim",
+      "original": "선생님",
+      "romanization": "seonsaengnim",
+      "translations": {
+        "it": "insegnante",
+        "en": "teacher"
+      },
+      "category": "title_rank",
+      "art": ["taekwondo", "hapkido"],
+      "notes": "General respectful term for teacher"
+    },
+    {
+      "id": "sunbae",
+      "original": "선배",
+      "romanization": "sunbae",
+      "translations": {
+        "it": "anziano, senior",
+        "en": "senior student"
+      },
+      "category": "title_rank",
+      "art": ["taekwondo", "hapkido"],
+      "notes": "Senior student"
+    },
+    {
+      "id": "hubae",
+      "original": "후배",
+      "romanization": "hubae",
+      "translations": {
+        "it": "junior",
+        "en": "junior student"
+      },
+      "category": "title_rank",
+      "art": ["taekwondo", "hapkido"],
+      "notes": "Junior student"
+    },
+    {
+      "id": "dan",
+      "original": "단",
+      "romanization": "dan",
+      "translations": {
+        "it": "grado (cintura nera)",
+        "en": "degree (black belt)"
+      },
+      "category": "title_rank",
+      "art": ["taekwondo", "hapkido", "tang_soo_do"],
+      "notes": "Black belt rank"
+    },
+    {
+      "id": "geup",
+      "original": "급",
+      "romanization": "geup",
+      "translations": {
+        "it": "grado (prima della cintura nera)",
+        "en": "grade (before black belt)"
+      },
+      "category": "title_rank",
+      "art": ["taekwondo", "hapkido"],
+      "notes": "Color belt rank (counts down)"
+    },
+    {
+      "id": "yudan",
+      "original": "유단자",
+      "romanization": "yudanja",
+      "translations": {
+        "it": "possessore di dan",
+        "en": "dan holder, black belt"
+      },
+      "category": "title_rank",
+      "art": ["taekwondo", "hapkido"],
+      "notes": "Person holding a dan rank"
+    },
+    {
+      "id": "dojang",
+      "original": "도장",
+      "romanization": "dojang",
+      "translations": {
+        "it": "palestra, sala di pratica",
+        "en": "training hall"
+      },
+      "category": "dojang",
+      "art": ["taekwondo", "hapkido", "tang_soo_do"],
+      "notes": "Place of training"
+    },
+    {
+      "id": "dobok",
+      "original": "도복",
+      "romanization": "dobok",
+      "translations": {
+        "it": "uniforme",
+        "en": "uniform"
+      },
+      "category": "dojang",
+      "art": ["taekwondo", "hapkido"],
+      "notes": "Training uniform"
+    },
+    {
+      "id": "tti",
+      "original": "띠",
+      "romanization": "tti",
+      "translations": {
+        "it": "cintura",
+        "en": "belt"
+      },
+      "category": "dojang",
+      "art": ["taekwondo", "hapkido"],
+      "notes": "Belt"
+    },
+    {
+      "id": "gyeongnye",
+      "original": "경례",
+      "romanization": "gyeongnye",
+      "translations": {
+        "it": "saluto",
+        "en": "bow"
+      },
+      "category": "dojang",
+      "art": ["taekwondo", "hapkido"],
+      "notes": "Command to bow"
+    },
+    {
+      "id": "charyeot",
+      "original": "차렷",
+      "romanization": "charyeot",
+      "translations": {
+        "it": "attenti",
+        "en": "attention"
+      },
+      "category": "command",
+      "art": ["taekwondo", "hapkido"],
+      "notes": "Attention stance command"
+    },
+    {
+      "id": "junbi",
+      "original": "준비",
+      "romanization": "junbi",
+      "translations": {
+        "it": "pronti",
+        "en": "ready"
+      },
+      "category": "command",
+      "art": ["taekwondo", "hapkido"],
+      "notes": "Ready command"
+    },
+    {
+      "id": "sijak",
+      "original": "시작",
+      "romanization": "sijak",
+      "translations": {
+        "it": "inizio, via",
+        "en": "begin, start"
+      },
+      "category": "command",
+      "art": ["taekwondo", "hapkido"],
+      "notes": "Start command"
+    },
+    {
+      "id": "guman",
+      "original": "그만",
+      "romanization": "guman",
+      "translations": {
+        "it": "stop, basta",
+        "en": "stop"
+      },
+      "category": "command",
+      "art": ["taekwondo", "hapkido"],
+      "notes": "Stop command"
+    },
+    {
+      "id": "baro",
+      "original": "바로",
+      "romanization": "baro",
+      "translations": {
+        "it": "ritorno",
+        "en": "return to ready"
+      },
+      "category": "command",
+      "art": ["taekwondo", "hapkido"],
+      "notes": "Return to ready position"
+    },
+    {
+      "id": "swio",
+      "original": "쉬어",
+      "romanization": "swieo",
+      "translations": {
+        "it": "riposo",
+        "en": "at ease, rest"
+      },
+      "category": "command",
+      "art": ["taekwondo", "hapkido"],
+      "notes": "At ease command"
+    },
+    {
+      "id": "dwiro_dora",
+      "original": "뒤로 돌아",
+      "romanization": "dwiro dora",
+      "translations": {
+        "it": "dietro front",
+        "en": "about face"
+      },
+      "category": "command",
+      "art": ["taekwondo", "hapkido"],
+      "notes": "Turn around command"
+    },
+    {
+      "id": "kiap",
+      "original": "기합",
+      "romanization": "kihap",
+      "translations": {
+        "it": "grido, urlo di potenza",
+        "en": "spirit yell"
+      },
+      "category": "command",
+      "art": ["taekwondo", "hapkido"],
+      "notes": "Spirit shout/yell"
+    },
+    {
+      "id": "hana",
+      "original": "하나",
+      "romanization": "hana",
+      "translations": {
+        "it": "uno",
+        "en": "one"
+      },
+      "category": "native_number",
+      "art": ["taekwondo"],
+      "notes": "Native Korean counting"
+    },
+    {
+      "id": "dul",
+      "original": "둘",
+      "romanization": "dul",
+      "translations": {
+        "it": "due",
+        "en": "two"
+      },
+      "category": "native_number",
+      "art": ["taekwondo"],
+      "notes": "Native Korean counting"
+    },
+    {
+      "id": "set",
+      "original": "셋",
+      "romanization": "set",
+      "translations": {
+        "it": "tre",
+        "en": "three"
+      },
+      "category": "native_number",
+      "art": ["taekwondo"],
+      "notes": "Native Korean counting"
+    },
+    {
+      "id": "net",
+      "original": "넷",
+      "romanization": "net",
+      "translations": {
+        "it": "quattro",
+        "en": "four"
+      },
+      "category": "native_number",
+      "art": ["taekwondo"],
+      "notes": "Native Korean counting"
+    },
+    {
+      "id": "daseot",
+      "original": "다섯",
+      "romanization": "daseot",
+      "translations": {
+        "it": "cinque",
+        "en": "five"
+      },
+      "category": "native_number",
+      "art": ["taekwondo"],
+      "notes": "Native Korean counting"
+    },
+    {
+      "id": "yeoseot",
+      "original": "여섯",
+      "romanization": "yeoseot",
+      "translations": {
+        "it": "sei",
+        "en": "six"
+      },
+      "category": "native_number",
+      "art": ["taekwondo"],
+      "notes": "Native Korean counting"
+    },
+    {
+      "id": "ilgop",
+      "original": "일곱",
+      "romanization": "ilgop",
+      "translations": {
+        "it": "sette",
+        "en": "seven"
+      },
+      "category": "native_number",
+      "art": ["taekwondo"],
+      "notes": "Native Korean counting"
+    },
+    {
+      "id": "yeodeol",
+      "original": "여덟",
+      "romanization": "yeodeol",
+      "translations": {
+        "it": "otto",
+        "en": "eight"
+      },
+      "category": "native_number",
+      "art": ["taekwondo"],
+      "notes": "Native Korean counting"
+    },
+    {
+      "id": "ahop",
+      "original": "아홉",
+      "romanization": "ahop",
+      "translations": {
+        "it": "nove",
+        "en": "nine"
+      },
+      "category": "native_number",
+      "art": ["taekwondo"],
+      "notes": "Native Korean counting"
+    },
+    {
+      "id": "yeol",
+      "original": "열",
+      "romanization": "yeol",
+      "translations": {
+        "it": "dieci",
+        "en": "ten"
+      },
+      "category": "native_number",
+      "art": ["taekwondo"],
+      "notes": "Native Korean counting"
+    },
+    {
+      "id": "il",
+      "original": "일",
+      "romanization": "il",
+      "translations": {
+        "it": "uno (sino-coreano)",
+        "en": "one (Sino-Korean)"
+      },
+      "category": "number",
+      "art": ["taekwondo"],
+      "notes": "Sino-Korean counting"
+    },
+    {
+      "id": "i",
+      "original": "이",
+      "romanization": "i",
+      "translations": {
+        "it": "due (sino-coreano)",
+        "en": "two (Sino-Korean)"
+      },
+      "category": "number",
+      "art": ["taekwondo"],
+      "notes": "Sino-Korean counting"
+    },
+    {
+      "id": "sam",
+      "original": "삼",
+      "romanization": "sam",
+      "translations": {
+        "it": "tre (sino-coreano)",
+        "en": "three (Sino-Korean)"
+      },
+      "category": "number",
+      "art": ["taekwondo"],
+      "notes": "Sino-Korean counting"
+    },
+    {
+      "id": "sa",
+      "original": "사",
+      "romanization": "sa",
+      "translations": {
+        "it": "quattro (sino-coreano)",
+        "en": "four (Sino-Korean)"
+      },
+      "category": "number",
+      "art": ["taekwondo"],
+      "notes": "Sino-Korean counting"
+    },
+    {
+      "id": "o",
+      "original": "오",
+      "romanization": "o",
+      "translations": {
+        "it": "cinque (sino-coreano)",
+        "en": "five (Sino-Korean)"
+      },
+      "category": "number",
+      "art": ["taekwondo"],
+      "notes": "Sino-Korean counting"
+    },
+    {
+      "id": "yuk",
+      "original": "육",
+      "romanization": "yuk",
+      "translations": {
+        "it": "sei (sino-coreano)",
+        "en": "six (Sino-Korean)"
+      },
+      "category": "number",
+      "art": ["taekwondo"],
+      "notes": "Sino-Korean counting"
+    },
+    {
+      "id": "chil",
+      "original": "칠",
+      "romanization": "chil",
+      "translations": {
+        "it": "sette (sino-coreano)",
+        "en": "seven (Sino-Korean)"
+      },
+      "category": "number",
+      "art": ["taekwondo"],
+      "notes": "Sino-Korean counting"
+    },
+    {
+      "id": "pal",
+      "original": "팔",
+      "romanization": "pal",
+      "translations": {
+        "it": "otto (sino-coreano)",
+        "en": "eight (Sino-Korean)"
+      },
+      "category": "number",
+      "art": ["taekwondo"],
+      "notes": "Sino-Korean counting"
+    },
+    {
+      "id": "gu",
+      "original": "구",
+      "romanization": "gu",
+      "translations": {
+        "it": "nove (sino-coreano)",
+        "en": "nine (Sino-Korean)"
+      },
+      "category": "number",
+      "art": ["taekwondo"],
+      "notes": "Sino-Korean counting"
+    },
+    {
+      "id": "sip",
+      "original": "십",
+      "romanization": "sip",
+      "translations": {
+        "it": "dieci (sino-coreano)",
+        "en": "ten (Sino-Korean)"
+      },
+      "category": "number",
+      "art": ["taekwondo"],
+      "notes": "Sino-Korean counting"
+    },
+    {
+      "id": "meori",
+      "original": "머리",
+      "romanization": "meori",
+      "translations": {
+        "it": "testa",
+        "en": "head"
+      },
+      "category": "body_part",
+      "art": ["taekwondo", "hapkido"],
+      "notes": "Head"
+    },
+    {
+      "id": "eolgul",
+      "original": "얼굴",
+      "romanization": "eolgul",
+      "translations": {
+        "it": "viso",
+        "en": "face"
+      },
+      "category": "body_part",
+      "art": ["taekwondo", "hapkido"],
+      "notes": "Face - high target area"
+    },
+    {
+      "id": "momtong",
+      "original": "몸통",
+      "romanization": "momtong",
+      "translations": {
+        "it": "tronco, corpo",
+        "en": "body, torso"
+      },
+      "category": "body_part",
+      "art": ["taekwondo", "hapkido"],
+      "notes": "Middle target area"
+    },
+    {
+      "id": "arae",
+      "original": "아래",
+      "romanization": "arae",
+      "translations": {
+        "it": "basso",
+        "en": "low, below"
+      },
+      "category": "body_part",
+      "art": ["taekwondo", "hapkido"],
+      "notes": "Low target area"
+    },
+    {
+      "id": "son",
+      "original": "손",
+      "romanization": "son",
+      "translations": {
+        "it": "mano",
+        "en": "hand"
+      },
+      "category": "body_part",
+      "art": ["taekwondo", "hapkido"],
+      "notes": "Hand"
+    },
+    {
+      "id": "jumeok",
+      "original": "주먹",
+      "romanization": "jumeok",
+      "translations": {
+        "it": "pugno",
+        "en": "fist"
+      },
+      "category": "body_part",
+      "art": ["taekwondo", "hapkido"],
+      "notes": "Fist"
+    },
+    {
+      "id": "sonnal",
+      "original": "손날",
+      "romanization": "sonnal",
+      "translations": {
+        "it": "taglio della mano",
+        "en": "knife hand"
+      },
+      "category": "body_part",
+      "art": ["taekwondo", "hapkido"],
+      "notes": "Knife hand (outer edge)"
+    },
+    {
+      "id": "sonkkeut",
+      "original": "손끝",
+      "romanization": "sonkkeut",
+      "translations": {
+        "it": "punta delle dita",
+        "en": "fingertips"
+      },
+      "category": "body_part",
+      "art": ["taekwondo", "hapkido"],
+      "notes": "Fingertips"
+    },
+    {
+      "id": "palmok",
+      "original": "팔목",
+      "romanization": "palmok",
+      "translations": {
+        "it": "avambraccio",
+        "en": "forearm"
+      },
+      "category": "body_part",
+      "art": ["taekwondo", "hapkido"],
+      "notes": "Forearm"
+    },
+    {
+      "id": "palkup",
+      "original": "팔꿈치",
+      "romanization": "palkup",
+      "translations": {
+        "it": "gomito",
+        "en": "elbow"
+      },
+      "category": "body_part",
+      "art": ["taekwondo", "hapkido"],
+      "notes": "Elbow"
+    },
+    {
+      "id": "bal",
+      "original": "발",
+      "romanization": "bal",
+      "translations": {
+        "it": "piede",
+        "en": "foot"
+      },
+      "category": "body_part",
+      "art": ["taekwondo", "hapkido"],
+      "notes": "Foot"
+    },
+    {
+      "id": "baldung",
+      "original": "발등",
+      "romanization": "baldung",
+      "translations": {
+        "it": "collo del piede",
+        "en": "instep"
+      },
+      "category": "body_part",
+      "art": ["taekwondo"],
+      "notes": "Top of foot"
+    },
+    {
+      "id": "apchuk",
+      "original": "앞축",
+      "romanization": "apchuk",
+      "translations": {
+        "it": "avampiede",
+        "en": "ball of foot"
+      },
+      "category": "body_part",
+      "art": ["taekwondo"],
+      "notes": "Ball of foot"
+    },
+    {
+      "id": "dwichuk",
+      "original": "뒤축",
+      "romanization": "dwichuk",
+      "translations": {
+        "it": "tallone",
+        "en": "heel"
+      },
+      "category": "body_part",
+      "art": ["taekwondo"],
+      "notes": "Heel"
+    },
+    {
+      "id": "balnal",
+      "original": "발날",
+      "romanization": "balnal",
+      "translations": {
+        "it": "taglio del piede",
+        "en": "foot blade"
+      },
+      "category": "body_part",
+      "art": ["taekwondo"],
+      "notes": "Outer edge of foot"
+    },
+    {
+      "id": "mureup",
+      "original": "무릎",
+      "romanization": "mureup",
+      "translations": {
+        "it": "ginocchio",
+        "en": "knee"
+      },
+      "category": "body_part",
+      "art": ["taekwondo", "hapkido"],
+      "notes": "Knee"
+    },
+    {
+      "id": "seogi",
+      "original": "서기",
+      "romanization": "seogi",
+      "translations": {
+        "it": "posizione",
+        "en": "stance"
+      },
+      "category": "stance",
+      "art": ["taekwondo", "hapkido"],
+      "notes": "General term for stance"
+    },
+    {
+      "id": "naranhi_seogi",
+      "original": "나란히 서기",
+      "romanization": "naranhi seogi",
+      "translations": {
+        "it": "posizione parallela",
+        "en": "parallel stance"
+      },
+      "category": "stance",
+      "art": ["taekwondo"],
+      "notes": "Feet parallel, shoulder width"
+    },
+    {
+      "id": "moa_seogi",
+      "original": "모아 서기",
+      "romanization": "moa seogi",
+      "translations": {
+        "it": "posizione chiusa",
+        "en": "closed stance"
+      },
+      "category": "stance",
+      "art": ["taekwondo"],
+      "notes": "Feet together"
+    },
+    {
+      "id": "ap_seogi",
+      "original": "앞서기",
+      "romanization": "ap seogi",
+      "translations": {
+        "it": "posizione frontale",
+        "en": "front stance"
+      },
+      "category": "stance",
+      "art": ["taekwondo"],
+      "notes": "Short front stance"
+    },
+    {
+      "id": "ap_kubi",
+      "original": "앞굽이",
+      "romanization": "ap kubi",
+      "translations": {
+        "it": "posizione lunga avanti",
+        "en": "long front stance"
+      },
+      "category": "stance",
+      "art": ["taekwondo"],
+      "notes": "Long forward stance"
+    },
+    {
+      "id": "dwi_kubi",
+      "original": "뒤굽이",
+      "romanization": "dwi kubi",
+      "translations": {
+        "it": "posizione lunga indietro",
+        "en": "back stance"
+      },
+      "category": "stance",
+      "art": ["taekwondo"],
+      "notes": "Back stance, weight on rear leg"
+    },
+    {
+      "id": "juchum_seogi",
+      "original": "주춤 서기",
+      "romanization": "juchum seogi",
+      "translations": {
+        "it": "posizione del cavaliere",
+        "en": "horse stance"
+      },
+      "category": "stance",
+      "art": ["taekwondo"],
+      "notes": "Horse riding stance"
+    },
+    {
+      "id": "beom_seogi",
+      "original": "범서기",
+      "romanization": "beom seogi",
+      "translations": {
+        "it": "posizione della tigre",
+        "en": "tiger stance"
+      },
+      "category": "stance",
+      "art": ["taekwondo"],
+      "notes": "Tiger stance"
+    },
+    {
+      "id": "hakdari_seogi",
+      "original": "학다리 서기",
+      "romanization": "hakdari seogi",
+      "translations": {
+        "it": "posizione della gru",
+        "en": "crane stance"
+      },
+      "category": "stance",
+      "art": ["taekwondo"],
+      "notes": "One-legged crane stance"
+    },
+    {
+      "id": "koa_seogi",
+      "original": "꼬아 서기",
+      "romanization": "koa seogi",
+      "translations": {
+        "it": "posizione incrociata",
+        "en": "cross stance"
+      },
+      "category": "stance",
+      "art": ["taekwondo"],
+      "notes": "Crossed legs stance"
+    },
+    {
+      "id": "makgi",
+      "original": "막기",
+      "romanization": "makgi",
+      "translations": {
+        "it": "parata",
+        "en": "block"
+      },
+      "category": "block",
+      "art": ["taekwondo", "hapkido"],
+      "notes": "General term for block"
+    },
+    {
+      "id": "arae_makgi",
+      "original": "아래 막기",
+      "romanization": "arae makgi",
+      "translations": {
+        "it": "parata bassa",
+        "en": "low block"
+      },
+      "category": "block",
+      "art": ["taekwondo"],
+      "notes": "Downward block"
+    },
+    {
+      "id": "momtong_makgi",
+      "original": "몸통 막기",
+      "romanization": "momtong makgi",
+      "translations": {
+        "it": "parata media",
+        "en": "middle block"
+      },
+      "category": "block",
+      "art": ["taekwondo"],
+      "notes": "Inside-outside block"
+    },
+    {
+      "id": "eolgul_makgi",
+      "original": "얼굴 막기",
+      "romanization": "eolgul makgi",
+      "translations": {
+        "it": "parata alta",
+        "en": "high block"
+      },
+      "category": "block",
+      "art": ["taekwondo"],
+      "notes": "Rising block to face level"
+    },
+    {
+      "id": "sonnal_makgi",
+      "original": "손날 막기",
+      "romanization": "sonnal makgi",
+      "translations": {
+        "it": "parata a mano di coltello",
+        "en": "knife hand block"
+      },
+      "category": "block",
+      "art": ["taekwondo"],
+      "notes": "Knife hand block"
+    },
+    {
+      "id": "batangson_makgi",
+      "original": "바탕손 막기",
+      "romanization": "batangson makgi",
+      "translations": {
+        "it": "parata con il palmo",
+        "en": "palm block"
+      },
+      "category": "block",
+      "art": ["taekwondo"],
+      "notes": "Palm heel block"
+    },
+    {
+      "id": "hecho_makgi",
+      "original": "헤쳐 막기",
+      "romanization": "hecho makgi",
+      "translations": {
+        "it": "parata a cuneo",
+        "en": "wedging block"
+      },
+      "category": "block",
+      "art": ["taekwondo"],
+      "notes": "Spreading block"
+    },
+    {
+      "id": "jirugi",
+      "original": "지르기",
+      "romanization": "jirugi",
+      "translations": {
+        "it": "pugno",
+        "en": "punch"
+      },
+      "category": "punch",
+      "art": ["taekwondo", "hapkido"],
+      "notes": "General term for punch"
+    },
+    {
+      "id": "momtong_jirugi",
+      "original": "몸통 지르기",
+      "romanization": "momtong jirugi",
+      "translations": {
+        "it": "pugno al corpo",
+        "en": "middle punch"
+      },
+      "category": "punch",
+      "art": ["taekwondo"],
+      "notes": "Punch to body"
+    },
+    {
+      "id": "eolgul_jirugi",
+      "original": "얼굴 지르기",
+      "romanization": "eolgul jirugi",
+      "translations": {
+        "it": "pugno al viso",
+        "en": "high punch"
+      },
+      "category": "punch",
+      "art": ["taekwondo"],
+      "notes": "Punch to face"
+    },
+    {
+      "id": "dubeon_jirugi",
+      "original": "두번 지르기",
+      "romanization": "dubeon jirugi",
+      "translations": {
+        "it": "doppio pugno",
+        "en": "double punch"
+      },
+      "category": "punch",
+      "art": ["taekwondo"],
+      "notes": "Double punch"
+    },
+    {
+      "id": "sonnal_chigi",
+      "original": "손날 치기",
+      "romanization": "sonnal chigi",
+      "translations": {
+        "it": "colpo a mano di coltello",
+        "en": "knife hand strike"
+      },
+      "category": "punch",
+      "art": ["taekwondo", "hapkido"],
+      "notes": "Knife hand strike"
+    },
+    {
+      "id": "deungjumeok_chigi",
+      "original": "등주먹 치기",
+      "romanization": "deungjumeok chigi",
+      "translations": {
+        "it": "colpo con il dorso del pugno",
+        "en": "backfist strike"
+      },
+      "category": "punch",
+      "art": ["taekwondo"],
+      "notes": "Backfist strike"
+    },
+    {
+      "id": "palkup_chigi",
+      "original": "팔꿈치 치기",
+      "romanization": "palkup chigi",
+      "translations": {
+        "it": "gomitata",
+        "en": "elbow strike"
+      },
+      "category": "punch",
+      "art": ["taekwondo", "hapkido"],
+      "notes": "Elbow strike"
+    },
+    {
+      "id": "chagi",
+      "original": "차기",
+      "romanization": "chagi",
+      "translations": {
+        "it": "calcio",
+        "en": "kick"
+      },
+      "category": "kick",
+      "art": ["taekwondo", "hapkido"],
+      "notes": "General term for kick"
+    },
+    {
+      "id": "ap_chagi",
+      "original": "앞차기",
+      "romanization": "ap chagi",
+      "translations": {
+        "it": "calcio frontale",
+        "en": "front kick"
+      },
+      "category": "kick",
+      "art": ["taekwondo", "hapkido"],
+      "notes": "Front snap kick"
+    },
+    {
+      "id": "dollyo_chagi",
+      "original": "돌려 차기",
+      "romanization": "dollyo chagi",
+      "translations": {
+        "it": "calcio circolare",
+        "en": "roundhouse kick"
+      },
+      "category": "kick",
+      "art": ["taekwondo"],
+      "notes": "Roundhouse kick"
+    },
+    {
+      "id": "yeop_chagi",
+      "original": "옆차기",
+      "romanization": "yeop chagi",
+      "translations": {
+        "it": "calcio laterale",
+        "en": "side kick"
+      },
+      "category": "kick",
+      "art": ["taekwondo"],
+      "notes": "Side kick"
+    },
+    {
+      "id": "dwi_chagi",
+      "original": "뒤차기",
+      "romanization": "dwi chagi",
+      "translations": {
+        "it": "calcio all'indietro",
+        "en": "back kick"
+      },
+      "category": "kick",
+      "art": ["taekwondo"],
+      "notes": "Back kick"
+    },
+    {
+      "id": "dwi_huryeo_chagi",
+      "original": "뒤후려차기",
+      "romanization": "dwi huryeo chagi",
+      "translations": {
+        "it": "calcio girato a gancio",
+        "en": "spinning hook kick"
+      },
+      "category": "kick",
+      "art": ["taekwondo"],
+      "notes": "Spinning hook kick"
+    },
+    {
+      "id": "naeryeo_chagi",
+      "original": "내려 차기",
+      "romanization": "naeryeo chagi",
+      "translations": {
+        "it": "calcio ad ascia",
+        "en": "axe kick"
+      },
+      "category": "kick",
+      "art": ["taekwondo"],
+      "notes": "Downward axe kick"
+    },
+    {
+      "id": "bandal_chagi",
+      "original": "반달 차기",
+      "romanization": "bandal chagi",
+      "translations": {
+        "it": "calcio a mezzaluna",
+        "en": "crescent kick"
+      },
+      "category": "kick",
+      "art": ["taekwondo"],
+      "notes": "Crescent kick"
+    },
+    {
+      "id": "twio_chagi",
+      "original": "뛰어 차기",
+      "romanization": "twio chagi",
+      "translations": {
+        "it": "calcio in salto",
+        "en": "jumping kick"
+      },
+      "category": "kick",
+      "art": ["taekwondo"],
+      "notes": "Jumping kick (general)"
+    },
+    {
+      "id": "twio_yeop_chagi",
+      "original": "뛰어 옆차기",
+      "romanization": "twio yeop chagi",
+      "translations": {
+        "it": "calcio laterale in salto",
+        "en": "jumping side kick"
+      },
+      "category": "kick",
+      "art": ["taekwondo"],
+      "notes": "Jumping side kick"
+    },
+    {
+      "id": "twio_dollyo_chagi",
+      "original": "뛰어 돌려차기",
+      "romanization": "twio dollyo chagi",
+      "translations": {
+        "it": "calcio circolare in salto",
+        "en": "jumping roundhouse kick"
+      },
+      "category": "kick",
+      "art": ["taekwondo"],
+      "notes": "Jumping roundhouse kick"
+    },
+    {
+      "id": "momdollyo_chagi",
+      "original": "몸돌려 차기",
+      "romanization": "momdollyo chagi",
+      "translations": {
+        "it": "calcio girato",
+        "en": "spinning kick"
+      },
+      "category": "kick",
+      "art": ["taekwondo"],
+      "notes": "Spinning kick (general)"
+    },
+    {
+      "id": "poomsae",
+      "original": "품새",
+      "romanization": "poomsae",
+      "translations": {
+        "it": "forma (WTF)",
+        "en": "form, pattern (WTF)"
+      },
+      "category": "form",
+      "art": ["taekwondo"],
+      "notes": "WTF style forms"
+    },
+    {
+      "id": "hyeong",
+      "original": "형",
+      "romanization": "hyeong",
+      "translations": {
+        "it": "forma (ITF)",
+        "en": "form, pattern (ITF)"
+      },
+      "category": "form",
+      "art": ["taekwondo", "tang_soo_do"],
+      "notes": "ITF style forms"
+    },
+    {
+      "id": "taegeuk",
+      "original": "태극",
+      "romanization": "taegeuk",
+      "translations": {
+        "it": "grande eternità",
+        "en": "great eternity"
+      },
+      "category": "form",
+      "art": ["taekwondo"],
+      "notes": "Basic WTF poomsae series"
+    },
+    {
+      "id": "koryo",
+      "original": "고려",
+      "romanization": "koryo",
+      "translations": {
+        "it": "Koryo (antica Corea)",
+        "en": "Koryo (ancient Korea)"
+      },
+      "category": "form",
+      "art": ["taekwondo"],
+      "notes": "Advanced poomsae - 1st dan"
+    },
+    {
+      "id": "keumgang",
+      "original": "금강",
+      "romanization": "keumgang",
+      "translations": {
+        "it": "diamante",
+        "en": "diamond"
+      },
+      "category": "form",
+      "art": ["taekwondo"],
+      "notes": "Advanced poomsae - 2nd dan"
+    },
+    {
+      "id": "do",
+      "original": "도",
+      "romanization": "do",
+      "translations": {
+        "it": "via, cammino",
+        "en": "way, path"
+      },
+      "category": "philosophy",
+      "art": ["taekwondo", "hapkido"],
+      "notes": "The Way - fundamental concept"
+    },
+    {
+      "id": "taekwondo",
+      "original": "태권도",
+      "romanization": "taekwondo",
+      "translations": {
+        "it": "via del piede e del pugno",
+        "en": "way of foot and fist"
+      },
+      "category": "philosophy",
+      "art": ["taekwondo"],
+      "notes": "Korean martial art name"
+    },
+    {
+      "id": "hapkido",
+      "original": "합기도",
+      "romanization": "hapkido",
+      "translations": {
+        "it": "via dell'energia coordinata",
+        "en": "way of coordinated energy"
+      },
+      "category": "philosophy",
+      "art": ["hapkido"],
+      "notes": "Korean martial art name"
+    },
+    {
+      "id": "tang_soo_do",
+      "original": "당수도",
+      "romanization": "tang soo do",
+      "translations": {
+        "it": "via della mano della Cina",
+        "en": "way of the Chinese hand"
+      },
+      "category": "philosophy",
+      "art": ["tang_soo_do"],
+      "notes": "Korean martial art name"
+    },
+    {
+      "id": "musul",
+      "original": "무술",
+      "romanization": "musul",
+      "translations": {
+        "it": "arti marziali",
+        "en": "martial arts"
+      },
+      "category": "philosophy",
+      "art": ["taekwondo", "hapkido"],
+      "notes": "General term for martial arts"
+    },
+    {
+      "id": "jeongsin",
+      "original": "정신",
+      "romanization": "jeongsin",
+      "translations": {
+        "it": "spirito, mente",
+        "en": "spirit, mind"
+      },
+      "category": "philosophy",
+      "art": ["taekwondo", "hapkido"],
+      "notes": "Spirit/mental aspect"
+    },
+    {
+      "id": "innaeryeok",
+      "original": "인내력",
+      "romanization": "innaeryeok",
+      "translations": {
+        "it": "perseveranza",
+        "en": "perseverance"
+      },
+      "category": "philosophy",
+      "art": ["taekwondo"],
+      "notes": "Tenet: perseverance"
+    },
+    {
+      "id": "yeuui",
+      "original": "예의",
+      "romanization": "ye-ui",
+      "translations": {
+        "it": "cortesia",
+        "en": "courtesy"
+      },
+      "category": "philosophy",
+      "art": ["taekwondo"],
+      "notes": "Tenet: courtesy"
+    },
+    {
+      "id": "yeomchi",
+      "original": "염치",
+      "romanization": "yeomchi",
+      "translations": {
+        "it": "integrità",
+        "en": "integrity"
+      },
+      "category": "philosophy",
+      "art": ["taekwondo"],
+      "notes": "Tenet: integrity"
+    },
+    {
+      "id": "geukgi",
+      "original": "극기",
+      "romanization": "geukgi",
+      "translations": {
+        "it": "autocontrollo",
+        "en": "self-control"
+      },
+      "category": "philosophy",
+      "art": ["taekwondo"],
+      "notes": "Tenet: self-control"
+    },
+    {
+      "id": "baekjeolbulgul",
+      "original": "백절불굴",
+      "romanization": "baekjeolbulgul",
+      "translations": {
+        "it": "spirito indomito",
+        "en": "indomitable spirit"
+      },
+      "category": "philosophy",
+      "art": ["taekwondo"],
+      "notes": "Tenet: indomitable spirit"
+    },
+    {
+      "id": "gyeorugi",
+      "original": "겨루기",
+      "romanization": "gyeorugi",
+      "translations": {
+        "it": "combattimento",
+        "en": "sparring"
+      },
+      "category": "competition",
+      "art": ["taekwondo"],
+      "notes": "Free sparring"
+    },
+    {
+      "id": "hansok",
+      "original": "한속",
+      "romanization": "hansok",
+      "translations": {
+        "it": "attacco singolo",
+        "en": "single attack"
+      },
+      "category": "competition",
+      "art": ["taekwondo"],
+      "notes": "One-step sparring"
+    },
+    {
+      "id": "kyeokpa",
+      "original": "격파",
+      "romanization": "kyeokpa",
+      "translations": {
+        "it": "rottura",
+        "en": "breaking"
+      },
+      "category": "competition",
+      "art": ["taekwondo"],
+      "notes": "Board/brick breaking"
+    },
+    {
+      "id": "hogu",
+      "original": "호구",
+      "romanization": "hogu",
+      "translations": {
+        "it": "corpetto protettivo",
+        "en": "chest protector"
+      },
+      "category": "competition",
+      "art": ["taekwondo"],
+      "notes": "Body protector for sparring"
+    },
+    {
+      "id": "simsa",
+      "original": "심사",
+      "romanization": "simsa",
+      "translations": {
+        "it": "esame di graduazione",
+        "en": "grading examination"
+      },
+      "category": "training",
+      "art": ["taekwondo", "hapkido"],
+      "notes": "Belt test"
+    },
+    {
+      "id": "hosinsul",
+      "original": "호신술",
+      "romanization": "hosinsul",
+      "translations": {
+        "it": "autodifesa",
+        "en": "self-defense"
+      },
+      "category": "training",
+      "art": ["taekwondo", "hapkido"],
+      "notes": "Self-defense techniques"
+    },
+    {
+      "id": "balchagi",
+      "original": "발차기",
+      "romanization": "balchagi",
+      "translations": {
+        "it": "allenamento calci",
+        "en": "kicking practice"
+      },
+      "category": "training",
+      "art": ["taekwondo"],
+      "notes": "Kicking drills"
+    },
+    {
+      "id": "suryeon",
+      "original": "수련",
+      "romanization": "suryeon",
+      "translations": {
+        "it": "allenamento, pratica",
+        "en": "training, practice"
+      },
+      "category": "training",
+      "art": ["taekwondo", "hapkido"],
+      "notes": "Training/practice"
+    }
+  ]
+}

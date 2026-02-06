@@ -1,0 +1,136 @@
+{
+  "_metadata": {
+    "type": "terminology",
+    "language": "chinese",
+    "source": "martial_arts_patterns.py",
+    "exported_at": "2026-01-21T09:22:27.609785"
+  },
+  "terms": [
+    {
+      "original": "云手",
+      "romanization": "Yun Shou",
+      "english": "Cloud Hands",
+      "style": "tai_chi",
+      "context": "technique"
+    },
+    {
+      "original": "单鞭",
+      "romanization": "Dan Bian",
+      "english": "Single Whip",
+      "style": "tai_chi",
+      "context": "technique"
+    },
+    {
+      "original": "揽雀尾",
+      "romanization": "Lan Que Wei",
+      "english": "Grasp Sparrow's Tail",
+      "style": "tai_chi",
+      "context": "technique"
+    },
+    {
+      "original": "推手",
+      "romanization": "Tui Shou",
+      "english": "Push Hands",
+      "style": "tai_chi",
+      "context": "technique"
+    },
+    {
+      "original": "守中线",
+      "romanization": "Centerline Guard",
+      "english": "",
+      "style": "wing_chun",
+      "context": "technique"
+    },
+    {
+      "original": "连环冲拳",
+      "romanization": "Chain Punches",
+      "english": "",
+      "style": "wing_chun",
+      "context": "technique"
+    },
+    {
+      "original": "摊手",
+      "romanization": "Tan Sao",
+      "english": "Palm Up Block",
+      "style": "wing_chun",
+      "context": "technique"
+    },
+    {
+      "original": "膀手",
+      "romanization": "Bong Sao",
+      "english": "Wing Arm",
+      "style": "wing_chun",
+      "context": "technique"
+    },
+    {
+      "original": "黐手",
+      "romanization": "Chi Sao",
+      "english": "Sticky Hands",
+      "style": "wing_chun",
+      "context": "technique"
+    },
+    {
+      "original": "虎爪",
+      "romanization": "Hu Zhua",
+      "english": "Tiger Claw",
+      "style": "shaolin",
+      "context": "technique"
+    },
+    {
+      "original": "龙拳",
+      "romanization": "Long Quan",
+      "english": "Dragon Fist",
+      "style": "shaolin",
+      "context": "technique"
+    },
+    {
+      "original": "佛掌",
+      "romanization": "Fo Zhang",
+      "english": "Buddha Palm",
+      "style": "shaolin",
+      "context": "technique"
+    },
+    {
+      "original": "猴式",
+      "romanization": "Hou Shi",
+      "english": "Monkey Stance",
+      "style": "shaolin",
+      "context": "technique"
+    },
+    {
+      "original": "鹤腿",
+      "romanization": "He Tui",
+      "english": "Crane Kick",
+      "style": "shaolin",
+      "context": "technique"
+    },
+    {
+      "original": "走圈",
+      "romanization": "Zou Quan",
+      "english": "Circle Walking",
+      "style": "bagua",
+      "context": "technique"
+    },
+    {
+      "original": "换掌",
+      "romanization": "Huan Zhang",
+      "english": "Palm Changes",
+      "style": "bagua",
+      "context": "technique"
+    },
+    {
+      "original": "蛇掌",
+      "romanization": "She Zhang",
+      "english": "Snake Palm",
+      "style": "bagua",
+      "context": "technique"
+    },
+    {
+      "original": "狮掌",
+      "romanization": "Shi Zhang",
+      "english": "Lion Palm",
+      "style": "bagua",
+      "context": "technique"
+    }
+  ]
+}

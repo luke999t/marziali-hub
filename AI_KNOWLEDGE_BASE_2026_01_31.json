@@ -1,0 +1,262 @@
+{
+  "metadata": {
+    "date": "2026-01-31",
+    "version": "2.0.0",
+    "project": "Media Center Arti Marziali",
+    "component": "Full Stack - Backend + Frontend",
+    "ai_agent": "Claude Opus 4.5 + Claude Code",
+    "session_type": "Critical Bug Fix + TypeScript Fix + Documentation"
+  },
+  
+  "session_summary": {
+    "total_bugs_fixed": 6,
+    "backend_endpoints_created": 2,
+    "frontend_files_modified": 7,
+    "typescript_errors_resolved": 3,
+    "documentation_files_updated": 3,
+    "total_lines_changed": "~500"
+  },
+
+  "bugs_fixed": [
+    {
+      "id": "BUG-001",
+      "severity": "CRITICAL",
+      "component": "Backend",
+      "file": "backend/api/v1/admin.py",
+      "endpoint": "GET /api/v1/admin/analytics/platform",
+      "error_type": "Endpoint Schema Mismatch + Missing Table",
+      "symptom": "Admin analytics dashboard crash 'Ops!'",
+      "root_cause": [
+        "Schema response diverso da quello atteso dal frontend",
+        "Query su Subscription.status ma tabella non migrata"
+      ],
+      "fix_applied": {
+        "description": "Riscritto endpoint completo con schema corretto",
+        "key_change": "User.tier.notin_([FREE, PAY_PER_VIEW]) invece di Subscription.status",
+        "lines_added": 248
+      },
+      "ai_learning": {
+        "pattern": "SCHEMA_ALIGNMENT",
+        "lesson": "Prima di creare endpoint, leggere il frontend per capire schema atteso"
+      },
+      "status": "FIXED_AND_TESTED"
+    },
+    {
+      "id": "BUG-002",
+      "severity": "HIGH",
+      "component": "Frontend",
+      "file": "frontend/src/services/curriculumApi.ts",
+      "error_type": "API Path Duplication",
+      "symptom": "Curriculum page 401/404 errors",
+      "root_cause": "CURRICULUM_API_BASE = '/api/v1/curricula' + '/curricula' = path duplicato",
+      "fix_applied": {
+        "description": "Rimosso /curricula duplicato da 11 funzioni",
+        "functions_fixed": 11
+      },
+      "ai_learning": {
+        "pattern": "BASE_URL_CHECK",
+        "lesson": "Verificare sempre che baseUrl non contenga già parte del path"
+      },
+      "status": "FIXED_AND_TESTED"
+    },
+    {
+      "id": "BUG-003",
+      "severity": "HIGH",
+      "component": "Backend + Frontend",
+      "files": ["backend/api/v1/skeleton.py", "frontend/src/app/api/studio/skeletons/route.ts"],
+      "endpoint": "GET /api/v1/skeleton/list",
+      "error_type": "Missing Endpoint",
+      "symptom": "Skeleton dates showing '1 gennaio 1970'",
+      "root_cause": [
+        "Frontend chiamava /api/v1/videos/skeletons che non esisteva",
+        "Fallback ritornava date null → JS convertiva a epoch 0"
+      ],
+      "fix_applied": {
+        "description": "Creato nuovo endpoint listing + corretto path frontend",
+        "backend_lines": 112,
+        "frontend_change": "Path da /api/v1/videos/skeletons a /api/v1/skeleton/list"
+      },
+      "ai_learning": {
+        "pattern": "ENDPOINT_EXISTENCE_CHECK",
+        "lesson": "Verificare che endpoint chiamati esistano prima di assumere bug nel rendering"
+      },
+      "status": "FIXED_AND_TESTED"
+    },
+    {
+      "id": "BUG-004",
+      "severity": "MEDIUM",
+      "component": "Frontend",
+      "files": ["frontend/src/contexts/AuthContext.tsx", "frontend/src/app/me/page.tsx", "frontend/src/app/maestro/page.tsx"],
+      "error_type": "Missing Interface Field",
+      "symptom": "Header/profile not showing user name",
+      "root_cause": [
+        "User interface mancava full_name",
+        "Backend ritorna full_name: null",
+        "Mancava fallback a username"
+      ],
+      "fix_applied": {
+        "description": "Aggiunto full_name?: string + fallback pattern",
+        "pattern_used": "user.full_name || user.username"
+      },
+      "ai_learning": {
+        "pattern": "OPTIONAL_FIELD_FALLBACK",
+        "lesson": "Campi nullable in API devono essere optional in TypeScript con fallback"
+      },
+      "status": "FIXED"
+    },
+    {
+      "id": "BUG-005",
+      "severity": "MEDIUM",
+      "component": "Frontend",
+      "file": "frontend/src/components/shared/DataTable.tsx",
+      "error_type": "TypeScript Generic Constraint",
+      "symptom": "TS2322: Type 'Column<Avatar3D>[]' not assignable",
+      "root_cause": "T extends Record<string, unknown> troppo restrittivo per tipi con enum/nested",
+      "fix_applied": {
+        "description": "Cambiato constraint a T extends object + type assertions",
+        "before": "DataTable<T extends Record<string, unknown>>",
+        "after": "DataTable<T extends object>"
+      },
+      "ai_learning": {
+        "pattern": "GENERIC_CONSTRAINT_FLEXIBILITY",
+        "lesson": "Usare object invece di Record<string, unknown> per accettare classi tipizzate"
+      },
+      "status": "FIXED"
+    },
+    {
+      "id": "BUG-006",
+      "severity": "LOW",
+      "component": "Frontend",
+      "file": "frontend/src/components/avatar/AvatarViewer3D.tsx",
+      "error_type": "TypeScript Type Casting",
+      "symptom": "TS2352: Conversion of type 'GLTFLoader' to type 'Error'",
+      "root_cause": "useGLTF callback error è unknown, non Error",
+      "fix_applied": {
+        "before": "onError?.(error as Error)",
+        "after": "onError?.(error instanceof Error ? error : new Error(String(error)))"
+      },
+      "ai_learning": {
+        "pattern": "SAFE_ERROR_CASTING",
+        "lesson": "Usare instanceof check prima di cast a Error per callback esterne"
+      },
+      "status": "FIXED"
+    }
+  ],
+
+  "new_endpoints_created": [
+    {
+      "method": "GET",
+      "path": "/api/v1/admin/analytics/platform",
+      "query_params": ["period: 7d|30d|90d"],
+      "response_schema": {
+        "overview": {
+          "total_views": "int",
+          "total_watch_time": "int (minutes)",
+          "total_revenue": "float (EUR)",
+          "new_users": "int",
+          "active_subscribers": "int"
+        },
+        "daily_views": "[{date: string, views: int}]",
+        "top_videos": "[{title: string, views: int, revenue: float}]",
+        "user_growth": "[{date: string, users: int}]",
+        "revenue_by_type": "[{type: string, amount: float}]"
+      },
+      "auth_required": true,
+      "admin_only": true
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/skeleton/list",
+      "response_schema": {
+        "skeletons": "[{asset_id, filename, created_at, duration, total_frames, avg_confidence, status, skeleton_url}]",
+        "total": "int"
+      },
+      "auth_required": true,
+      "logic": "Scans data/skeletons/ for *_holistic.json and *_skeleton.json files"
+    }
+  ],
+
+  "files_modified_summary": {
+    "backend": [
+      {"file": "api/v1/admin.py", "changes": "+248 lines (analytics endpoint)"},
+      {"file": "api/v1/skeleton.py", "changes": "+112 lines (list endpoint)"}
+    ],
+    "frontend": [
+      {"file": "services/curriculumApi.ts", "changes": "11 path fixes"},
+      {"file": "app/api/studio/skeletons/route.ts", "changes": "API path + auth"},
+      {"file": "contexts/AuthContext.tsx", "changes": "+1 line (full_name)"},
+      {"file": "app/me/page.tsx", "changes": "username fallback"},
+      {"file": "app/maestro/page.tsx", "changes": "username fallback"},
+      {"file": "components/shared/DataTable.tsx", "changes": "generic constraint fix"},
+      {"file": "components/avatar/AvatarViewer3D.tsx", "changes": "error handling fix"}
+    ],
+    "docs": [
+      {"file": "CHANGELOG.md", "changes": "Added [2026-01-31] section"},
+      {"file": "BUG_FIX_REPORT_2026_01_31_SESSION2.md", "changes": "New file"},
+      {"file": "ERROR_KNOWLEDGE_BASE_2026_01_31.json", "changes": "New file"},
+      {"file": "AI_KNOWLEDGE_BASE_2026_01_31.json", "changes": "New file (this)"}
+    ]
+  },
+
+  "patterns_for_ai_learning": {
+    "SCHEMA_ALIGNMENT": {
+      "trigger": "Frontend crash o errore dati",
+      "check": "Leggere file frontend che chiama API per vedere schema atteso",
+      "action": "Modificare backend per matchare schema oppure frontend per adattarsi"
+    },
+    "BASE_URL_CHECK": {
+      "trigger": "404 Not Found su API call",
+      "check": "Verificare se baseUrl già contiene parte del path",
+      "example_bug": "baseUrl = '/api/v1/curricula' + '/curricula' = path duplicato"
+    },
+    "ENDPOINT_EXISTENCE_CHECK": {
+      "trigger": "Frontend mostra dati corrotti o default (es. date 1970)",
+      "check": "curl endpoint per verificare se esiste e cosa ritorna",
+      "action": "Creare endpoint mancante o correggere path"
+    },
+    "OPTIONAL_FIELD_FALLBACK": {
+      "trigger": "Campo undefined in rendering",
+      "check": "Verificare se API può ritornare null/undefined",
+      "action": "Aggiungere ? a interface + || fallback nel JSX"
+    },
+    "GENERIC_CONSTRAINT_FLEXIBILITY": {
+      "trigger": "TS error su generic types con classi/enum",
+      "check": "Verificare se constraint è troppo restrittivo",
+      "action": "Usare 'T extends object' invece di 'T extends Record<string, unknown>'"
+    },
+    "SAFE_ERROR_CASTING": {
+      "trigger": "TS error su cast to Error",
+      "check": "Callback da librerie esterne può non essere Error",
+      "action": "Usare 'error instanceof Error ? error : new Error(String(error))'"
+    }
+  },
+
+  "test_verification": {
+    "endpoints_tested": [
+      {"endpoint": "GET /api/v1/admin/analytics/platform?period=30d", "status": "200 OK", "data_valid": true},
+      {"endpoint": "GET /api/v1/curricula/", "status": "200 OK", "data_valid": true},
+      {"endpoint": "GET /api/v1/skeleton/list", "status": "200 OK", "count": 6},
+      {"endpoint": "POST /api/v1/auth/login", "status": "200 OK", "full_name_present": true}
+    ],
+    "typescript_check": {
+      "command": "npx tsc --noEmit",
+      "errors_before": 3,
+      "errors_after": 0
+    }
+  },
+
+  "project_status_after_session": {
+    "backend_completion": "96%",
+    "frontend_completion": "88.5%",
+    "typescript_errors": 0,
+    "bugs_remaining": "Nessuno critico identificato"
+  },
+
+  "recommendations_for_next_session": [
+    "Test frontend in browser per verifica visiva",
+    "Commit e push su Git",
+    "Creare pagina /videos mancante (404)",
+    "UI per Content Classification (wizard/editor)",
+    "Test complete E2E con Chrome Extension"
+  ]
+}

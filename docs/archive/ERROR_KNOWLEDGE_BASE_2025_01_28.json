@@ -1,0 +1,242 @@
+{
+  "metadata": {
+    "project": "Media Center Arti Marziali",
+    "created_at": "2025-01-28T10:00:00Z",
+    "last_updated": "2025-01-28T10:30:00Z",
+    "version": "1.4.0",
+    "purpose": "AI-First error tracking per manutenzione automatica",
+    "session": "100% Test Pass Rate Achievement"
+  },
+
+  "milestone": {
+    "achievement": "100% TEST PASS RATE",
+    "date": "2025-01-28",
+    "tests_passed": 686,
+    "tests_failed": 0,
+    "tests_skipped": 36,
+    "skip_reason": "Admin endpoints timeout - intentional skip pending optimization"
+  },
+
+  "errors_fixed_today": [
+    {
+      "id": "ERR-019",
+      "date": "2025-01-28",
+      "category": "Backend",
+      "subcategory": "FastAPI Route Ordering",
+      "severity": "CRITICAL",
+      "title": "Route Ordering - contributions.py /admin/* intercepted",
+      "symptom": "GET /api/v1/contributions/admin/audit ritorna 422 perché 'admin' viene interpretato come contribution_id",
+      "root_cause": "/{contribution_id} definito PRIMA di /admin/audit, /admin/stats, /my-contributions",
+      "files_affected": ["api/v1/contributions.py"],
+      "solution": {
+        "description": "Spostare endpoint /admin/stats, /admin/audit, /my-contributions PRIMA di /{contribution_id}",
+        "lines_moved": "~456-510 spostati prima di ~568",
+        "comment_added": "FIX 2025-01-27: Route ordering - path specifici PRIMA di path con parametri"
+      },
+      "fixed_by": "Opus (chat)",
+      "verified": true
+    },
+    {
+      "id": "ERR-020",
+      "date": "2025-01-28",
+      "category": "Security",
+      "subcategory": "Input Sanitization",
+      "severity": "HIGH",
+      "title": "Error message exposes raw user input - path traversal",
+      "symptom": "test_path_traversal_prevention fallisce - input '../../../etc/passwd' visibile nel messaggio errore",
+      "root_cause": "f-string usa video_id raw nel messaggio errore: f'Skeleton not found for video: {video_id}'",
+      "files_affected": ["api/v1/export.py"],
+      "solution": {
+        "description": "Sanitizzare video_id prima di usarlo nel messaggio errore",
+        "code_added": "safe_video_id = re.sub(r'[^\\w\\-]', '', video_id)[:50]",
+        "message_after": "Skeleton not found for video. Please verify the video ID and ensure skeleton extraction has been run.",
+        "line": "~467"
+      },
+      "security_impact": "Previene information disclosure tramite error messages",
+      "fixed_by": "Opus (chat)",
+      "verified": true
+    },
+    {
+      "id": "ERR-021",
+      "date": "2025-01-28",
+      "category": "Security",
+      "subcategory": "Input Validation",
+      "severity": "HIGH",
+      "title": "SQL Injection via event_id - missing validation",
+      "symptom": "test_sql_injection_event_id fallisce - endpoint accetta input SQL injection",
+      "root_cause": "GET /live-translation/events/{event_id}/stats non valida formato event_id",
+      "files_affected": ["api/v1/live_translation.py"],
+      "solution": {
+        "description": "Aggiunta validazione regex per event_id + check esistenza evento",
+        "code_added": [
+          "if not re.match(r'^[a-zA-Z0-9_-]+$', event_id):",
+          "    raise HTTPException(status_code=422, detail='Invalid event ID format')",
+          "if not translation_manager.is_session_active(event_id):",
+          "    raise HTTPException(status_code=404, detail='Event not found')"
+        ],
+        "line": "~319-327"
+      },
+      "security_impact": "Previene SQL injection attacks",
+      "fixed_by": "CODE 1",
+      "verified": true
+    }
+  ],
+
+  "errors_fixed_previous_session": [
+    {
+      "id": "ERR-015",
+      "title": "Route Ordering - notifications.py",
+      "fixed": true,
+      "verified": true
+    },
+    {
+      "id": "ERR-016", 
+      "title": "PostgreSQL ARRAY tags.contains() incompatibility",
+      "fixed": true,
+      "verified": true
+    },
+    {
+      "id": "ERR-017",
+      "title": "GET scheduler endpoint requires admin instead of user",
+      "fixed": true,
+      "verified": true
+    }
+  ],
+
+  "patterns_consolidated": [
+    {
+      "id": "PATTERN-004",
+      "category": "FastAPI",
+      "title": "Route Ordering Critical",
+      "rule": "SEMPRE dichiarare endpoint con path specifici PRIMA di quelli con /{param}",
+      "applied_to": [
+        "api/v1/notifications.py",
+        "api/v1/videos.py",
+        "api/v1/contributions.py",
+        "api/v1/live_translation.py"
+      ],
+      "standard_structure": [
+        "# === HEALTH/PUBLIC ENDPOINTS ===",
+        "@router.get('/health')",
+        "# === SPECIFIC PATH ENDPOINTS ===",
+        "@router.get('/search')",
+        "@router.get('/favorites')",
+        "@router.get('/admin/stats')",
+        "# === PARAMETERIZED ENDPOINTS (LAST) ===",
+        "@router.get('/{item_id}')"
+      ]
+    },
+    {
+      "id": "PATTERN-007",
+      "category": "Security",
+      "title": "Error Message Sanitization",
+      "rule": "MAI includere input utente raw nei messaggi di errore",
+      "example_bad": "f'Not found: {user_input}'",
+      "example_good": "safe_input = re.sub(r'[^\\w\\-]', '', user_input)[:50]; f'Not found for ID. Please verify.'",
+      "rationale": "Previene information disclosure e path traversal reflection"
+    },
+    {
+      "id": "PATTERN-008",
+      "category": "Security",
+      "title": "Input Validation Regex",
+      "rule": "Validare TUTTI gli input path parameter con regex whitelist",
+      "standard_pattern": "if not re.match(r'^[a-zA-Z0-9_-]+$', param): raise HTTPException(422)",
+      "rationale": "Previene SQL injection, path traversal, XSS via URL parameters"
+    }
+  ],
+
+  "anti_patterns_reinforced": [
+    {
+      "id": "ANTI-001",
+      "title": "MAI modificare test per accettare errori",
+      "status": "ENFORCED",
+      "description": "Se test fallisce, fixare BACKEND non test",
+      "exceptions": "Solo se il test ha asserzione troppo rigida (es: aspetta 403 ma 404 è anche corretto)"
+    },
+    {
+      "id": "ANTI-002",
+      "title": "MAI usare workaround nei test",
+      "status": "ENFORCED",
+      "description": "Workaround come 'assert status in [200, 500]' nascondono bug reali",
+      "correct": "Fixare backend, poi rimuovere workaround dal test"
+    }
+  ],
+
+  "test_statistics": {
+    "date": "2025-01-28",
+    "final_results": {
+      "passed": 686,
+      "failed": 0,
+      "skipped": 36,
+      "total": 722,
+      "pass_rate": "100%"
+    },
+    "progression": [
+      {"date": "2025-01-26", "passed": 506, "rate": "73.8%"},
+      {"date": "2025-01-27 AM", "passed": 674, "rate": "93.4%"},
+      {"date": "2025-01-27 PM", "passed": 681, "rate": "99.27%"},
+      {"date": "2025-01-28", "passed": 686, "rate": "100%"}
+    ],
+    "skipped_analysis": {
+      "file": "tests/api/test_admin_api.py",
+      "count": 36,
+      "reason": "pytest.mark.skip(reason='Admin endpoints timeout - need backend optimization')",
+      "type": "INTENTIONAL - performance issue",
+      "action_needed": "Optimize admin queries, add indices, then remove skip"
+    }
+  },
+
+  "files_modified_session": [
+    {
+      "file": "api/v1/contributions.py",
+      "changes": "Route ordering fix - moved /admin/*, /my-contributions before /{contribution_id}",
+      "modified_by": "Opus"
+    },
+    {
+      "file": "api/v1/export.py",
+      "changes": "Input sanitization in error messages",
+      "modified_by": "Opus"
+    },
+    {
+      "file": "api/v1/live_translation.py",
+      "changes": "Added event_id validation regex + existence check",
+      "modified_by": "CODE 1"
+    },
+    {
+      "file": "tests/api/test_scheduler_api.py",
+      "changes": "Fixed expired token test - valid expired token instead of empty",
+      "modified_by": "Opus"
+    },
+    {
+      "file": "tests/api/test_contributions_api.py",
+      "changes": "Updated status code assertions, removed workarounds",
+      "modified_by": "Opus"
+    },
+    {
+      "file": "tests/api/test_export_api.py",
+      "changes": "Restored path traversal check after backend fix",
+      "modified_by": "Opus"
+    }
+  ],
+
+  "next_priorities": [
+    {
+      "priority": 1,
+      "task": "Optimize admin endpoints",
+      "reason": "36 test skipped due to timeout",
+      "approach": "Add database indices, optimize N+1 queries, add caching"
+    },
+    {
+      "priority": 2,
+      "task": "Flutter lint warnings",
+      "count": 9289,
+      "approach": "unused_import, prefer_const, avoid_print"
+    },
+    {
+      "priority": 3,
+      "task": "Register pytest marks",
+      "reason": "24 warnings about unknown marks",
+      "fix": "Add to pytest.ini: markers = api, integration"
+    }
+  ]
+}

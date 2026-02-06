@@ -1,0 +1,75 @@
+{
+  "_metadata": {
+    "AI_MODULE": "Seed Data - Maestri",
+    "AI_DESCRIPTION": "Demo martial arts masters linked to users",
+    "AI_BUSINESS": "Enables curriculum creation and video teaching demos",
+    "AI_TEACHING": "Foreign key relationships, profile modeling"
+  },
+  "maestri": [
+    {
+      "id": "m1-karate-shotokan",
+      "user_email": "tanaka.hiroshi@mediacenter.demo",
+      "display_name": "Maestro Hiroshi Tanaka",
+      "bio": "7° Dan Karate Shotokan. Allievo diretto del Maestro Nakayama presso il JKA. Oltre 40 anni di pratica e 30 anni di insegnamento. Specializzato in Kata avanzati e Bunkai.",
+      "specialization": "Karate Shotokan",
+      "years_experience": 40,
+      "verified": true,
+      "available_for_correction": true,
+      "rating": 4.9,
+      "total_students": 1250,
+      "total_videos": 87
+    },
+    {
+      "id": "m2-judo-kodokan",
+      "user_email": "rossi.marco@mediacenter.demo",
+      "display_name": "Maestro Marco Rossi",
+      "bio": "6° Dan Judo Kodokan. Ex atleta della Nazionale Italiana, medaglia di bronzo ai Campionati Europei. Specializzato in Nage-waza e preparazione agonistica.",
+      "specialization": "Judo",
+      "years_experience": 35,
+      "verified": true,
+      "available_for_correction": true,
+      "rating": 4.8,
+      "total_students": 890,
+      "total_videos": 56
+    },
+    {
+      "id": "m3-aikido-aikikai",
+      "user_email": "yamamoto.kenji@mediacenter.demo",
+      "display_name": "Sensei Kenji Yamamoto",
+      "bio": "5° Dan Aikido Aikikai. Formatosi all'Hombu Dojo di Tokyo sotto la guida del Doshu. Insegna l'Aikido tradizionale con enfasi sull'armonia e la fluidità del movimento.",
+      "specialization": "Aikido",
+      "years_experience": 28,
+      "verified": true,
+      "available_for_correction": true,
+      "rating": 4.95,
+      "total_students": 420,
+      "total_videos": 43
+    },
+    {
+      "id": "m4-taekwondo-wtf",
+      "user_email": "kim.soomin@mediacenter.demo",
+      "display_name": "Grandmaster Soo-Min Kim",
+      "bio": "8° Dan Taekwondo WT. Campionessa mondiale e olimpica. Specializzata in Poomsae e tecniche di calcio avanzate. Formatrice di atleti olimpici.",
+      "specialization": "Taekwondo",
+      "years_experience": 32,
+      "verified": true,
+      "available_for_correction": true,
+      "rating": 4.92,
+      "total_students": 1580,
+      "total_videos": 112
+    },
+    {
+      "id": "m5-kung-fu-shaolin",
+      "user_email": "chen.wei@mediacenter.demo",
+      "display_name": "Shifu Wei Chen",
+      "bio": "Maestro di Kung Fu Shaolin del Nord. Formatosi al Tempio Shaolin per 15 anni. Esperto in forme tradizionali, armi e Qigong.",
+      "specialization": "Kung Fu Shaolin",
+      "years_experience": 38,
+      "verified": true,
+      "available_for_correction": true,
+      "rating": 4.88,
+      "total_students": 650,
+      "total_videos": 78
+    }
+  ]
+}

@@ -1,0 +1,286 @@
+{
+  "_metadata": {
+    "type": "martial_arts_techniques",
+    "style": "karate",
+    "style_name": "KARATE",
+    "source": "martial_arts_patterns.py",
+    "exported_at": "2026-01-21T09:22:27.609785",
+    "pattern_count": 5,
+    "ai_indexable": true,
+    "rag_enabled": true
+  },
+  "techniques": [
+    {
+      "id": "zenkutsu_dachi",
+      "name": "前屈立ち (Zenkutsu Dachi - Front Stance)",
+      "style": "karate",
+      "description": "Posizione fondamentale in avanti",
+      "keywords": [
+        "zenkutsu",
+        "front stance",
+        "forward stance"
+      ],
+      "velocity_profile": "medium",
+      "temporal_signature": "discrete",
+      "duration_range": [
+        1.0,
+        5.0
+      ],
+      "key_landmarks": [
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "angle_ranges": {
+        "front_knee": [
+          90,
+          110
+        ],
+        "back_leg": [
+          160,
+          180
+        ],
+        "stance_length": [
+          1.5,
+          2.0
+        ]
+      },
+      "hand_positions": {
+        "guard": "chamber_fist"
+      },
+      "distance_ratios": {
+        "wide_stance": [
+          1.5,
+          2.0
+        ],
+        "weight_forward": [
+          0.6,
+          0.7
+        ]
+      },
+      "confidence_threshold": 0.8,
+      "text_for_rag": "前屈立ち (Zenkutsu Dachi - Front Stance) - Posizione fondamentale in avanti. Keywords: zenkutsu, front stance, forward stance"
+    },
+    {
+      "id": "oi_zuki",
+      "name": "追い突き (Oi Zuki - Lunge Punch)",
+      "style": "karate",
+      "description": "Pugno in avanzamento",
+      "keywords": [
+        "oi zuki",
+        "lunge punch",
+        "stepping punch"
+      ],
+      "velocity_profile": "explosive",
+      "temporal_signature": "discrete",
+      "duration_range": [
+        0.3,
+        0.8
+      ],
+      "key_landmarks": [
+        13,
+        14,
+        15,
+        16,
+        23,
+        25,
+        27
+      ],
+      "angle_ranges": {
+        "punch_extension": [
+          170,
+          180
+        ],
+        "hip_rotation": [
+          30,
+          60
+        ],
+        "front_step": [
+          90,
+          120
+        ]
+      },
+      "hand_positions": {
+        "punching": "horizontal_fist",
+        "chamber": "hip_fist"
+      },
+      "distance_ratios": {
+        "full_extension": [
+          0.95,
+          1.05
+        ],
+        "hip_snap": [
+          0.5,
+          0.8
+        ]
+      },
+      "confidence_threshold": 0.75,
+      "text_for_rag": "追い突き (Oi Zuki - Lunge Punch) - Pugno in avanzamento. Keywords: oi zuki, lunge punch, stepping punch"
+    },
+    {
+      "id": "mae_geri",
+      "name": "前蹴り (Mae Geri - Front Kick)",
+      "style": "karate",
+      "description": "Calcio frontale con palla del piede",
+      "keywords": [
+        "mae geri",
+        "front kick",
+        "snap kick"
+      ],
+      "velocity_profile": "explosive",
+      "temporal_signature": "discrete",
+      "duration_range": [
+        0.4,
+        1.0
+      ],
+      "key_landmarks": [
+        23,
+        25,
+        27,
+        31
+      ],
+      "angle_ranges": {
+        "knee_chamber": [
+          45,
+          60
+        ],
+        "kick_extension": [
+          150,
+          180
+        ],
+        "hip_thrust": [
+          10,
+          30
+        ]
+      },
+      "hand_positions": {
+        "both": "guard_position"
+      },
+      "distance_ratios": {
+        "kick_height": [
+          0.6,
+          1.0
+        ],
+        "balance": [
+          0.9,
+          1.0
+        ]
+      },
+      "confidence_threshold": 0.75,
+      "text_for_rag": "前蹴り (Mae Geri - Front Kick) - Calcio frontale con palla del piede. Keywords: mae geri, front kick, snap kick"
+    },
+    {
+      "id": "uke",
+      "name": "受け (Uke - Block)",
+      "style": "karate",
+      "description": "Parata con avambraccio",
+      "keywords": [
+        "uke",
+        "block",
+        "parry",
+        "age uke",
+        "gedan barai"
+      ],
+      "velocity_profile": "fast",
+      "temporal_signature": "discrete",
+      "duration_range": [
+        0.2,
+        0.6
+      ],
+      "key_landmarks": [
+        13,
+        14,
+        15,
+        16
+      ],
+      "angle_ranges": {
+        "forearm_angle": [
+          90,
+          120
+        ],
+        "chamber_to_block": [
+          60,
+          90
+        ],
+        "hip_rotation": [
+          20,
+          45
+        ]
+      },
+      "hand_positions": {
+        "blocking": "tight_fist"
+      },
+      "distance_ratios": {
+        "block_distance": [
+          0.4,
+          0.7
+        ],
+        "body_protection": [
+          0.2,
+          0.4
+        ]
+      },
+      "confidence_threshold": 0.7,
+      "text_for_rag": "受け (Uke - Block) - Parata con avambraccio. Keywords: uke, block, parry, age uke, gedan barai"
+    },
+    {
+      "id": "kata_stance",
+      "name": "型構え (Kata Stance)",
+      "style": "karate",
+      "description": "Posizioni formali del kata",
+      "keywords": [
+        "kata",
+        "form",
+        "heian",
+        "tekki",
+        "bassai"
+      ],
+      "velocity_profile": "slow",
+      "temporal_signature": "discrete",
+      "duration_range": [
+        2.0,
+        10.0
+      ],
+      "key_landmarks": [
+        23,
+        24,
+        25,
+        26,
+        11,
+        12
+      ],
+      "angle_ranges": {
+        "precise_angles": [
+          80,
+          100
+        ],
+        "stable_base": [
+          90,
+          110
+        ],
+        "formal_posture": [
+          170,
+          180
+        ]
+      },
+      "hand_positions": {
+        "formal": "precise_placement"
+      },
+      "distance_ratios": {
+        "stance_perfect": [
+          0.95,
+          1.05
+        ],
+        "symmetry": [
+          0.98,
+          1.02
+        ]
+      },
+      "confidence_threshold": 0.8,
+      "text_for_rag": "型構え (Kata Stance) - Posizioni formali del kata. Keywords: kata, form, heian, tekki, bassai"
+    }
+  ]
+}

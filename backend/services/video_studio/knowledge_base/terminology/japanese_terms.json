@@ -1,0 +1,45 @@
+{
+  "_metadata": {
+    "type": "terminology",
+    "language": "japanese",
+    "source": "martial_arts_patterns.py",
+    "exported_at": "2026-01-21T09:22:27.609785"
+  },
+  "terms": [
+    {
+      "original": "前屈立ち",
+      "romanization": "Zenkutsu Dachi",
+      "english": "Front Stance",
+      "style": "karate",
+      "context": "technique"
+    },
+    {
+      "original": "追い突き",
+      "romanization": "Oi Zuki",
+      "english": "Lunge Punch",
+      "style": "karate",
+      "context": "technique"
+    },
+    {
+      "original": "前蹴り",
+      "romanization": "Mae Geri",
+      "english": "Front Kick",
+      "style": "karate",
+      "context": "technique"
+    },
+    {
+      "original": "受け",
+      "romanization": "Uke",
+      "english": "Block",
+      "style": "karate",
+      "context": "technique"
+    },
+    {
+      "original": "型構え",
+      "romanization": "Kata Stance",
+      "english": "",
+      "style": "karate",
+      "context": "technique"
+    }
+  ]
+}

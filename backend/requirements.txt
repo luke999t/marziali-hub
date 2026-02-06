@@ -1,0 +1,94 @@
+# === Web Framework ===
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+
+# === Database ===
+sqlalchemy==2.0.23
+asyncpg==0.29.0
+alembic==1.12.1
+psycopg2-binary==2.9.9
+
+# === Caching & Queue ===
+redis==5.0.1
+celery==5.3.4
+flower==2.0.1
+
+# === Scheduler ===
+APScheduler==3.10.4
+
+# === Auth ===
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+
+# === AI/ML ===
+mediapipe==0.10.7
+opencv-python==4.8.1.78
+numpy==1.24.3
+scipy==1.11.4
+scikit-learn==1.3.2
+fastdtw==0.3.4
+openai==1.3.5
+chromadb==0.4.18
+
+# === Video Processing ===
+ffmpeg-python==0.2.0
+Pillow==10.1.0
+
+# === PDF/OCR ===
+PyPDF2==3.0.1
+PyMuPDF==1.23.8
+python-docx==1.1.0
+pytesseract==0.3.10
+ebooklib==0.18
+beautifulsoup4==4.12.2
+lxml==5.1.0
+
+# === HTTP Clients ===
+httpx==0.25.1
+aiohttp==3.9.0
+
+# === Validation ===
+pydantic==2.5.0
+pydantic-settings==2.1.0
+email-validator==2.1.0
+
+# === Payment ===
+stripe==7.4.0
+
+# === Blockchain ===
+web3==6.11.3
+
+# === AWS ===
+boto3==1.29.6
+botocore==1.32.6
+
+# === Utils ===
+python-dotenv==1.0.0
+pytz==2023.3
+python-dateutil==2.8.2
+
+# === Testing ===
+pytest==7.4.3
+pytest-asyncio==0.21.1
+pytest-cov==4.1.0
+
+# === Monitoring ===
+prometheus-client==0.19.0
+prometheus-fastapi-instrumentator==6.1.0
+sentry-sdk[fastapi]==1.38.0
+
+# === Google Cloud (OPTIONAL - only if using Google providers) ===
+google-cloud-speech==2.21.0
+google-cloud-translate==3.12.1
+google-auth==2.23.4
+
+# === Open Source Speech & Translation (DEFAULT) ===
+# Whisper - Speech-to-Text
+faster-whisper==0.10.0
+torch==2.1.1
+torchaudio==2.1.1
+
+# NLLB - Translation
+transformers==4.35.2
+sentencepiece==0.1.99

@@ -1,0 +1,489 @@
+{
+  "_metadata": {
+    "type": "knowledge_base",
+    "category": "techniques",
+    "source": "martial_arts_patterns.py",
+    "exported_at": "2026-01-21T09:22:27.609785",
+    "total_items": 23,
+    "ai_indexable": true,
+    "rag_enabled": true,
+    "supported_queries": [
+      "technique search",
+      "style filtering",
+      "keyword matching",
+      "semantic search"
+    ]
+  },
+  "items": [
+    {
+      "id": "yun_shou",
+      "name": "云手 (Yun Shou - Cloud Hands)",
+      "style": "tai_chi",
+      "category": "technique",
+      "description": "Movimento circolare continuo delle braccia, simbolo del Tai Chi",
+      "keywords": [
+        "yun shou",
+        "cloud hands",
+        "mani nuvola",
+        "circular",
+        "circolare"
+      ],
+      "velocity": "slow",
+      "duration_seconds": [
+        3.0,
+        8.0
+      ],
+      "content": "Tecnica: 云手 (Yun Shou - Cloud Hands)\nStile: tai_chi\nDescrizione: Movimento circolare continuo delle braccia, simbolo del Tai Chi\nParole chiave: yun shou, cloud hands, mani nuvola, circular, circolare\nVelocità: slow\nPattern temporale: cyclic",
+      "summary": "云手 (Yun Shou - Cloud Hands) (tai_chi) - Movimento circolare continuo delle braccia, simbolo del Tai Chi..."
+    },
+    {
+      "id": "single_whip",
+      "name": "单鞭 (Dan Bian - Single Whip)",
+      "style": "tai_chi",
+      "category": "technique",
+      "description": "Posizione iconica con una mano a becco d'uccello",
+      "keywords": [
+        "single whip",
+        "dan bian",
+        "frusta",
+        "whip",
+        "becco"
+      ],
+      "velocity": "gradual",
+      "duration_seconds": [
+        2.0,
+        5.0
+      ],
+      "content": "Tecnica: 单鞭 (Dan Bian - Single Whip)\nStile: tai_chi\nDescrizione: Posizione iconica con una mano a becco d'uccello\nParole chiave: single whip, dan bian, frusta, whip, becco\nVelocità: gradual\nPattern temporale: discrete",
+      "summary": "单鞭 (Dan Bian - Single Whip) (tai_chi) - Posizione iconica con una mano a becco d'uccello..."
+    },
+    {
+      "id": "grasp_sparrows_tail",
+      "name": "揽雀尾 (Lan Que Wei - Grasp Sparrow's Tail)",
+      "style": "tai_chi",
+      "category": "technique",
+      "description": "Sequenza di 4 movimenti: Ward Off, Roll Back, Press, Push",
+      "keywords": [
+        "lan que wei",
+        "grasp sparrow",
+        "ward off",
+        "roll back",
+        "press",
+        "push"
+      ],
+      "velocity": "slow",
+      "duration_seconds": [
+        8.0,
+        15.0
+      ],
+      "content": "Tecnica: 揽雀尾 (Lan Que Wei - Grasp Sparrow's Tail)\nStile: tai_chi\nDescrizione: Sequenza di 4 movimenti: Ward Off, Roll Back, Press, Push\nParole chiave: lan que wei, grasp sparrow, ward off, roll back, press, push\nVelocità: slow\nPattern temporale: cyclic",
+      "summary": "揽雀尾 (Lan Que Wei - Grasp Sparrow's Tail) (tai_chi) - Sequenza di 4 movimenti: Ward Off, Roll Back, Press, Push..."
+    },
+    {
+      "id": "push_hands",
+      "name": "推手 (Tui Shou - Push Hands)",
+      "style": "tai_chi",
+      "category": "technique",
+      "description": "Esercizio a due per sviluppare sensibilità",
+      "keywords": [
+        "push hands",
+        "tui shou",
+        "sticky hands",
+        "sensing",
+        "two person"
+      ],
+      "velocity": "slow",
+      "duration_seconds": [
+        5.0,
+        20.0
+      ],
+      "content": "Tecnica: 推手 (Tui Shou - Push Hands)\nStile: tai_chi\nDescrizione: Esercizio a due per sviluppare sensibilità\nParole chiave: push hands, tui shou, sticky hands, sensing, two person\nVelocità: slow\nPattern temporale: cyclic",
+      "summary": "推手 (Tui Shou - Push Hands) (tai_chi) - Esercizio a due per sviluppare sensibilità..."
+    },
+    {
+      "id": "centerline_guard",
+      "name": "守中线 (Centerline Guard)",
+      "style": "wing_chun",
+      "category": "technique",
+      "description": "Guardia caratteristica con mani davanti al centro",
+      "keywords": [
+        "centerline",
+        "guard",
+        "man sao",
+        "wu sao",
+        "ready position"
+      ],
+      "velocity": "medium",
+      "duration_seconds": [
+        1.0,
+        10.0
+      ],
+      "content": "Tecnica: 守中线 (Centerline Guard)\nStile: wing_chun\nDescrizione: Guardia caratteristica con mani davanti al centro\nParole chiave: centerline, guard, man sao, wu sao, ready position\nVelocità: medium\nPattern temporale: discrete",
+      "summary": "守中线 (Centerline Guard) (wing_chun) - Guardia caratteristica con mani davanti al centro..."
+    },
+    {
+      "id": "chain_punches",
+      "name": "连环冲拳 (Chain Punches)",
+      "style": "wing_chun",
+      "category": "technique",
+      "description": "Pugni rapidi consecutivi sulla centerline",
+      "keywords": [
+        "chain punch",
+        "straight punch",
+        "lian huan",
+        "rapid fire"
+      ],
+      "velocity": "explosive",
+      "duration_seconds": [
+        0.5,
+        2.0
+      ],
+      "content": "Tecnica: 连环冲拳 (Chain Punches)\nStile: wing_chun\nDescrizione: Pugni rapidi consecutivi sulla centerline\nParole chiave: chain punch, straight punch, lian huan, rapid fire\nVelocità: explosive\nPattern temporale: cyclic",
+      "summary": "连环冲拳 (Chain Punches) (wing_chun) - Pugni rapidi consecutivi sulla centerline..."
+    },
+    {
+      "id": "tan_sao",
+      "name": "摊手 (Tan Sao - Palm Up Block)",
+      "style": "wing_chun",
+      "category": "technique",
+      "description": "Parata con palmo verso l'alto",
+      "keywords": [
+        "tan sao",
+        "palm up",
+        "dispersing hand",
+        "block"
+      ],
+      "velocity": "fast",
+      "duration_seconds": [
+        0.3,
+        1.0
+      ],
+      "content": "Tecnica: 摊手 (Tan Sao - Palm Up Block)\nStile: wing_chun\nDescrizione: Parata con palmo verso l'alto\nParole chiave: tan sao, palm up, dispersing hand, block\nVelocità: fast\nPattern temporale: discrete",
+      "summary": "摊手 (Tan Sao - Palm Up Block) (wing_chun) - Parata con palmo verso l'alto..."
+    },
+    {
+      "id": "bong_sao",
+      "name": "膀手 (Bong Sao - Wing Arm)",
+      "style": "wing_chun",
+      "category": "technique",
+      "description": "Parata con braccio a ala sollevato",
+      "keywords": [
+        "bong sao",
+        "wing arm",
+        "elbow up",
+        "deflection"
+      ],
+      "velocity": "fast",
+      "duration_seconds": [
+        0.3,
+        1.0
+      ],
+      "content": "Tecnica: 膀手 (Bong Sao - Wing Arm)\nStile: wing_chun\nDescrizione: Parata con braccio a ala sollevato\nParole chiave: bong sao, wing arm, elbow up, deflection\nVelocità: fast\nPattern temporale: discrete",
+      "summary": "膀手 (Bong Sao - Wing Arm) (wing_chun) - Parata con braccio a ala sollevato..."
+    },
+    {
+      "id": "chi_sao",
+      "name": "黐手 (Chi Sao - Sticky Hands)",
+      "style": "wing_chun",
+      "category": "technique",
+      "description": "Esercizio di sensibilità con contatto continuo",
+      "keywords": [
+        "chi sao",
+        "sticky hands",
+        "sensitivity",
+        "rolling",
+        "two person"
+      ],
+      "velocity": "medium",
+      "duration_seconds": [
+        5.0,
+        30.0
+      ],
+      "content": "Tecnica: 黐手 (Chi Sao - Sticky Hands)\nStile: wing_chun\nDescrizione: Esercizio di sensibilità con contatto continuo\nParole chiave: chi sao, sticky hands, sensitivity, rolling, two person\nVelocità: medium\nPattern temporale: cyclic",
+      "summary": "黐手 (Chi Sao - Sticky Hands) (wing_chun) - Esercizio di sensibilità con contatto continuo..."
+    },
+    {
+      "id": "tiger_claw",
+      "name": "虎爪 (Hu Zhua - Tiger Claw)",
+      "style": "shaolin",
+      "category": "technique",
+      "description": "Artiglio di tigre con dita curve",
+      "keywords": [
+        "tiger claw",
+        "hu zhua",
+        "claw",
+        "grab",
+        "tiger"
+      ],
+      "velocity": "explosive",
+      "duration_seconds": [
+        0.5,
+        1.5
+      ],
+      "content": "Tecnica: 虎爪 (Hu Zhua - Tiger Claw)\nStile: shaolin\nDescrizione: Artiglio di tigre con dita curve\nParole chiave: tiger claw, hu zhua, claw, grab, tiger\nVelocità: explosive\nPattern temporale: discrete",
+      "summary": "虎爪 (Hu Zhua - Tiger Claw) (shaolin) - Artiglio di tigre con dita curve..."
+    },
+    {
+      "id": "dragon_fist",
+      "name": "龙拳 (Long Quan - Dragon Fist)",
+      "style": "shaolin",
+      "category": "technique",
+      "description": "Pugno del drago con forma speciale",
+      "keywords": [
+        "dragon fist",
+        "long quan",
+        "spiral",
+        "phoenix eye"
+      ],
+      "velocity": "explosive",
+      "duration_seconds": [
+        0.3,
+        0.8
+      ],
+      "content": "Tecnica: 龙拳 (Long Quan - Dragon Fist)\nStile: shaolin\nDescrizione: Pugno del drago con forma speciale\nParole chiave: dragon fist, long quan, spiral, phoenix eye\nVelocità: explosive\nPattern temporale: discrete",
+      "summary": "龙拳 (Long Quan - Dragon Fist) (shaolin) - Pugno del drago con forma speciale..."
+    },
+    {
+      "id": "buddha_palm",
+      "name": "佛掌 (Fo Zhang - Buddha Palm)",
+      "style": "shaolin",
+      "category": "technique",
+      "description": "Palmo aperto potente",
+      "keywords": [
+        "buddha palm",
+        "fo zhang",
+        "palm strike",
+        "open hand"
+      ],
+      "velocity": "explosive",
+      "duration_seconds": [
+        0.4,
+        1.0
+      ],
+      "content": "Tecnica: 佛掌 (Fo Zhang - Buddha Palm)\nStile: shaolin\nDescrizione: Palmo aperto potente\nParole chiave: buddha palm, fo zhang, palm strike, open hand\nVelocità: explosive\nPattern temporale: discrete",
+      "summary": "佛掌 (Fo Zhang - Buddha Palm) (shaolin) - Palmo aperto potente..."
+    },
+    {
+      "id": "monkey_stance",
+      "name": "猴式 (Hou Shi - Monkey Stance)",
+      "style": "shaolin",
+      "category": "technique",
+      "description": "Posizione bassa imitando la scimmia",
+      "keywords": [
+        "monkey",
+        "hou",
+        "low stance",
+        "agile",
+        "animal form"
+      ],
+      "velocity": "fast",
+      "duration_seconds": [
+        1.0,
+        3.0
+      ],
+      "content": "Tecnica: 猴式 (Hou Shi - Monkey Stance)\nStile: shaolin\nDescrizione: Posizione bassa imitando la scimmia\nParole chiave: monkey, hou, low stance, agile, animal form\nVelocità: fast\nPattern temporale: discrete",
+      "summary": "猴式 (Hou Shi - Monkey Stance) (shaolin) - Posizione bassa imitando la scimmia..."
+    },
+    {
+      "id": "crane_kick",
+      "name": "鹤腿 (He Tui - Crane Kick)",
+      "style": "shaolin",
+      "category": "technique",
+      "description": "Calcio alto su una gamba come la gru",
+      "keywords": [
+        "crane kick",
+        "he tui",
+        "high kick",
+        "bird",
+        "one leg"
+      ],
+      "velocity": "explosive",
+      "duration_seconds": [
+        0.5,
+        1.5
+      ],
+      "content": "Tecnica: 鹤腿 (He Tui - Crane Kick)\nStile: shaolin\nDescrizione: Calcio alto su una gamba come la gru\nParole chiave: crane kick, he tui, high kick, bird, one leg\nVelocità: explosive\nPattern temporale: discrete",
+      "summary": "鹤腿 (He Tui - Crane Kick) (shaolin) - Calcio alto su una gamba come la gru..."
+    },
+    {
+      "id": "circle_walking",
+      "name": "走圈 (Zou Quan - Circle Walking)",
+      "style": "bagua",
+      "category": "technique",
+      "description": "Camminata circolare caratteristica del Bagua",
+      "keywords": [
+        "circle walk",
+        "zou quan",
+        "walking",
+        "circular",
+        "bagua"
+      ],
+      "velocity": "medium",
+      "duration_seconds": [
+        5.0,
+        30.0
+      ],
+      "content": "Tecnica: 走圈 (Zou Quan - Circle Walking)\nStile: bagua\nDescrizione: Camminata circolare caratteristica del Bagua\nParole chiave: circle walk, zou quan, walking, circular, bagua\nVelocità: medium\nPattern temporale: cyclic",
+      "summary": "走圈 (Zou Quan - Circle Walking) (bagua) - Camminata circolare caratteristica del Bagua..."
+    },
+    {
+      "id": "palm_changes",
+      "name": "换掌 (Huan Zhang - Palm Changes)",
+      "style": "bagua",
+      "category": "technique",
+      "description": "Cambi di palmo durante la camminata",
+      "keywords": [
+        "palm change",
+        "huan zhang",
+        "transition",
+        "flow"
+      ],
+      "velocity": "gradual",
+      "duration_seconds": [
+        2.0,
+        5.0
+      ],
+      "content": "Tecnica: 换掌 (Huan Zhang - Palm Changes)\nStile: bagua\nDescrizione: Cambi di palmo durante la camminata\nParole chiave: palm change, huan zhang, transition, flow\nVelocità: gradual\nPattern temporale: cyclic",
+      "summary": "换掌 (Huan Zhang - Palm Changes) (bagua) - Cambi di palmo durante la camminata..."
+    },
+    {
+      "id": "snake_palm",
+      "name": "蛇掌 (She Zhang - Snake Palm)",
+      "style": "bagua",
+      "category": "technique",
+      "description": "Palmo serpeggiante con movimento ondulatorio",
+      "keywords": [
+        "snake palm",
+        "she zhang",
+        "wave",
+        "penetrating"
+      ],
+      "velocity": "fast",
+      "duration_seconds": [
+        0.5,
+        1.5
+      ],
+      "content": "Tecnica: 蛇掌 (She Zhang - Snake Palm)\nStile: bagua\nDescrizione: Palmo serpeggiante con movimento ondulatorio\nParole chiave: snake palm, she zhang, wave, penetrating\nVelocità: fast\nPattern temporale: discrete",
+      "summary": "蛇掌 (She Zhang - Snake Palm) (bagua) - Palmo serpeggiante con movimento ondulatorio..."
+    },
+    {
+      "id": "lion_palm",
+      "name": "狮掌 (Shi Zhang - Lion Palm)",
+      "style": "bagua",
+      "category": "technique",
+      "description": "Palmo del leone potente",
+      "keywords": [
+        "lion palm",
+        "shi zhang",
+        "heavy strike",
+        "power"
+      ],
+      "velocity": "explosive",
+      "duration_seconds": [
+        0.4,
+        1.0
+      ],
+      "content": "Tecnica: 狮掌 (Shi Zhang - Lion Palm)\nStile: bagua\nDescrizione: Palmo del leone potente\nParole chiave: lion palm, shi zhang, heavy strike, power\nVelocità: explosive\nPattern temporale: discrete",
+      "summary": "狮掌 (Shi Zhang - Lion Palm) (bagua) - Palmo del leone potente..."
+    },
+    {
+      "id": "zenkutsu_dachi",
+      "name": "前屈立ち (Zenkutsu Dachi - Front Stance)",
+      "style": "karate",
+      "category": "technique",
+      "description": "Posizione fondamentale in avanti",
+      "keywords": [
+        "zenkutsu",
+        "front stance",
+        "forward stance"
+      ],
+      "velocity": "medium",
+      "duration_seconds": [
+        1.0,
+        5.0
+      ],
+      "content": "Tecnica: 前屈立ち (Zenkutsu Dachi - Front Stance)\nStile: karate\nDescrizione: Posizione fondamentale in avanti\nParole chiave: zenkutsu, front stance, forward stance\nVelocità: medium\nPattern temporale: discrete",
+      "summary": "前屈立ち (Zenkutsu Dachi - Front Stance) (karate) - Posizione fondamentale in avanti..."
+    },
+    {
+      "id": "oi_zuki",
+      "name": "追い突き (Oi Zuki - Lunge Punch)",
+      "style": "karate",
+      "category": "technique",
+      "description": "Pugno in avanzamento",
+      "keywords": [
+        "oi zuki",
+        "lunge punch",
+        "stepping punch"
+      ],
+      "velocity": "explosive",
+      "duration_seconds": [
+        0.3,
+        0.8
+      ],
+      "content": "Tecnica: 追い突き (Oi Zuki - Lunge Punch)\nStile: karate\nDescrizione: Pugno in avanzamento\nParole chiave: oi zuki, lunge punch, stepping punch\nVelocità: explosive\nPattern temporale: discrete",
+      "summary": "追い突き (Oi Zuki - Lunge Punch) (karate) - Pugno in avanzamento..."
+    },
+    {
+      "id": "mae_geri",
+      "name": "前蹴り (Mae Geri - Front Kick)",
+      "style": "karate",
+      "category": "technique",
+      "description": "Calcio frontale con palla del piede",
+      "keywords": [
+        "mae geri",
+        "front kick",
+        "snap kick"
+      ],
+      "velocity": "explosive",
+      "duration_seconds": [
+        0.4,
+        1.0
+      ],
+      "content": "Tecnica: 前蹴り (Mae Geri - Front Kick)\nStile: karate\nDescrizione: Calcio frontale con palla del piede\nParole chiave: mae geri, front kick, snap kick\nVelocità: explosive\nPattern temporale: discrete",
+      "summary": "前蹴り (Mae Geri - Front Kick) (karate) - Calcio frontale con palla del piede..."
+    },
+    {
+      "id": "uke",
+      "name": "受け (Uke - Block)",
+      "style": "karate",
+      "category": "technique",
+      "description": "Parata con avambraccio",
+      "keywords": [
+        "uke",
+        "block",
+        "parry",
+        "age uke",
+        "gedan barai"
+      ],
+      "velocity": "fast",
+      "duration_seconds": [
+        0.2,
+        0.6
+      ],
+      "content": "Tecnica: 受け (Uke - Block)\nStile: karate\nDescrizione: Parata con avambraccio\nParole chiave: uke, block, parry, age uke, gedan barai\nVelocità: fast\nPattern temporale: discrete",
+      "summary": "受け (Uke - Block) (karate) - Parata con avambraccio..."
+    },
+    {
+      "id": "kata_stance",
+      "name": "型構え (Kata Stance)",
+      "style": "karate",
+      "category": "technique",
+      "description": "Posizioni formali del kata",
+      "keywords": [
+        "kata",
+        "form",
+        "heian",
+        "tekki",
+        "bassai"
+      ],
+      "velocity": "slow",
+      "duration_seconds": [
+        2.0,
+        10.0
+      ],
+      "content": "Tecnica: 型構え (Kata Stance)\nStile: karate\nDescrizione: Posizioni formali del kata\nParole chiave: kata, form, heian, tekki, bassai\nVelocità: slow\nPattern temporale: discrete",
+      "summary": "型構え (Kata Stance) (karate) - Posizioni formali del kata..."
+    }
+  ]
+}
